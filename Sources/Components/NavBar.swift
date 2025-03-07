@@ -16,7 +16,7 @@ struct NavBar: HTML {
                 Text(markdown: "[Temperature Converter](/swiftUIProjects/temperatureConverter)")
             }
             Dropdown("App Store") {
-                Link("By Rule", target: "https://byruleapp.com")
+                Text(markdown: "[By Rule](/swiftUIProjects/byRule)")
             }
             Dropdown("Info") {
                 Text(markdown: "[About](/info/about)")
