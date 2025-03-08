@@ -1,10 +1,14 @@
 ---
+author: Daniel J. Aupont
+date: 2022-09-14 14:55
 published: true
 ---
 
 # About 👤
-<p><img src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/swiftuiweekly%2FPFP.png?alt=media&token=555d869c-661d-414b-8584-f26560226c44" alt="Profile Picture" style="height: 200px;"/></p>
+
 <p>As an iOS Engineer with a passion for crafting elegant solutions, I blend technical expertise with a talent for making complex concepts accessible. My journey in the Apple ecosystem has led me to wear multiple hats—from developing production applications to teaching the next generation of Swift developers.</p>
+
+<p><img src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/swiftuiweekly%2FPFP.png?alt=media&token=555d869c-661d-414b-8584-f26560226c44" alt="Profile Picture" style="height: 200px;"/></p>
 <br></br>
 
 ## What I Do 🛠️
