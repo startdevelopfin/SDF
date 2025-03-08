@@ -125,8 +125,6 @@ This final section formats the output value to two decimal places and returns it
 ## The Power of Swift's Type System ✅
 
 <p>If I had to highlight just one thing I learned from this week, it would be **Swift's strong type system**. The type system stands out to me because it provides safety and clarity without disrupting the readability of my code.</p>
-
-*See the [complete implementation on GitHub](https://github.com/startdevelopfin/TemperatureConverter)*
 <br></br>
 
 ## Key Terms I'm Adding to My Vocabulary 📝
@@ -138,6 +136,7 @@ This final section formats the output value to two decimal places and returns it
 | **`Collection Types`** | Swift's three primary collection types: arrays, sets, and dictionaries |
 | **`Control Flow`** | Structures that change the order in which code is executed (if/else, loops, switch) |
 | **`Parameter Labels`** | External names for function parameters that make function calls more readable |
+
 <br></br>
 
 ## Next Week's Focus 🎯
@@ -153,14 +152,14 @@ This final section formats the output value to two decimal places and returns it
 4. **`Protocols and Extensions`** - The secret to Swift's flexibility
 <br></br>
 
----
-
 ## Resources I Found Helpful ⚡️
 
 - **[Hacking with Swift](https://www.hackingwithswift.com/100/swiftui)**: Paul Hudson's clear explanations of Swift fundamentals
-- **[Swift Documentation](https://swift.org/documentation/)**: Official documentation for deeper understanding
-- **[Swift Playgrounds](https://www.apple.com/swift/playgrounds/)**: Great for experimenting with code in real-time
+
 ---
+
+*See the [complete implementation on GitHub](https://github.com/startdevelopfin/TemperatureConverter)*
+
 <!---->
 <!---->
 <!--## How I Could Enhance My Temperature Converter App 🌡️-->

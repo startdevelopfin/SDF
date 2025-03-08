@@ -235,9 +235,8 @@ Button(action: {
 }
 ```
 
-<p>The first parameter to `Button` is a closure that executes when the button is tapped. This is a powerful example of "passing functions into functions."</p>
+<p>The closure executes when the button is tapped. This is a powerful example of "passing functions into functions."</p>
 <br></br>
-
 
 
 ## Key Terms I'm Adding to My Vocabulary 📝
@@ -252,25 +251,12 @@ Button(action: {
 | **`Nil Coalescing`** | The `??` operator that provides a default value when an optional is nil |
 | **`Closure`** | Self-contained blocks of functionality that can be passed around and used in your code |
 | **`Singleton Pattern`** | A design pattern ensuring a class has only one instance with global access |
+
 <br></br>
-
-## Next Week's Focus 🎯
-
-<p>Looking ahead to Week 3, I'll be diving into:</p>
-
-1. **Advanced SwiftUI Views** - Creating custom view components
-2. **SwiftUI Navigation** - Managing app flow and screens
-3. **State and Data Flow** - More advanced state management techniques
-4. **Custom Modifiers** - Creating reusable view modifications
-<br></br>
----
 
 ## Resources I Found Helpful ⚡️
 
 - **[Swift.org - Error Handling](https://docs.swift.org/swift-book/LanguageGuide/ErrorHandling.html)**: Official documentation on Swift's error handling
-- **[Hacking with Swift - Protocol-Oriented Programming](https://www.hackingwithswift.com/plus/protocol-oriented-swift)**: Paul Hudson's guide to protocols
-- **[Swift by Sundell - Computed Properties](https://www.swiftbysundell.com/articles/computed-properties-in-swift/)**: In-depth look at computed properties
-- **[Apple Developer - Access Control](https://developer.apple.com/documentation/swift/access-control)**: Official guide to access control in Swift
 
 ---
 
