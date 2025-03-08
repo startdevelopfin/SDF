@@ -13,7 +13,7 @@
     <link href="/css/prism-plugins.css" rel="stylesheet" />
     <link href="/css/bootstrap-icons.min.css" rel="stylesheet" />
     <link href="/css/ignite-core.min.css" rel="stylesheet" />
-    <link href="https://startdevelopfinish.com/swiftUIProjects/temperatureConverter2" rel="canonical" />
+    <link href="https://startdevelopfinish.com/swiftUI/temperatureConverter2" rel="canonical" />
     <script>(function() {
     function getThemePreference() {
         return localStorage.getItem('custom-theme') || 'auto';
@@ -65,7 +65,7 @@
     <meta content="SwiftUI Fundamentals 🚀" name="twitter:title" />
     <meta content="Part 2: Leveling up our Temperature Converter app with advanced Swift concepts" property="og:description" />
     <meta content="Part 2: Leveling up our Temperature Converter app with advanced Swift concepts" name="twitter:description" />
-    <meta content="https://startdevelopfinish.com/swiftUIProjects/temperatureConverter2" property="og:url" />
+    <meta content="https://startdevelopfinish.com/swiftUI/temperatureConverter2" property="og:url" />
     <meta content="startdevelopfinish.com" name="twitter:domain" />
     <meta content="summary_large_image" name="twitter:card" />
     <meta content="on" name="twitter:dnt" />
@@ -80,8 +80,8 @@
             <ul class="col justify-content-end mb-2 mb-md-0 navbar-nav">
               <li class="dropdown nav-item" data-bs-theme="light"><a href="#" role="button" class="dropdown dropdown-toggle link-underline link-underline-opacity-100 link-underline-opacity-100-hover nav-link" data-bs-toggle="dropdown" aria-expanded="false">SwiftUI Projects</a>
                 <ul class="dropdown dropdown-menu">
-                  <li><p class="dropdown-header"><a href="/swiftUIProjects/temperatureConverter">Temperature Converter</a></p></li>
-                  <li><p class="dropdown-header"><a href="/swiftUIProjects/temperatureConverter2">Temperature Converter pt. 2</a></p></li>
+                  <li><p class="dropdown-header"><a href="/swiftUI/temperatureConverter">Temperature Converter</a></p></li>
+                  <li><p class="dropdown-header"><a href="/swiftUI/temperatureConverter2">Temperature Converter pt. 2</a></p></li>
                 </ul></li>
               <li class="dropdown nav-item" data-bs-theme="light"><a href="#" role="button" class="dropdown dropdown-toggle link-underline link-underline-opacity-100 link-underline-opacity-100-hover nav-link" data-bs-toggle="dropdown" aria-expanded="false">App Store</a>
                 <ul class="dropdown dropdown-menu">
@@ -105,7 +105,7 @@
               <div class="card-body">
                 <p>Daniel J. Aupont</p>
                 <p>Published on Mar 8, 2025</p>
-                <p>1276 words; 6 minutes to read.</p>
+                <p>1549 words; 7 minutes to read.</p>
                 <h3 class="card-title"><a href="/tags/swift-u-i" rel="tag" class="link-plain link-underline link-underline-opacity-100 link-underline-opacity-100-hover"><span class="badge rounded-pill text-bg-primary" style="margin-right: 5px">SwiftUI</span></a><a href="/tags/100-days-of-swift-u-i" rel="tag" class="link-plain link-underline link-underline-opacity-100 link-underline-opacity-100-hover"><span class="badge rounded-pill text-bg-primary" style="margin-right: 5px">100DaysOfSwiftUI</span></a><a href="/tags/app" rel="tag" class="link-plain link-underline link-underline-opacity-100 link-underline-opacity-100-hover"><span class="badge rounded-pill text-bg-primary" style="margin-right: 5px">App</span></a></h3>
               </div>
             </div>
@@ -115,11 +115,11 @@
           <p><img src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/swiftuiweekly%2FTC01.png?alt=media&amp;token=1da40d82-d6b2-4ef4-816e-8a75afca1b26" alt="Temperature Converter 2" style="height: 400px;" /></p> 
           <p><br /><br /></p>
           <h2>To Be Continued… 📝</h2>
-          <p>Last week, we created a simple Temperature Converter app using basic Swift concepts. This week, we're taking it to the next level by implementing more advanced Swift features. I've updated our Temperature Converter app to demonstrate how they work together in a real-world project. In this post, we will explore how these powerful features can make our code more robust, maintainable, and expandable.</p> 
+          <p>Last week, I created a simple Temperature Converter app using basic Swift concepts. This week, lets take it to the next level by implementing more advanced Swift features. In this post, we will explore how they can make our code more robust, maintainable, and scalable.</p> 
           <br />
           <br /> 
           <h2>Enhanced Temperature Converter App 🌡️</h2>
-          <p>Here's how I've updated our app to showcase these concepts:</p> 
+          <p>Here's how I've updated the app:</p> 
           <ol>
             <li>Improved the <code>UI</code> with validation feedback</li>
             <li>Implemented <code>error handling</code> for <code>invalid</code> inputs</li>
@@ -129,10 +129,11 @@
           </ol>
           <h2>Error Handling with Throwing Functions ⚠️</h2>
           <p>Instead of silently failing when users enter invalid input, we can use Swift's error handling system to provide meaningful feedback.</p> 
-          <pre><code class="language-swift">// Define custom error types
+          <pre><code class="language-swift">/// Errors that can occur during temperature conversion.
 enum TemperatureError: Error {
-    case invalidInput
+case invalidInput
     
+    /// User-friendly error description.
     var localizedDescription: String {
         switch self {
         case .invalidInput:
@@ -146,33 +147,30 @@ func convert(_ value: String, from fromUnit: TemperatureUnit, to toUnit: Tempera
     guard let inputValue = Double(value) else {
         throw TemperatureError.invalidInput
     }
-    
-    // Conversion logic follows...
 }
 </code></pre>
-          <p>Using the `throws` keyword tells Swift that this function can throw errors, which must be handled by the caller using `do-try-catch`:</p> 
+          <p><br /><br /></p>
+          <p>Using the `throws` keyword tells Swift that this function can throw errors, which must be handled by the caller using `do-try-catch`. This makes the app more robust by gracefully handling errors rather than simply crashing.</p> 
           <pre><code class="language-swift">do {
     let result = try converter.convert(inputTemperature, from: fromUnit, to: toUnit)
     // Use the result
 } catch TemperatureError.invalidInput {
     // Handle invalid input error
 } catch {
-    // Handle other errors
+    // All other errors
 }
 </code></pre>
-          <p>This makes our app more robust by gracefully handling errors rather than crashing.</p> 
-          <br />
-          <br /> 
+          <p><br /><br /></p>
           <h2>Optionals for Error Handling 🔄</h2>
-          <p>We use an optional `String` to represent an error message that might or might not exist:</p> 
+          <p>I use an optional `String` to represent an error message that might or might not exist:</p> 
           <pre><code class="language-swift">@State private var errorMessage: String? = nil
 </code></pre>
-          <p>When displaying it, we use nil coalescing to provide a default. This is a clean way to handle potentially absent values:</p> 
+          <p>When displaying it, I use nil coalescing to provide a default. This is a clean way to handle potentially absent values:</p> 
           <pre><code class="language-swift">Text(errorMessage ?? "An unknown error occurred")
 </code></pre>
           <p><br /><br /></p>
           <h2>Protocols and Classes for Conversion Logic 🧩</h2>
-          <p>Our original app had conversion logic embedded directly in the view. Now, we've extracted it into a proper architecture using protocols and classes:</p> 
+          <p>The original app had conversion logic embedded directly in the view. Now, I've extracted it into a proper architecture using protocols and classes:</p> 
           <pre><code class="language-swift">// Define a protocol for temperature conversion
 protocol TemperatureConvertible {
     func convert(_ value: String, from fromUnit: TemperatureUnit, to toUnit: TemperatureUnit) throws -&gt; Double
@@ -186,21 +184,69 @@ final class TemperatureConverter: TemperatureConvertible {
     
     private init() {}
     
+    /// Converts a temperature value from one unit to another.
+    /// - Parameters:
+    ///   - value: The temperature value to convert as a string.
+    ///   - fromUnit: The unit of the input temperature.
+    ///   - toUnit: The unit to convert the temperature to.
+    /// - Returns: The converted temperature value.
+    /// - Throws: `TemperatureError.invalidInput` if the provided value is not a valid number.
     func convert(_ value: String, from fromUnit: TemperatureUnit, to toUnit: TemperatureUnit) throws -&gt; Double {
-        // Implementation here
+        // If input and output units are the same, return the original value
+        if fromUnit == toUnit, let doubleValue = Double(value) {
+            return doubleValue
+        }
+        
+        guard let inputValue = Double(value) else {
+            throw TemperatureError.invalidInput
+        }
+        
+        // Convert to celsius first (base unit for conversion)
+        let valueInCelsius = toCelsius(inputValue, from: fromUnit)
+        
+        // Then convert from celsius to the desired output unit
+        return fromCelsius(valueInCelsius, to: toUnit)
     }
     
+    /// Formats a temperature value with the specified number of decimal places.
+    /// - Parameters:
+    ///   - value: The temperature value to format.
+    ///   - decimalPlaces: The number of decimal places to include (default is 2).
+    /// - Returns: A formatted string representation of the temperature.
     func formatTemperature(_ value: Double, decimalPlaces: Int = 2) -&gt; String {
         return String(format: "%.\(decimalPlaces)f", value)
     }
     
-    // Private helper methods
+    /// Converts a temperature from any unit to Celsius.
+    /// - Parameters:
+    ///   - value: The temperature value to convert.
+    ///   - unit: The unit of the temperature value.
+    /// - Returns: The temperature value in Celsius.
     private func toCelsius(_ value: Double, from unit: TemperatureUnit) -&gt; Double {
-        // Implementation here
+        switch unit {
+        case .celsius:
+            return value
+        case .fahrenheit:
+            return (value - 32) * 5 / 9
+        case .kelvin:
+            return value - 273.15
+        }
     }
     
+    /// Converts a temperature from Celsius to another unit.
+    /// - Parameters:
+    ///   - value: The temperature value in Celsius.
+    ///   - unit: The unit to convert the temperature to.
+    /// - Returns: The converted temperature value.
     private func fromCelsius(_ value: Double, to unit: TemperatureUnit) -&gt; Double {
-        // Implementation here
+        switch unit {
+        case .celsius:
+            return value
+        case .fahrenheit:
+            return (value * 9 / 5) + 32
+        case .kelvin:
+            return value + 273.15
+        }
     }
 }
 </code></pre>
@@ -213,16 +259,28 @@ final class TemperatureConverter: TemperatureConvertible {
             <li><strong><code>Default parameter</code> values</strong>: Convenience for common cases <br /><br /></li>
           </ol>
           <h2>Structs and Computed Properties for History Tracking 📝</h2>
-          <p>To track conversion history, we use a struct with computed properties:</p> 
-          <pre><code class="language-swift">struct TemperatureRecord: Identifiable {
-    let id = UUID()  // Automatic ID for each record
+          <p>To track conversion history, I use a struct with computed properties:</p> 
+          <pre><code class="language-swift">/// Represents a temperature conversion record.
+struct TemperatureRecord: Identifiable {
+    /// Unique identifier for the record.
+    let id = UUID()
+    
+    /// The original temperature value entered by the user.
     let inputValue: String
+    
+    /// The unit of the input temperature.
     let fromUnit: TemperatureUnit
+    
+    /// The unit of the output temperature.
     let toUnit: TemperatureUnit
+    
+    /// The converted temperature value.
     let result: String
+    
+    /// The date and time when the conversion was performed.
     let timestamp: Date = Date()
     
-    // Computed property for formatted display
+    /// Formatted timestamp for display purposes.
     var formattedTimestamp: String {
         let formatter = DateFormatter()
         formatter.timeStyle = .short
@@ -321,18 +379,18 @@ final class TemperatureConverter: TemperatureConvertible {
         <div class="sticky-top" style="padding-top: 80px">
           <h3>Read this next…</h3>
           <div class="card">
-            <img alt="" src="/images/photos/temperatureConverter2.png" class="card-img-top" />
+            <img alt="" src="/images/photos/SpeakerStage.png" class="card-img-top" />
             <div class="card-header">
-              <h2><a href="/swiftUIProjects/temperatureConverter2" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover">SwiftUI Fundamentals 🚀</a></h2>
+              <h2><a href="/article/speakingengagement" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover">First Talk 🎙️</a></h2>
             </div>
             <div class="card-body">
-              <p class="card-text mb-0">Part 2: Leveling up our Temperature Converter app with advanced Swift concepts</p>
+              <p class="card-text mb-0">In this post, I detail my first speaking engagement as a part of the HBCU C2 Student Leadership Conference at Tennesee State University.</p>
             </div>
             <div class="card-footer text-body-secondary">
               <div style="margin-top: -5px">
-                <a href="/tags/swift-u-i" rel="tag" class="link-plain link-underline link-underline-opacity-100 link-underline-opacity-100-hover"><span class="badge rounded-pill text-bg-primary" style="margin-right: 5px">SwiftUI</span></a>
-                <a href="/tags/100-days-of-swift-u-i" rel="tag" class="link-plain link-underline link-underline-opacity-100 link-underline-opacity-100-hover"><span class="badge rounded-pill text-bg-primary" style="margin-right: 5px">100DaysOfSwiftUI</span></a>
-                <a href="/tags/app" rel="tag" class="link-plain link-underline link-underline-opacity-100 link-underline-opacity-100-hover"><span class="badge rounded-pill text-bg-primary" style="margin-right: 5px">App</span></a>
+                <a href="/tags/swift--coding--clubs" rel="tag" class="link-plain link-underline link-underline-opacity-100 link-underline-opacity-100-hover"><span class="badge rounded-pill text-bg-primary" style="margin-right: 5px">Swift Coding Clubs</span></a>
+                <a href="/tags/by--rule" rel="tag" class="link-plain link-underline link-underline-opacity-100 link-underline-opacity-100-hover"><span class="badge rounded-pill text-bg-primary" style="margin-right: 5px">By Rule</span></a>
+                <a href="/tags/article" rel="tag" class="link-plain link-underline link-underline-opacity-100 link-underline-opacity-100-hover"><span class="badge rounded-pill text-bg-primary" style="margin-right: 5px">Article</span></a>
               </div>
             </div>
           </div>

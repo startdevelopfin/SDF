@@ -16,12 +16,12 @@ Part 2: Leveling up our Temperature Converter app with advanced Swift concepts
 <br></br>
 ## To Be Continued... 📝
 
-<p>Last week, we created a simple Temperature Converter app using basic Swift concepts. This week, we're taking it to the next level by implementing more advanced Swift features. I've updated our Temperature Converter app to demonstrate how they work together in a real-world project. In this post, we will explore how these powerful features can make our code more robust, maintainable, and expandable.</p>
+<p>Last week, I created a simple Temperature Converter app using basic Swift concepts. This week, lets take it to the next level by implementing more advanced Swift features. In this post, we will explore how they can make our code more robust, maintainable, and scalable.</p>
 <br></br>
                                                         
 ## Enhanced Temperature Converter App 🌡️
 
-<p>Here's how I've updated our app to showcase these concepts:</p>
+<p>Here's how I've updated the app:</p>
 
 1. Improved the `UI` with validation feedback
 2. Implemented `error handling` for `invalid` inputs
@@ -35,10 +35,11 @@ Part 2: Leveling up our Temperature Converter app with advanced Swift concepts
 <p>Instead of silently failing when users enter invalid input, we can use Swift's error handling system to provide meaningful feedback.</p>
 
 ```swift
-// Define custom error types
+/// Errors that can occur during temperature conversion.
 enum TemperatureError: Error {
-    case invalidInput
+case invalidInput
     
+    /// User-friendly error description.
     var localizedDescription: String {
         switch self {
         case .invalidInput:
@@ -52,12 +53,11 @@ func convert(_ value: String, from fromUnit: TemperatureUnit, to toUnit: Tempera
     guard let inputValue = Double(value) else {
         throw TemperatureError.invalidInput
     }
-    
-    // Conversion logic follows...
 }
 ```
+<br></br>
 
-<p>Using the `throws` keyword tells Swift that this function can throw errors, which must be handled by the caller using `do-try-catch`:</p>
+<p>Using the `throws` keyword tells Swift that this function can throw errors, which must be handled by the caller using `do-try-catch`. This makes the app more robust by gracefully handling errors rather than simply crashing.</p>
 
 ```swift
 do {
@@ -66,22 +66,20 @@ do {
 } catch TemperatureError.invalidInput {
     // Handle invalid input error
 } catch {
-    // Handle other errors
+    // All other errors
 }
 ```
-
-<p>This makes our app more robust by gracefully handling errors rather than crashing.</p>
 <br></br>
 
 ## Optionals for Error Handling 🔄
 
-<p>We use an optional `String` to represent an error message that might or might not exist:</p>
+<p>I use an optional `String` to represent an error message that might or might not exist:</p>
 
 ```swift
 @State private var errorMessage: String? = nil
 ```
                     
-<p>When displaying it, we use nil coalescing to provide a default. This is a clean way to handle potentially absent values:</p>
+<p>When displaying it, I use nil coalescing to provide a default. This is a clean way to handle potentially absent values:</p>
 
 ```swift
 Text(errorMessage ?? "An unknown error occurred")
@@ -91,7 +89,7 @@ Text(errorMessage ?? "An unknown error occurred")
 
 ## Protocols and Classes for Conversion Logic 🧩
 
-<p>Our original app had conversion logic embedded directly in the view. Now, we've extracted it into a proper architecture using protocols and classes:</p>
+<p>The original app had conversion logic embedded directly in the view. Now, I've extracted it into a proper architecture using protocols and classes:</p>
 
 ```swift
 // Define a protocol for temperature conversion
@@ -107,21 +105,69 @@ final class TemperatureConverter: TemperatureConvertible {
     
     private init() {}
     
+    /// Converts a temperature value from one unit to another.
+    /// - Parameters:
+    ///   - value: The temperature value to convert as a string.
+    ///   - fromUnit: The unit of the input temperature.
+    ///   - toUnit: The unit to convert the temperature to.
+    /// - Returns: The converted temperature value.
+    /// - Throws: `TemperatureError.invalidInput` if the provided value is not a valid number.
     func convert(_ value: String, from fromUnit: TemperatureUnit, to toUnit: TemperatureUnit) throws -> Double {
-        // Implementation here
+        // If input and output units are the same, return the original value
+        if fromUnit == toUnit, let doubleValue = Double(value) {
+            return doubleValue
+        }
+        
+        guard let inputValue = Double(value) else {
+            throw TemperatureError.invalidInput
+        }
+        
+        // Convert to celsius first (base unit for conversion)
+        let valueInCelsius = toCelsius(inputValue, from: fromUnit)
+        
+        // Then convert from celsius to the desired output unit
+        return fromCelsius(valueInCelsius, to: toUnit)
     }
     
+    /// Formats a temperature value with the specified number of decimal places.
+    /// - Parameters:
+    ///   - value: The temperature value to format.
+    ///   - decimalPlaces: The number of decimal places to include (default is 2).
+    /// - Returns: A formatted string representation of the temperature.
     func formatTemperature(_ value: Double, decimalPlaces: Int = 2) -> String {
         return String(format: "%.\(decimalPlaces)f", value)
     }
     
-    // Private helper methods
+    /// Converts a temperature from any unit to Celsius.
+    /// - Parameters:
+    ///   - value: The temperature value to convert.
+    ///   - unit: The unit of the temperature value.
+    /// - Returns: The temperature value in Celsius.
     private func toCelsius(_ value: Double, from unit: TemperatureUnit) -> Double {
-        // Implementation here
+        switch unit {
+        case .celsius:
+            return value
+        case .fahrenheit:
+            return (value - 32) * 5 / 9
+        case .kelvin:
+            return value - 273.15
+        }
     }
     
+    /// Converts a temperature from Celsius to another unit.
+    /// - Parameters:
+    ///   - value: The temperature value in Celsius.
+    ///   - unit: The unit to convert the temperature to.
+    /// - Returns: The converted temperature value.
     private func fromCelsius(_ value: Double, to unit: TemperatureUnit) -> Double {
-        // Implementation here
+        switch unit {
+        case .celsius:
+            return value
+        case .fahrenheit:
+            return (value * 9 / 5) + 32
+        case .kelvin:
+            return value + 273.15
+        }
     }
 }
 ```
@@ -137,18 +183,30 @@ final class TemperatureConverter: TemperatureConvertible {
                                                     
 ## Structs and Computed Properties for History Tracking 📝
 
-<p>To track conversion history, we use a struct with computed properties:</p>
+<p>To track conversion history, I use a struct with computed properties:</p>
 
 ```swift
+/// Represents a temperature conversion record.
 struct TemperatureRecord: Identifiable {
-    let id = UUID()  // Automatic ID for each record
+    /// Unique identifier for the record.
+    let id = UUID()
+    
+    /// The original temperature value entered by the user.
     let inputValue: String
+    
+    /// The unit of the input temperature.
     let fromUnit: TemperatureUnit
+    
+    /// The unit of the output temperature.
     let toUnit: TemperatureUnit
+    
+    /// The converted temperature value.
     let result: String
+    
+    /// The date and time when the conversion was performed.
     let timestamp: Date = Date()
     
-    // Computed property for formatted display
+    /// Formatted timestamp for display purposes.
     var formattedTimestamp: String {
         let formatter = DateFormatter()
         formatter.timeStyle = .short
