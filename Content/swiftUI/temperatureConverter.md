@@ -22,9 +22,23 @@ The first example app TemperatureConverter.
 
 ### State Management ⚙️
 
-  <p><img src="  https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/swiftuiweekly%2FTC1.png?alt=media&token=b9181ce8-a115-4be9-a5fa-8a052e7c94ac" alt="State Properties for Temperature Converter" style="height: 300px;"/></p>
-  
 <p>First, I set up three state properties to manage the dynamic interactions in the temperature converter:</p>
+
+```swift
+    /// The user's input temperature as a string.
+    @State private var inputTemperature: String = ""
+    
+    /// The selected input temperature unit.
+    @State private var selectedInputUnit: TemperatureUnit = .celsius
+    
+    /// The selected output temperature unit.
+    @State private var selectedOutputUnit: TemperatureUnit = .fahrenheit
+}
+```
+<br></br>
+
+Using the `throws` keyword tells Swift that this function can throw errors, which must be handled by the caller using `do-try-catch`. This makes the app more robust by gracefully handling errors rather than simply crashing.
+
 
 1. `inputTemperature`: A string that holds the temperature value entered by the user.
 <br></br>
@@ -41,19 +55,54 @@ A. Enum Declaration
 
 <p>The TemperatureUnit enum represents the different temperature units supported in the converter. It conforms to String and later I use CaseIterable and Identifiable to provide easy access and iteration over the available temperature units.</p>
 
-  <p><img src="  https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/swiftuiweekly%2FTC3A.png?alt=media&token=110482cb-f103-4a4e-85e5-9b7077113f39" alt="Enum for Temperature Converter" style="height: 300px;"/></p>
+```swift
+    /// Represents the different temperature units supported in the converter.
+    enum TemperatureUnit: String, CaseIterable, Identifiable {
+        case celsius = "Celsius"
+        case fahrenheit = "Fahrenheit"
+        case kelvin = "Kelvin"
+}
+```
+<br></br>
   
 B. Abbreviation Property  
 
-This computed property returns the abbreviation for each temperature unit (°C for Celsius, °F for Fahrenheit, and K for Kelvin). This allows me to easily display the correct unit abbreviation based on the selected TemperatureUnit.
+<p>This computed property returns the abbreviation for each temperature unit (°C for Celsius, °F for Fahrenheit, and K for Kelvin). This allows me to easily display the correct unit abbreviation based on the selected TemperatureUnit.</p>
 
-<p><img src="  https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/swiftuiweekly%2FTC3B.png?alt=media&token=596db718-a863-4ac9-9176-852fda121b1f" alt="Enum for Temperature Converter" style="height: 300px;"/></p>
+```swift
+    /// The abbreviation for each temperature unit.
+    var abbreviation: String {
+    switch self {
+    case .celsius:
+        return "°C"
+    case .fahrenheit:
+        return "°F"
+    case .kelvin:
+        return "K"
+    }
+}
+```
+<br></br>
+
     
 C. Identifiable Conformance
 
-The id property returns the raw value (the string) of each case. This allows TemperatureUnit to conform to the Identifiable protocol.
+<p>The id property returns the raw value (the string) of each case. This allows TemperatureUnit to conform to the Identifiable protocol.</p>
     
-<p><img src="  https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/swiftuiweekly%2FTC3C.png?alt=media&token=ad9e081b-d73b-48a2-a695-eff5a0118ed5" alt="Enum for Temperature Converter" style="height: 200px;"/></p>
+```swift
+    /// The abbreviation for each temperature unit.
+    var abbreviation: String {
+        switch self {
+            case .celsius:
+        return "°C"
+            case .fahrenheit:
+        return "°F"
+            case .kelvin:
+        return "K"
+    }
+}
+```
+<br></br>
 
 <p>By using an enum instead of raw strings, the app guarantees that only valid temperature units are selected, making the code more robust and easier to maintain. Additionally, the abbreviation computed property and conformance to Identifiable further enhance the usability and integration of the TemperatureUnit enum, providing a seamless experience in both the logic and the user interface.</p>
       
@@ -64,8 +113,19 @@ The id property returns the raw value (the string) of each case. This allows Tem
   <p>The app needed a way to store the core logic for converting temperatures between different units. Here's a breakdown of how my conversion function works:</p>
   
   A. **Function signature and the initial guard clause to ensure that the input can be converted to a Double**: 
-  
-    <img src="  https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/swiftuiweekly%2FTC2A.png?alt=media&token=a5b591bd-8e44-486a-bf3d-670adb9daec9" alt="Conversion Function for Temperature Converter" style="height: 300px;"/>
+    
+```swift
+    /// Converts a given temperature from one unit to another.
+    /// - Parameters:
+    ///   - input: The temperature value to convert.
+    ///   - fromUnit: The selected input unit.
+    ///   - toUnit: The selected output unit.
+    ///
+    /// - Returns: The converted temperature as a formatted string.
+    private func convertTemperature(_ input: String, from fromUnit: TemperatureUnit, to toUnit: TemperatureUnit) -> String {
+        guard let inputValue = Double(input) else { return "0.0" }
+    }
+```
 
 This function takes in the user's input temperature, the selected input unit, and the selected output unit. It performs the conversion by first converting the input temperature to Celsius, and then converting that Celsius value to the desired output unit.
 <br></br>
@@ -80,9 +140,19 @@ This function takes in the user's input temperature, the selected input unit, an
 
 B. **Converting Input Temperature to Celsius**:
 
-This section handles the logic of converting the input temperature to Celsius based on the selected fromUnit
+This section handles the logic of converting the input temperature to Celsius based on the selected fromUnit.
 
-<p><img src="      https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/swiftuiweekly%2FTC2B.png?alt=media&token=309480b6-aac6-4c41-b71c-3f2697beca1d" alt="Conversion Function for Temperature Converter" style="height: 300px;"/></p>
+```swift
+    var valueInCelsius: Double
+        
+    // Convert input temperature to Celsius first
+    switch fromUnit {
+        case .celsius: valueInCelsius = inputValue
+        case .fahrenheit: valueInCelsius = (inputValue - 32) * 5 / 9
+        case .kelvin: valueInCelsius = inputValue - 273.15
+    }
+    
+```
 
 - The input temperature is first converted to Celsius using the appropriate formula based on the selected `fromUnit`.
 
@@ -91,19 +161,31 @@ This section handles the logic of converting the input temperature to Celsius ba
 
 C. **Converting Celsius to Desired Output Unit**: 
 
-In this section, the temperature in Celsius is converted to the desired toUnit.
+<p>In this section, the temperature in Celsius is converted to the desired toUnit.</p>
 
-<p><img src="  https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/swiftuiweekly%2FTC2C.png?alt=media&token=e1888782-8e0f-42c3-9124-63523bd53777" alt="Conversion Function for Temperature Converter" style="height: 300px;"/></p>
+```swift
+    var outputValue: Double
+        
+    // Convert from Celsius to the desired output unit
+    switch toUnit {
+        case .celsius: outputValue = valueInCelsius
+        case .fahrenheit: outputValue = (valueInCelsius * 9 / 5) + 32
+        case .kelvin: outputValue = valueInCelsius + 273.15
+    }
 
+```
 This computed property automatically calls the `convertTemperature` function with the current input and unit selections, returning the converted temperature as a formatted string.
+<br></br>
 
 D. **Returning the Converted Temperature**
 
-This final section formats the output value to two decimal places and returns it as a string.
+<p>This final section formats the output value to two decimal places and returns it as a string.</p>
 
-<p><img src="  https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/swiftuiweekly%2FTC2D.png?alt=media&token=629117b0-111b-4be4-b33b-ad805d3d34cc" alt="Conversion Function for Temperature Converter" style="height: 200px;"/></p>
+```swift
+    return String(format: "%.2f", outputValue)
+```
 
-<p>This function encapsulates the temperature conversion logic, ensuring that all necessary calculations are handled efficiently and accurately.</p>
+This function encapsulates the temperature conversion logic, ensuring that all necessary calculations are handled efficiently and accurately.
 <br></br>
 
 <!--### User Interface 🚥-->
