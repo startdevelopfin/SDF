@@ -13,8 +13,8 @@ struct NavBar: HTML {
     var body: some HTML {
         NavigationBar(logo: Text(markdown: "Start. <span style='color: #6B8E23;'>Develop</span>. Finish.")) {
             Dropdown("SwiftUI Projects") {
-                Text(markdown: "[Temperature Converter](/swiftUIProjects/temperatureConverter)")
-                Text(markdown: "[Temperature Converter pt. 2](/swiftUIProjects/temperatureConverter2)")
+                Text(markdown: "[Temperature Converter](/swiftUI/temperatureConverter)")
+                Text(markdown: "[Temperature Converter pt. 2](/swiftUI/temperatureConverter2)")
             }
             Dropdown("App Store") {
                 Link("By Rule", target: "https://byruleapp.com")
