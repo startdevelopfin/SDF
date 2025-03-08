@@ -1,0 +1,347 @@
+<!doctype html>
+<html data-bs-theme="auto" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="Part 2: Leveling up our Temperature Converter app with advanced Swift concepts" name="description" />
+    <meta content="Daniel J. Aupont" name="author" />
+    <meta content="Ignite v0.2.1" name="generator" />
+    <title>SwiftUI Fundamentals 🚀 – Swift Blog Site</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/prism-xcode-dark.css" rel="stylesheet" data-highlight-theme="xcode-dark" />
+    <link href="/css/prism-xcode-light.css" rel="stylesheet" data-highlight-theme="xcode-light" />
+    <link href="/css/prism-plugins.css" rel="stylesheet" />
+    <link href="/css/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="/css/ignite-core.min.css" rel="stylesheet" />
+    <link href="https://startdevelopfinish.com/swiftUIProjects/temperatureConverter2" rel="canonical" />
+    <script>(function() {
+    function getThemePreference() {
+        return localStorage.getItem('custom-theme') || 'auto';
+    }
+
+    function applyTheme(themeID) {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const lightThemeID = document.documentElement.getAttribute('data-light-theme') || 'light';
+        const darkThemeID = document.documentElement.getAttribute('data-dark-theme') || 'dark';
+        const actualThemeID = themeID === 'auto' ? (prefersDark ? darkThemeID : lightThemeID) : themeID;
+
+        document.documentElement.setAttribute('data-bs-theme', actualThemeID);
+        document.documentElement.setAttribute('data-theme-state', themeID);
+    }
+
+    function applySyntaxTheme() {
+        const syntaxTheme = getComputedStyle(document.documentElement)
+            .getPropertyValue('--syntax-highlight-theme').trim().replace(/"/g, '');
+
+        if (!syntaxTheme) return;
+
+        document.querySelectorAll('link[data-highlight-theme]').forEach(link => {
+            link.setAttribute('disabled', 'disabled');
+        });
+
+        const themeLink = document.querySelector(`link[data-highlight-theme="${syntaxTheme}"]`);
+        if (themeLink) {
+            themeLink.removeAttribute('disabled');
+        }
+    }
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        const currentTheme = getThemePreference();
+        if (currentTheme === 'auto') {
+            applyTheme('auto');
+            applySyntaxTheme();
+        }
+    });
+
+    const savedTheme = getThemePreference();
+    applyTheme(savedTheme);
+    applySyntaxTheme();
+})();
+</script>
+    <meta content="Start. Develop. Finish." property="og:site_name" />
+    <meta content="/images/photos/temperatureConverter2.png" property="og:image" />
+    <meta content="/images/photos/temperatureConverter2.png" name="twitter:image" />
+    <meta content="SwiftUI Fundamentals 🚀" property="og:title" />
+    <meta content="SwiftUI Fundamentals 🚀" name="twitter:title" />
+    <meta content="Part 2: Leveling up our Temperature Converter app with advanced Swift concepts" property="og:description" />
+    <meta content="Part 2: Leveling up our Temperature Converter app with advanced Swift concepts" name="twitter:description" />
+    <meta content="https://startdevelopfinish.com/swiftUIProjects/temperatureConverter2" property="og:url" />
+    <meta content="startdevelopfinish.com" name="twitter:domain" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="on" name="twitter:dnt" />
+  </head>
+  <body class="container">
+    <header>
+      <nav class="fixed-top navbar navbar-expand-md" style="background-color: rgb(0 0 0 / 100%)" data-bs-theme="dark">
+        <div class="container">
+          <a href="/" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover navbar-brand"><p class="mb-0">Start. <span style="color: #6B8E23;">Develop</span>. Finish.</p></a>
+          <button type="button" class="btn navbar-toggler" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="col justify-content-end mb-2 mb-md-0 navbar-nav">
+              <li class="dropdown nav-item" data-bs-theme="light"><a href="#" role="button" class="dropdown dropdown-toggle link-underline link-underline-opacity-100 link-underline-opacity-100-hover nav-link" data-bs-toggle="dropdown" aria-expanded="false">SwiftUI Projects</a>
+                <ul class="dropdown dropdown-menu">
+                  <li><p class="dropdown-header"><a href="/swiftUIProjects/temperatureConverter">Temperature Converter</a></p></li>
+                  <li><p class="dropdown-header"><a href="/swiftUIProjects/temperatureConverter2">Temperature Converter pt. 2</a></p></li>
+                </ul></li>
+              <li class="dropdown nav-item" data-bs-theme="light"><a href="#" role="button" class="dropdown dropdown-toggle link-underline link-underline-opacity-100 link-underline-opacity-100-hover nav-link" data-bs-toggle="dropdown" aria-expanded="false">App Store</a>
+                <ul class="dropdown dropdown-menu">
+                  <li><a href="https://byruleapp.com" class="dropdown-item link-underline link-underline-opacity-100 link-underline-opacity-100-hover">By Rule</a></li>
+                </ul></li>
+              <li class="dropdown nav-item" data-bs-theme="light"><a href="#" role="button" class="dropdown dropdown-toggle link-underline link-underline-opacity-100 link-underline-opacity-100-hover nav-link" data-bs-toggle="dropdown" aria-expanded="false">Info</a>
+                <ul class="dropdown dropdown-menu">
+                  <li><p class="dropdown-header"><a href="/info/about">About</a></p></li>
+                </ul></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="row">
+      <div class="col-md-9">
+        <div style="padding-bottom: 80px; padding-top: 80px">
+          <div>
+            <h1>SwiftUI Fundamentals 🚀</h1>
+            <div class="card">
+              <div class="card-body">
+                <p>Daniel J. Aupont</p>
+                <p>Published on Mar 8, 2025</p>
+                <p>1276 words; 6 minutes to read.</p>
+                <h3 class="card-title"><a href="/tags/swift-u-i" rel="tag" class="link-plain link-underline link-underline-opacity-100 link-underline-opacity-100-hover"><span class="badge rounded-pill text-bg-primary" style="margin-right: 5px">SwiftUI</span></a><a href="/tags/100-days-of-swift-u-i" rel="tag" class="link-plain link-underline link-underline-opacity-100 link-underline-opacity-100-hover"><span class="badge rounded-pill text-bg-primary" style="margin-right: 5px">100DaysOfSwiftUI</span></a><a href="/tags/app" rel="tag" class="link-plain link-underline link-underline-opacity-100 link-underline-opacity-100-hover"><span class="badge rounded-pill text-bg-primary" style="margin-right: 5px">App</span></a></h3>
+              </div>
+            </div>
+          </div>
+          <p></p>
+          <p>Part 2: Leveling up our Temperature Converter app with advanced Swift concepts</p> 
+          <p><img src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/swiftuiweekly%2FTC01.png?alt=media&amp;token=1da40d82-d6b2-4ef4-816e-8a75afca1b26" alt="Temperature Converter 2" style="height: 400px;" /></p> 
+          <p><br /><br /></p>
+          <h2>To Be Continued… 📝</h2>
+          <p>Last week, we created a simple Temperature Converter app using basic Swift concepts. This week, we're taking it to the next level by implementing more advanced Swift features. I've updated our Temperature Converter app to demonstrate how they work together in a real-world project. In this post, we will explore how these powerful features can make our code more robust, maintainable, and expandable.</p> 
+          <br />
+          <br /> 
+          <h2>Enhanced Temperature Converter App 🌡️</h2>
+          <p>Here's how I've updated our app to showcase these concepts:</p> 
+          <ol>
+            <li>Improved the <code>UI</code> with validation feedback</li>
+            <li>Implemented <code>error handling</code> for <code>invalid</code> inputs</li>
+            <li>Added decimal place <code>precision</code> control</li>
+            <li>Created a robust architecture using <code>protocols</code> and <code>classes</code></li>
+            <li>Added <code>conversion history</code> tracking <br /><br /></li>
+          </ol>
+          <h2>Error Handling with Throwing Functions ⚠️</h2>
+          <p>Instead of silently failing when users enter invalid input, we can use Swift's error handling system to provide meaningful feedback.</p> 
+          <pre><code class="language-swift">// Define custom error types
+enum TemperatureError: Error {
+    case invalidInput
+    
+    var localizedDescription: String {
+        switch self {
+        case .invalidInput:
+            return "Please enter a valid number for the temperature."
+        }
+    }
+}
+
+// A throwing function that validates and converts temperature
+func convert(_ value: String, from fromUnit: TemperatureUnit, to toUnit: TemperatureUnit) throws -&gt; Double {
+    guard let inputValue = Double(value) else {
+        throw TemperatureError.invalidInput
+    }
+    
+    // Conversion logic follows...
+}
+</code></pre>
+          <p>Using the `throws` keyword tells Swift that this function can throw errors, which must be handled by the caller using `do-try-catch`:</p> 
+          <pre><code class="language-swift">do {
+    let result = try converter.convert(inputTemperature, from: fromUnit, to: toUnit)
+    // Use the result
+} catch TemperatureError.invalidInput {
+    // Handle invalid input error
+} catch {
+    // Handle other errors
+}
+</code></pre>
+          <p>This makes our app more robust by gracefully handling errors rather than crashing.</p> 
+          <br />
+          <br /> 
+          <h2>Optionals for Error Handling 🔄</h2>
+          <p>We use an optional `String` to represent an error message that might or might not exist:</p> 
+          <pre><code class="language-swift">@State private var errorMessage: String? = nil
+</code></pre>
+          <p>When displaying it, we use nil coalescing to provide a default. This is a clean way to handle potentially absent values:</p> 
+          <pre><code class="language-swift">Text(errorMessage ?? "An unknown error occurred")
+</code></pre>
+          <p><br /><br /></p>
+          <h2>Protocols and Classes for Conversion Logic 🧩</h2>
+          <p>Our original app had conversion logic embedded directly in the view. Now, we've extracted it into a proper architecture using protocols and classes:</p> 
+          <pre><code class="language-swift">// Define a protocol for temperature conversion
+protocol TemperatureConvertible {
+    func convert(_ value: String, from fromUnit: TemperatureUnit, to toUnit: TemperatureUnit) throws -&gt; Double
+    func formatTemperature(_ value: Double, decimalPlaces: Int) -&gt; String
+}
+
+// Implement the protocol in a class
+final class TemperatureConverter: TemperatureConvertible {
+    // Singleton pattern with static shared instance
+    static let shared = TemperatureConverter()
+    
+    private init() {}
+    
+    func convert(_ value: String, from fromUnit: TemperatureUnit, to toUnit: TemperatureUnit) throws -&gt; Double {
+        // Implementation here
+    }
+    
+    func formatTemperature(_ value: Double, decimalPlaces: Int = 2) -&gt; String {
+        return String(format: "%.\(decimalPlaces)f", value)
+    }
+    
+    // Private helper methods
+    private func toCelsius(_ value: Double, from unit: TemperatureUnit) -&gt; Double {
+        // Implementation here
+    }
+    
+    private func fromCelsius(_ value: Double, to unit: TemperatureUnit) -&gt; Double {
+        // Implementation here
+    }
+}
+</code></pre>
+          <p><br /><br /></p>
+          <p>This approach gives us:</p> 
+          <ol>
+            <li><strong><code>Protocol</code>-based design</strong>: Clear contract for what a temperature converter should do</li>
+            <li><strong><code>Singleton</code> pattern</strong>: Easy access to the converter throughout the app</li>
+            <li><strong><code>Access control</code></strong>: Public API with private implementation details</li>
+            <li><strong><code>Default parameter</code> values</strong>: Convenience for common cases <br /><br /></li>
+          </ol>
+          <h2>Structs and Computed Properties for History Tracking 📝</h2>
+          <p>To track conversion history, we use a struct with computed properties:</p> 
+          <pre><code class="language-swift">struct TemperatureRecord: Identifiable {
+    let id = UUID()  // Automatic ID for each record
+    let inputValue: String
+    let fromUnit: TemperatureUnit
+    let toUnit: TemperatureUnit
+    let result: String
+    let timestamp: Date = Date()
+    
+    // Computed property for formatted display
+    var formattedTimestamp: String {
+        let formatter = DateFormatter()
+        formatter.timeStyle = .short
+        return formatter.string(from: timestamp)
+    }
+}
+</code></pre>
+          <p>The `formattedTimestamp` computed property dynamically formats the timestamp whenever it's accessed, without needing to store the formatted string.</p> 
+          <br />
+          <br /> 
+          <h2>Using Closures for Button Actions 🔘</h2>
+          <p>In SwiftUI, we frequently use closures for button actions:</p> 
+          <pre><code class="language-swift">Button(action: {
+    convertAndSave()  // This is a closure!
+}) {
+    Text("Save Conversion")
+        .padding()
+        .frame(maxWidth: .infinity)
+        .background(Color.blue)
+        .foregroundColor(.white)
+        .cornerRadius(8)
+}
+</code></pre>
+          <p>The first parameter to `Button` is a closure that executes when the button is tapped. This is a powerful example of "passing functions into functions."</p> 
+          <br />
+          <br /> 
+          <h2>Key Terms I’m Adding to My Vocabulary 📝</h2>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col"><strong>Term</strong></th>
+                <th scope="col"><strong>Definition</strong></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong><code>Throwing Functions</code></strong></td>
+                <td>Functions that can signal errors using Swift’s <code>throw</code> mechanism</td>
+              </tr>
+              <tr>
+                <td><strong><code>Protocol</code></strong></td>
+                <td>A blueprint of methods and properties that conforming types must implement</td>
+              </tr>
+              <tr>
+                <td><strong><code>Computed Property</code></strong></td>
+                <td>A property that runs code to determine its value rather than storing it</td>
+              </tr>
+              <tr>
+                <td><strong><code>Access Control</code></strong></td>
+                <td>Restricting access to parts of your code with keywords like <code>private</code> and <code>public</code></td>
+              </tr>
+              <tr>
+                <td><strong><code>Extension</code></strong></td>
+                <td>A way to add functionality to existing types without subclassing</td>
+              </tr>
+              <tr>
+                <td><strong><code>Nil Coalescing</code></strong></td>
+                <td>The <code>??</code> operator that provides a default value when an optional is nil</td>
+              </tr>
+              <tr>
+                <td><strong><code>Closure</code></strong></td>
+                <td>Self-contained blocks of functionality that can be passed around and used in your code</td>
+              </tr>
+              <tr>
+                <td><strong><code>Singleton Pattern</code></strong></td>
+                <td>A design pattern ensuring a class has only one instance with global access</td>
+              </tr>
+              <tr>
+                <td><br /><br /></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <h2>Next Week’s Focus 🎯</h2>
+          <p>Looking ahead to Week 3, I'll be diving into:</p> 
+          <ol>
+            <li><strong>Advanced SwiftUI Views</strong> - Creating custom view components</li>
+            <li><strong>SwiftUI Navigation</strong> - Managing app flow and screens</li>
+            <li><strong>State and Data Flow</strong> - More advanced state management techniques</li>
+            <li><strong>Custom Modifiers</strong> - Creating reusable view modifications <br /><br /></li>
+          </ol>
+          <hr />
+          <h2>Resources I Found Helpful ⚡️</h2>
+          <ul>
+            <li><strong><a href="https://docs.swift.org/swift-book/LanguageGuide/ErrorHandling.html">Swift.org - Error Handling</a></strong>: Official documentation on Swift’s error handling</li>
+            <li><strong><a href="https://www.hackingwithswift.com/plus/protocol-oriented-swift">Hacking with Swift - Protocol-Oriented Programming</a></strong>: Paul Hudson’s guide to protocols</li>
+            <li><strong><a href="https://www.swiftbysundell.com/articles/computed-properties-in-swift/">Swift by Sundell - Computed Properties</a></strong>: In-depth look at computed properties</li>
+            <li><strong><a href="https://developer.apple.com/documentation/swift/access-control">Apple Developer - Access Control</a></strong>: Official guide to access control in Swift</li>
+          </ul>
+          <hr />
+          <p><em>See the <a href="https://github.com/startdevelopfin/TemperatureConverter">complete implementation on GitHub</a></em></p>
+          <p></p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="sticky-top" style="padding-top: 80px">
+          <h3>Read this next…</h3>
+          <div class="card">
+            <img alt="" src="/images/photos/temperatureConverter2.png" class="card-img-top" />
+            <div class="card-header">
+              <h2><a href="/swiftUIProjects/temperatureConverter2" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover">SwiftUI Fundamentals 🚀</a></h2>
+            </div>
+            <div class="card-body">
+              <p class="card-text mb-0">Part 2: Leveling up our Temperature Converter app with advanced Swift concepts</p>
+            </div>
+            <div class="card-footer text-body-secondary">
+              <div style="margin-top: -5px">
+                <a href="/tags/swift-u-i" rel="tag" class="link-plain link-underline link-underline-opacity-100 link-underline-opacity-100-hover"><span class="badge rounded-pill text-bg-primary" style="margin-right: 5px">SwiftUI</span></a>
+                <a href="/tags/100-days-of-swift-u-i" rel="tag" class="link-plain link-underline link-underline-opacity-100 link-underline-opacity-100-hover"><span class="badge rounded-pill text-bg-primary" style="margin-right: 5px">100DaysOfSwiftUI</span></a>
+                <a href="/tags/app" rel="tag" class="link-plain link-underline link-underline-opacity-100 link-underline-opacity-100-hover"><span class="badge rounded-pill text-bg-primary" style="margin-right: 5px">App</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="mt-5 text-center">Created in Swift with <a href="https://github.com/twostraws/Ignite" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover">Ignite</a></p>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/syntax-highlighting.js"></script>
+    <script src="/js/ignite-core.js"></script>
+  </body>
+</html>

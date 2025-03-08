@@ -81,10 +81,11 @@
               <li class="dropdown nav-item" data-bs-theme="light"><a href="#" role="button" class="dropdown dropdown-toggle link-underline link-underline-opacity-100 link-underline-opacity-100-hover nav-link" data-bs-toggle="dropdown" aria-expanded="false">SwiftUI Projects</a>
                 <ul class="dropdown dropdown-menu">
                   <li><p class="dropdown-header"><a href="/swiftUIProjects/temperatureConverter">Temperature Converter</a></p></li>
+                  <li><p class="dropdown-header"><a href="/swiftUIProjects/temperatureConverter2">Temperature Converter pt. 2</a></p></li>
                 </ul></li>
               <li class="dropdown nav-item" data-bs-theme="light"><a href="#" role="button" class="dropdown dropdown-toggle link-underline link-underline-opacity-100 link-underline-opacity-100-hover nav-link" data-bs-toggle="dropdown" aria-expanded="false">App Store</a>
                 <ul class="dropdown dropdown-menu">
-                  <li><p class="dropdown-header"><a href="/swiftUIProjects/byRule">By Rule</a></p></li>
+                  <li><a href="https://byruleapp.com" class="dropdown-item link-underline link-underline-opacity-100 link-underline-opacity-100-hover">By Rule</a></li>
                 </ul></li>
               <li class="dropdown nav-item" data-bs-theme="light"><a href="#" role="button" class="dropdown dropdown-toggle link-underline link-underline-opacity-100 link-underline-opacity-100-hover nav-link" data-bs-toggle="dropdown" aria-expanded="false">Info</a>
                 <ul class="dropdown dropdown-menu">
@@ -103,9 +104,9 @@
             <div class="card">
               <div class="card-body">
                 <p>Daniel J. Aupont</p>
-                <p>Published on Feb 28, 2025</p>
-                <p>1704 words; 7 minutes to read.</p>
-                <h3 class="card-title"><a href="/tags/swift-u-i" rel="tag" class="link-plain link-underline link-underline-opacity-100 link-underline-opacity-100-hover"><span class="badge rounded-pill text-bg-primary" style="margin-right: 5px">SwiftUI</span></a><a href="/tags/100-days-of-swift-u-i" rel="tag" class="link-plain link-underline link-underline-opacity-100 link-underline-opacity-100-hover"><span class="badge rounded-pill text-bg-primary" style="margin-right: 5px">100DaysOfSwiftUI</span></a><a href="/tags/i-o-s--development" rel="tag" class="link-plain link-underline link-underline-opacity-100 link-underline-opacity-100-hover"><span class="badge rounded-pill text-bg-primary" style="margin-right: 5px">iOS Development</span></a></h3>
+                <p>Published on Mar 1, 2025</p>
+                <p>1813 words; 8 minutes to read.</p>
+                <h3 class="card-title"><a href="/tags/swift-u-i" rel="tag" class="link-plain link-underline link-underline-opacity-100 link-underline-opacity-100-hover"><span class="badge rounded-pill text-bg-primary" style="margin-right: 5px">SwiftUI</span></a><a href="/tags/100-days-of-swift-u-i" rel="tag" class="link-plain link-underline link-underline-opacity-100 link-underline-opacity-100-hover"><span class="badge rounded-pill text-bg-primary" style="margin-right: 5px">100DaysOfSwiftUI</span></a><a href="/tags/app" rel="tag" class="link-plain link-underline link-underline-opacity-100 link-underline-opacity-100-hover"><span class="badge rounded-pill text-bg-primary" style="margin-right: 5px">App</span></a></h3>
               </div>
             </div>
           </div>
@@ -113,21 +114,8 @@
           <p>The first example app TemperatureConverter.</p> 
           <p><img src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/swiftuiweekly%2FTC0.png?alt=media&amp;token=f7a195f1-90d6-4db3-96b2-fba4449278d8" alt="Temperature Converter" style="height: 300px;" /></p> 
           <p><br /><br /></p>
-          <h2>Topics 👀</h2>
-          <p>This week was all about basic data types.</p> 
-          <ul>
-            <li><strong><code>Basic Data Types</code></strong>: Variables, constants, integers, doubles, strings, and booleans</li>
-            <li><strong><code>Collections</code></strong>: Arrays, dictionaries, and sets</li>
-            <li><strong><code>Control Flow</code></strong>: Conditionals (if/else), switch statements, and various loop types</li>
-            <li><strong><code>Functions</code></strong>: Creating, parameterizing, and returning values from functions</li>
-            <li><strong><code>Enumerations</code></strong>: Creating and using basic enums in Swift <br /><br /></li>
-          </ul>
-          <h2>The Power of Swift’s Type System ✅</h2>
-          <p>If I had to highlight just one thing I learned from this week, it would be **Swift's strong type system**. The type system stands out to me because it provides safety and clarity without disrupting the readability of my code.</p> 
-          <br />
-          <br /> 
           <h2>Code Spotlight 💡: Building a Temperature Converter</h2>
-          <p>Here's a practical example of how I'm applying what I learned. My biggest hurdle was deciding how to condense the new information into a short blog post. I overcame it by building around one of the challenges I completed earlier in the week. TemperatureConverter is a simple, intuitive SwiftUI app that converts temperatures between Celsius, Fahrenheit, and Kelvin. Designed with best practices in mind, this app provides a clean user interface, real-time conversion, and accessibility support.</p> 
+          <p>This week was all about basic data types and building around one of the challenges I completed earlier in the week. TemperatureConverter is a simple, intuitive SwiftUI app that converts temperatures between Celsius, Fahrenheit, and Kelvin. Designed with best practices in mind, this app provides a clean user interface, real-time conversion, and accessibility support.</p> 
           <br />
           <br /> 
           <h3>State Management ⚙️</h3> 
@@ -181,16 +169,23 @@
           <p>This function encapsulates the temperature conversion logic, ensuring that all necessary calculations are handled efficiently and accurately.</p> 
           <br />
           <br /> 
-          <h3>User Interface 🚥</h3>
-          <p>In this section, we define the main body of the temperature converter view using a <code>NavigationView</code> and a vertical stack (<code>VStack</code>) to organize the UI elements. Here’s how the layout is structured:</p> 
-          <p><img src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/swiftuiweekly%2FTC3.png?alt=media&amp;token=53d79c7d-e28a-45be-8756-52f68053703b" alt="User Interface for Temperature Converter" style="height: 400px;" /></p> 
-          <ol>
-            <li><strong><code>inputField()</code></strong>: A custom view builder that creates the input field for the user to enter the temperature value. <br /><br /></li>
-            <li><strong><code>unitPicker</code>(title: selection: )</strong>: A reusable view builder that creates a picker for selecting the input and output temperature units. It takes a <code>title</code> parameter to label each picker and a <code>selection</code> binding to update the selected unit. <br /><br /></li>
-            <li><strong><code>convertedTemperatureView</code>()</strong>: A custom view builder that displays the converted temperature result based on the user’s input and selected units. <br /><br /></li>
-            <li><strong><code>Spacer</code>()</strong>: Adds flexible space to push the content toward the top of the screen.</li>
-          </ol>
-          <p>This structure keeps the UI clean, organized, and responsive, leveraging SwiftUI’s declarative syntax to dynamically update the view based on user interaction.</p>
+          <!--### User Interface 🚥--> 
+          <!----> 
+          <!--  In this section, we define the main body of the temperature converter view using a `NavigationView` and a vertical stack (`VStack`) to organize the UI elements. Here's how the layout is structured:--> 
+          <!----> 
+          <!--  <p><img src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/swiftuiweekly%2FTC3.png?alt=media&token=53d79c7d-e28a-45be-8756-52f68053703b" alt="User Interface for Temperature Converter" style="height: 400px;"/></p>--> 
+          <!----> 
+          <!--1. **`inputField()`**: A custom view builder that creates the input field for the user to enter the temperature value.--> 
+          <!--<br></br>--> 
+          <!--2. **`unitPicker`(title: selection: )**: A reusable view builder that creates a picker for selecting the input and output temperature units. It takes a `title` parameter to label each picker and a `selection` binding to update the selected unit.--> 
+          <!--<br></br>--> 
+          <!--3. **`convertedTemperatureView`()**: A custom view builder that displays the converted temperature result based on the user’s input and selected units.--> 
+          <!--<br></br>--> 
+          <!--4. **`Spacer`()**: Adds flexible space to push the content toward the top of the screen.--> 
+          <!----> 
+          <!--This structure keeps the UI clean, organized, and responsive, leveraging SwiftUI’s declarative syntax to dynamically update the view based on user interaction. --> 
+          <h2>The Power of Swift’s Type System ✅</h2>
+          <p>If I had to highlight just one thing I learned from this week, it would be **Swift's strong type system**. The type system stands out to me because it provides safety and clarity without disrupting the readability of my code.</p> 
           <p><em>See the <a href="https://github.com/startdevelopfin/TemperatureConverter">complete implementation on GitHub</a></em> <br /><br /></p>
           <h2>Key Terms I’m Adding to My Vocabulary 📝</h2>
           <table class="table">
@@ -243,6 +238,53 @@
             <li><strong><a href="https://www.apple.com/swift/playgrounds/">Swift Playgrounds</a></strong>: Great for experimenting with code in real-time</li>
           </ul>
           <hr />
+          <!----> 
+          <!----> 
+          <!--## How I Could Enhance My Temperature Converter App 🌡️--> 
+          <!----> 
+          <!--I could enhance my Temperature Converter app by:--> 
+          <!----> 
+          <!--1. Creating a `Temperature` protocol with requirements for any temperature unit--> 
+          <!--2. Implementing temperature units as structs conforming to this protocol--> 
+          <!--3. Adding extension methods for conversion between units--> 
+          <!--4. Using computed properties for formatted temperature strings--> 
+          <!--5. Improving the UI with more advanced SwiftUI techniques--> 
+          <!----> 
+          <!--For example, I could refactor the `TemperatureUnit` enum into a protocol and individual conforming structs:--> 
+          <!----> 
+          <!--```swift--> 
+          <!--protocol TemperatureUnit {--> 
+          <!--    var symbol: String { get }--> 
+          <!--    func convertToCelsius(_ value: Double) -> Double--> 
+          <!--    func convertFromCelsius(_ value: Double) -> Double--> 
+          <!--}--> 
+          <!----> 
+          <!--struct Celsius: TemperatureUnit {--> 
+          <!--    let symbol = "°C"--> 
+          <!--    --> 
+          <!--    func convertToCelsius(_ value: Double) -> Double {--> 
+          <!--        return value // Already in Celsius--> 
+          <!--    }--> 
+          <!--    --> 
+          <!--    func convertFromCelsius(_ value: Double) -> Double {--> 
+          <!--        return value // No conversion needed--> 
+          <!--    }--> 
+          <!--}--> 
+          <!----> 
+          <!--struct Fahrenheit: TemperatureUnit {--> 
+          <!--    let symbol = "°F"--> 
+          <!--    --> 
+          <!--    func convertToCelsius(_ value: Double) -> Double {--> 
+          <!--        return (value - 32) * 5 / 9--> 
+          <!--    }--> 
+          <!--    --> 
+          <!--    func convertFromCelsius(_ value: Double) -> Double {--> 
+          <!--        return (value * 9 / 5) + 32--> 
+          <!--    }--> 
+          <!--}--> 
+          <!--```--> 
+          <!----> 
+          <!--This approach would make the code more extensible and demonstrate the power of protocols and structs in Swift.--> 
           <p></p>
         </div>
       </div>
@@ -250,19 +292,18 @@
         <div class="sticky-top" style="padding-top: 80px">
           <h3>Read this next…</h3>
           <div class="card">
-            <img alt="" src="/images/photos/DeepDishCard.png" class="card-img-top" />
+            <img alt="" src="/images/photos/temperatureConverter.png" class="card-img-top" />
             <div class="card-header">
-              <h2><a href="/articles/firstconference" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover">First Conference 🥳</a></h2>
+              <h2><a href="/swiftUIProjects/temperatureConverter" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover">SwiftUI Fundamentals 🚀</a></h2>
             </div>
             <div class="card-body">
-              <p class="card-text mb-0">In this post, I share the experience attending my first Swift conference and detail the potential impact of these community driven events for aspiring iOS developers.</p>
+              <p class="card-text mb-0">The first example app TemperatureConverter.</p>
             </div>
             <div class="card-footer text-body-secondary">
               <div style="margin-top: -5px">
-                <a href="/tags/diversity" rel="tag" class="link-plain link-underline link-underline-opacity-100 link-underline-opacity-100-hover"><span class="badge rounded-pill text-bg-primary" style="margin-right: 5px">Diversity</span></a>
-                <a href="/tags/swift" rel="tag" class="link-plain link-underline link-underline-opacity-100 link-underline-opacity-100-hover"><span class="badge rounded-pill text-bg-primary" style="margin-right: 5px">Swift</span></a>
-                <a href="/tags/deep--dish--swift" rel="tag" class="link-plain link-underline link-underline-opacity-100 link-underline-opacity-100-hover"><span class="badge rounded-pill text-bg-primary" style="margin-right: 5px">Deep Dish Swift</span></a>
-                <a href="/tags/article" rel="tag" class="link-plain link-underline link-underline-opacity-100 link-underline-opacity-100-hover"><span class="badge rounded-pill text-bg-primary" style="margin-right: 5px">Article</span></a>
+                <a href="/tags/swift-u-i" rel="tag" class="link-plain link-underline link-underline-opacity-100 link-underline-opacity-100-hover"><span class="badge rounded-pill text-bg-primary" style="margin-right: 5px">SwiftUI</span></a>
+                <a href="/tags/100-days-of-swift-u-i" rel="tag" class="link-plain link-underline link-underline-opacity-100 link-underline-opacity-100-hover"><span class="badge rounded-pill text-bg-primary" style="margin-right: 5px">100DaysOfSwiftUI</span></a>
+                <a href="/tags/app" rel="tag" class="link-plain link-underline link-underline-opacity-100 link-underline-opacity-100-hover"><span class="badge rounded-pill text-bg-primary" style="margin-right: 5px">App</span></a>
               </div>
             </div>
           </div>
