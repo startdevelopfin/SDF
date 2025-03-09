@@ -27,6 +27,9 @@ struct About: StaticLayout {
             
             Text("I create intuitive iOS applications that solve real problems while maintaining clean, maintainable codebases. When I'm not building software, I'm sharing knowledge through:")
                 .fontWeight(.semibold)
+                .padding(.horizontal)
+                .lineSpacing(1.5)
+            
             List {
                 Text("Technical writing on this blog, where I break down complex Swift concepts")
                     .margin(.bottom, .small)
@@ -42,8 +45,10 @@ struct About: StaticLayout {
             .margin(.bottom, .small)
                 
         }
+        .cardStyle(.bordered)
         .margin(.bottom, .large)
         .background(.steelBlue.opacity(0.75))
+        .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
 
         Card {
             Text("My Approach 🎯")
@@ -52,9 +57,13 @@ struct About: StaticLayout {
             
             Text("I believe great software emerges from the intersection of technical excellence and intuitive design. As an independent developer, I have the freedom to pursue projects that align with this philosophy, whether client work or personal endeavors.")
                 .fontWeight(.semibold)
+                .padding(.horizontal)
+                .lineSpacing(1.5)
         }
+        .cardStyle(.bordered)
         .margin(.bottom, .large)
         .background(.sandyBrown.opacity(0.6))
+        .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
         
         Card {
             Text("Let's Connect 🌍")
@@ -63,7 +72,10 @@ struct About: StaticLayout {
             
             Text("Whether you're looking for development expertise, considering a mentorship opportunity, or interested in having me speak at your event, I welcome the conversation. While this blog offers insights into my technical perspective, you can learn more about my professional background on LinkedIn or follow my coding journey on GitHub.")
                 .fontWeight(.semibold)
+                .padding(.horizontal)
+                .lineSpacing(1.5)
         }
+        .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
         .margin(.bottom, .large)
         .background(.mediumSeaGreen.opacity(0.5))
 

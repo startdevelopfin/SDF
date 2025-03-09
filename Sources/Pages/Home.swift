@@ -18,18 +18,19 @@ struct Home: StaticLayout {
         Text("Welcome Swift enthusiasts!")
             .font(.title1)
         
-            Text("Enjoy a variety of posts focused on programming and the Swift community. Follow along as I use SwiftUI fundamentals to build cool apps and be sure to check out the latest content to stay up to date. Thank you for reading!")
-                .font(.lead)
-                .padding()
+        Text("Enjoy a variety of posts focused on programming and the Swift community. Follow along as I use SwiftUI fundamentals to build cool apps and be sure to check out the latest content to stay up to date. Thank you for reading!")
+            .font(.lead)
+            .padding()
+        
         Card {
-            Carousel {
-                Slide(background: "/images/photos/CardImage3.png")
-            }
-            .carouselStyle(.crossfade)
-            
+            Image("/images/photos/CardImage3.png")
+                .resizable()
+                .aspectRatio(.r21x9, contentMode: .fill)
+                .margin(.bottom, .small)
         }
         .cardStyle(.bordered)
         .background(.powderBlue.opacity(0.5))
+        
         Text("Latest")
             .font(.title2)
             .padding(.top)
