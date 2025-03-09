@@ -42,7 +42,7 @@ struct TCPart2: StaticLayout {
         
         Text("Last week, I created a simple Temperature Converter app using basic Swift concepts. This week, lets take it to the next level by implementing more advanced Swift features. In this post, we will explore how they can make our code more robust, maintainable, and scalable.")
             .lineSpacing(1.75)
-            .margin(.bottom, .medium)
+            .margin(.vertical, .large)
         
         // Enhanced Temperature Converter App Section
         Text("Enhanced Temperature Converter App 🌡️")
@@ -51,7 +51,7 @@ struct TCPart2: StaticLayout {
         
         Text("Here's how I've updated the app:")
             .lineSpacing(1.75)
-            .margin(.bottom, .medium)
+            .margin(.vertical, .large)
         
         List {
             Text("Improved the UI with validation feedback")
@@ -60,7 +60,7 @@ struct TCPart2: StaticLayout {
             Text("Created a robust architecture using protocols and classes")
             Text("Added conversion history tracking")
         }
-        .margin(.vertical, .medium)
+        .margin(.vertical, .large)
         
         // Error Handling Section
         Text("Error Handling with Throwing Functions ⚠️")
@@ -69,7 +69,7 @@ struct TCPart2: StaticLayout {
         
         Text("Instead of silently failing when users enter invalid input, we can use Swift's error handling system to provide meaningful feedback.")
             .lineSpacing(1.75)
-            .margin(.bottom, .medium)
+            .margin(.vertical, .large)
         
         CodeBlock(.swift) {
             """
@@ -98,7 +98,7 @@ struct TCPart2: StaticLayout {
         
         Text("Using the throws keyword tells Swift that this function can throw errors, which must be handled by the caller using do-try-catch. This makes the app more robust by gracefully handling errors rather than simply crashing.")
             .lineSpacing(1.75)
-            .margin(.vertical, .medium)
+            .margin(.vertical, .large)
         
         CodeBlock(.swift) {
             """
@@ -121,7 +121,7 @@ struct TCPart2: StaticLayout {
         
         Text("I use an optional String to represent an error message that might or might not exist:")
             .lineSpacing(1.75)
-            .margin(.bottom, .medium)
+            .margin(.vertical, .large)
         
         CodeBlock(.swift) {
             """
@@ -132,7 +132,7 @@ struct TCPart2: StaticLayout {
         
         Text("When displaying it, I use nil coalescing to provide a default. This is a clean way to handle potentially absent values:")
             .lineSpacing(1.75)
-            .margin(.bottom, .medium)
+            .margin(.vertical, .large)
         
         CodeBlock(.swift) {
             """
@@ -148,7 +148,7 @@ struct TCPart2: StaticLayout {
         
         Text("The original app had conversion logic embedded directly in the view. Now, I've extracted it into a proper architecture using protocols and classes:")
             .lineSpacing(1.75)
-            .margin(.bottom, .medium)
+            .margin(.vertical, .large)
         
         CodeBlock(.swift) {
             """
@@ -236,7 +236,7 @@ struct TCPart2: StaticLayout {
         
         Text("This approach gives us:")
             .lineSpacing(1.75)
-            .margin(.vertical, .medium)
+            .margin(.vertical, .large)
         
         List {
             Text("Protocol-based design: Clear contract for what a temperature converter should do")
@@ -244,7 +244,7 @@ struct TCPart2: StaticLayout {
             Text("Access control: Public API with private implementation details")
             Text("Default parameter values: Convenience for common cases")
         }
-        .margin(.vertical, .medium)
+        .margin(.vertical, .large)
         
         // Structs and Computed Properties Section
         Text("Structs and Computed Properties for History Tracking 📝")
@@ -253,7 +253,7 @@ struct TCPart2: StaticLayout {
         
         Text("To track conversion history, I use a struct with computed properties:")
             .lineSpacing(1.75)
-            .margin(.bottom, .medium)
+            .margin(.vertical, .large)
         
         CodeBlock(.swift) {
             """
@@ -290,7 +290,7 @@ struct TCPart2: StaticLayout {
         
         Text("The formattedTimestamp computed property dynamically formats the timestamp whenever it's accessed, without needing to store the formatted string.")
             .lineSpacing(1.75)
-            .margin(.vertical, .medium)
+            .margin(.vertical, .large)
         
         // Closures Section
         Text("Using Closures for Button Actions 🔘")
@@ -299,7 +299,7 @@ struct TCPart2: StaticLayout {
         
         Text("In SwiftUI, we frequently use closures for button actions:")
             .lineSpacing(1.75)
-            .margin(.bottom, .medium)
+            .margin(.vertical, .large)
         
         CodeBlock(.swift) {
             """
@@ -319,7 +319,7 @@ struct TCPart2: StaticLayout {
         
         Text("The closure executes when the button is tapped. This is a powerful example of passing functions into functions.")
             .lineSpacing(1.75)
-            .margin(.vertical, .medium)
+            .margin(.vertical, .large)
         
         // Key Terms Section
         Text("Key Terms I'm Adding to My Vocabulary 📝")
@@ -396,7 +396,7 @@ struct TCPart2: StaticLayout {
                 Link("Swift.org - Error Handling", target: "https://docs.swift.org/swift-book/LanguageGuide/ErrorHandling.html")
                         .fontWeight(.bold)
         }
-        .margin(.vertical, .medium)
+        .margin(.vertical, .large)
         
         Divider()
             .margin(.vertical, .large)

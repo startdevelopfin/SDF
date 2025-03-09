@@ -100,9 +100,9 @@
             <img alt="" src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/swiftuiweekly%2FTC0.png?alt=media&amp;token=f7a195f1-90d6-4db3-96b2-fba4449278d8" class="img-fluid object-fit-contain" />
           </div>
           <h3 class="my-4">Code Spotlight 💡: Building a Temperature Converter</h3>
-          <p class="mb-3" style="line-height: 1.8">This week was all about basic data types and building around one of the challenges I completed earlier in the week. TemperatureConverter is a simple, intuitive SwiftUI app that converts temperatures between Celsius, Fahrenheit, and Kelvin. Designed with best practices in mind, this app provides a clean user interface, real-time conversion, and accessibility support.</p>
+          <p class="my-4" style="line-height: 1.8">This week was all about basic data types and building around one of the challenges I completed earlier in the week. TemperatureConverter is a simple, intuitive SwiftUI app that converts temperatures between Celsius, Fahrenheit, and Kelvin. Designed with best practices in mind, this app provides a clean user interface, real-time conversion, and accessibility support.</p>
           <h3 class="my-4">State Management ⚙️</h3>
-          <p class="mb-3" style="line-height: 1.8">First, I set up three state properties to manage the dynamic interactions in the temperature converter:</p>
+          <p class="my-4" style="line-height: 1.8">First, I set up three state properties to manage the dynamic interactions in the temperature converter:</p>
           <pre style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px"><code class="language-swift">/// The user's input temperature as a string.
 @State private var inputTemperature: String = ""
 
@@ -112,23 +112,23 @@
 /// The selected output temperature unit.
 @State private var selectedOutputUnit: TemperatureUnit = .fahrenheit
 </code></pre>
-          <ul class="my-3">
+          <ul class="my-4">
             <li><p class="m-0">inputTemperature: A string that holds the temperature value entered by the user.</p></li>
             <li><p class="m-0">selectedInputUnit: The temperature unit chosen by the user for the input temperature (e.g., Celsius, Fahrenheit, or Kelvin).</p></li>
             <li><p class="m-0">selectedOutputUnit: The temperature unit selected by the user for the output temperature.</p></li>
           </ul>
-          <h3 class="mb-3 mt-4">Enum 🔑</h3>
-          <p class="mb-3" style="line-height: 1.8">What's noteworthy in this section is the use of a custom type, TemperatureUnit, to represent the various units of temperature (Celsius, Fahrenheit, and Kelvin).</p>
-          <p class="my-2" style="font-weight: 700">A. Enum Declaration</p>
-          <p class="mb-3" style="line-height: 1.8">The TemperatureUnit enum represents the different temperature units supported in the converter. It conforms to String and later I use CaseIterable and Identifiable to provide easy access and iteration over the available temperature units.</p>
+          <h3 class="my-4">Enum 🔑</h3>
+          <p class="my-4" style="line-height: 1.8">What's noteworthy in this section is the use of a custom type, TemperatureUnit, to represent the various units of temperature (Celsius, Fahrenheit, and Kelvin).</p>
+          <p class="my-4" style="font-weight: 700">A. Enum Declaration</p>
+          <p class="my-4" style="line-height: 1.8">The TemperatureUnit enum represents the different temperature units supported in the converter. It conforms to String and later I use CaseIterable and Identifiable to provide easy access and iteration over the available temperature units.</p>
           <pre style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px"><code class="language-swift">/// Represents the different temperature units supported in the converter.
 enum TemperatureUnit: String, CaseIterable, Identifiable {
     case celsius = "Celsius"
     case fahrenheit = "Fahrenheit"
     case kelvin = "Kelvin"
 }</code></pre>
-          <p class="my-2" style="font-weight: 700">B. Abbreviation Property</p>
-          <p class="mb-3" style="line-height: 1.8">This computed property returns the abbreviation for each temperature unit (°C for Celsius, °F for Fahrenheit, and K for Kelvin). This allows me to easily display the correct unit abbreviation based on the selected TemperatureUnit.</p>
+          <p class="my-4" style="font-weight: 700">B. Abbreviation Property</p>
+          <p class="my-4" style="line-height: 1.8">This computed property returns the abbreviation for each temperature unit (°C for Celsius, °F for Fahrenheit, and K for Kelvin). This allows me to easily display the correct unit abbreviation based on the selected TemperatureUnit.</p>
           <pre style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px"><code class="language-swift">/// The abbreviation for each temperature unit.
 var abbreviation: String {
     switch self {
@@ -140,14 +140,14 @@ var abbreviation: String {
         return "K"
     }
 }</code></pre>
-          <p class="my-2" style="font-weight: 700">C. Identifiable Conformance</p>
-          <p class="mb-3" style="line-height: 1.8">The id property returns the raw value (the string) of each case. This allows TemperatureUnit to conform to the Identifiable protocol.</p>
+          <p class="my-4" style="font-weight: 700">C. Identifiable Conformance</p>
+          <p class="my-4" style="line-height: 1.8">The id property returns the raw value (the string) of each case. This allows TemperatureUnit to conform to the Identifiable protocol.</p>
           <pre style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px"><code class="language-swift">/// The identifiable requirement
 var id: String { self.rawValue }</code></pre>
-          <p class="my-3" style="line-height: 1.8">By using an enum instead of raw strings, the app guarantees that only valid temperature units are selected, making the code more robust and easier to maintain. Additionally, the abbreviation computed property and conformance to Identifiable further enhance the usability and integration of the TemperatureUnit enum, providing a seamless experience in both the logic and the user interface.</p>
-          <h3 class="mb-3 mt-4">Conversion Logic 🧮</h3>
-          <p class="mb-3" style="line-height: 1.8">The app needed a way to store the core logic for converting temperatures between different units. Here's a breakdown of how my conversion function works:</p>
-          <p class="my-2" style="font-weight: 700">A. Function signature and the initial guard clause to ensure that the input can be converted to a Double:</p>
+          <p class="my-4" style="line-height: 1.8">By using an enum instead of raw strings, the app guarantees that only valid temperature units are selected, making the code more robust and easier to maintain. Additionally, the abbreviation computed property and conformance to Identifiable further enhance the usability and integration of the TemperatureUnit enum, providing a seamless experience in both the logic and the user interface.</p>
+          <h3 class="mt-4 my-4">Conversion Logic 🧮</h3>
+          <p class="my-4" style="line-height: 1.8">The app needed a way to store the core logic for converting temperatures between different units. Here's a breakdown of how my conversion function works:</p>
+          <p class="my-4" style="font-weight: 700">A. Function signature and the initial guard clause to ensure that the input can be converted to a Double:</p>
           <pre style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px"><code class="language-swift">/// Converts a given temperature from one unit to another.
 /// - Parameters:
 ///   - input: The temperature value to convert.
@@ -158,8 +158,8 @@ var id: String { self.rawValue }</code></pre>
 private func convertTemperature(_ input: String, from fromUnit: TemperatureUnit, to toUnit: TemperatureUnit) -&gt; String {
     guard let inputValue = Double(input) else { return "0.0" }
 }</code></pre>
-          <p class="my-3" style="line-height: 1.8">This function takes in the user's input temperature, the selected input unit, and the selected output unit. It performs the conversion by first converting the input temperature to Celsius, and then converting that Celsius value to the desired output unit.</p>
-          <ul class="my-3">
+          <p class="my-4" style="line-height: 1.8">This function takes in the user's input temperature, the selected input unit, and the selected output unit. It performs the conversion by first converting the input temperature to Celsius, and then converting that Celsius value to the desired output unit.</p>
+          <ul class="my-4">
             <li><p class="m-0" style="font-weight: 700">Input Parameters:</p></li>
             <li><p class="m-0">input: The temperature value to convert, provided as a string.</p></li>
             <li><p class="m-0">fromUnit: The selected input temperature unit (Celsius, Fahrenheit, or Kelvin).</p></li>
@@ -167,8 +167,8 @@ private func convertTemperature(_ input: String, from fromUnit: TemperatureUnit,
             <li><p class="m-0"></p><p class="mt-2" style="font-weight: 700">Returns:</p><p></p></li>
             <li><p class="m-0">A string containing the converted temperature, formatted to two decimal places.</p></li>
           </ul>
-          <p class="my-2" style="font-weight: 700">B. Converting Input Temperature to Celsius:</p>
-          <p class="mb-3" style="line-height: 1.8">This section handles the logic of converting the input temperature to Celsius based on the selected fromUnit.</p>
+          <p class="my-4" style="font-weight: 700">B. Converting Input Temperature to Celsius:</p>
+          <p class="my-4" style="line-height: 1.8">This section handles the logic of converting the input temperature to Celsius based on the selected fromUnit.</p>
           <pre style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px"><code class="language-swift">var valueInCelsius: Double
     
 // Convert input temperature to Celsius first
@@ -177,12 +177,12 @@ switch fromUnit {
     case .fahrenheit: valueInCelsius = (inputValue - 32) * 5 / 9
     case .kelvin: valueInCelsius = inputValue - 273.15
 }</code></pre>
-          <ul class="my-3">
+          <ul class="my-4">
             <li><p class="m-0">The input temperature is first converted to Celsius using the appropriate formula based on the selected fromUnit.</p></li>
             <li><p class="m-0">The converted Celsius value is then used to calculate the output temperature in the toUnit.</p></li>
           </ul>
-          <p class="my-2" style="font-weight: 700">C. Converting Celsius to Desired Output Unit:</p>
-          <p class="mb-3" style="line-height: 1.8">In this section, the temperature in Celsius is converted to the desired toUnit.</p>
+          <p class="my-4" style="font-weight: 700">C. Converting Celsius to Desired Output Unit:</p>
+          <p class="my-4" style="line-height: 1.8">In this section, the temperature in Celsius is converted to the desired toUnit.</p>
           <pre style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px"><code class="language-swift">var outputValue: Double
     
 // Convert from Celsius to the desired output unit
@@ -191,13 +191,13 @@ switch toUnit {
     case .fahrenheit: outputValue = (valueInCelsius * 9 / 5) + 32
     case .kelvin: outputValue = valueInCelsius + 273.15
 }</code></pre>
-          <p class="my-3" style="line-height: 1.8">This computed property automatically calls the convertTemperature function with the current input and unit selections, returning the converted temperature as a formatted string.</p>
-          <p class="my-2" style="font-weight: 700">D. Returning the Converted Temperature</p>
-          <p class="mb-3" style="line-height: 1.8">This final section formats the output value to two decimal places and returns it as a string.</p>
+          <p class="my-4" style="line-height: 1.8">This computed property automatically calls the convertTemperature function with the current input and unit selections, returning the converted temperature as a formatted string.</p>
+          <p class="my-4" style="font-weight: 700">D. Returning the Converted Temperature</p>
+          <p class="my-4" style="line-height: 1.8">This final section formats the output value to two decimal places and returns it as a string.</p>
           <pre style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px"><code class="language-swift">return String(format: "%.2f", outputValue)</code></pre>
-          <p class="my-3" style="line-height: 1.8">This function encapsulates the temperature conversion logic, ensuring that all necessary calculations are handled efficiently and accurately.</p>
+          <p class="my-4" style="line-height: 1.8">This function encapsulates the temperature conversion logic, ensuring that all necessary calculations are handled efficiently and accurately.</p>
           <h3 class="my-4">The Power of Swift's Type System ✅</h3>
-          <p class="my-3" style="line-height: 1.8">If I had to highlight just one thing I learned from this week, it would be Swift's strong type system. The type system stands out to me because it provides safety and clarity without disrupting the readability of my code.</p>
+          <p class="my-4" style="line-height: 1.8">If I had to highlight just one thing I learned from this week, it would be Swift's strong type system. The type system stands out to me because it provides safety and clarity without disrupting the readability of my code.</p>
           <h3 class="my-4">Key Terms I'm Adding to My Vocabulary 📝</h3>
           <table class="my-4 table" style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px">
             <tbody>
@@ -228,27 +228,27 @@ switch toUnit {
             </tbody>
           </table>
           <h3 class="my-4">Next Week's Focus 🎯</h3>
-          <p class="mb-3" style="line-height: 1.8">Looking ahead to Week 2, I'll be diving into:</p>
-          <ul class="my-3">
+          <p class="my-4" style="line-height: 1.8">Looking ahead to Week 2, I'll be diving into:</p>
+          <ul class="my-4">
             <li><p class="m-0">Closures - Swift's elegant functions on steroids</p></li>
             <li><p class="m-0">Structs - Creating custom data types with value semantics</p></li>
             <li><p class="m-0">Classes - Object-oriented programming in Swift</p></li>
             <li><p class="m-0">Protocols and Extensions - The secret to Swift's flexibility</p></li>
           </ul>
           <h3 class="my-4">Resources I Found Helpful ⚡️</h3>
-          <ul class="my-3">
+          <ul class="my-4">
             <li><a href="https://www.hackingwithswift.com/100/swiftui" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover m-0" style="font-weight: 700">Hacking with Swift</a></li>
           </ul>
           <hr class="my-4" />
-          <p>See the </p>
-          <a href="https://github.com/startdevelopfin/TemperatureConverter" class="link-plain link-underline link-underline-opacity-100 link-underline-opacity-100-hover"><p>complete implementation on GitHub</p></a>
-          <p class="mt-4" style="font-weight: 300">SwiftUI Fundamentals - The first example app TemperatureConverter</p>
+          <p>See the complete implementation GitHub</p>
+          <a href="https://github.com/startdevelopfin/TemperatureConverter" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover">Temperature Converter</a>
+          <p class="mt-4" style="font-weight: 300">SwiftUI Fundamentals - The second example app TemperatureConverter 2.0</p>
         </div>
       </div>
       <div class="col-md-3">
         <div class="sticky-top" style="padding-top: 80px">
           <h3>Read this next…</h3>
-          <div class="card" style="background-color: rgb(106 90 205 / 50%); border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; margin-bottom: 20px">
+          <div class="card" style="background-color: rgb(255 99 71 / 50%); border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; margin-bottom: 20px">
             <img alt="" src="/images/photos/mentorshipCard.png" class="card-img-top" />
             <div class="card-header">
               <h2><a href="/article/mentorship" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover">Mentorship 📚</a></h2>
