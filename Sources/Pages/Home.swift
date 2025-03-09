@@ -22,15 +22,15 @@ struct Home: StaticLayout {
             .font(.lead)
             .fontWeight(.semibold)
             .padding()
-        
-        Card {
+
             Image("/images/photos/CardImage3.png")
-                .resizable()
-                .aspectRatio(.r21x9, contentMode: .fill)
-                .margin(.bottom, .small)
-        }
-        .cardStyle(.bordered)
-        .background(.powderBlue.opacity(0.5))
+            .resizable()
+            .aspectRatio(.r21x9, contentMode: .fill)
+            .clipped()
+            .cornerRadius(12)
+            .border(.powderBlue, width: 6, style: .solid, cornerRadii: .init(), edges: .all)
+            .margin(.bottom, .xLarge)
+
         
         Text("Latest")
             .font(.title2)
