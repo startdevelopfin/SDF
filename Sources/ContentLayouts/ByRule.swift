@@ -89,7 +89,6 @@ struct ByRule: StaticLayout {
             .margin(.top, .large)
             .margin(.bottom, .large)
     
-    Card {
         Table {
             Row {
                 Text("Feature")
@@ -182,8 +181,9 @@ struct ByRule: StaticLayout {
                     .fontWeight(.semibold)
             }
         }
-    }
-    .background(.powderBlue.opacity(0.5))
+        .cornerRadius(12)
+        .border(.powderBlue, width: 6, style: .solid, cornerRadii: .init(), edges: .all)
+
         // Download section
         Text("Download Today ✅")
             .font(.title2)
