@@ -20,6 +20,7 @@ struct Home: StaticLayout {
         
         Text("Enjoy a variety of posts focused on programming and the Swift community. Follow along as I use SwiftUI fundamentals to build cool apps and be sure to check out the latest content to stay up to date. Thank you for reading!")
             .font(.lead)
+            .fontWeight(.semibold)
             .padding()
         
         Card {
@@ -40,6 +41,7 @@ struct Home: StaticLayout {
                 ContentPreview(for: item)
                     .width(4)
                     .margin(.bottom)
+                    .border(.black, width: 4, style: .solid, cornerRadii: .init(12), edges: .all)
             }
         }
         .margin(.bottom, .xLarge)
