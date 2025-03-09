@@ -27,7 +27,7 @@ struct About: StaticLayout {
             
             Text("I create intuitive iOS applications that solve real problems while maintaining clean, maintainable codebases. When I'm not building software, I'm sharing knowledge through:")
                 .fontWeight(.semibold)
-                .padding(.horizontal)
+                .padding(.horizontal, 4)
                 .lineSpacing(1.5)
             
             List {
@@ -42,7 +42,7 @@ struct About: StaticLayout {
                     .fontWeight(.semibold)
             }
             .listMarkerStyle(.custom("⚡️"))
-            .margin(.bottom, .small)
+            .margin(.bottom, .medium)
                 
         }
         .cardStyle(.bordered)
@@ -57,8 +57,9 @@ struct About: StaticLayout {
             
             Text("I believe great software emerges from the intersection of technical excellence and intuitive design. As an independent developer, I have the freedom to pursue projects that align with this philosophy, whether client work or personal endeavors.")
                 .fontWeight(.semibold)
-                .padding(.horizontal)
+                .padding(.horizontal, 4)
                 .lineSpacing(1.5)
+                .margin(.bottom, .medium)
         }
         .cardStyle(.bordered)
         .margin(.bottom, .large)
@@ -72,8 +73,9 @@ struct About: StaticLayout {
             
             Text("Whether you're looking for development expertise, considering a mentorship opportunity, or interested in having me speak at your event, I welcome the conversation. While this blog offers insights into my technical perspective, you can learn more about my professional background on LinkedIn or follow my coding journey on GitHub.")
                 .fontWeight(.semibold)
-                .padding(.horizontal)
+                .padding(.horizontal, 4)
                 .lineSpacing(1.5)
+                .margin(.bottom, .medium)
         }
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
         .margin(.bottom, .large)
