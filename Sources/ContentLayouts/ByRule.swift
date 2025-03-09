@@ -181,7 +181,6 @@ struct ByRule: StaticLayout {
                     .fontWeight(.semibold)
             }
         }
-        .clipped()
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
 
         // Download section
