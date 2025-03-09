@@ -29,6 +29,7 @@ struct ByRule: StaticLayout {
                 .clipped()
                 .cornerRadius(12)
                 .border(.powderBlue, width: 6, style: .solid, cornerRadii: .init(), edges: .all)
+                .innerShadow(radius: 5)
                 .margin(.bottom, .xLarge)
 
         Card {
@@ -48,6 +49,7 @@ struct ByRule: StaticLayout {
                     .margin(.top, .medium)
                     .margin(.bottom, .medium)
             .background(.paleGoldenRod.opacity(0.75))
+            .innerShadow(radius: 5)
             
             Text("Basketball officiating demands split-second decision making based on thorough rules knowledge and on-court experience. Whether you're preparing for certification, advancing your career, or simply want to understand the game better, By Rule provides everything you need to refine and refresh your skills.")
                 .padding(4)
@@ -58,6 +60,7 @@ struct ByRule: StaticLayout {
         }
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
         .background(.mediumSeaGreen.opacity(0.5))
+        .innerShadow(radius: 5)
         .margin(.bottom, .large)
         
 //        Grid {
