@@ -63,29 +63,7 @@ struct ByRule: StaticLayout {
         .innerShadow(radius: 5)
         .margin(.bottom, .large)
         
-//        Grid {
-            
-//            Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/QuickStart.png?alt=media&token=36d0a74a-45d4-4c31-b3ef-ddb059f41cfc")
-//                .resizable()
-//            
-//            Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/2%2Fillustration4New.png?alt=media&token=54d3be3f-9901-4aa1-9fbc-70e2a578c09d")
-//                .resizable()
-//            
-//            Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/Illustration19New.png?alt=media&token=705b545c-9c6e-4367-b6da-36eb2b7282ef")
-//                .resizable()
-//            
-//            Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/Illustration14.png?alt=media&token=1e7218f9-fd8e-418e-ba57-263a30519e99")
-//                .resizable()
-
-//            Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/8%2FIllustration3New.png?alt=media&token=81db44eb-fef4-4f26-903e-ab7facda0b64")
-//                .resizable()
-//            .width(5)
-
-//        }
-//        .columns(1)
-        .margin(.bottom, .xLarge)
-        
-        
+     
         // Features section
         Text("Key Features 🔑")
             .font(.title2)
