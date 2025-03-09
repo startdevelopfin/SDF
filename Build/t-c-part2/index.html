@@ -100,10 +100,10 @@
             <img alt="" src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/swiftuiweekly%2FTC01.png?alt=media&amp;token=1da40d82-d6b2-4ef4-816e-8a75afca1b26" class="img-fluid object-fit-contain" />
           </div>
           <h3 class="my-4">To Be Continued... 📝</h3>
-          <p class="mb-3" style="line-height: 1.8">Last week, I created a simple Temperature Converter app using basic Swift concepts. This week, lets take it to the next level by implementing more advanced Swift features. In this post, we will explore how they can make our code more robust, maintainable, and scalable.</p>
+          <p class="my-4" style="line-height: 1.8">Last week, I created a simple Temperature Converter app using basic Swift concepts. This week, lets take it to the next level by implementing more advanced Swift features. In this post, we will explore how they can make our code more robust, maintainable, and scalable.</p>
           <h3 class="my-4">Enhanced Temperature Converter App 🌡️</h3>
-          <p class="mb-3" style="line-height: 1.8">Here's how I've updated the app:</p>
-          <ul class="my-3">
+          <p class="my-4" style="line-height: 1.8">Here's how I've updated the app:</p>
+          <ul class="my-4">
             <li><p class="m-0">Improved the UI with validation feedback</p></li>
             <li><p class="m-0">Implemented error handling for invalid inputs</p></li>
             <li><p class="m-0">Added decimal place precision control</p></li>
@@ -111,7 +111,7 @@
             <li><p class="m-0">Added conversion history tracking</p></li>
           </ul>
           <h3 class="my-4">Error Handling with Throwing Functions ⚠️</h3>
-          <p class="mb-3" style="line-height: 1.8">Instead of silently failing when users enter invalid input, we can use Swift's error handling system to provide meaningful feedback.</p>
+          <p class="my-4" style="line-height: 1.8">Instead of silently failing when users enter invalid input, we can use Swift's error handling system to provide meaningful feedback.</p>
           <pre style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px"><code class="language-swift">/// Errors that can occur during temperature conversion.
 enum TemperatureError: Error {
 case invalidInput
@@ -131,7 +131,7 @@ func convert(_ value: String, from fromUnit: TemperatureUnit, to toUnit: Tempera
         throw TemperatureError.invalidInput
     }
 }</code></pre>
-          <p class="my-3" style="line-height: 1.8">Using the throws keyword tells Swift that this function can throw errors, which must be handled by the caller using do-try-catch. This makes the app more robust by gracefully handling errors rather than simply crashing.</p>
+          <p class="my-4" style="line-height: 1.8">Using the throws keyword tells Swift that this function can throw errors, which must be handled by the caller using do-try-catch. This makes the app more robust by gracefully handling errors rather than simply crashing.</p>
           <pre style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px"><code class="language-swift">do {
     let result = try converter.convert(inputTemperature, from: fromUnit, to: toUnit)
     // Use the result
@@ -141,12 +141,12 @@ func convert(_ value: String, from fromUnit: TemperatureUnit, to toUnit: Tempera
     // All other errors
 }</code></pre>
           <h3 class="my-4">Optionals for Error Handling 🔄</h3>
-          <p class="mb-3" style="line-height: 1.8">I use an optional String to represent an error message that might or might not exist:</p>
+          <p class="my-4" style="line-height: 1.8">I use an optional String to represent an error message that might or might not exist:</p>
           <pre style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px"><code class="language-swift">@State private var errorMessage: String? = nil</code></pre>
-          <p class="mb-3" style="line-height: 1.8">When displaying it, I use nil coalescing to provide a default. This is a clean way to handle potentially absent values:</p>
+          <p class="my-4" style="line-height: 1.8">When displaying it, I use nil coalescing to provide a default. This is a clean way to handle potentially absent values:</p>
           <pre style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px"><code class="language-swift">Text(errorMessage ?? "An unknown error occurred")</code></pre>
           <h3 class="my-4">Protocols and Classes for Conversion Logic 🧩</h3>
-          <p class="mb-3" style="line-height: 1.8">The original app had conversion logic embedded directly in the view. Now, I've extracted it into a proper architecture using protocols and classes:</p>
+          <p class="my-4" style="line-height: 1.8">The original app had conversion logic embedded directly in the view. Now, I've extracted it into a proper architecture using protocols and classes:</p>
           <pre style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px"><code class="language-swift">// Define a protocol for temperature conversion
 protocol TemperatureConvertible {
     func convert(_ value: String, from fromUnit: TemperatureUnit, to toUnit: TemperatureUnit) throws -&gt; Double
@@ -225,15 +225,15 @@ final class TemperatureConverter: TemperatureConvertible {
         }
     }
 }</code></pre>
-          <p class="my-3" style="line-height: 1.8">This approach gives us:</p>
-          <ul class="my-3">
+          <p class="my-4" style="line-height: 1.8">This approach gives us:</p>
+          <ul class="my-4">
             <li><p class="m-0">Protocol-based design: Clear contract for what a temperature converter should do</p></li>
             <li><p class="m-0">Singleton pattern: Easy access to the converter throughout the app</p></li>
             <li><p class="m-0">Access control: Public API with private implementation details</p></li>
             <li><p class="m-0">Default parameter values: Convenience for common cases</p></li>
           </ul>
           <h3 class="my-4">Structs and Computed Properties for History Tracking 📝</h3>
-          <p class="mb-3" style="line-height: 1.8">To track conversion history, I use a struct with computed properties:</p>
+          <p class="my-4" style="line-height: 1.8">To track conversion history, I use a struct with computed properties:</p>
           <pre style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px"><code class="language-swift">/// Represents a temperature conversion record.
 struct TemperatureRecord: Identifiable {
     /// Unique identifier for the record.
@@ -261,9 +261,9 @@ struct TemperatureRecord: Identifiable {
         return formatter.string(from: timestamp)
     }
 }</code></pre>
-          <p class="my-3" style="line-height: 1.8">The formattedTimestamp computed property dynamically formats the timestamp whenever it's accessed, without needing to store the formatted string.</p>
+          <p class="my-4" style="line-height: 1.8">The formattedTimestamp computed property dynamically formats the timestamp whenever it's accessed, without needing to store the formatted string.</p>
           <h3 class="my-4">Using Closures for Button Actions 🔘</h3>
-          <p class="mb-3" style="line-height: 1.8">In SwiftUI, we frequently use closures for button actions:</p>
+          <p class="my-4" style="line-height: 1.8">In SwiftUI, we frequently use closures for button actions:</p>
           <pre style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px"><code class="language-swift">Button(action: {
     convertAndSave()  // This is a closure!
 }) {
@@ -274,7 +274,7 @@ struct TemperatureRecord: Identifiable {
         .foregroundColor(.white)
         .cornerRadius(8)
 }</code></pre>
-          <p class="my-3" style="line-height: 1.8">The closure executes when the button is tapped. This is a powerful example of passing functions into functions.</p>
+          <p class="my-4" style="line-height: 1.8">The closure executes when the button is tapped. This is a powerful example of passing functions into functions.</p>
           <h3 class="my-4">Key Terms I'm Adding to My Vocabulary 📝</h3>
           <table class="my-4 table" style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px">
             <tbody>
@@ -317,7 +317,7 @@ struct TemperatureRecord: Identifiable {
             </tbody>
           </table>
           <h3 class="my-4">Resources I Found Helpful ⚡️</h3>
-          <ul class="my-3">
+          <ul class="my-4">
             <li><a href="https://docs.swift.org/swift-book/LanguageGuide/ErrorHandling.html" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover m-0" style="font-weight: 700">Swift.org - Error Handling</a></li>
           </ul>
           <hr class="my-4" />
@@ -329,20 +329,18 @@ struct TemperatureRecord: Identifiable {
       <div class="col-md-3">
         <div class="sticky-top" style="padding-top: 80px">
           <h3>Read this next…</h3>
-          <div class="card" style="background-color: rgb(123 104 238 / 50%); border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; margin-bottom: 20px">
-            <img alt="" src="/images/photos/mentorshipCard.png" class="card-img-top" />
+          <div class="card" style="background-color: rgb(65 105 225 / 50%); border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; margin-bottom: 20px">
+            <img alt="" src="/images/photos/temperatureConverter.png" class="card-img-top" />
             <div class="card-header">
-              <h2><a href="/article/mentorship" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover">Mentorship 📚</a></h2>
+              <h2><a href="/swiftUI/temperatureConverter" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover">SwiftUI Fundamentals 🚀</a></h2>
             </div>
             <div class="card-body">
-              <p class="card-text mb-0">In this post, I reflect on the the power of Mentorship using excerpts from my second iOS Conference Talk.</p>
+              <p class="card-text mb-0">The first example app TemperatureConverter.</p>
             </div>
             <div class="card-footer text-body-secondary">
               <div style="margin-top: -5px">
-                <a href="/tags/mentorship" rel="tag" class="link-plain link-underline link-underline-opacity-100 link-underline-opacity-100-hover"><span class="badge rounded-pill text-bg-primary" style="margin-right: 5px">Mentorship</span></a>
-                <a href="/tags/community" rel="tag" class="link-plain link-underline link-underline-opacity-100 link-underline-opacity-100-hover"><span class="badge rounded-pill text-bg-primary" style="margin-right: 5px">Community</span></a>
-                <a href="/tags/n-s-spain" rel="tag" class="link-plain link-underline link-underline-opacity-100 link-underline-opacity-100-hover"><span class="badge rounded-pill text-bg-primary" style="margin-right: 5px">NSSpain</span></a>
-                <a href="/tags/article" rel="tag" class="link-plain link-underline link-underline-opacity-100 link-underline-opacity-100-hover"><span class="badge rounded-pill text-bg-primary" style="margin-right: 5px">Article</span></a>
+                <a href="/tags/swift-u-i" rel="tag" class="link-plain link-underline link-underline-opacity-100 link-underline-opacity-100-hover"><span class="badge rounded-pill text-bg-primary" style="margin-right: 5px">SwiftUI</span></a>
+                <a href="/tags/app" rel="tag" class="link-plain link-underline link-underline-opacity-100 link-underline-opacity-100-hover"><span class="badge rounded-pill text-bg-primary" style="margin-right: 5px">App</span></a>
               </div>
             </div>
           </div>

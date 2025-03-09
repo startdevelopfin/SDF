@@ -41,7 +41,7 @@ struct TemperatureConverter: StaticLayout {
         
         Text("This week was all about basic data types and building around one of the challenges I completed earlier in the week. TemperatureConverter is a simple, intuitive SwiftUI app that converts temperatures between Celsius, Fahrenheit, and Kelvin. Designed with best practices in mind, this app provides a clean user interface, real-time conversion, and accessibility support.")
             .lineSpacing(1.75)
-            .margin(.bottom, .medium)
+            .margin(.vertical, .large)
         
         // State Management Section
         Text("State Management ⚙️")
@@ -50,7 +50,7 @@ struct TemperatureConverter: StaticLayout {
         
         Text("First, I set up three state properties to manage the dynamic interactions in the temperature converter:")
             .lineSpacing(1.75)
-            .margin(.bottom, .medium)
+            .margin(.vertical, .large)
         
         CodeBlock(.swift) {
             """
@@ -72,25 +72,24 @@ struct TemperatureConverter: StaticLayout {
             Text("selectedInputUnit: The temperature unit chosen by the user for the input temperature (e.g., Celsius, Fahrenheit, or Kelvin).")
             Text("selectedOutputUnit: The temperature unit selected by the user for the output temperature.")
         }
-        .margin(.vertical, .medium)
+        .margin(.vertical, .large)
         
         // Enum Section
         Text("Enum 🔑")
             .font(.title3)
-            .margin(.top, .large)
-            .margin(.bottom, .medium)
+            .margin(.vertical, .large)
         
         Text("What's noteworthy in this section is the use of a custom type, TemperatureUnit, to represent the various units of temperature (Celsius, Fahrenheit, and Kelvin).")
             .lineSpacing(1.75)
-            .margin(.bottom, .medium)
+            .margin(.vertical, .large)
         
         Text("A. Enum Declaration")
             .fontWeight(.bold)
-            .margin(.vertical, .small)
+            .margin(.vertical, .large)
         
         Text("The TemperatureUnit enum represents the different temperature units supported in the converter. It conforms to String and later I use CaseIterable and Identifiable to provide easy access and iteration over the available temperature units.")
             .lineSpacing(1.75)
-            .margin(.bottom, .medium)
+            .margin(.vertical, .large)
         
         
         CodeBlock(.swift) {
@@ -108,11 +107,11 @@ struct TemperatureConverter: StaticLayout {
         
         Text("B. Abbreviation Property")
             .fontWeight(.bold)
-            .margin(.vertical, .small)
+            .margin(.vertical, .large)
         
         Text("This computed property returns the abbreviation for each temperature unit (°C for Celsius, °F for Fahrenheit, and K for Kelvin). This allows me to easily display the correct unit abbreviation based on the selected TemperatureUnit.")
             .lineSpacing(1.75)
-            .margin(.bottom, .medium)
+            .margin(.vertical, .large)
         
         
         CodeBlock(.swift) {
@@ -134,11 +133,11 @@ struct TemperatureConverter: StaticLayout {
         
         Text("C. Identifiable Conformance")
             .fontWeight(.bold)
-            .margin(.vertical, .small)
+            .margin(.vertical, .large)
         
         Text("The id property returns the raw value (the string) of each case. This allows TemperatureUnit to conform to the Identifiable protocol.")
             .lineSpacing(1.75)
-            .margin(.bottom, .medium)
+            .margin(.vertical, .large)
         
         CodeBlock(.swift) {
             """
@@ -150,21 +149,21 @@ struct TemperatureConverter: StaticLayout {
         
         Text("By using an enum instead of raw strings, the app guarantees that only valid temperature units are selected, making the code more robust and easier to maintain. Additionally, the abbreviation computed property and conformance to Identifiable further enhance the usability and integration of the TemperatureUnit enum, providing a seamless experience in both the logic and the user interface.")
             .lineSpacing(1.75)
-            .margin(.vertical, .medium)
+            .margin(.vertical, .large)
         
         // Conversion Logic Section
         Text("Conversion Logic 🧮")
             .font(.title3)
             .margin(.top, .large)
-            .margin(.bottom, .medium)
+            .margin(.vertical, .large)
         
         Text("The app needed a way to store the core logic for converting temperatures between different units. Here's a breakdown of how my conversion function works:")
             .lineSpacing(1.75)
-            .margin(.bottom, .medium)
+            .margin(.vertical, .large)
         
         Text("A. Function signature and the initial guard clause to ensure that the input can be converted to a Double:")
             .fontWeight(.bold)
-            .margin(.vertical, .small)
+            .margin(.vertical, .large)
         
         
         CodeBlock(.swift) {
@@ -185,7 +184,7 @@ struct TemperatureConverter: StaticLayout {
         
         Text("This function takes in the user's input temperature, the selected input unit, and the selected output unit. It performs the conversion by first converting the input temperature to Celsius, and then converting that Celsius value to the desired output unit.")
             .lineSpacing(1.75)
-            .margin(.vertical, .medium)
+            .margin(.vertical, .large)
         
         List {
             Text("Input Parameters:")
@@ -197,15 +196,15 @@ struct TemperatureConverter: StaticLayout {
             Text(Text("Returns:").fontWeight(.bold).margin(.top, .small))
             Text("A string containing the converted temperature, formatted to two decimal places.")
         }
-        .margin(.vertical, .medium)
+        .margin(.vertical, .large)
         
         Text("B. Converting Input Temperature to Celsius:")
             .fontWeight(.bold)
-            .margin(.vertical, .small)
+            .margin(.vertical, .large)
         
         Text("This section handles the logic of converting the input temperature to Celsius based on the selected fromUnit.")
             .lineSpacing(1.75)
-            .margin(.bottom, .medium)
+            .margin(.vertical, .large)
         
         
         CodeBlock(.swift) {
@@ -226,15 +225,15 @@ struct TemperatureConverter: StaticLayout {
             Text("The input temperature is first converted to Celsius using the appropriate formula based on the selected fromUnit.")
             Text("The converted Celsius value is then used to calculate the output temperature in the toUnit.")
         }
-        .margin(.vertical, .medium)
+        .margin(.vertical, .large)
         
         Text("C. Converting Celsius to Desired Output Unit:")
             .fontWeight(.bold)
-            .margin(.vertical, .small)
+            .margin(.vertical, .large)
         
         Text("In this section, the temperature in Celsius is converted to the desired toUnit.")
             .lineSpacing(1.75)
-            .margin(.bottom, .medium)
+            .margin(.vertical, .large)
         
         CodeBlock(.swift) {
             """
@@ -252,15 +251,15 @@ struct TemperatureConverter: StaticLayout {
         
         Text("This computed property automatically calls the convertTemperature function with the current input and unit selections, returning the converted temperature as a formatted string.")
             .lineSpacing(1.75)
-            .margin(.vertical, .medium)
+            .margin(.vertical, .large)
         
         Text("D. Returning the Converted Temperature")
             .fontWeight(.bold)
-            .margin(.vertical, .small)
+            .margin(.vertical, .large)
         
         Text("This final section formats the output value to two decimal places and returns it as a string.")
             .lineSpacing(1.75)
-            .margin(.bottom, .medium)
+            .margin(.vertical, .large)
         
         CodeBlock(.swift) {
             """
@@ -271,7 +270,7 @@ struct TemperatureConverter: StaticLayout {
         
         Text("This function encapsulates the temperature conversion logic, ensuring that all necessary calculations are handled efficiently and accurately.")
             .lineSpacing(1.75)
-            .margin(.vertical, .medium)
+            .margin(.vertical, .large)
         
         // The Power of Swift's Type System Section
         Text("The Power of Swift's Type System ✅")
@@ -280,7 +279,7 @@ struct TemperatureConverter: StaticLayout {
         
         Text("If I had to highlight just one thing I learned from this week, it would be Swift's strong type system. The type system stands out to me because it provides safety and clarity without disrupting the readability of my code.")
             .lineSpacing(1.75)
-            .margin(.vertical, .medium)
+            .margin(.vertical, .large)
         
         // Key Terms Section
         Text("Key Terms I'm Adding to My Vocabulary 📝")
@@ -337,7 +336,7 @@ struct TemperatureConverter: StaticLayout {
         
         Text("Looking ahead to Week 2, I'll be diving into:")
             .lineSpacing(1.75)
-            .margin(.bottom, .medium)
+            .margin(.vertical, .large)
         
         List {
             Text("Closures - Swift's elegant functions on steroids")
@@ -345,7 +344,7 @@ struct TemperatureConverter: StaticLayout {
             Text("Classes - Object-oriented programming in Swift")
             Text("Protocols and Extensions - The secret to Swift's flexibility")
         }
-        .margin(.vertical, .medium)
+        .margin(.vertical, .large)
         
         // Resources Section
         Text("Resources I Found Helpful ⚡️")
@@ -356,17 +355,16 @@ struct TemperatureConverter: StaticLayout {
                 Link("Hacking with Swift", target: "https://www.hackingwithswift.com/100/swiftui")
                         .fontWeight(.bold)
         }
-        .margin(.vertical, .medium)
+        .margin(.vertical, .large)
         
         Divider()
             .margin(.vertical, .large)
         
-        Text("See the ")
-        Link(target: "https://github.com/startdevelopfin/TemperatureConverter") {
-            Text("complete implementation on GitHub")
-        }
+        Text("See the complete implementation GitHub")
         
-        Text("SwiftUI Fundamentals - The first example app TemperatureConverter")
+        Link("Temperature Converter", target: "https://github.com/startdevelopfin/TemperatureConverter")
+        
+        Text("SwiftUI Fundamentals - The second example app TemperatureConverter 2.0")
             .fontWeight(.light)
             .margin(.top, .large)
     }
