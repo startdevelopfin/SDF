@@ -18,15 +18,19 @@ struct ByRule: StaticLayout {
                 .fontWeight(.bold)
             
             Text("NCAA Rules Study & Quiz")
-                .font(.title3)
+                .font(.title4)
                 .fontWeight(.semibold)
         }
         
-        
-        Carousel {
-            Slide(background: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/Twitter%20Cover%20PNG.png?alt=media&token=645e4185-4f66-4efb-9ae2-58513e5875f7")
+        Card {
+            Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/Twitter%20Cover%20PNG.png?alt=media&token=645e4185-4f66-4efb-9ae2-58513e5875f7")
+                .resizable()
+                .aspectRatio(.r21x9, contentMode: .fill)
+                .clipped()
+                .cornerRadius(12)
         }
-        .carouselStyle(.crossfade)
+        .cardStyle(.default)
+        .background(.powderBlue.opacity(0.5))
         .margin(.bottom, .xLarge)
 
         Card {
@@ -40,16 +44,24 @@ struct ByRule: StaticLayout {
                 .fontWeight(.semibold)
                 .font(.title5)
             
-            Table {
-                Row {
-                    ZStack {
-                        Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/Illustration19New.png?alt=media&token=705b545c-9c6e-4367-b6da-36eb2b7282ef")
-                            .width(4)
-                            .margin(.bottom, .small)
-                    }
-                    .background(.paleGoldenRod.opacity(0.75))
-                }
+//            Table {
+//                Row {
+//                    VStack {
+//                        Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/Illustration19New.png?alt=media&token=705b545c-9c6e-4367-b6da-36eb2b7282ef")
+//                            .resizable()
+//                            .margin(.bottom, .small)
+//                    }
+//                    .background(.paleGoldenRod.opacity(0.75))
+//                }
+            //            }
+            
+            Grid {
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/Illustration19New.png?alt=media&token=705b545c-9c6e-4367-b6da-36eb2b7282ef")
+                    .resizable()
+                    .aspectRatio(.r21x9, contentMode: .fit)
+                    .margin(.bottom, .small)
             }
+            .background(.paleGoldenRod.opacity(0.75))
             
             Text("Basketball officiating demands split-second decision making based on thorough rules knowledge and on-court experience. Whether you're preparing for certification, advancing your career, or simply want to understand the game better, By Rule provides everything you need to refine and refresh your skills.")
                 .padding()
@@ -58,6 +70,7 @@ struct ByRule: StaticLayout {
                 .fontWeight(.semibold)
             
         }
+        .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
         .background(.mediumSeaGreen.opacity(0.5))
         .margin(.bottom, .large)
         
