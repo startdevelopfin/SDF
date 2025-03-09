@@ -26,6 +26,7 @@ struct SuggestedArticleLayout: Layout {
 
                     if let latest = articles.all.randomElement() {
                         ContentPreview(for: latest)
+                            .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
                     }
                 }
                 .width(3)
