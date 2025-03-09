@@ -12,16 +12,15 @@ import Ignite
 struct NavBar: HTML {
     var body: some HTML {
         NavigationBar(logo: Text(markdown: "Start. <span style='color: #6B8E23;'>Develop</span>. Finish.")) {
-            Dropdown("SwiftUI Projects") {
+            Dropdown("SwiftUI Tutorials") {
                 Text(markdown: "[Temperature Converter](/swiftUI/temperatureConverter)")
                 Text(markdown: "[Temperature Converter pt. 2](/swiftUI/temperatureConverter2)")
             }
             Dropdown("App Store") {
-                Link("By Rule", target: "https://byruleapp.com")
-                Link("New By Rule", target: ByRuleLayout())
+                Link("By Rule", target: ByRule())
             }
             Dropdown("Info") {
-                Text(markdown: "[About](/info/about)")
+                Link("About", target: About())
             }
             
         }

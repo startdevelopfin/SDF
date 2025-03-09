@@ -13,13 +13,13 @@ import Ignite
 /// components with builtIn icons, external links and custom attributes.
 struct SocialFooter: HTML {
     let icons = [
+//        Image(systemName: "linkedIn"),
         Image(systemName: "github"),
-        Image(systemName: "twitter"),
     ]
-
+    
     let urlStrings = [
+//        "https://www.linkedin.com/in/daniel-j-a-094615205/",
         "https://github.com/startdevelopfin",
-        "https://twitter.com/startdevelopfin",
     ]
 
     var body: some HTML {

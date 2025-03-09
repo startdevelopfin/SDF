@@ -36,7 +36,8 @@ struct SDF: Site {
     }
     
     var staticLayouts: [any StaticLayout] {
-        ByRuleLayout()
+        ByRule()
+        About()
     }
 }
 

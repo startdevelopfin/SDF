@@ -1,5 +1,5 @@
 //
-//  Bento.swift
+//  ByRuleLayout.swift
 //  IgniteStarter
 //
 //  Created by Dan Aupont on 3/8/25.
@@ -9,7 +9,7 @@ import Foundation
 import Ignite
 import SwiftUI
 
-struct ByRuleLayout: StaticLayout {
+struct ByRule: StaticLayout {
     var title = "By Rule: Basketball Official"
 
     var body: some HTML {
