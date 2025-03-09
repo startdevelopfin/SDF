@@ -1,0 +1,226 @@
+<!doctype html>
+<html data-bs-theme="auto" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="Daniel J. Aupont" name="author" />
+    <meta content="Ignite v0.2.1" name="generator" />
+    <title>By Rule: Basketball Official – Swift Blog Site</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/prism-xcode-dark.css" rel="stylesheet" data-highlight-theme="xcode-dark" />
+    <link href="/css/prism-xcode-light.css" rel="stylesheet" data-highlight-theme="xcode-light" />
+    <link href="/css/prism-plugins.css" rel="stylesheet" />
+    <link href="/css/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="/css/ignite-core.min.css" rel="stylesheet" />
+    <link href="https://startdevelopfinish.com/by-rule-layout" rel="canonical" />
+    <script>(function() {
+    function getThemePreference() {
+        return localStorage.getItem('custom-theme') || 'auto';
+    }
+
+    function applyTheme(themeID) {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const lightThemeID = document.documentElement.getAttribute('data-light-theme') || 'light';
+        const darkThemeID = document.documentElement.getAttribute('data-dark-theme') || 'dark';
+        const actualThemeID = themeID === 'auto' ? (prefersDark ? darkThemeID : lightThemeID) : themeID;
+
+        document.documentElement.setAttribute('data-bs-theme', actualThemeID);
+        document.documentElement.setAttribute('data-theme-state', themeID);
+    }
+
+    function applySyntaxTheme() {
+        const syntaxTheme = getComputedStyle(document.documentElement)
+            .getPropertyValue('--syntax-highlight-theme').trim().replace(/"/g, '');
+
+        if (!syntaxTheme) return;
+
+        document.querySelectorAll('link[data-highlight-theme]').forEach(link => {
+            link.setAttribute('disabled', 'disabled');
+        });
+
+        const themeLink = document.querySelector(`link[data-highlight-theme="${syntaxTheme}"]`);
+        if (themeLink) {
+            themeLink.removeAttribute('disabled');
+        }
+    }
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        const currentTheme = getThemePreference();
+        if (currentTheme === 'auto') {
+            applyTheme('auto');
+            applySyntaxTheme();
+        }
+    });
+
+    const savedTheme = getThemePreference();
+    applyTheme(savedTheme);
+    applySyntaxTheme();
+})();
+</script>
+    <meta content="Start. Develop. Finish." property="og:site_name" />
+    <meta content="By Rule: Basketball Official" property="og:title" />
+    <meta content="By Rule: Basketball Official" name="twitter:title" />
+    <meta content="https://startdevelopfinish.com/by-rule-layout" property="og:url" />
+    <meta content="startdevelopfinish.com" name="twitter:domain" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="on" name="twitter:dnt" />
+  </head>
+  <body class="container">
+    <header>
+      <nav class="fixed-top navbar navbar-expand-md" style="background-color: rgb(0 0 0 / 100%)" data-bs-theme="dark">
+        <div class="container">
+          <a href="/" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover navbar-brand"><p class="mb-0">Start. <span style="color: #6B8E23;">Develop</span>. Finish.</p></a>
+          <button type="button" class="btn navbar-toggler" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="col justify-content-end mb-2 mb-md-0 navbar-nav">
+              <li class="dropdown nav-item" data-bs-theme="light"><a href="#" role="button" class="dropdown dropdown-toggle link-underline link-underline-opacity-100 link-underline-opacity-100-hover nav-link" data-bs-toggle="dropdown" aria-expanded="false">SwiftUI Projects</a>
+                <ul class="dropdown dropdown-menu">
+                  <li><p class="dropdown-header"><a href="/swiftUI/temperatureConverter">Temperature Converter</a></p></li>
+                  <li><p class="dropdown-header"><a href="/swiftUI/temperatureConverter2">Temperature Converter pt. 2</a></p></li>
+                </ul></li>
+              <li class="dropdown nav-item" data-bs-theme="light"><a href="#" role="button" class="active dropdown dropdown-toggle link-underline link-underline-opacity-100 link-underline-opacity-100-hover nav-link" data-bs-toggle="dropdown" aria-expanded="false">App Store</a>
+                <ul class="dropdown dropdown-menu">
+                  <li><a href="https://byruleapp.com" class="dropdown-item link-underline link-underline-opacity-100 link-underline-opacity-100-hover">By Rule</a></li>
+                  <li><a href="/by-rule-layout" class="active dropdown-item link-underline link-underline-opacity-100 link-underline-opacity-100-hover" aria-current="page">New By Rule</a></li>
+                </ul></li>
+              <li class="dropdown nav-item" data-bs-theme="light"><a href="#" role="button" class="dropdown dropdown-toggle link-underline link-underline-opacity-100 link-underline-opacity-100-hover nav-link" data-bs-toggle="dropdown" aria-expanded="false">Info</a>
+                <ul class="dropdown dropdown-menu">
+                  <li><p class="dropdown-header"><a href="/info/about">About</a></p></li>
+                </ul></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="row">
+      <div class="col-md-9">
+        <div style="padding-bottom: 80px; padding-top: 80px">
+          <h1>By Rule: Basketball Official 🏀</h1>
+          <h2 style="font-weight: 300">NCAA Rules Study &amp; Quiz</h2>
+          <p>Rule the game!</p>
+          <div id="carouselcmfj2" class="carousel carousel-fade mb-5 slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" class="active btn" data-bs-slide-to="0" data-bs-target="#carouselcmfj2" aria-current="true" aria-label="Slide 1"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="active carousel-item" style="background-color: black">
+                <img alt="" src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/Twitter%20Cover%20PNG.png?alt=media&amp;token=645e4185-4f66-4efb-9ae2-58513e5875f7" class="d-block w-100" style="height: 100%; object-fit: cover; opacity: 1" />
+                <div class="container">
+                  <div class="carousel-caption"></div>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="btn carousel-control-prev" data-bs-slide="prev" data-bs-target="#carouselcmfj2"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
+            <button type="button" class="btn carousel-control-next" data-bs-slide="next" data-bs-target="#carouselcmfj2"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title mb-4">Why Choose By Rule? 💡</h2>
+              <p class="card-text">Basketball officiating demands split-second decision making based on thorough rules knowledge. Whether you're preparing for certification, advancing your career, or simply want to understand the game better, By Rule provides everything you need in one comprehensive package.</p>
+              <p class="card-text mb-2">By Rule is the premier study tool for basketball officials, coaches, players, and fans looking to engage NCAA basketball rules. With comprehensive study modules, interactive quizzes, and pointed training resources, this app is designed to elevate your officiating knowledge and confidence. For more information, visit the By Rule official app webpage</p>
+            </div>
+          </div>
+          <div class="mb-5 row row-cols-1 row-cols-md-5">
+            <div class="col">
+              <img alt="" src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/QuickStart.png?alt=media&amp;token=36d0a74a-45d4-4c31-b3ef-ddb059f41cfc" class="img-fluid" />
+            </div>
+            <div class="col">
+              <img alt="" src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/2%2Fillustration4New.png?alt=media&amp;token=54d3be3f-9901-4aa1-9fbc-70e2a578c09d" class="img-fluid" />
+            </div>
+            <div class="col">
+              <img alt="" src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/Illustration19New.png?alt=media&amp;token=705b545c-9c6e-4367-b6da-36eb2b7282ef" class="img-fluid" />
+            </div>
+            <div class="col">
+              <img alt="" src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/Illustration14.png?alt=media&amp;token=1e7218f9-fd8e-418e-ba57-263a30519e99" class="img-fluid" />
+            </div>
+            <div class="col">
+              <img alt="" src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/8%2FIllustration3New.png?alt=media&amp;token=81db44eb-fef4-4f26-903e-ab7facda0b64" class="img-fluid" />
+            </div>
+          </div>
+          <h3 class="mb-4 mt-4">Key Features 🔑</h3>
+          <div class="card">
+            <div class="card-body">
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <td><p style="font-weight: 700">Feature</p></td>
+                    <td><p style="font-weight: 700">Description</p></td>
+                  </tr>
+                  <tr>
+                    <td><p style="font-weight: 700">📚 Comprehensive Study System</p></td>
+                    <td><p>Simulate exam conditions with customizable rules mashups to prepare for any testing scenario.</p></td>
+                  </tr>
+                  <tr>
+                    <td><p style="font-weight: 700">🔍 Spotlight Learning</p></td>
+                    <td><p>Target specific rules (1-11) to improve areas where you need the most growth.</p></td>
+                  </tr>
+                  <tr>
+                    <td><p style="font-weight: 700">📖 Official NCAA Rules</p></td>
+                    <td><p>Access complete men's and women's rulebooks with searchable content for quick reference.</p></td>
+                  </tr>
+                  <tr>
+                    <td><p style="font-weight: 700">📱 Interactive Flashcards</p></td>
+                    <td><p>Build rules recall with 650+ professionally crafted cards designed by experienced officials.</p></td>
+                  </tr>
+                  <tr>
+                    <td><p style="font-weight: 700">✅ Challenging Quizzes</p></td>
+                    <td><p>Test your knowledge with real game scenarios that prepare you for on-court situations.</p></td>
+                  </tr>
+                  <tr>
+                    <td><p style="font-weight: 700">🎥 Video Training Library</p></td>
+                    <td><p>Watch instructional clips on officiating mechanics and techniques from experienced professionals.</p></td>
+                  </tr>
+                  <tr>
+                    <td><p style="font-weight: 700">🎧 Audio Rules</p></td>
+                    <td><p>Listen to rules on-the-go for convenient learning during commutes or workouts.</p></td>
+                  </tr>
+                  <tr>
+                    <td><p style="font-weight: 700">📊 Performance Analytics</p></td>
+                    <td><p>Track your progress and identify improvement areas with detailed performance metrics.</p></td>
+                  </tr>
+                  <tr>
+                    <td><p style="font-weight: 700">💬 Rules Chat</p></td>
+                    <td><p>Get insights directly from official documentation when you have specific questions.</p></td>
+                  </tr>
+                  <tr>
+                    <td><p style="font-weight: 700">⚙️ Customizable Experience</p></td>
+                    <td><p>Adjust font sizes, toggle between dark and light mode, and personalize your study sessions.</p></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <h2 class="mt-4">Download Today ✅</h2>
+          <a href="https://apps.apple.com/us/app/by-rule/id1532845521" class="link-plain link-underline link-underline-opacity-100 link-underline-opacity-100-hover"><img alt="" src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/NewLogo1.png?alt=media&amp;token=b8ffed6b-0a32-46a3-b0ea-d3058f9365a2" class="my-3" style="height: 200px" /></a>
+          <hr class="my-4" />
+          <p>By Rule: Basketball Official - NCAA Rules Study &amp; Quiz</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="sticky-top" style="padding-top: 80px">
+          <h3>Read this next…</h3>
+          <div class="card">
+            <img alt="" src="/images/photos/temperatureConverter2.png" class="card-img-top" />
+            <div class="card-header">
+              <h2><a href="/swiftUI/temperatureConverter2" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover">SwiftUI Fundamentals 🚀</a></h2>
+            </div>
+            <div class="card-body">
+              <p class="card-text mb-0">Part 2: Leveling up our Temperature Converter app with advanced Swift concepts</p>
+            </div>
+            <div class="card-footer text-body-secondary">
+              <div style="margin-top: -5px">
+                <a href="/tags/swift-u-i" rel="tag" class="link-plain link-underline link-underline-opacity-100 link-underline-opacity-100-hover"><span class="badge rounded-pill text-bg-primary" style="margin-right: 5px">SwiftUI</span></a>
+                <a href="/tags/100-days-of-swift-u-i" rel="tag" class="link-plain link-underline link-underline-opacity-100 link-underline-opacity-100-hover"><span class="badge rounded-pill text-bg-primary" style="margin-right: 5px">100DaysOfSwiftUI</span></a>
+                <a href="/tags/app" rel="tag" class="link-plain link-underline link-underline-opacity-100 link-underline-opacity-100-hover"><span class="badge rounded-pill text-bg-primary" style="margin-right: 5px">App</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="mt-5 text-center">Created in Swift with <a href="https://github.com/twostraws/Ignite" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover">Ignite</a></p>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/syntax-highlighting.js"></script>
+    <script src="/js/ignite-core.js"></script>
+  </body>
+</html>

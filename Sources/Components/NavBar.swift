@@ -18,6 +18,7 @@ struct NavBar: HTML {
             }
             Dropdown("App Store") {
                 Link("By Rule", target: "https://byruleapp.com")
+                Link("New By Rule", target: ByRuleLayout())
             }
             Dropdown("Info") {
                 Text(markdown: "[About](/info/about)")
