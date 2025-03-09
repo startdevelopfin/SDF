@@ -49,6 +49,7 @@ struct About: StaticLayout {
         .margin(.bottom, .large)
         .background(.lightSteelBlue.opacity(0.5))
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
+        .innerShadow(radius: 5)
 
         Card {
             Text("My Approach 🎯")
@@ -65,6 +66,7 @@ struct About: StaticLayout {
         .margin(.bottom, .large)
         .background(.sandyBrown.opacity(0.6))
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
+        .innerShadow(radius: 5)
         
         Card {
             Text("Let's Connect 🌍")
@@ -80,6 +82,7 @@ struct About: StaticLayout {
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
         .margin(.bottom, .large)
         .background(.mediumSeaGreen.opacity(0.5))
+        .innerShadow(radius: 5)
 
         SocialFooter()
     }
