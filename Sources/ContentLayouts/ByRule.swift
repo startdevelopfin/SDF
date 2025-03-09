@@ -23,16 +23,13 @@ struct ByRule: StaticLayout {
         }
         .padding(4)
         
-        Card {
             Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/Twitter%20Cover%20PNG.png?alt=media&token=645e4185-4f66-4efb-9ae2-58513e5875f7")
                 .resizable()
                 .aspectRatio(.r21x9, contentMode: .fill)
                 .clipped()
                 .cornerRadius(12)
-        }
-        .cardStyle(.default)
-        .background(.powderBlue.opacity(0.5))
-        .margin(.bottom, .xLarge)
+                .border(.powderBlue, width: 6, style: .solid, cornerRadii: .init(), edges: .all)
+                .margin(.bottom, .xLarge)
 
         Card {
             Text("Why Choose By Rule? 💡")
@@ -132,7 +129,7 @@ struct ByRule: StaticLayout {
                 Text("📱 Interactive Flashcards")
                     .font(.title6)
                     .fontWeight(.bold)
-                Text("Build rules recall with 650+ professionally crafted cards designed by experienced officials.")
+                Text("Build rules recall with 300+ professionally crafted cards designed by experienced officials.")
                     .fontWeight(.semibold)
             }
             

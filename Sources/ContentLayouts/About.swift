@@ -17,7 +17,7 @@ struct About: StaticLayout {
         Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/swiftuiweekly%2FPFP.png?alt=media&token=555d869c-661d-414b-8584-f26560226c44")
             .margin(.bottom, .xLarge)
             .cornerRadius(12)
-            .border(.honeydew, width: 4, style: .solid, cornerRadii: .init(), edges: .all)
+            .border(.powderBlue, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
         
 
         Card {
