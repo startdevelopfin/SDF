@@ -16,6 +16,8 @@ struct About: StaticLayout {
 
         Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/swiftuiweekly%2FPFP.png?alt=media&token=555d869c-661d-414b-8584-f26560226c44")
             .margin(.bottom, .xLarge)
+            .cornerRadius(12)
+            .border(.honeydew, width: 4, style: .solid, cornerRadii: .init(), edges: .all)
         
 
         Card {
@@ -41,7 +43,7 @@ struct About: StaticLayout {
                 
         }
         .margin(.bottom, .large)
-        .background(.steelBlue.opacity(0.5))
+        .background(.steelBlue.opacity(0.75))
 
         Card {
             Text("My Approach 🎯")
@@ -52,7 +54,7 @@ struct About: StaticLayout {
                 .fontWeight(.semibold)
         }
         .margin(.bottom, .large)
-        .background(.mediumTurquoise.opacity(0.5))
+        .background(.sandyBrown.opacity(0.6))
         
         Card {
             Text("Let's Connect 🌍")
