@@ -3,7 +3,7 @@ layout: Story
 author: Daniel J. Aupont
 description: SwiftUI Fundamentals - The first example app TemperatureConverter.
 date: 2025-03-8 09:00
-tags: SwiftUI, 100DaysOfSwiftUI, App
+tags: SwiftUI, App
 published: true
 image: /images/photos/temperatureConverter2.png
 ---

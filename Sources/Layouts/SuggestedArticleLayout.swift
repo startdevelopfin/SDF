@@ -13,68 +13,31 @@ struct SuggestedArticleLayout: Layout {
     
     
     let backgroundColors: [Color] = [
-        .aquamarine,
-        .burlyWood,
-        .bootstrapCyan,
-        .bootstrapTeal,
         .bootstrapGreen,
         .bootstrapPurple,
-        .coral,
-        .chocolate,
         .cadetBlue,
         .cornflowerBlue,
-        .dimGray,
-        .dimGrey,
         .darkCyan,
         .darkKhaki,
         .darkSalmon,
         .dodgerBlue,
-        .darkGoldenrod,
-        .darkTurquoise,
-        .deepSkyBlue,
         .darkSeaGreen,
         .darkSlateBlue,
-        .darkSlateGray,
-        .darkSlateGrey,
-        .darkOliveGreen,
-        .forestGreen,
-        .goldenrod,
-        .indianRed,
-        .khaki,
-        .lavender,
-        .lightBlue,
-        .lightPink,
-        .lightCoral,
-        .lightGreen,
-        .moccasin,
         .mediumPurple,
-        .mediumTurquoise,
         .mediumAquamarine,
-        .mediumSeaGreen,
         .mediumSlateBlue,
-        .olive,
-        .oliveDrab,
         .peru,
         .plum,
-        .paleGreen,
-        .paleGoldenRod,
-        .paleVioletRed,
         .rosyBrown,
         .royalBlue,
         .rebeccaPurple,
         .salmon,
         .sienna,
-        .skyBlue,
         .seaGreen,
         .slateBlue,
-        .slateGray,
-        .slateGrey,
         .steelBlue,
-        .sandyBrown,
-        .tan,
         .teal,
         .tomato,
-        .thistle,
     ]
 
     var body: some HTML {
@@ -92,7 +55,7 @@ struct SuggestedArticleLayout: Layout {
 
                     if let latest = articles.all.randomElement() {
                         
-                        let randomColor = backgroundColors.randomElement() ?? Color.burlyWood  // Pick a random Ignite color
+                        let randomColor = backgroundColors.randomElement() ?? Color.dodgerBlue  // Pick a random Ignite color
 
                         ContentPreview(for: latest)
                             .margin(.bottom)
