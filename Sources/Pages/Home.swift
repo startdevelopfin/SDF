@@ -28,8 +28,8 @@ struct Home: StaticLayout {
             .carouselStyle(.crossfade)
             
         }
-        .cardStyle(.default)
-
+        .cardStyle(.bordered)
+        .background(.powderBlue.opacity(0.5))
         Text("Latest")
             .font(.title2)
             .padding(.top)

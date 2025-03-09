@@ -15,12 +15,11 @@ struct ByRule: StaticLayout {
         Group {
             Text("By Rule: Basketball Official 🏀")
                 .font(.title1)
+                .fontWeight(.bold)
             
             Text("NCAA Rules Study & Quiz")
-                .font(.title2)
-                .fontWeight(.light)
-            
-            Text("Rule the game!")
+                .font(.title3)
+                .fontWeight(.semibold)
         }
         
         
@@ -48,7 +47,7 @@ struct ByRule: StaticLayout {
                             .width(4)
                             .margin(.bottom, .small)
                     }
-                    .background(.paleGoldenRod.opacity(0.5))
+                    .background(.paleGoldenRod.opacity(0.75))
                 }
             }
             
@@ -59,7 +58,7 @@ struct ByRule: StaticLayout {
                 .fontWeight(.semibold)
             
         }
-        .background(.mediumSeaGreen.opacity(0.35))
+        .background(.mediumSeaGreen.opacity(0.5))
         .margin(.bottom, .large)
         
 //        Grid {
@@ -185,7 +184,7 @@ struct ByRule: StaticLayout {
             }
         }
     }
-    .background(.oliveDrab.opacity(0.75))
+    .background(.powderBlue.opacity(0.5))
         // Download section
         Text("Download Today ✅")
             .font(.title2)
