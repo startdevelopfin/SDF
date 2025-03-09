@@ -10,6 +10,34 @@ import Ignite
 
 struct ByRule: StaticLayout {
     var title = "By Rule: Basketball Official"
+    
+    let backgroundColors: [Color] = [
+        .bootstrapGreen,
+        .bootstrapPurple,
+        .cadetBlue,
+        .cornflowerBlue,
+        .darkCyan,
+        .darkKhaki,
+        .darkSalmon,
+        .dodgerBlue,
+        .darkSeaGreen,
+        .darkSlateBlue,
+        .mediumPurple,
+        .mediumAquamarine,
+        .mediumSlateBlue,
+        .peru,
+        .plum,
+        .rosyBrown,
+        .royalBlue,
+        .rebeccaPurple,
+        .salmon,
+        .sienna,
+        .seaGreen,
+        .slateBlue,
+        .steelBlue,
+        .teal,
+        .tomato,
+    ]
 
     var body: some HTML {
         Group {
@@ -59,7 +87,7 @@ struct ByRule: StaticLayout {
             
         }
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
-        .background(.mediumSeaGreen.opacity(0.5))
+        .background(.darkSeaGreen.opacity(0.5))
         .innerShadow(radius: 5)
         .margin(.bottom, .large)
         

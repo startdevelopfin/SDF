@@ -9,6 +9,35 @@ import Ignite
 
 struct About: StaticLayout {
     var title = "By Rule: Basketball Official"
+    
+    let backgroundColors: [Color] = [
+        .bootstrapGreen,
+        .bootstrapPurple,
+        .cadetBlue,
+        .cornflowerBlue,
+        .darkCyan,
+        .darkKhaki,
+        .darkSalmon,
+        .dodgerBlue,
+        .darkSeaGreen,
+        .darkSlateBlue,
+        .mediumPurple,
+        .mediumAquamarine,
+        .mediumSlateBlue,
+        .peru,
+        .plum,
+        .rosyBrown,
+        .royalBlue,
+        .rebeccaPurple,
+        .salmon,
+        .sienna,
+        .seaGreen,
+        .slateBlue,
+        .steelBlue,
+        .teal,
+        .tomato,
+    ]
+    
 
     var body: some HTML {
         Text("About 👤")
@@ -47,7 +76,7 @@ struct About: StaticLayout {
         }
         .cardStyle(.bordered)
         .margin(.bottom, .large)
-        .background(.lightSteelBlue.opacity(0.5))
+        .background(.steelBlue.opacity(0.5))
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
         .innerShadow(radius: 5)
 
@@ -64,7 +93,7 @@ struct About: StaticLayout {
         }
         .cardStyle(.bordered)
         .margin(.bottom, .large)
-        .background(.sandyBrown.opacity(0.6))
+        .background(.darkSalmon.opacity(0.5))
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
         .innerShadow(radius: 5)
         
@@ -81,7 +110,7 @@ struct About: StaticLayout {
         }
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
         .margin(.bottom, .large)
-        .background(.mediumSeaGreen.opacity(0.5))
+        .background(.seaGreen.opacity(0.5))
         .innerShadow(radius: 5)
 
         SocialFooter()
