@@ -41,7 +41,7 @@ struct Home: StaticLayout {
                 ContentPreview(for: item)
                     .width(4)
                     .margin(.bottom)
-                    .border(.black, width: 4, style: .solid, cornerRadii: .init(12), edges: .all)
+                    .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
             }
         }
         .margin(.bottom, .xLarge)
