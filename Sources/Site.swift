@@ -25,7 +25,7 @@ struct SDF: Site {
     var feedConfiguration = FeedConfiguration(mode: .full, contentCount: 20)
     var robotsConfiguration = Robots()
     var author = "Daniel J. Aupont"
-
+    var pageWidth = 12
     var homePage = Home()
     var tagLayout = Tags()
     var layout = SuggestedArticleLayout()
@@ -34,4 +34,9 @@ struct SDF: Site {
         Story()
         CustomStory()
     }
+    
+    var staticLayouts: [any StaticLayout] {
+        ByRuleLayout()
+    }
 }
+

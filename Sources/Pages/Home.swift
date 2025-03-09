@@ -24,7 +24,6 @@ struct Home: StaticLayout {
         Card {
             Carousel {
                 Slide(background: "/images/photos/CardImage3.png")
-                Slide(background: "/images/photos/CardImage2.png")
             }
             .carouselStyle(.crossfade)
             
