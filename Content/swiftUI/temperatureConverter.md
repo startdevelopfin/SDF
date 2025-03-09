@@ -37,9 +37,6 @@ The first example app TemperatureConverter.
 ```
 <br></br>
 
-Using the `throws` keyword tells Swift that this function can throw errors, which must be handled by the caller using `do-try-catch`. This makes the app more robust by gracefully handling errors rather than simply crashing.
-
-
 1. `inputTemperature`: A string that holds the temperature value entered by the user.
 <br></br>
 2. `selectedInputUnit`: The temperature unit chosen by the user for the input temperature (e.g., Celsius, Fahrenheit, or Kelvin).
@@ -206,7 +203,7 @@ This function encapsulates the temperature conversion logic, ensuring that all n
 
 ## The Power of Swift's Type System ✅
 
-<p>If I had to highlight just one thing I learned from this week, it would be **Swift's strong type system**. The type system stands out to me because it provides safety and clarity without disrupting the readability of my code.</p>
+<p>If I had to highlight just one thing I learned from this week, it would be Swift's strong type system. The type system stands out to me because it provides safety and clarity without disrupting the readability of my code.</p>
 <br></br>
 
 ## Key Terms I'm Adding to My Vocabulary 📝
