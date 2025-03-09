@@ -39,33 +39,21 @@ struct ByRule: StaticLayout {
                 .margin(.bottom, .medium)
             
             Text("By Rule is the premier study tool for basketball officials, coaches, players, and fans looking to engage NCAA basketball rules. With comprehensive study modules, interactive quizzes, and pointed training resources, this app is designed to elevate your officiating knowledge and confidence.")
-                .lineSpacing(1.5)
+                .lineSpacing(1.75)
                 .padding(4)
                 .fontWeight(.semibold)
                 .font(.title6)
             
-//            Table {
-//                Row {
-//                    VStack {
-//                        Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/Illustration19New.png?alt=media&token=705b545c-9c6e-4367-b6da-36eb2b7282ef")
-//                            .resizable()
-//                            .margin(.bottom, .small)
-//                    }
-//                    .background(.paleGoldenRod.opacity(0.75))
-//                }
-            //            }
-            
-            Grid {
                 Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/Illustration19New.png?alt=media&token=705b545c-9c6e-4367-b6da-36eb2b7282ef")
                     .resizable()
                     .aspectRatio(.r21x9, contentMode: .fit)
-                    .margin(.bottom, .small)
-            }
+                    .margin(.top, .medium)
+                    .margin(.bottom, .medium)
             .background(.paleGoldenRod.opacity(0.75))
             
             Text("Basketball officiating demands split-second decision making based on thorough rules knowledge and on-court experience. Whether you're preparing for certification, advancing your career, or simply want to understand the game better, By Rule provides everything you need to refine and refresh your skills.")
                 .padding(4)
-                .lineSpacing(1.5)
+                .lineSpacing(1.75)
                 .font(.title6)
                 .fontWeight(.semibold)
             
@@ -116,7 +104,7 @@ struct ByRule: StaticLayout {
             
             Row {
                 Text("📚 Comprehensive Study System")
-                    .font(.title4)
+                    .font(.title6)
                     .fontWeight(.bold)
                 
                 Text("Simulate exam conditions with customizable rules mashups to prepare for any testing scenario.")
@@ -125,7 +113,7 @@ struct ByRule: StaticLayout {
             
             Row {
                 Text("🔍 Spotlight Learning")
-                    .font(.title4)
+                    .font(.title6)
                     .fontWeight(.bold)
                 Text("Target specific rules (1-11) to improve areas where you need the most growth.")
                     .fontWeight(.semibold)
@@ -133,7 +121,7 @@ struct ByRule: StaticLayout {
             
             Row {
                 Text("📖 Official NCAA Rules")
-                    .font(.title4)
+                    .font(.title6)
                     .fontWeight(.bold)
                 Text("Access complete men's and women's rulebooks with searchable content for quick reference.")
                     .fontWeight(.semibold)
@@ -141,7 +129,7 @@ struct ByRule: StaticLayout {
             
             Row {
                 Text("📱 Interactive Flashcards")
-                    .font(.title4)
+                    .font(.title6)
                     .fontWeight(.bold)
                 Text("Build rules recall with 650+ professionally crafted cards designed by experienced officials.")
                     .fontWeight(.semibold)
@@ -149,7 +137,7 @@ struct ByRule: StaticLayout {
             
             Row {
                 Text("✅ Challenging Quizzes")
-                    .font(.title4)
+                    .font(.title6)
                     .fontWeight(.bold)
                 Text("Test your knowledge with real game scenarios that prepare you for on-court situations.")
                     .fontWeight(.semibold)
@@ -157,7 +145,7 @@ struct ByRule: StaticLayout {
             
             Row {
                 Text("🎥 Video Training Library")
-                    .font(.title4)
+                    .font(.title6)
                     .fontWeight(.bold)
                 Text("Watch instructional clips on officiating mechanics and techniques from experienced professionals.")
                     .fontWeight(.semibold)
@@ -165,7 +153,7 @@ struct ByRule: StaticLayout {
             
             Row {
                 Text("🎧 Audio Rules")
-                    .font(.title4)
+                    .font(.title6)
                     .fontWeight(.bold)
                 
                 Text("Listen to rules on-the-go for convenient learning during commutes or workouts.")
@@ -174,7 +162,7 @@ struct ByRule: StaticLayout {
             
             Row {
                 Text("📊 Performance Analytics")
-                    .font(.title4)
+                    .font(.title6)
                     .fontWeight(.bold)
                 Text("Track your progress and identify improvement areas with detailed performance metrics.")
                     .fontWeight(.semibold)
@@ -182,7 +170,7 @@ struct ByRule: StaticLayout {
             
             Row {
                 Text("💬 Rules Chat")
-                    .font(.title4)
+                    .font(.title6)
                     .fontWeight(.bold)
                 Text("Get insights directly from official documentation when you have specific questions.")
                     .fontWeight(.semibold)
@@ -190,7 +178,7 @@ struct ByRule: StaticLayout {
             
             Row {
                 Text("⚙️ Customizable Experience")
-                    .font(.title4)
+                    .font(.title6)
                     .fontWeight(.bold)
                 Text("Adjust font sizes, toggle between dark and light mode, and personalize your study sessions.")
                     .fontWeight(.semibold)
