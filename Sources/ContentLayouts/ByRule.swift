@@ -14,13 +14,14 @@ struct ByRule: StaticLayout {
     var body: some HTML {
         Group {
             Text("By Rule: Basketball Official 🏀")
-                .font(.title1)
+                .font(.title2)
                 .fontWeight(.bold)
             
             Text("NCAA Rules Study & Quiz")
                 .font(.title4)
                 .fontWeight(.semibold)
         }
+        .padding(4)
         
         Card {
             Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/Twitter%20Cover%20PNG.png?alt=media&token=645e4185-4f66-4efb-9ae2-58513e5875f7")
