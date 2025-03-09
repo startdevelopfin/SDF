@@ -185,22 +185,6 @@ D. **Returning the Converted Temperature**
 This function encapsulates the temperature conversion logic, ensuring that all necessary calculations are handled efficiently and accurately.
 <br></br>
 
-<!--### User Interface 🚥-->
-<!---->
-<!--  In this section, we define the main body of the temperature converter view using a `NavigationView` and a vertical stack (`VStack`) to organize the UI elements. Here's how the layout is structured:-->
-<!---->
-<!--  <p><img src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/swiftuiweekly%2FTC3.png?alt=media&token=53d79c7d-e28a-45be-8756-52f68053703b" alt="User Interface for Temperature Converter" style="height: 400px;"/></p>-->
-<!---->
-<!--1. **`inputField()`**: A custom view builder that creates the input field for the user to enter the temperature value.-->
-<!--<br></br>-->
-<!--2. **`unitPicker`(title: selection: )**: A reusable view builder that creates a picker for selecting the input and output temperature units. It takes a `title` parameter to label each picker and a `selection` binding to update the selected unit.-->
-<!--<br></br>-->
-<!--3. **`convertedTemperatureView`()**: A custom view builder that displays the converted temperature result based on the user’s input and selected units.-->
-<!--<br></br>-->
-<!--4. **`Spacer`()**: Adds flexible space to push the content toward the top of the screen.-->
-<!---->
-<!--This structure keeps the UI clean, organized, and responsive, leveraging SwiftUI’s declarative syntax to dynamically update the view based on user interaction. -->
-
 ## The Power of Swift's Type System ✅
 
 <p>If I had to highlight just one thing I learned from this week, it would be Swift's strong type system. The type system stands out to me because it provides safety and clarity without disrupting the readability of my code.</p>
@@ -238,51 +222,3 @@ This function encapsulates the temperature conversion logic, ensuring that all n
 ---
 
 *See the [complete implementation on GitHub](https://github.com/startdevelopfin/TemperatureConverter)*
-
-<!---->
-<!---->
-<!--## How I Could Enhance My Temperature Converter App 🌡️-->
-<!---->
-<!--I could enhance my Temperature Converter app by:-->
-<!---->
-<!--1. Creating a `Temperature` protocol with requirements for any temperature unit-->
-<!--2. Implementing temperature units as structs conforming to this protocol-->
-<!--3. Adding extension methods for conversion between units-->
-<!--4. Using computed properties for formatted temperature strings-->
-<!--5. Improving the UI with more advanced SwiftUI techniques-->
-<!---->
-<!--For example, I could refactor the `TemperatureUnit` enum into a protocol and individual conforming structs:-->
-<!---->
-<!--```swift-->
-<!--protocol TemperatureUnit {-->
-<!--    var symbol: String { get }-->
-<!--    func convertToCelsius(_ value: Double) -> Double-->
-<!--    func convertFromCelsius(_ value: Double) -> Double-->
-<!--}-->
-<!---->
-<!--struct Celsius: TemperatureUnit {-->
-<!--    let symbol = "°C"-->
-<!--    -->
-<!--    func convertToCelsius(_ value: Double) -> Double {-->
-<!--        return value // Already in Celsius-->
-<!--    }-->
-<!--    -->
-<!--    func convertFromCelsius(_ value: Double) -> Double {-->
-<!--        return value // No conversion needed-->
-<!--    }-->
-<!--}-->
-<!---->
-<!--struct Fahrenheit: TemperatureUnit {-->
-<!--    let symbol = "°F"-->
-<!--    -->
-<!--    func convertToCelsius(_ value: Double) -> Double {-->
-<!--        return (value - 32) * 5 / 9-->
-<!--    }-->
-<!--    -->
-<!--    func convertFromCelsius(_ value: Double) -> Double {-->
-<!--        return (value * 9 / 5) + 32-->
-<!--    }-->
-<!--}-->
-<!--```-->
-<!---->
-<!--This approach would make the code more extensible and demonstrate the power of protocols and structs in Swift.-->

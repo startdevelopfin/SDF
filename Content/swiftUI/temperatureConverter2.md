@@ -9,7 +9,7 @@ image: /images/photos/temperatureConverter2.png
 ---
 
 # SwiftUI Fundamentals 🚀
-Part 2: Leveling up our Temperature Converter app with advanced Swift concepts
+Part 2: Leveling up our TemperatureConverter app with advanced Swift concepts
 
   <p><img src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/swiftuiweekly%2FTC01.png?alt=media&token=1da40d82-d6b2-4ef4-816e-8a75afca1b26" alt="Temperature Converter 2" style="height: 400px;"/></p>
 

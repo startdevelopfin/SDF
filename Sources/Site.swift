@@ -36,6 +36,8 @@ struct SDF: Site {
     }
     
     var staticLayouts: [any StaticLayout] {
+        TemperatureConverter()
+        TCPart2()
         ByRule()
         About()
     }
