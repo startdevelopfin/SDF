@@ -181,8 +181,8 @@ struct ByRule: StaticLayout {
                     .fontWeight(.semibold)
             }
         }
-        .cornerRadius(12)
-        .border(.powderBlue, width: 6, style: .solid, cornerRadii: .init(), edges: .all)
+        .clipped()
+        .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
 
         // Download section
         Text("Download Today ✅")
