@@ -41,6 +41,8 @@ struct ByRule: StaticLayout {
             Text("By Rule is the premier study tool for basketball officials, coaches, players, and fans looking to engage NCAA basketball rules. With comprehensive study modules, interactive quizzes, and pointed training resources, this app is designed to elevate your officiating knowledge and confidence. For more information, visit the By Rule official app webpage")
                 .margin(.bottom, .small)
         }
+        .background(.oliveDrab.opacity(0.35))
+        .margin(.bottom, .large)
         
         Grid {
             
@@ -142,6 +144,7 @@ struct ByRule: StaticLayout {
             }
         }
     }
+    .background(.teal.opacity(0.5))
         // Download section
         Text("Download Today ✅")
             .font(.title2)
