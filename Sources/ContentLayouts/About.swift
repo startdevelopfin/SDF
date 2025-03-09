@@ -47,7 +47,7 @@ struct About: StaticLayout {
         }
         .cardStyle(.bordered)
         .margin(.bottom, .large)
-        .background(.darkSlateBlue.opacity(0.75))
+        .background(.lightSteelBlue.opacity(0.5))
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
 
         Card {
