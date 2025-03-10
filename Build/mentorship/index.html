@@ -1,0 +1,197 @@
+<!doctype html>
+<html data-bs-theme="auto" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="In this post, I reflect on the the power of Mentorship using excerpts from my second iOS Conference Talk." name="description" />
+    <meta content="Daniel J. Aupont" name="author" />
+    <meta content="Ignite v0.2.1" name="generator" />
+    <title>Mentorship 📚 – Swift Blog Site</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/prism-xcode-dark.css" rel="stylesheet" data-highlight-theme="xcode-dark" />
+    <link href="/css/prism-xcode-light.css" rel="stylesheet" data-highlight-theme="xcode-light" />
+    <link href="/css/prism-plugins.css" rel="stylesheet" />
+    <link href="/css/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="/css/ignite-core.min.css" rel="stylesheet" />
+    <link href="https://startdevelopfinish.com/mentorship" rel="canonical" />
+    <script>(function() {
+    function getThemePreference() {
+        return localStorage.getItem('custom-theme') || 'auto';
+    }
+
+    function applyTheme(themeID) {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const lightThemeID = document.documentElement.getAttribute('data-light-theme') || 'light';
+        const darkThemeID = document.documentElement.getAttribute('data-dark-theme') || 'dark';
+        const actualThemeID = themeID === 'auto' ? (prefersDark ? darkThemeID : lightThemeID) : themeID;
+
+        document.documentElement.setAttribute('data-bs-theme', actualThemeID);
+        document.documentElement.setAttribute('data-theme-state', themeID);
+    }
+
+    function applySyntaxTheme() {
+        const syntaxTheme = getComputedStyle(document.documentElement)
+            .getPropertyValue('--syntax-highlight-theme').trim().replace(/"/g, '');
+
+        if (!syntaxTheme) return;
+
+        document.querySelectorAll('link[data-highlight-theme]').forEach(link => {
+            link.setAttribute('disabled', 'disabled');
+        });
+
+        const themeLink = document.querySelector(`link[data-highlight-theme="${syntaxTheme}"]`);
+        if (themeLink) {
+            themeLink.removeAttribute('disabled');
+        }
+    }
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        const currentTheme = getThemePreference();
+        if (currentTheme === 'auto') {
+            applyTheme('auto');
+            applySyntaxTheme();
+        }
+    });
+
+    const savedTheme = getThemePreference();
+    applyTheme(savedTheme);
+    applySyntaxTheme();
+})();
+</script>
+    <meta content="Start. Develop. Finish." property="og:site_name" />
+    <meta content="Mentorship 📚" property="og:title" />
+    <meta content="Mentorship 📚" name="twitter:title" />
+    <meta content="In this post, I reflect on the the power of Mentorship using excerpts from my second iOS Conference Talk." property="og:description" />
+    <meta content="In this post, I reflect on the the power of Mentorship using excerpts from my second iOS Conference Talk." name="twitter:description" />
+    <meta content="https://startdevelopfinish.com/mentorship" property="og:url" />
+    <meta content="startdevelopfinish.com" name="twitter:domain" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="on" name="twitter:dnt" />
+  </head>
+  <body class="container">
+    <header>
+      <nav class="fixed-top navbar navbar-expand-md" style="background-color: rgb(0 0 0 / 100%)" data-bs-theme="dark">
+        <div class="container">
+          <a href="/" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover navbar-brand"><p class="mb-0">Start. <span style="color: #6B8E23;">Develop</span>. Finish.</p></a>
+          <button type="button" class="btn navbar-toggler" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="col justify-content-end mb-2 mb-md-0 navbar-nav">
+              <li class="dropdown nav-item" data-bs-theme="light"><a href="#" role="button" class="dropdown dropdown-toggle link-underline link-underline-opacity-100 link-underline-opacity-100-hover nav-link" data-bs-toggle="dropdown" aria-expanded="false">SwiftUI Tutorials</a>
+                <ul class="dropdown dropdown-menu">
+                  <li><a href="/temperature-converter" class="dropdown-item link-underline link-underline-opacity-100 link-underline-opacity-100-hover">Temperature Converter</a></li>
+                  <li><a href="/t-c-part2" class="dropdown-item link-underline link-underline-opacity-100 link-underline-opacity-100-hover">Temperature Converter 2</a></li>
+                </ul></li>
+              <li class="dropdown nav-item" data-bs-theme="light"><a href="#" role="button" class="dropdown dropdown-toggle link-underline link-underline-opacity-100 link-underline-opacity-100-hover nav-link" data-bs-toggle="dropdown" aria-expanded="false">App Store</a>
+                <ul class="dropdown dropdown-menu">
+                  <li><a href="/by-rule" class="dropdown-item link-underline link-underline-opacity-100 link-underline-opacity-100-hover">By Rule</a></li>
+                </ul></li>
+              <li class="dropdown nav-item" data-bs-theme="light"><a href="#" role="button" class="dropdown dropdown-toggle link-underline link-underline-opacity-100 link-underline-opacity-100-hover nav-link" data-bs-toggle="dropdown" aria-expanded="false">Info</a>
+                <ul class="dropdown dropdown-menu">
+                  <li><a href="/about" class="dropdown-item link-underline link-underline-opacity-100 link-underline-opacity-100-hover">About</a></li>
+                </ul></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="row">
+      <div class="col-md-9">
+        <div style="padding-bottom: 80px; padding-top: 80px">
+          <h1 class="my-4">Mentorship 📚</h1>
+          <div class="my-4 ratio ratio-21x9" style="background-color: rgb(143 188 143 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+            <img alt="" src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/nsspain%2FNSSPAIN.png?alt=media&amp;token=ae0e2de6-769f-4bd3-aaef-e5a0096993fb" class="img-fluid object-fit-cover" />
+          </div>
+          <p class="my-4">In this post, I reflect on the the power of Mentorship using excerpts from my second iOS Conference Talk.</p>
+          <p class="my-4">We'll spotlight community leaders making an impact and explore how you can leverage mentorship—whether you're seeking a mentor, looking to become one, or simply curious about how it fits into your career path.</p>
+          <p class="my-4">Shoutout to the team at NSSpain for organizing an awesome conference and allowing me the opportunity to share my latest thoughts with the broader Swift community.</p>
+          <h1 class="my-4">Seeking Mentorship Opportunities 👀</h1>
+          <div class="my-4 ratio ratio-21x9" style="background-color: rgb(143 188 143 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+            <img alt="" src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/nsspain%2FKobeJordan.png?alt=media&amp;token=6f6ab9d4-a41f-42f6-a693-dfe8e727b0de" class="img-fluid object-fit-cover" />
+          </div>
+          <p class="my-4">Mentorship is a powerful tool whose success relies on clear communication and understanding. Often, the terms and expectations of a mentorship relationship are not clearly defined, and that's where things can get tricky.</p>
+          <p class="my-4">Misunderstandings or lack of clarity can affect how productive or beneficial the relationship will be. Carefully consider these key factors before jumping in:</p>
+          <h3 class="my-4">4 Key Factors 🔑</h3>
+          <div class="card my-4" style="background-color: rgb(70 130 180 / 50%); border: 6.0px solid rgb(0 0 0 / 100%)">
+            <div class="card-body">
+              <h4 class="card-title my-2">Format ⚙️</h4>
+              <p class="card-text">Choosing a format is very important. Some people thrive in one-on-one environments, while others benefit from group discussions or community-based formats.</p>
+            </div>
+          </div>
+          <div class="card my-4" style="background-color: rgb(233 150 122 / 50%); border: 6.0px solid rgb(0 0 0 / 100%)">
+            <div class="card-body">
+              <h4 class="card-title my-2">Time Committment ⏰</h4>
+              <p class="card-text">Time commitment is another big factor that can make or break a mentorship relationship. How much time are you willing to commit, and what frequency works for both parties? You might want something structured like weekly meetings. Perhaps you need something more flexible.</p>
+            </div>
+          </div>
+          <div class="card my-4" style="background-color: rgb(46 139 87 / 50%); border: 6.0px solid rgb(0 0 0 / 100%)">
+            <div class="card-body">
+              <h4 class="card-title my-2">Desired Outcome 💡</h4>
+              <p class="card-text">Are you interested in fostering a community through peer mentorship, where knowledge-sharing is the primary goal? Are you looking for career progression or personal development? Maybe you are seeking hands-on guidance to grow technical skills.</p>
+            </div>
+          </div>
+          <div class="card my-4" style="background-color: rgb(47 79 79 / 50%); border: 6.0px solid rgb(0 0 0 / 100%)">
+            <div class="card-body">
+              <h4 class="card-title my-2">Resources you Have &amp; Need 📓</h4>
+              <p class="card-text">Do you have the resources to make the mentorship productive, like development tools, books, or some meeting space? And perhaps even more importantly—what resources do you still need access to?</p>
+            </div>
+          </div>
+          <h3 class="my-4">Mentorship Examples 💎</h3>
+          <div class="my-4 ratio ratio-21x9" style="background-color: rgb(143 188 143 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+            <img alt="" src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/nsspain%2FClover.png?alt=media&amp;token=c0a4d9aa-84ed-4a93-b8e1-5ea7a7359457" class="img-fluid object-fit-cover" />
+          </div>
+          <p class="my-4">By outlining what you have and need, it becomes clear what gaps your mentor can help you fill and how they can support your learning journey. The beauty of mentorship lies in its ability to fit the goals and needs of both individuals involved. Here are three common examples:</p>
+          <h4 class="my-4">Example 1</h4>
+          <div class="my-4 ratio ratio-16x9" style="background-color: rgb(143 188 143 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+            <img alt="" src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/nsspain%2FExampleOne.png?alt=media&amp;token=ce2450ee-019f-4e07-acf4-bd6c0a20ff94" class="img-fluid object-fit-contain" />
+          </div>
+          <p class="my-4">Here, someone with three years of experience is offering group mentorship bi-weekly. This format can help someone looking to build relationships and strengthen their understanding by sharing what they know with others. It's a perfect way to reinforce your learning while giving back to the community.</p>
+          <h4 class="my-4">Example 2</h4>
+          <div class="my-4 ratio ratio-21x9" style="background-color: rgb(143 188 143 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+            <img alt="" src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/nsspain%2FExampleTwo.png?alt=media&amp;token=639ec45e-977a-4b15-8869-7402470d2912" class="img-fluid object-fit-contain" />
+          </div>
+          <p class="my-4">In contrast, example two involves a more advisory relationship focused on leadership development. This individual has five years of experience and meets monthly with their mentor to discuss high-level strategies for growth. This kind of mentorship can be instrumental in helping someone transition to a leadership role.</p>
+          <h4 class="my-4">Example 3</h4>
+          <div class="my-4 ratio ratio-21x9" style="background-color: rgb(143 188 143 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+            <img alt="" src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/nsspain%2FExampleThree.png?alt=media&amp;token=fff7e7e2-a9f9-4654-84ad-ae9cfde2eb5d" class="img-fluid object-fit-contain" />
+          </div>
+          <p class="my-4">Finally, we have a more technical-focused mentorship. In this example, the mentee with two years of experience seeks to enhance their coding skills through regular, weekly one-on-one sessions. Whether learning new development tools or refining code quality, technical mentorship offers a focused environment for personal growth and skill-building.</p>
+          <p>Community Leaders 🏆</p>
+          <div class="my-4 ratio ratio-21x9" style="background-color: rgb(143 188 143 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+            <img alt="" src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/nsspain%2FRuhaQuote.png?alt=media&amp;token=d3ff8998-30c2-4f39-83e9-45b40ee07847" class="img-fluid object-fit-contain" />
+          </div>
+          <p class="my-4">These examples illustrate just a few of the many paths mentorship can take. Ultimately, mentorship is about impact—on both sides, building relationships, sharing knowledge, and supporting each other on the journey.</p>
+          <p>Danielle Lewis ⚡️</p>
+          <div class="my-4 ratio ratio-21x9" style="background-color: rgb(143 188 143 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+            <img alt="" src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/nsspain%2FDanielleWorkshop.png?alt=media&amp;token=8404fa9e-9079-4a6d-abc1-b55433e060ad" class="img-fluid object-fit-contain" />
+          </div>
+          <p class="my-4">Danielle is a young go-getter with eight apps published already—five on Vision Pro and three on iOS. But beyond the impressive numbers, it's her journey and dedication that truly set her apart. She shared her experiences learning Swift, the value of representation, and the power of community with me during a recent sit down.</p>
+          <p class="my-4">During the meeting, she spoke about having to persevere through losing her job and dealing with ongoing health issues. But instead of letting those obstacles hold her back, she took a deliberate approach: focusing on learning new skills, remaining resilient, and pushing through her natural introversion to seize opportunities.</p>
+          <p class="my-4">She's a passionate developer who isn't just chasing personal success; she's actively giving back, helping others, and building a network of mentorship and collaboration. I was in attendance for her workshop with Black Orlando Tech as she guided attendees through building a tip calculator app using SwiftUI, covering the basics in a way that was both informative and approachable. I am inspired by Danielle's journey and excited to see where her path leads.</p>
+          <p>Emad Ghorbaninia ⚡️</p>
+          <div class="my-4 ratio ratio-21x9" style="background-color: rgb(143 188 143 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+            <img alt="" src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/nsspain%2FEmad.png?alt=media&amp;token=bec34e3f-449e-48da-b8fa-dc3d020d220b" class="img-fluid object-fit-contain" />
+          </div>
+          <p class="my-4">Emad is a seasoned Lead iOS Engineer with over ten years of experience. He excels in both Objective-C and Swift. Beyond his technical prowess, Emad is passionate about community and has dedicated much of his time to mentoring others. He's been mentoring roughly six people, providing guidance and support to those looking to grow in their careers.</p>
+          <p class="my-4">After grappling with mental health challenges, especially during the upheaval of the COVID-19 pandemic and its impact on our industry, Emad realized he needed support beyond the technical. He connected with a mentor who could offer practical advice on managing multiple high-level tasks, finding balance, and staying organized amidst the chaos of a demanding career.</p>
+          <p class="my-4">He has since started his own company and is organizing an iOS developer conference with Try! Swift and Deep Dish — Maize Conf– where folks can gather, refresh, and learn. It's a powerful reminder that mentorship is not just about skills; it's also about connection, support, and the shared human experience.</p>
+          <p>Vui Nguyen ⚡️</p>
+          <div class="my-4 ratio ratio-21x9" style="background-color: rgb(143 188 143 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+            <img alt="" src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/nsspain%2FVuiN.png?alt=media&amp;token=c8795095-233d-452a-833e-3d30c6ace988" class="img-fluid object-fit-contain" />
+          </div>
+          <p class="my-4">I want to spotlight a leader whose journey exemplifies resilience, innovation, and the power of mentorship—someone who adapted to change and leveraged it to inspire others. Take a moment to reflect on the incredible work of Vui Nguyen, whose story is a testament to the difference one person can make.</p>
+          <p class="my-4">Leading the Women Who Code Mobile community, Vui organized over three technical events every month—from study sessions and coding workshops to inspiring speaker talks. She wasn't just hosting events; she was cultivating an ecosystem. Volunteers were mentored, not just to give talks but to grow into confident speakers and leaders. Vui didn't just lead—she lifted others, setting the stage for a vibrant, inclusive community where everyone's contribution is valued.</p>
+          <p class="my-4">Vui is very clear about the impact Women Who Code had on her and others before it closed this April: "It helped me fulfill my dream of building the world that I want to live in. Through my involvement with WWCode, I helped women become technical speakers, leaders, maintainers, and contributors to open-source software, and software engineers. To paraphrase the mission of WWCode, I, and many others, have been empowered to excel in our technology careers."</p>
+          <p>Conclusion 💭</p>
+          <div class="my-4 ratio ratio-21x9" style="background-color: rgb(143 188 143 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+            <img alt="" src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/nsspain%2FSpecialThanks.png?alt=media&amp;token=c84f16f3-6f45-4bc5-b425-834c82636058" class="img-fluid object-fit-contain" />
+          </div>
+          <p class="my-4">Leadership is hard, at every level. Think about how you can leverage your role—whether as a mentor or a mentee—to make a meaningful impact on the Swift community. How can you use your skills, knowledge, and experiences to support others, foster inclusivity, and contribute to the growth of the broader tech community? The answer may change your perspective or career.</p>
+        </div>
+      </div>
+    </div>
+    <p class="mt-5 text-center">Created in Swift with <a href="https://github.com/twostraws/Ignite" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover">Ignite</a></p>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/syntax-highlighting.js"></script>
+    <script src="/js/ignite-core.js"></script>
+  </body>
+</html>

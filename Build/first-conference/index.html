@@ -1,0 +1,182 @@
+<!doctype html>
+<html data-bs-theme="auto" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="In this post, I reflect on the experience attending my first Swift conference and detail the potential impact of these community driven events for aspiring iOS developers." name="description" />
+    <meta content="Daniel J. Aupont" name="author" />
+    <meta content="Ignite v0.2.1" name="generator" />
+    <title>First Conference 🥳 – Swift Blog Site</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/prism-xcode-dark.css" rel="stylesheet" data-highlight-theme="xcode-dark" />
+    <link href="/css/prism-xcode-light.css" rel="stylesheet" data-highlight-theme="xcode-light" />
+    <link href="/css/prism-plugins.css" rel="stylesheet" />
+    <link href="/css/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="/css/ignite-core.min.css" rel="stylesheet" />
+    <link href="https://startdevelopfinish.com/first-conference" rel="canonical" />
+    <script>(function() {
+    function getThemePreference() {
+        return localStorage.getItem('custom-theme') || 'auto';
+    }
+
+    function applyTheme(themeID) {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const lightThemeID = document.documentElement.getAttribute('data-light-theme') || 'light';
+        const darkThemeID = document.documentElement.getAttribute('data-dark-theme') || 'dark';
+        const actualThemeID = themeID === 'auto' ? (prefersDark ? darkThemeID : lightThemeID) : themeID;
+
+        document.documentElement.setAttribute('data-bs-theme', actualThemeID);
+        document.documentElement.setAttribute('data-theme-state', themeID);
+    }
+
+    function applySyntaxTheme() {
+        const syntaxTheme = getComputedStyle(document.documentElement)
+            .getPropertyValue('--syntax-highlight-theme').trim().replace(/"/g, '');
+
+        if (!syntaxTheme) return;
+
+        document.querySelectorAll('link[data-highlight-theme]').forEach(link => {
+            link.setAttribute('disabled', 'disabled');
+        });
+
+        const themeLink = document.querySelector(`link[data-highlight-theme="${syntaxTheme}"]`);
+        if (themeLink) {
+            themeLink.removeAttribute('disabled');
+        }
+    }
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        const currentTheme = getThemePreference();
+        if (currentTheme === 'auto') {
+            applyTheme('auto');
+            applySyntaxTheme();
+        }
+    });
+
+    const savedTheme = getThemePreference();
+    applyTheme(savedTheme);
+    applySyntaxTheme();
+})();
+</script>
+    <meta content="Start. Develop. Finish." property="og:site_name" />
+    <meta content="First Conference 🥳" property="og:title" />
+    <meta content="First Conference 🥳" name="twitter:title" />
+    <meta content="In this post, I reflect on the experience attending my first Swift conference and detail the potential impact of these community driven events for aspiring iOS developers." property="og:description" />
+    <meta content="In this post, I reflect on the experience attending my first Swift conference and detail the potential impact of these community driven events for aspiring iOS developers." name="twitter:description" />
+    <meta content="https://startdevelopfinish.com/first-conference" property="og:url" />
+    <meta content="startdevelopfinish.com" name="twitter:domain" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="on" name="twitter:dnt" />
+  </head>
+  <body class="container">
+    <header>
+      <nav class="fixed-top navbar navbar-expand-md" style="background-color: rgb(0 0 0 / 100%)" data-bs-theme="dark">
+        <div class="container">
+          <a href="/" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover navbar-brand"><p class="mb-0">Start. <span style="color: #6B8E23;">Develop</span>. Finish.</p></a>
+          <button type="button" class="btn navbar-toggler" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="col justify-content-end mb-2 mb-md-0 navbar-nav">
+              <li class="dropdown nav-item" data-bs-theme="light"><a href="#" role="button" class="dropdown dropdown-toggle link-underline link-underline-opacity-100 link-underline-opacity-100-hover nav-link" data-bs-toggle="dropdown" aria-expanded="false">SwiftUI Tutorials</a>
+                <ul class="dropdown dropdown-menu">
+                  <li><a href="/temperature-converter" class="dropdown-item link-underline link-underline-opacity-100 link-underline-opacity-100-hover">Temperature Converter</a></li>
+                  <li><a href="/t-c-part2" class="dropdown-item link-underline link-underline-opacity-100 link-underline-opacity-100-hover">Temperature Converter 2</a></li>
+                </ul></li>
+              <li class="dropdown nav-item" data-bs-theme="light"><a href="#" role="button" class="dropdown dropdown-toggle link-underline link-underline-opacity-100 link-underline-opacity-100-hover nav-link" data-bs-toggle="dropdown" aria-expanded="false">App Store</a>
+                <ul class="dropdown dropdown-menu">
+                  <li><a href="/by-rule" class="dropdown-item link-underline link-underline-opacity-100 link-underline-opacity-100-hover">By Rule</a></li>
+                </ul></li>
+              <li class="dropdown nav-item" data-bs-theme="light"><a href="#" role="button" class="dropdown dropdown-toggle link-underline link-underline-opacity-100 link-underline-opacity-100-hover nav-link" data-bs-toggle="dropdown" aria-expanded="false">Info</a>
+                <ul class="dropdown dropdown-menu">
+                  <li><a href="/about" class="dropdown-item link-underline link-underline-opacity-100 link-underline-opacity-100-hover">About</a></li>
+                </ul></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="row">
+      <div class="col-md-9">
+        <div style="padding-bottom: 80px; padding-top: 80px">
+          <h1 class="my-4">First Conference 🥳</h1>
+          <p class="my-4">In this post, I share the experience attending my first Swift conference and detail the potential impact of these community driven events for aspiring iOS developers.</p>
+          <h3 class="my-4">Deep Dish Swift 🍕</h3>
+          <div class="my-4 ratio ratio-16x9" style="background-color: rgb(143 188 143 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+            <img alt="" src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/DeepDish%2FDeepDishBadge.png?alt=media&amp;token=3f32edf8-564d-4075-bbdb-95328c0a7a4d" class="img-fluid object-fit-cover" />
+          </div>
+          <p class="my-4">I decided to go to Chicagoland for my first developer conference, Deep Dish Swift. Over three-hundred attendees were present. Developers converged in a large conference room. I could not help but feel excited because Day 1 was devoted to Indie Devs. I am nearing completion of converting my UIKit app [By Rule](https://apps.apple.com/us/app/by-rule/id1532845521) to SwiftUI, so the time to learn about mastering subscriptions, shipping faster, and optimizing for the App Store was now more than ever. Immediately, I found value in attending the conference.</p>
+          <p class="my-4">Each day, talented members of the Swift community took the stage and presented thorough talks that explored a wide range of topics. Speakers regaled us with tales from their careers and kept the atmosphere lively with cheeky memes peppered throughout their slides. Notably, three of the twenty conference speakers were Black. Including Black speakers in a Swift conference is extremely important and has a significant impact because it shows that the community recognizes the value of having diverse perspectives and experiences.</p>
+          <h3 class="mb-3">Tips for Attendees 💡</h3>
+          <p class="my-4">Attending a Swift developer conference can be beneficial for developers in many ways. Attendees have the chance to learn about new frameworks, tools, and techniques, as well as to network with peers and receive feedback on their projects. As a result, conferences can broaden a developer's perspective, inspire new ideas and approaches to programming, and provide access to resources not otherwise available.</p>
+          <p class="my-4">I noticed a few things that impacted the overall experience at my first conference. I have listed them below and hope you will consider them the next time you attend. Here are 7 Tips to Maximize Your Next Conference Experience:</p>
+          <div class="card my-4" style="background-color: rgb(238 232 170 / 50%); border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset">
+            <div class="card-body">
+              <h4 class="card-title mb-3">1. Be on time ⏰</h4>
+              <h5 class="card-title my-3" style="font-weight: 600; line-height: 1.8; padding: 4px">Arriving for the conference on time set the tone for the entire day. A new experience can be nerve-wracking. Getting settled in with plenty of time to spare let me relax and mentally prepare myself.</h5>
+            </div>
+          </div>
+          <div class="card my-4" style="background-color: rgb(95 158 160 / 50%); border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset">
+            <div class="card-body">
+              <h4 class="card-title mb-3">2. Sit somewhere new everyday 👀</h4>
+              <h5 class="card-title my-3" style="font-weight: 600; line-height: 1.8; padding: 4px">Where you decide to sit may seem trivial, but it can impact your visibility and the number of connections you can make. I sat somewhere new daily and found it to be very beneficial.</h5>
+            </div>
+          </div>
+          <div class="card my-4" style="background-color: rgb(221 160 221 / 50%); border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset">
+            <div class="card-body">
+              <h4 class="card-title mb-3">3. Take high level notes 📝</h4>
+              <h5 class="card-title my-4" style="font-weight: 600; line-height: 1.8; padding: 4px">There was no way I could sit and absorb all of the information and visual stimuli on display at the conference. Taking high-level notes allowed me to maintain my focus on conference speakers while stopping only to write down information pertinent to me from each talk.</h5>
+            </div>
+          </div>
+          <div class="card my-4" style="background-color: rgb(250 128 114 / 50%); border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset">
+            <div class="card-body">
+              <h4 class="card-title mb-3">4. Make a new connection everyday 👋🏿</h4>
+              <h5 class="card-title my-4" style="font-weight: 600; line-height: 1.8; padding: 4px">This tip is crucial for developers at all stages. Do not be afraid to say hello to someone new. Chances are they are nervous too. I made a few new connections by exchanging emails, reaching out on social media, and hanging out after hours.</h5>
+            </div>
+          </div>
+          <div class="card my-4" style="background-color: rgb(102 205 170 / 50%); border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset">
+            <div class="card-body">
+              <h4 class="card-title mb-3">5. Ask questions ❓</h4>
+              <h5 class="card-title my-4" style="font-weight: 600; line-height: 1.8; padding: 4px">Whether it is a conference speaker, sponsor, or peer, asking quality questions is crucial. I cannot wait to delve deeper into Machine Learning and put the knowledge I gained to use.</h5>
+            </div>
+          </div>
+          <div class="card my-4" style="background-color: rgb(70 130 180 / 50%); border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset">
+            <div class="card-body">
+              <h4 class="card-title mb-3">6. Share your experience 🗣️</h4>
+              <h5 class="card-title my-4" style="font-weight: 600; line-height: 1.8; padding: 4px">Standing in a room full of accomplished industry professionals can be intimidating. However, we all have to start somewhere and have unique experiences to share. Sharing updates about my projects and receiving positive feedback felt good.</h5>
+            </div>
+          </div>
+          <div class="card my-4" style="background-color: rgb(106 90 205 / 50%); border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset">
+            <div class="card-body">
+              <h4 class="card-title mb-3">7. Take pictures 📸</h4>
+              <h5 class="card-title my-4" style="font-weight: 600; line-height: 1.8; padding: 4px">Document the moments that matter to you! I took a lot of pictures to preserve the memory of the occasion.</h5>
+            </div>
+          </div>
+          <h3 class="my-4">Diversity in Swift 🎨</h3>
+          <p class="my-4">According to a 2022 survey by Stack Overflow, only 4.8% of professional developers identify as women, and only 1.27 identify as Black. This lack of representation can lead to a lack of diversity of thought and perspectives, limit innovation, and hinder progress.</p>
+          <p class="my-4">The broader societal issues that affect underrepresented groups, such as systemic racism and sexism, contribute to the lack of diversity in the Swift community.</p>
+          <div class="my-4 ratio ratio-21x9" style="background-color: rgb(143 188 143 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+            <img alt="" src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/DeepDish%2FDeepDishSlide1.png?alt=media&amp;token=f8df07d2-7390-49d1-99af-d2306a53ac2e" class="img-fluid object-fit-cover" />
+          </div>
+          <p class="my-4">While there have been efforts to increase representation in the Swift community, progress has been slow. The lack of significant improvement could be due to broken interview practices, implicit bias or discrimination during the hiring process, and a failure to provide consistent material support. There is still much work to do.</p>
+          <p class="my-4">I believe conferences should prioritize diversity and inclusion efforts, including actively seeking out and inviting Black speakers and attendees, providing mentorship and networking opportunities, and creating safe spaces for underrepresented groups. Organizers and attendees should be mindful of codes of conduct to ensure everyone feels respected and valued.</p>
+          <h3 class="my-4">Conclusion 💭</h3>
+          <div class="my-4 ratio ratio-21x9" style="background-color: rgb(143 188 143 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+            <img alt="" src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/DeepDish%2FDeepDishBanner.jpg?alt=media&amp;token=dddb58d4-7996-49bb-94a5-8a9bb4c2d519" class="img-fluid object-fit-cover" />
+          </div>
+          <p class="my-4">My first Swift conference was truly memorable. I got to explore a different city and try out the local cuisine. I learned something new from the various talks, met many great developers, and made new friends too! I was even fortunate enough to receive an affirming round of applause for my [work mentoring last summer](https://startdevelopfin.github.io/posts/codingdtc/). I will never forget that moment. If you are on the fence about attending a Swift conference, let this be the nudge you need to find your way to an event near you.</p>
+          <p class="my-4">Shoutout to the Deep Dish Swift team for organizing the event!</p>
+          <h3 class="my-4">Call to Action 🚨</h3>
+          <div class="my-4 ratio ratio-21x9" style="background-color: rgb(143 188 143 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+            <img alt="" src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/DeepDish%2FDeepDishSlide2.png?alt=media&amp;token=7584a679-ac7f-49a5-889c-9df394bf6bfe" class="img-fluid object-fit-cover" />
+          </div>
+          <p class="my-4">Photo of Paul Hudson's closing keynote slide</p>
+          <p class="my-4">Paul Hudson's entire closing keynote was sensational. He took the stage and implored attendees to avoid bickering over superficial coding debates and focus on what matters -- building the apps we care about, looking for opportunities to provide mentorship regardless of our experience, challenging the status quo, and moving forward together.</p>
+          <p class="my-4">I have a similar ask for every reader from the Swift community: Find a way to make an impact and foster positive change. Maybe that looks like lobbying for paid internships or entry-level support where you work. Perhaps that looks like joining an organization like [Underdog Devs](https://www.underdogdevs.org) and providing sponsorship or mentorship for aspiring developers. We all have a role to play. The future of the Swift community depends on the actions we take right now.</p>
+        </div>
+      </div>
+    </div>
+    <p class="mt-5 text-center">Created in Swift with <a href="https://github.com/twostraws/Ignite" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover">Ignite</a></p>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/syntax-highlighting.js"></script>
+    <script src="/js/ignite-core.js"></script>
+  </body>
+</html>
