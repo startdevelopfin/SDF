@@ -35,7 +35,6 @@ struct Home: StaticLayout {
         .slateBlue,
         .steelBlue,
         .teal,
-        .tomato,
     ]
 
     var body: some HTML {
@@ -58,27 +57,96 @@ struct Home: StaticLayout {
             .margin(.bottom, .xLarge)
 
         
+//        Text("Latest")
+//            .font(.title2)
+//            .padding(.top)
+        
+//        Grid {
+//            
+//            ForEach(articles.tagged("Article")) { item in
+//                let randomColor = backgroundColors.randomElement() ?? Color.dodgerBlue  // Pick a random Ignite color
+//
+//                
+//                    ContentPreview(for: item)
+//                        .width(4)
+//                        .margin(.bottom)
+//                        .background(randomColor.opacity(0.5))  // Apply random background
+//                        .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
+//                        .innerShadow(radius: 5)
+//                
+//            }
+//            
+//        }
+//        .margin(.bottom, .xLarge)
+        
         Text("Latest")
             .font(.title2)
             .padding(.top)
         
+        
+        
         Grid {
-            
-            ForEach(articles.tagged("Article")) { item in
-                let randomColor = backgroundColors.randomElement() ?? Color.dodgerBlue  // Pick a random Ignite color
 
-                
-                    ContentPreview(for: item)
-                        .width(4)
-                        .margin(.bottom)
-                        .background(randomColor.opacity(0.5))  // Apply random background
-                        .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
-                        .innerShadow(radius: 5)
-                
+            Card(imageName: "/images/photos/mentorshipCard.png") {
+                Link("Mentorship 📚", target: Mentorship())
+                    .font(.title3)
+                Text("In this post, I reflect on my first speaking engagement as a part of the HBCU C2 Student Leadership Conference at Tennesee State University.")
+            } footer: {
+
             }
+            .width(4)
+            .margin(.bottom)
+            .background(Color.dodgerBlue.opacity(0.5))  // Apply random background
+            .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
+            .innerShadow(radius: 5)
+            
+            Card(imageName: "/images/photos/DeepDishCard.png") {
+                Link("First Conference 🥳", target: FirstConference())
+                    .font(.title3)
+                Text("In this post, I reflect on the experience attending my first Swift conference and detail the potential impact of these community driven events for aspiring iOS developers.")
+            } footer: {
+
+            }
+            .width(4)
+            .margin(.bottom)
+            .background(Color.bootstrapRed.opacity(0.25))
+            .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
+            .innerShadow(radius: 5)
+            
+            
+            Card(imageName: "/images/photos/SpeakerStage.png") {
+                Link("First Talk 🎙️", target: FirstTalk())
+                    .font(.title3)
+                Text("In this post, I reflect on my first speaking engagement as a part of the HBCU C2 Student Leadership Conference at Tennesee State University.")
+            } footer: {
+
+            }
+            .width(4)
+            .margin(.bottom)
+            .background(Color.bootstrapPurple.opacity(0.5))
+            .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
+            .innerShadow(radius: 5)
         }
+        
+        Card(imageName: "/images/photos/CodingHeader.png") {
+            Link("Coding Instructor 👨🏿‍💻", target: CodingInstructor())
+                .font(.title3)
+                .foregroundStyle(.white)
+            Text("In this post, I reflect on my time instructing Denmark Technical College's coding class as a part of their Upward Bound summer enrichment program. I'll also explain how students with little to no coding experience leveraged the power of SwiftUI and Swift Playgrounds to build apps using an iPad.")
+        } footer: {
+
+        }
+        .width(4)
+        .margin(.bottom)
+        .background(Color.bootstrapTeal.opacity(0.35))
+        .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
+        .innerShadow(radius: 5)
+            
+        
         .margin(.bottom, .xLarge)
+        
     }
+    
 }
 
 struct CardColor: Identifiable {

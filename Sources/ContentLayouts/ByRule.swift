@@ -48,7 +48,7 @@ struct ByRule: StaticLayout {
                     .aspectRatio(.r21x9, contentMode: .fit)
                     .margin(.top, .medium)
                     .margin(.bottom, .medium)
-            .background(.paleGoldenRod.opacity(0.75))
+                    .background(.beige.opacity(0.75))
             .innerShadow(radius: 5)
             
             Text("Basketball officiating demands split-second decision making based on thorough rules knowledge and on-court experience. Whether you're preparing for certification, advancing your career, or simply want to understand the game better, By Rule provides everything you need to refine and refresh your skills.")
@@ -59,7 +59,7 @@ struct ByRule: StaticLayout {
             
         }
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
-        .background(.darkSeaGreen.opacity(0.5))
+        .background(.cadetBlue.opacity(0.5))
         .innerShadow(radius: 5)
         .margin(.bottom, .large)
         

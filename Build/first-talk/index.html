@@ -1,0 +1,148 @@
+<!doctype html>
+<html data-bs-theme="auto" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="In this post, I reflect on my first speaking engagement as a part of the HBCU C2 Student Leadership Conference at Tennesee State University." name="description" />
+    <meta content="Daniel J. Aupont" name="author" />
+    <meta content="Ignite v0.2.1" name="generator" />
+    <title>First Talk 🎙️ – Swift Blog Site</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/prism-xcode-dark.css" rel="stylesheet" data-highlight-theme="xcode-dark" />
+    <link href="/css/prism-xcode-light.css" rel="stylesheet" data-highlight-theme="xcode-light" />
+    <link href="/css/prism-plugins.css" rel="stylesheet" />
+    <link href="/css/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="/css/ignite-core.min.css" rel="stylesheet" />
+    <link href="https://startdevelopfinish.com/first-talk" rel="canonical" />
+    <script>(function() {
+    function getThemePreference() {
+        return localStorage.getItem('custom-theme') || 'auto';
+    }
+
+    function applyTheme(themeID) {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const lightThemeID = document.documentElement.getAttribute('data-light-theme') || 'light';
+        const darkThemeID = document.documentElement.getAttribute('data-dark-theme') || 'dark';
+        const actualThemeID = themeID === 'auto' ? (prefersDark ? darkThemeID : lightThemeID) : themeID;
+
+        document.documentElement.setAttribute('data-bs-theme', actualThemeID);
+        document.documentElement.setAttribute('data-theme-state', themeID);
+    }
+
+    function applySyntaxTheme() {
+        const syntaxTheme = getComputedStyle(document.documentElement)
+            .getPropertyValue('--syntax-highlight-theme').trim().replace(/"/g, '');
+
+        if (!syntaxTheme) return;
+
+        document.querySelectorAll('link[data-highlight-theme]').forEach(link => {
+            link.setAttribute('disabled', 'disabled');
+        });
+
+        const themeLink = document.querySelector(`link[data-highlight-theme="${syntaxTheme}"]`);
+        if (themeLink) {
+            themeLink.removeAttribute('disabled');
+        }
+    }
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        const currentTheme = getThemePreference();
+        if (currentTheme === 'auto') {
+            applyTheme('auto');
+            applySyntaxTheme();
+        }
+    });
+
+    const savedTheme = getThemePreference();
+    applyTheme(savedTheme);
+    applySyntaxTheme();
+})();
+</script>
+    <meta content="Start. Develop. Finish." property="og:site_name" />
+    <meta content="First Talk 🎙️" property="og:title" />
+    <meta content="First Talk 🎙️" name="twitter:title" />
+    <meta content="In this post, I reflect on my first speaking engagement as a part of the HBCU C2 Student Leadership Conference at Tennesee State University." property="og:description" />
+    <meta content="In this post, I reflect on my first speaking engagement as a part of the HBCU C2 Student Leadership Conference at Tennesee State University." name="twitter:description" />
+    <meta content="https://startdevelopfinish.com/first-talk" property="og:url" />
+    <meta content="startdevelopfinish.com" name="twitter:domain" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="on" name="twitter:dnt" />
+  </head>
+  <body class="container">
+    <header>
+      <nav class="fixed-top navbar navbar-expand-md" style="background-color: rgb(0 0 0 / 100%)" data-bs-theme="dark">
+        <div class="container">
+          <a href="/" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover navbar-brand"><p class="mb-0">Start. <span style="color: #6B8E23;">Develop</span>. Finish.</p></a>
+          <button type="button" class="btn navbar-toggler" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="col justify-content-end mb-2 mb-md-0 navbar-nav">
+              <li class="dropdown nav-item" data-bs-theme="light"><a href="#" role="button" class="dropdown dropdown-toggle link-underline link-underline-opacity-100 link-underline-opacity-100-hover nav-link" data-bs-toggle="dropdown" aria-expanded="false">SwiftUI Tutorials</a>
+                <ul class="dropdown dropdown-menu">
+                  <li><a href="/temperature-converter" class="dropdown-item link-underline link-underline-opacity-100 link-underline-opacity-100-hover">Temperature Converter</a></li>
+                  <li><a href="/t-c-part2" class="dropdown-item link-underline link-underline-opacity-100 link-underline-opacity-100-hover">Temperature Converter 2</a></li>
+                </ul></li>
+              <li class="dropdown nav-item" data-bs-theme="light"><a href="#" role="button" class="dropdown dropdown-toggle link-underline link-underline-opacity-100 link-underline-opacity-100-hover nav-link" data-bs-toggle="dropdown" aria-expanded="false">App Store</a>
+                <ul class="dropdown dropdown-menu">
+                  <li><a href="/by-rule" class="dropdown-item link-underline link-underline-opacity-100 link-underline-opacity-100-hover">By Rule</a></li>
+                </ul></li>
+              <li class="dropdown nav-item" data-bs-theme="light"><a href="#" role="button" class="dropdown dropdown-toggle link-underline link-underline-opacity-100 link-underline-opacity-100-hover nav-link" data-bs-toggle="dropdown" aria-expanded="false">Info</a>
+                <ul class="dropdown dropdown-menu">
+                  <li><a href="/about" class="dropdown-item link-underline link-underline-opacity-100 link-underline-opacity-100-hover">About</a></li>
+                </ul></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="row">
+      <div class="col-md-9">
+        <div style="padding-bottom: 80px; padding-top: 80px">
+          <h1 class="my-4">First Talk 🎙️</h1>
+          <p class="my-4">In this post, I detail my first speaking engagement as a part of the HBCU C2 Student Leadership Conference at Tennesee State University. I'll take you through the highlights from my first speaking engagement, leaving a lasting impression on the audience and shaping my path as a confident communicator.</p>
+          <h3 class="my-4">HBCU C2 Student Leadership Conference 🎉</h3>
+          <div class="my-4 ratio ratio-21x9" style="background-color: rgb(143 188 143 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+            <img alt="" src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/FirstTalk%2FConferencePoster.png?alt=media&amp;token=109c73ea-dc26-4cfb-a355-738382d3c217" class="img-fluid object-fit-cover" />
+          </div>
+          <p class="my-4">The Recommit, Reconnect, Refresh, Student Leadership Conference will increase knowledge and use of Apple devices, tools, and resources to enhance student development for the complexity of modern digital environments.</p>
+          <div class="my-4 ratio ratio-21x9" style="background-color: rgb(143 188 143 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+            <img alt="" src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/FirstTalk%2FCollege.png?alt=media&amp;token=0edd87e7-5fef-4892-b5cf-d8210a26144b" class="img-fluid object-fit-cover" />
+          </div>
+          <p class="my-4">Tennessee State University is committed to connecting Historically Black Colleges and Universities to the diverse applications of digital technology through its partnership with Apple. By design, the HBCU C² Student Leadership Conference helped students to network with students at various institutions while building relationships with the Innovation Team faculty. The photo above does not do the beautiful campus any justice. You'll have to visit to check it out yourself!</p>
+          <h3 class="my-4">Swift Coding Clubs ⚡️</h3>
+          <div class="my-4 ratio ratio-16x9" style="background-color: rgb(143 188 143 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+            <img alt="" src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/FirstTalk%2FSpeakerImage.png?alt=media&amp;token=5f2b5034-3db8-4157-b0d3-7f53fa0144cb" class="img-fluid object-fit-cover" />
+          </div>
+          <p class="my-4">I told my story from the beginning to help connect the dots for folks wondering how I arrived at this point. My goal was to encourage the audience to explore Swift and to show that joining or creating a Swift Coding Club is a great way to start their journeys.</p>
+          <div class="my-4 ratio ratio-16x9" style="background-color: rgb(143 188 143 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+            <img alt="" src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/FirstTalk%2FDTC%20Camp%20Innovation.png?alt=media&amp;token=0b120c36-3c52-4b18-87d9-3c79b7a37199" class="img-fluid object-fit-contain" />
+          </div>
+          <p class="my-4">Being technical, creative, and solution-oriented is important. But I also spoke about the importance of being imaginative, optimistic, and persistent. Everyone can code, and luckily, getting started with SwiftUI is easier than ever due to the wonders of Swift Playgrounds.</p>
+          <h3 class="my-4">By Rule 🏀</h3>
+          <p class="my-4">During the course of the talk, I shared the challenges and obstacles I faced while traversing UIKit and SwiftUI. Although it took a lot of patience, I was able to successfully build and launch my own app to the store!</p>
+          <div class="card" style="background-color: rgb(143 188 143 / 50%); border: 6.0px solid rgb(176 224 230 / 100%)">
+            <div class="card-body">
+              <p class="card-text" style="font-weight: 600">By Rule is an iOS app and the ultimate basketball rules companion. It is the most robust college basketball rules app ever!</p>
+              <img alt="" src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/FirstTalk%2FBRPreview1.png?alt=media&amp;token=123710df-16cd-4a05-bd41-e78be59bc037" class="card-img img-fluid my-4" style="box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset" />
+            </div>
+          </div>
+          <p class="my-4">Attendees received a sneak peek of By Rule (SwiftUI version) and some new features coming later to the app.</p>
+          <div class="card" style="background-color: rgb(143 188 143 / 50%); border: 6.0px solid rgb(176 224 230 / 100%)">
+            <div class="card-body">
+              <img alt="" src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/FirstTalk%2FBRPreview2.png?alt=media&amp;token=36dadd3a-289b-4cbf-8097-fbd046f179b8" class="card-img img-fluid my-4" style="box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset" />
+              <p class="card-text" style="font-weight: 600">Optimize your rules-learning experience with modules for Coaches, Players, Fans, and Officials.</p>
+            </div>
+          </div>
+          <h3 class="my-4">Conclusion 💭</h3>
+          <div class="my-4 ratio ratio-21x9" style="background-color: rgb(143 188 143 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+            <img alt="" src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/FirstTalk%2FPoster.png?alt=media&amp;token=93dc3c11-ee15-41db-afb0-19b98813a9e0" class="img-fluid object-fit-cover" />
+          </div>
+          <p class="my-4">The conference allowed me to meet a diverse group of students, program managers, engineers, and more. For nearly an hour, I spoke candidly about my journey learning the Swift programming language, becoming a software engineer, and imploring all those listening to join or create a Swift Coding Club at their respective institutions. The next day, I felt incredibly encouraged by the positive feedback I received from numerous attendees at the Student Leadership Conference. I'm thankful for the opportunity and will be looking forward to my next speaking engagement!</p>
+        </div>
+      </div>
+    </div>
+    <p class="mt-5 text-center">Created in Swift with <a href="https://github.com/twostraws/Ignite" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover">Ignite</a></p>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/syntax-highlighting.js"></script>
+    <script src="/js/ignite-core.js"></script>
+  </body>
+</html>

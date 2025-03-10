@@ -36,10 +36,15 @@ struct SDF: Site {
     }
     
     var staticLayouts: [any StaticLayout] {
+        About()
+        ByRule()
+        CodingInstructor()
+        FirstTalk()
+        FirstConference()
+        Mentorship()
         TemperatureConverter()
         TCPart2()
-        ByRule()
-        About()
     }
+    
 }
 
