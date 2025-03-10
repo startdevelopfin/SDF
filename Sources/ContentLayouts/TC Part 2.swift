@@ -14,12 +14,14 @@ struct TCPart2: StaticLayout {
     var body: some HTML {
         Group {
             Text("SwiftUI Fundamentals 🚀")
-                .font(.title2)
+                .font(.title1)
                 .fontWeight(.bold)
+                .margin(.vertical, .large)
             
             Text("Part 2: Leveling up our TemperatureConverter app with advanced Swift concepts")
-                .font(.title4)
+                .font(.body)
                 .fontWeight(.semibold)
+                .margin(.vertical, .medium)
         }
         .padding(4)
         
@@ -36,7 +38,7 @@ struct TCPart2: StaticLayout {
             
         
         // To Be Continued Section
-        Text("To Be Continued... 📝")
+        Text("To Be Continued...🚧")
             .font(.title3)
             .margin(.vertical, .large)
         
@@ -247,7 +249,7 @@ struct TCPart2: StaticLayout {
         .margin(.vertical, .large)
         
         // Structs and Computed Properties Section
-        Text("Structs and Computed Properties for History Tracking 📝")
+        Text("Structs and Computed Properties for History Tracking 🕰️")
             .font(.title3)
             .margin(.vertical, .large)
         

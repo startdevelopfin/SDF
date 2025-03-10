@@ -29,12 +29,11 @@ struct CodingInstructor: StaticLayout {
         
         Text("I never thought I would be writing this blog post. Sometimes, an idea can dramatically change the course of your life. When I pivoted to iOS Development, it was hard to find my niche because I wanted to feel like my work impacted my community.")
             .margin(.vertical, .large)
-
-        Text("The Opportunity of a Lifetime")
+        
+        Text("The Opportunity of a Lifetime 🏫")
             .font(.title3)
             .fontWeight(.semibold)
             .margin(.vertical, .large)
-        
         Image( "https://media-exp1.licdn.com/dms/image/C4D1BAQFoA4GVMrXAtQ/company-background_10000/0/1561064993777?e=2147483647&v=beta&t=jkxDQLvuaAD_lm9r2PegJ64wk7a1yqk31cNuwz09Elc")
             .resizable()
             .aspectRatio(.r21x9, contentMode: .fill)
@@ -52,7 +51,7 @@ struct CodingInstructor: StaticLayout {
         Text("Denmark Technical College is a public, historically black, two-year technical college located in rural Bamberg County, South Carolina. It is a city chalk full of kind and hardworking people. The staff at the college are some of the most genuine people I have ever met. The students are no different. The Upward Bound program provides support services to these high school students in order to prepare them to graduate from high school, enroll in college, and graduate with a degree. Visit the Denmark Technical College website to learn more.")
             .margin(.vertical, .large)
 
-            Text("The Power of SwiftUI")
+            Text("The Power of SwiftUI 🦾")
                 .font(.title3)
                 .fontWeight(.semibold)
                 .margin(.vertical, .large)
@@ -62,7 +61,7 @@ struct CodingInstructor: StaticLayout {
   
             Text("When I sat down to think about what mode of learning would most effectively engage the students without overwhelming them, all roads pointed back to one of the most innovative applications of this decade. An app that served as an educational tool, was free to use(way more accessible), and could handle shipping to the App Store all in one would be a game-changer. Conveniently enough, such an app exists and is known as Swift Playgrounds for iPad.")
                 .margin(.vertical, .large)
-
+        
     Card {
         Text("Curriculum 📚")
             .font(.title2)
@@ -149,8 +148,8 @@ struct CodingInstructor: StaticLayout {
         
         Text("We learned about inspecting code via the preview window, created SwiftUI views like Text views, provided arguments, modified views using dot notation, and so much more!")
             .margin(.vertical, .large)
-            
-            Text("Challenges")
+        
+            Text("Challenges ⚠️")
                 .font(.title3)
                 .fontWeight(.semibold)
                 .margin(.vertical, .large)
@@ -182,9 +181,7 @@ struct CodingInstructor: StaticLayout {
                 .margin(.vertical, .large)
         
         
-    
-            
-            Text("A Multifaceted Approach")
+            Text("A Multifaceted Approach 🎲")
                 .font(.title3)
                 .fontWeight(.semibold)
                 .margin(.vertical, .large)
@@ -214,10 +211,7 @@ struct CodingInstructor: StaticLayout {
             Text("I asked the students questions about their experience coding this summer, but you will have to watch the DTC UB Coding Video to hear what they had to say. You can also check out some of the About Me projects they were working on by downloading the testflight beta DTC UB22 app. Not every student completed their project, but I am still incredibly proud of how hard they worked to create their own views and provide the apps content.")
                 .margin(.vertical, .large)
         
-        
-     
-            
-            Text("Final Thoughts")
+            Text("Final Thoughts 💭")
                 .font(.title3)
                 .fontWeight(.semibold)
                 .margin(.vertical, .large)

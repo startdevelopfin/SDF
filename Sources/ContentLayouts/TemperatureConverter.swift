@@ -15,12 +15,14 @@ struct TemperatureConverter: StaticLayout {
     var body: some HTML {
         Group {
             Text("SwiftUI Fundamentals 🚀")
-                .font(.title2)
+                .font(.title1)
                 .fontWeight(.bold)
+                .margin(.vertical, .large)
             
             Text("The first example app TemperatureConverter")
-                .font(.title4)
+                .font(.body)
                 .fontWeight(.semibold)
+                .margin(.vertical, .medium)
         }
         .padding(4)
         
