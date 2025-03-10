@@ -216,7 +216,7 @@ struct CodingInstructor: StaticLayout {
                 .fontWeight(.semibold)
                 .margin(.vertical, .large)
         
-        Image("/images/photos/Classroom1.png")
+        Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/ClassRoom1.png?alt=media&token=4557c319-40f0-438a-92f7-167eed4dbe83")
             .resizable()
             .aspectRatio(.r21x9, contentMode: .fill)
             .clipped()
