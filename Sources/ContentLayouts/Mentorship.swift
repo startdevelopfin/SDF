@@ -45,7 +45,7 @@ struct Mentorship: StaticLayout {
             .margin(.vertical, .large)
             
             Text("Seeking Mentorship Opportunities 👀")
-            .font(.title1)
+            .font(.title3)
             .margin(.vertical, .large)
             
             
@@ -67,12 +67,12 @@ struct Mentorship: StaticLayout {
             .margin(.vertical, .large)
         
         Text("4 Key Factors 🔑")
-            .font(.title3)
+            .font(.title4)
             .margin(.vertical, .large)
         
                 Card {
                     Text("Format ⚙️")
-                        .font(.title4)
+                        .font(.title5)
                         .margin(.vertical, .small)
                     
                     
@@ -84,7 +84,7 @@ struct Mentorship: StaticLayout {
                 
                 Card {
                     Text("Time Committment ⏰")
-                        .font(.title4)
+                        .font(.title5)
                         .margin(.vertical, .small)
                     
                     
@@ -96,7 +96,7 @@ struct Mentorship: StaticLayout {
                 
                 Card {
                     Text("Desired Outcome 💡")
-                        .font(.title4)
+                        .font(.title5)
                         .margin(.vertical, .small)
 
                     Text("Are you interested in fostering a community through peer mentorship, where knowledge-sharing is the primary goal? Are you looking for career progression or personal development? Maybe you are seeking hands-on guidance to grow technical skills.")
@@ -107,7 +107,7 @@ struct Mentorship: StaticLayout {
                 
                 Card {
                     Text("Resources you Have & Need 📓")
-                        .font(.title4)
+                        .font(.title5)
                         .margin(.vertical, .small)
 
                     Text("Do you have the resources to make the mentorship productive, like development tools, books, or some meeting space? And perhaps even more importantly—what resources do you still need access to?")
@@ -193,10 +193,12 @@ struct Mentorship: StaticLayout {
 
 
                 Text("Community Leaders 🏆")
+            .font(.title3)
+            .margin(.vertical, .large)
             
             Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/nsspain%2FRuhaQuote.png?alt=media&token=d3ff8998-30c2-4f39-83e9-45b40ee07847")
             .resizable()
-            .aspectRatio(.r21x9, contentMode: .fit)
+            .aspectRatio(.r16x9, contentMode: .fit)
             .clipped()
             .cornerRadius(12)
             .background(.darkSeaGreen.opacity(0.5))
@@ -210,11 +212,13 @@ struct Mentorship: StaticLayout {
             
 
                 Text("Danielle Lewis ⚡️")
+            .font(.title3)
+            .margin(.vertical, .medium)
             
             
             Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/nsspain%2FDanielleWorkshop.png?alt=media&token=8404fa9e-9079-4a6d-abc1-b55433e060ad")
             .resizable()
-            .aspectRatio(.r21x9, contentMode: .fit)
+            .aspectRatio(.r4x3, contentMode: .fit)
             .clipped()
             .cornerRadius(12)
             .background(.darkSeaGreen.opacity(0.5))
@@ -233,10 +237,12 @@ struct Mentorship: StaticLayout {
             
             
                 Text("Emad Ghorbaninia ⚡️")
+            .font(.title3)
+            .margin(.vertical, .medium)
             
             Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/nsspain%2FEmad.png?alt=media&token=bec34e3f-449e-48da-b8fa-dc3d020d220b")
             .resizable()
-            .aspectRatio(.r21x9, contentMode: .fit)
+            .aspectRatio(.r4x3, contentMode: .fit)
             .clipped()
             .cornerRadius(12)
             .background(.darkSeaGreen.opacity(0.5))
@@ -255,10 +261,12 @@ struct Mentorship: StaticLayout {
             
             
                 Text("Vui Nguyen ⚡️")
+            .font(.title3)
+            .margin(.vertical, .medium)
             
             Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/nsspain%2FVuiN.png?alt=media&token=c8795095-233d-452a-833e-3d30c6ace988")
             .resizable()
-            .aspectRatio(.r21x9, contentMode: .fit)
+            .aspectRatio(.r4x3, contentMode: .fit)
             .clipped()
             .cornerRadius(12)
             .background(.darkSeaGreen.opacity(0.5))
@@ -278,6 +286,8 @@ struct Mentorship: StaticLayout {
 
             
                 Text("Conclusion 💭")
+            .font(.title4)
+            .margin(.vertical, .large)
             
             
             Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/nsspain%2FSpecialThanks.png?alt=media&token=c84f16f3-6f45-4bc5-b425-834c82636058")

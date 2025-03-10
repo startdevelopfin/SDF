@@ -41,7 +41,7 @@ struct FirstConference: StaticLayout {
             .margin(.vertical, .large)
 
             
-            Text("I decided to go to Chicagoland for my first developer conference, Deep Dish Swift. Over three-hundred attendees were present. Developers converged in a large conference room. I could not help but feel excited because Day 1 was devoted to Indie Devs. I am nearing completion of converting my UIKit app [By Rule](https://apps.apple.com/us/app/by-rule/id1532845521) to SwiftUI, so the time to learn about mastering subscriptions, shipping faster, and optimizing for the App Store was now more than ever. Immediately, I found value in attending the conference.")
+            Text("I decided to go to Chicagoland for my first developer conference, Deep Dish Swift. Over three-hundred attendees were present. Developers converged in a large conference room. I could not help but feel excited because Day 1 was devoted to Indie Devs. I am nearing completion of converting my UIKit app By Rule to SwiftUI, so the time to learn about mastering subscriptions, shipping faster, and optimizing for the App Store was now more than ever. Immediately, I found value in attending the conference.")
                 .font(.body)
                 .margin(.vertical, .large)
             
@@ -249,7 +249,7 @@ struct FirstConference: StaticLayout {
             
 
             
-            Text("My first Swift conference was truly memorable. I got to explore a different city and try out the local cuisine. I learned something new from the various talks, met many great developers, and made new friends too! I was even fortunate enough to receive an affirming round of applause for my [work mentoring last summer](https://startdevelopfin.github.io/posts/codingdtc/). I will never forget that moment. If you are on the fence about attending a Swift conference, let this be the nudge you need to find your way to an event near you.")
+            Text("My first Swift conference was truly memorable. I got to explore a different city and try out the local cuisine. I learned something new from the various talks, met many great developers, and made new friends too! I was even fortunate enough to receive an affirming round of applause for my work mentoring last summer. I will never forget that moment. If you are on the fence about attending a Swift conference, let this be the nudge you need to find your way to an event near you.")
                 .font(.body)
                 .margin(.vertical, .large)
             
@@ -277,7 +277,7 @@ struct FirstConference: StaticLayout {
                 .font(.body)
                 .margin(.vertical, .large)
             
-            Text("I have a similar ask for every reader from the Swift community: Find a way to make an impact and foster positive change. Maybe that looks like lobbying for paid internships or entry-level support where you work. Perhaps that looks like joining an organization like [Underdog Devs](https://www.underdogdevs.org) and providing sponsorship or mentorship for aspiring developers. We all have a role to play. The future of the Swift community depends on the actions we take right now.")
+            Text("I have a similar ask for every reader from the Swift community: Find a way to make an impact and foster positive change. Maybe that looks like lobbying for paid internships or entry-level support where you work. Perhaps that looks like joining an organization like Underdog Devs and providing sponsorship or mentorship for aspiring developers. We all have a role to play. The future of the Swift community depends on the actions we take right now.")
                 .font(.body)
                 .margin(.vertical, .large)
         
