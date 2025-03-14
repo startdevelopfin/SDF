@@ -360,12 +360,12 @@ struct TemperatureConverter: StaticLayout {
         .margin(.vertical, .large)
         
         Divider()
-            .margin(.vertical, .large)
-        
-        Text("See the complete implementation GitHub")
-        
-        Link("Temperature Converter", target: "https://github.com/startdevelopfin/TemperatureConverter")
-        
+//            .margin(.vertical, .large)
+//        
+//        Text("See the complete implementation GitHub")
+//        
+//        Link("Temperature Converter", target: "https://github.com/startdevelopfin/TemperatureConverter")
+//        
         Text("SwiftUI Fundamentals - The second example app TemperatureConverter 2.0")
             .fontWeight(.light)
             .margin(.top, .large)
