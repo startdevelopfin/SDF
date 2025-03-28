@@ -90,7 +90,7 @@ struct Home: StaticLayout {
             Card(imageName: "/images/photos/mentorshipCard.png") {
                 Link("Mentorship 📚", target: Mentorship())
                     .font(.title3)
-                Text("In this post, I reflect on my first speaking engagement as a part of the HBCU C2 Student Leadership Conference at Tennesee State University.")
+                Text("In this post, I reflect on the the power of Mentorship using excerpts from my second iOS Conference Talk.")
             } footer: {
 
             }
