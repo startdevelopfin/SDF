@@ -44,7 +44,7 @@ struct ByRule: StaticLayout {
                 .fontWeight(.semibold)
                 .font(.title6)
             
-                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/Illustration19New.png?alt=media&token=705b545c-9c6e-4367-b6da-36eb2b7282ef")
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/Manu.PNG?alt=media&token=78d06f68-d338-4768-9000-a9b7d6cd8097")
                     .resizable()
                     .aspectRatio(.r21x9, contentMode: .fit)
                     .margin(.top, .medium)
