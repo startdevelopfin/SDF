@@ -76,14 +76,14 @@ struct ByRule: StaticLayout {
             // By Rule Table
             Card {
                 Table {
-                    Row {
-                        Text("Feature")
-                            .font(.title3)
-                            .fontWeight(.bold)
-                        Text("Description")
-                            .fontWeight(.bold)
-                            .font(.title3)
-                    }
+//                    Row {
+//                        Text("Feature")
+//                            .font(.title3)
+//                            .fontWeight(.bold)
+//                        Text("Description")
+//                            .fontWeight(.bold)
+//                            .font(.title3)
+//                    }
                     
                     Row {
                         Text("📚 Comprehensive Study System")
@@ -241,7 +241,7 @@ struct ByRule: StaticLayout {
             Card {
                 Table {
                     Row {
-                        Text("📖 Knows the Rulebook")
+                        Text("📖 Rulebook")
                             .fontWeight(.bold)
                             .font(.title6)
                         Text("Built on official documents, Manu delivers precise, rule-based answers—no guesswork.")
@@ -249,7 +249,7 @@ struct ByRule: StaticLayout {
                     }
                     
                     Row {
-                        Text("⚡ Calls It Fast")
+                        Text("⚡ Fast")
                             .fontWeight(.bold)
                             .font(.title6)
                         Text("No more flipping through pages—Manu gets straight to the point, instantly.")
@@ -257,7 +257,7 @@ struct ByRule: StaticLayout {
                     }
                     
                     Row {
-                        Text("🎯 Clarity in the Moment")
+                        Text("🎯 Clarity")
                             .fontWeight(.bold)
                             .font(.title6)
                         Text("Whether you're courtside, on film study, or debating a call, Manu brings the facts.")
@@ -265,7 +265,7 @@ struct ByRule: StaticLayout {
                     }
                     
                     Row {
-                        Text("🤝 A Nudge in the Right Direction")
+                        Text("🤝 A Nudge")
                             .fontWeight(.bold)
                             .font(.title6)
                         Text("Manu doesn’t just answer—it guides you to better decisions.")
@@ -273,7 +273,7 @@ struct ByRule: StaticLayout {
                     }
                     
                     Row {
-                        Text("🚀 Always Game-Ready")
+                        Text("🚀 Game-Ready")
                             .fontWeight(.bold)
                             .font(.title6)
                         Text("Reliable, efficient, and focused. No fluff, just the call you need.")
