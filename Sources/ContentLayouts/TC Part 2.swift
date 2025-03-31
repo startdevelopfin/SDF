@@ -12,6 +12,10 @@ struct TCPart2: StaticLayout {
     var title = "SwiftUI Fundamentals - The second example app TemperatureConverter 2.0"
 
     var body: some HTML {
+        Head {
+            // Add the Google Analytics include file here
+            Include("google-analytics.html") as! (any HeadElement)
+        }
         Group {
             Text("SwiftUI Fundamentals 🚀")
                 .font(.title1)

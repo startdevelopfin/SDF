@@ -18,7 +18,10 @@ struct CodingInstructor: StaticLayout {
     var image = "/images/photos/CodingHeader.png"
     
     var body: some HTML {
-        
+        Head {
+            // Add the Google Analytics include file here
+            Include("google-analytics.html") as! (any HeadElement)
+        }
         Text("Coding Instructor 👨🏿‍💻")
             .font(.title1)
             .fontWeight(.bold)

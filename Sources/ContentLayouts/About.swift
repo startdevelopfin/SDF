@@ -11,6 +11,10 @@ struct About: StaticLayout {
     var title = "By Rule: Basketball Official"
 
     var body: some HTML {
+        Head {
+            // Add the Google Analytics include file here
+            Include("google-analytics.html") as! (any HeadElement)
+        }
         Text("About 👤")
                 .font(.title1)
 
