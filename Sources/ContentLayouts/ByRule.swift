@@ -49,11 +49,11 @@ struct ByRule: StaticLayout {
                     Text("By Rule is the premier study tool for basketball officials, coaches, players, and fans looking to engage NCAA basketball rules.")
                         .lineSpacing(1.75)
                         .padding(4)
-                        .font(.title5)
+                        .font(.title6)
                         .fontWeight(.semibold)
                 }
                 .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
-                .background(.darkOliveGreen.opacity(0.5))
+                .background(.oliveDrab.opacity(0.5))
                 .innerShadow(radius: 5)
                 .margin(.bottom, .large)
         
@@ -146,39 +146,23 @@ struct ByRule: StaticLayout {
             // By Rule Table
             Card {
                 Table {
-//                    Row {
-//                        Text("Feature")
-//                            .font(.title3)
-//                            .fontWeight(.bold)
-//                        Text("Description")
-//                            .fontWeight(.bold)
-//                            .font(.title3)
-//                    }
                     
                     Row {
-                        Text("📚 Comprehensive Study System")
+                        Text("🗂️ Index to Rules")
                             .font(.title6)
                             .fontWeight(.bold)
-                        
-                        Text("Simulate exam conditions with customizable rules mashups to prepare for any testing scenario.")
+                        Text("Glossary terms at your fingertips")
                             .fontWeight(.semibold)
                     }
-                    
+
                     Row {
-                        Text("🔍 Spotlight Learning")
+                        Text("🏠 Rules Center")
                             .font(.title6)
                             .fontWeight(.bold)
-                        Text("Zero in on weak spots—Rule 4 tripping you up? Master it fast.")
+                        Text("For quick reference of major concerns and procedures")
                             .fontWeight(.semibold)
                     }
-                    
-                    Row {
-                        Text("📖 Official NCAA Rules")
-                            .font(.title6)
-                            .fontWeight(.bold)
-                        Text("The full men’s rulebook, searchable, always at hand.")
-                            .fontWeight(.semibold)
-                    }
+
                     
                     Row {
                         Text("📱 Interactive Flashcards")
@@ -188,62 +172,16 @@ struct ByRule: StaticLayout {
                             .fontWeight(.semibold)
                     }
                     
-                    Row {
-                        Text("✅ Challenging Quizzes")
-                            .font(.title6)
-                            .fontWeight(.bold)
-                        Text("Real scenarios, real pressure—be game-ready.")
-                            .fontWeight(.semibold)
-                    }
                     
-                    Row {
-                        Text("🎥 Video Training Library")
-                            .font(.title6)
-                            .fontWeight(.bold)
-                        Text("Learn officiating mechanics, step by step.")
-                            .fontWeight(.semibold)
-                    }
-                    
-                    Row {
-                        Text("🎧 Audio Rules")
-                            .font(.title6)
-                            .fontWeight(.bold)
-                        
-                        Text("Rules on the go—learn while you drive or sweat.")
-                            .fontWeight(.semibold)
-                    }
-                    
-                    Row {
-                        Text("📊 Performance Analytics")
-                            .font(.title6)
-                            .fontWeight(.bold)
-                        Text("Track every win, spot every gap.")
-                            .fontWeight(.semibold)
-                    }
-                    
-                    Row {
-                        Text("💬 Rules Chat")
-                            .font(.title6)
-                            .fontWeight(.bold)
-                        Text("Instant answers, straight from the source.")
-                            .fontWeight(.semibold)
-                    }
-                    
-                    Row {
-                        Text("⚙️ Customizable Experience")
-                            .font(.title6)
-                            .fontWeight(.bold)
-                        Text("Adjust font sizes, toggle between dark and light mode, and personalize your study sessions.")
-                            .fontWeight(.semibold)
-                    }
                     
                 }
                 
             }
             .margin(.vertical, .large)
             .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
+            
         } header: {
-            Text("Key Features 🔑")
+            Text("Study 📝")
                 .font(.title2)
                 .margin(.top, .large)
                 .margin(.bottom, .large)
@@ -271,7 +209,66 @@ struct ByRule: StaticLayout {
             .margin(.vertical, .large)
             .margin(.horizontal, .large)
             
-        } footer: {
+        }
+        .clipped()
+        .cornerRadius(12)
+        .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
+        .background(.silver.opacity(0.5))
+        .innerShadow(radius: 5)
+        .margin(.bottom, .large)
+        
+        Card {
+//            Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/Manu.PNG?alt=media&token=78d06f68-d338-4768-9000-a9b7d6cd8097")
+//                .resizable()
+//                .background(.thinMaterial.colorScheme(.light))
+            
+            // Table
+            Card {
+                Table {
+                    
+                    Row {
+                        Text("🎧 Audio Rules")
+                            .font(.title6)
+                            .fontWeight(.bold)
+                        
+                        Text("Rules on the go—learn while you drive or sweat.")
+                            .fontWeight(.semibold)
+                    }
+                    
+                    
+                    Row {
+                        Text("🎥 Video Training Library")
+                            .font(.title6)
+                            .fontWeight(.bold)
+                        Text("Learn officiating mechanics, step by step.")
+                            .fontWeight(.semibold)
+                    }
+                    
+                    Row {
+                        Text("✅ Challenging Quizzes")
+                            .font(.title6)
+                            .fontWeight(.bold)
+                        Text("Real scenarios, real pressure—be game-ready.")
+                            .fontWeight(.semibold)
+                    }
+                    
+                    
+                    
+
+                }
+            }
+            .margin(.vertical, .large)
+            .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
+            
+        } header: {
+            Text("Listen 🎧 , Watch 🎥")
+                .font(.title2)
+                .margin(.top, .large)
+                .margin(.bottom, .large)
+            
+            Divider()
+                .margin(.vertical, .large)
+            
             // By Rule Screenshots 2
             Grid {
                 Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRAudio.png?alt=media&token=b0b35ed8-55eb-448e-975e-0565799b0957", description: "Audio")
@@ -291,6 +288,7 @@ struct ByRule: StaticLayout {
             }
             .margin(.vertical, .large)
             .margin(.horizontal, .large)
+
             
         }
         .clipped()
@@ -300,26 +298,18 @@ struct ByRule: StaticLayout {
         .innerShadow(radius: 5)
         .margin(.bottom, .large)
         
-      
-        // Manu
         Card {
-            Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/Manu.PNG?alt=media&token=78d06f68-d338-4768-9000-a9b7d6cd8097")
-                .resizable()
-                .background(.thinMaterial.colorScheme(.light))
+//            Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/Manu.PNG?alt=media&token=78d06f68-d338-4768-9000-a9b7d6cd8097")
+//                .resizable()
+//                .background(.thinMaterial.colorScheme(.light))
             
-            // Manu Table
+            // Table
             Card {
                 Table {
-                    Row {
-                        Text("📖 Rulebook")
-                            .fontWeight(.bold)
-                            .font(.title6)
-                        Text("No guesswork—just the facts.")
-                            .fontWeight(.semibold)
-                    }
+                
                     
                     Row {
-                        Text("⚡ Fast")
+                        Text("⚡ Lightning Search")
                             .fontWeight(.bold)
                             .font(.title6)
                         Text("Answers in a snap—no page-flipping required.")
@@ -327,35 +317,100 @@ struct ByRule: StaticLayout {
                     }
                     
                     Row {
-                        Text("🎯 Clarity")
-                            .fontWeight(.bold)
+                        Text("📖 Official NCAA Rules")
                             .font(.title6)
-                        Text("Courtside or film room, Manu nails it.")
+                            .fontWeight(.bold)
+                        Text("The full men’s rulebook, searchable, always at hand.")
                             .fontWeight(.semibold)
                     }
                     
                     Row {
-                        Text("🤝 A Nudge")
-                            .fontWeight(.bold)
+                        Text("📚 Learning Module")
                             .font(.title6)
-                        Text("Manu doesn’t just answer—it guides you to better decisions.")
-                            .fontWeight(.semibold)
-                    }
-                    
-                    Row {
-                        Text("🚀 Game-Ready")
                             .fontWeight(.bold)
-                            .font(.title6)
-                        Text("Reliable, efficient, and focused. No fluff, just the call you need.")
-                            .fontWeight(.semibold)
                         
+                        Text("Your personal guide to learning the basketball rules")
+                            .fontWeight(.semibold)
                     }
                     
+                    
+
                 }
-                
             }
             .margin(.vertical, .large)
             .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
+            
+        } header: {
+            Text("Learn 🔑")
+                .font(.title2)
+                .margin(.top, .large)
+                .margin(.bottom, .large)
+            
+            Divider()
+                .margin(.vertical, .large)
+            
+            // By Rule Screenshots 2
+            Grid {
+                
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRSearch.png?alt=media&token=d81968ce-8514-45d9-aa89-bea6bbd98d91", description: "Summary")
+                    .resizable()
+                    .width(4)
+                    .margin(.vertical, .medium)
+
+                
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRPDF.png?alt=media&token=b627d5eb-a906-406d-9d9a-7a0e5fe86830", description: "Summary")
+                    .resizable()
+                    .width(4)
+                    .margin(.vertical, .medium)
+                
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRHome.png?alt=media&token=448cca4a-fa6e-488a-aff5-0a306c93d1bc", description: "Summary")
+                    .resizable()
+                    .width(4)
+                    .margin(.vertical, .medium)
+            }            .margin(.vertical, .large)
+            .margin(.horizontal, .large)
+        }
+        .clipped()
+        .cornerRadius(12)
+        .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
+        .background(.silver.opacity(0.5))
+        .innerShadow(radius: 5)
+        .margin(.bottom, .large)
+        
+        
+      
+        // Manu
+        Card {
+//            Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/Manu.PNG?alt=media&token=78d06f68-d338-4768-9000-a9b7d6cd8097")
+//                .resizable()
+//                .background(.thinMaterial.colorScheme(.light))
+            
+            // Manu Screenshots
+            Grid {
+
+                
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRChatHistory.png?alt=media&token=cf9750b0-2a1a-42ef-ac85-c4f55d755e30", description: "Manu")
+                    .resizable()
+                    .width(4)
+                    .margin(.vertical, .medium)
+                
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRManu2.png?alt=media&token=7aaad391-ae07-4b32-8e8a-e7cedaf4124e", description: "Summary")
+                    .resizable()
+                    .width(4)
+                    .margin(.vertical, .medium)
+                
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRAnalyticSummary.png?alt=media&token=62da4096-0ab9-4813-a6b5-a3079a96f14b", description: "Summary")
+                    .resizable()
+                    .width(4)
+                    .margin(.vertical, .medium)
+                
+
+
+               }
+            .margin(.vertical, .large)
+            .margin(.horizontal, .large)
+            
+
         } header: {
             // Manu Title + Description
             Text("Manu: The AI That Makes the Call 🏀")
@@ -370,20 +425,144 @@ struct ByRule: StaticLayout {
                 .fontWeight(.semibold)
                 .margin(.top, .large)
                 .margin(.bottom, .large)
+            
+            Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/Manu.PNG?alt=media&token=78d06f68-d338-4768-9000-a9b7d6cd8097")
+                .resizable()
+                .background(.thinMaterial.colorScheme(.light))
         } footer: {
-            // Manu Screenshots
+            // Manu Table
+            Card {
+                Table {
+                    
+                    Row {
+                        Text("📲 Rules Chat, One-on-One:")
+                            .font(.title6)
+                            .fontWeight(.semibold)
+                        Text("Got a question? Manu’s your AI ref coach, pulling from the official NCAA rulebook and your data to clarify calls and boost weak spots.")
+                            .fontWeight(.semibold)
+                    }
+
+                    Row {
+                        Text("📆 History")
+                            .font(.title6)
+                            .fontWeight(.semibold)
+                        Text("Don't worry, Manu will save your chat for in depth discussion")
+                            .fontWeight(.semibold)
+                    }
+
+
+                    Row {
+                        Text("🤖 Personalized Summary")
+                            .font(.title6)
+                            .fontWeight(.semibold)
+                        Text("Get detailed feedback based on your studies")
+                            .fontWeight(.semibold)
+                    }
+                }
+                
+            }
+            .margin(.vertical, .large)
+            .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
+
+        }
+        .clipped()
+        .cornerRadius(12)
+        .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
+        .background(.darkSeaGreen.opacity(0.5))
+        .innerShadow(radius: 5)
+        .margin(.bottom, .large)
+        
+        // Analyitcs
+        Card {
+
             Grid {
                 Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRSummary.png?alt=media&token=35fe7a9a-d86b-4b9c-b216-2237b58a7a5a", description: "Summary")
                     .resizable()
                     .width(4)
                     .margin(.vertical, .medium)
+
                 
-                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRManu.png?alt=media&token=c7804be8-6a8a-4c5e-b7f9-e2e7a7850235", description: "Manu")
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRBoxScore.png?alt=media&token=36ff5a9a-6ad3-477a-8e2a-21d4075c8517", description: "Manu")
                     .resizable()
                     .width(4)
                     .margin(.vertical, .medium)
                 
+                
                 Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRAnalytics.png?alt=media&token=35254985-5ea7-4d2e-ae7c-818cdf90162c", description: "Analytics")
+                    .resizable()
+                    .width(4)
+                    .margin(.vertical, .medium)
+
+               }
+            .margin(.vertical, .large)
+            .margin(.horizontal, .large)
+
+        } header: {
+            // Manu Title + Description
+            Text("Analytics: Your Game Plan to Greatness 📊")
+                .font(.title2)
+                .margin(.top, .large)
+                .margin(.bottom, .large)
+            
+            Text("Ever wonder what separates good refs from great ones? It’s knowing your game—inside and out. By Rule turns your effort into insight, tracking every quiz, flashcard, and second you put in. No mystery here—just your hustle, our analytics, and Manu’s genius, all working together to make you unstoppable. Here’s how we break it down:")
+                .padding(4)
+                .lineSpacing(1.75)
+                .font(.title6)
+                .fontWeight(.semibold)
+                .margin(.top, .large)
+                .margin(.bottom, .large)
+
+        } footer: {
+
+            // Manu Table
+            Card {
+                Table {
+                    Row {
+                        Text("🤓 Instant Feedback")
+                            .font(.title6)
+                            .fontWeight(.semibold)
+                        Text("Finish a quiz? Manu’s on it—dissecting your rights and wrongs faster than a timeout huddle, so you learn on the spot.")
+                            .fontWeight(.semibold)
+                    }
+                    
+                    Row {
+                        Text("💯 Score Cards")
+                            .font(.title6)
+                            .fontWeight(.semibold)
+                        Text("See your score, time, and rule-by-rule breakdown—think of it as your stat sheet after a big game, showing where you dominate and where to drill.")
+                            .fontWeight(.semibold)
+                    }
+                    
+                    
+                    Row {
+                        Text("📊 Performance Analytics")
+                            .font(.title6)
+                            .fontWeight(.bold)
+                        Text("Track every win, spot every gap.")
+                            .fontWeight(.semibold)
+                    }
+                    
+                }
+                
+            }
+            .margin(.vertical, .large)
+            .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
+            
+            Grid {
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRIncorrect.png?alt=media&token=e1717b6e-4be3-4fc9-ace5-d2d27457c062", description: "Manu")
+                    .resizable()
+                    .width(4)
+                    .margin(.vertical, .medium)
+                
+               
+                
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRChart2.png?alt=media&token=d71eebec-4e4a-44c9-99e6-bc7425170b77", description: "Manu")
+                    .resizable()
+                    .width(4)
+                    .margin(.vertical, .medium)
+                
+                
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRRuleRank.png?alt=media&token=2a185fc4-9046-4b55-9d41-8235326cd48a", description: "Manu")
                     .resizable()
                     .width(4)
                     .margin(.vertical, .medium)
@@ -395,10 +574,11 @@ struct ByRule: StaticLayout {
         .clipped()
         .cornerRadius(12)
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
-        .background(.darkSeaGreen.opacity(0.5))
+        .background(.dodgerBlue.opacity(0.5))
         .innerShadow(radius: 5)
         .margin(.bottom, .large)
         
+
         Divider()
             .margin(.vertical, .large)
         
@@ -426,3 +606,36 @@ struct ByRule: StaticLayout {
 }
 
 //Download By Rule and rule the game!
+
+// Row {
+//Text("📖 Rulebook")
+//    .fontWeight(.bold)
+//    .font(.title6)
+//Text("Query the official rules. No guesswork—just the facts.")
+//    .fontWeight(.semibold)
+//}
+//
+//Row {
+//    Text("🤝 A Nudge")
+//        .fontWeight(.bold)
+//        .font(.title6)
+//    Text("Manu doesn’t just answer—it guides you to better decisions.")
+//        .fontWeight(.semibold)
+//}
+//
+//Row {
+//    Text("🚀 Game-Ready")
+//        .fontWeight(.bold)
+//        .font(.title6)
+//    Text("Reliable, efficient, and focused. No fluff, just the call you need.")
+//        .fontWeight(.semibold)
+//    
+//}
+//
+//Row {
+//    Text("🎯 Clarity")
+//        .fontWeight(.bold)
+//        .font(.title6)
+//    Text("Courtside or film room, Manu nails it.")
+//        .fontWeight(.semibold)
+//}
