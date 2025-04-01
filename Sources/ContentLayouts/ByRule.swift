@@ -585,7 +585,7 @@ struct ByRule: StaticLayout {
                 .margin(.top, .large)
                 .margin(.bottom, .large)
             
-            Text("By Rule turns your effort into insight, tracking every quiz, flashcard, and second you put in. No mystery here—just your hustle, our analytics, and Manu’s genius, all working together to make you unstoppable. ")
+            Text("By Rule turns your effort into insight, tracking every quiz, flashcard, and second you put in. No mystery here—just your hustle, your analytics, and Manu’s genius, all working together to make you unstoppable. ")
                 .padding(4)
                 .lineSpacing(1.75)
                 .font(.title6)
