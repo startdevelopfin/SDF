@@ -13,10 +13,10 @@ struct ByRule: StaticLayout {
     var title = "By Rule: Basketball Official"
     
     var body: some HTML {
-        Head {
-            // Add the Google Analytics include file here
-            Include("google-analytics.html") as! (any HeadElement)
-        }
+//        Head {
+//            // Add the Google Analytics include file here
+//            Include("google-analytics.html") as! (any HeadElement)
+//        }
         // By Rule Header
         Group {
             Text("By Rule: Basketball Official 🏀")
@@ -51,23 +51,71 @@ struct ByRule: StaticLayout {
                 .fontWeight(.semibold)
                 .font(.title6)
             
-            Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/refhuddle2.png?alt=media&token=dc87ce1a-2e00-4d8f-bc8b-e3d6c441fc04")
-                .resizable()
-                .aspectRatio(.r21x9, contentMode: .fit)
-                .margin(.top, .medium)
-                .margin(.bottom, .medium)
-                .background(.thinMaterial.colorScheme(.light))
-                .innerShadow(radius: 5)
+           
             
-            Text("Basketball officiating demands split-second decision making based on thorough rules knowledge and on-court experience. Whether you're preparing for certification, advancing your career, or simply want to understand the game better, By Rule provides everything you need to refine and refresh your skills.")
+            Grid {
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/ref1shot.png?alt=media&token=e2c020ed-0262-4f97-8623-c19c6b585008")
+                    .resizable()
+                    .width(4)
+                    .margin(.vertical, .medium)
+                    .background(.thinMaterial.colorScheme(.light))
+                    .innerShadow(radius: 5)
+                
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/refviolation.png?alt=media&token=3bb531af-8b9b-4a06-84b6-8d6587bac634")
+                    .resizable()
+                    .width(4)
+                    .margin(.vertical, .medium)
+                    .background(.thinMaterial.colorScheme(.light))
+                    .innerShadow(radius: 5)
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/reffoul.png?alt=media&token=9791b1b1-7ed9-4a6a-a2a8-23b2a53ff944")
+                    .resizable()
+                    .width(4)
+                    .margin(.vertical, .medium)
+                    .background(.thinMaterial.colorScheme(.light))
+                    .innerShadow(radius: 5)
+
+            }
+            .margin(.vertical, .large)
+            .margin(.horizontal, .large)
+            
+            Text("Basketball demands split-second precision. Whether you’re a rookie stepping onto the court or a seasoned vet, By Rule sharpens your skills with tools you won’t find anywhere else. New officials, this is your fast track: flip through 300+ flashcards until every call feels instinctive, then test yourself with real-game scenarios using quizzes to mimic the pressure of a packed gym.")
                 .padding(4)
                 .lineSpacing(1.75)
                 .font(.title6)
                 .fontWeight(.semibold)
+                .margin(.vertical, .medium)
             
         }
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
         .background(.burlyWood.opacity(0.5))
+        .innerShadow(radius: 5)
+        .margin(.bottom, .large)
+        
+        
+        Card {
+            
+            Text("For everyone else, it’s about sharpening your skills and staying current—repetition that fits your life, from audio rules on your commute to video breakdowns of floor mechanics. Struggling with Rule 4? Analytics will spot it, Spotlight Learning fixes it, and Manu, your AI rules guru, clears up any call on the fly.")
+                .padding(4)
+                .lineSpacing(1.75)
+                .font(.title6)
+                .fontWeight(.semibold)
+                .margin(.vertical, .medium)
+            
+            Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/refhuddle2.png?alt=media&token=dc87ce1a-2e00-4d8f-bc8b-e3d6c441fc04")
+                .resizable()
+                .aspectRatio(.r21x9, contentMode: .fit)
+                .background(.thinMaterial.colorScheme(.light))
+                .innerShadow(radius: 5)
+            
+            Text("It’s not just an app—it’s your companion, built by refs for refs, designed to grow with you from your first game to your thousandth. Ready to see how it works?")
+                .padding(4)
+                .lineSpacing(1.75)
+                .font(.title6)
+                .fontWeight(.semibold)
+                .margin(.vertical, .medium)
+        }
+        .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
+        .background(. steelBlue.opacity(0.5))
         .innerShadow(radius: 5)
         .margin(.bottom, .large)
         
@@ -102,7 +150,7 @@ struct ByRule: StaticLayout {
                         Text("🔍 Spotlight Learning")
                             .font(.title6)
                             .fontWeight(.bold)
-                        Text("Target specific rules (1-11) to improve areas where you need the most growth.")
+                        Text("Zero in on weak spots—Rule 4 tripping you up? Master it fast.")
                             .fontWeight(.semibold)
                     }
                     
@@ -110,7 +158,7 @@ struct ByRule: StaticLayout {
                         Text("📖 Official NCAA Rules")
                             .font(.title6)
                             .fontWeight(.bold)
-                        Text("Access complete men's rulebook with searchable content for quick reference.")
+                        Text("The full men’s rulebook, searchable, always at hand.")
                             .fontWeight(.semibold)
                     }
                     
@@ -118,7 +166,7 @@ struct ByRule: StaticLayout {
                         Text("📱 Interactive Flashcards")
                             .font(.title6)
                             .fontWeight(.bold)
-                        Text("Build rules recall with 300+ professionally crafted cards designed by experienced officials.")
+                        Text("300+ cards from seasoned officials—flip, learn, repeat.")
                             .fontWeight(.semibold)
                     }
                     
@@ -126,7 +174,7 @@ struct ByRule: StaticLayout {
                         Text("✅ Challenging Quizzes")
                             .font(.title6)
                             .fontWeight(.bold)
-                        Text("Test your knowledge with real game scenarios that prepare you for on-court situations.")
+                        Text("Real scenarios, real pressure—be game-ready.")
                             .fontWeight(.semibold)
                     }
                     
@@ -134,7 +182,7 @@ struct ByRule: StaticLayout {
                         Text("🎥 Video Training Library")
                             .font(.title6)
                             .fontWeight(.bold)
-                        Text("Watch instructional clips on officiating mechanics and techniques from experienced professionals.")
+                        Text("Learn officiating mechanics, step by step.")
                             .fontWeight(.semibold)
                     }
                     
@@ -143,7 +191,7 @@ struct ByRule: StaticLayout {
                             .font(.title6)
                             .fontWeight(.bold)
                         
-                        Text("Listen to rules on-the-go for convenient learning during commutes or workouts.")
+                        Text("Rules on the go—learn while you drive or sweat.")
                             .fontWeight(.semibold)
                     }
                     
@@ -151,7 +199,7 @@ struct ByRule: StaticLayout {
                         Text("📊 Performance Analytics")
                             .font(.title6)
                             .fontWeight(.bold)
-                        Text("Track your progress and identify improvement areas with detailed performance metrics.")
+                        Text("Track every win, spot every gap.")
                             .fontWeight(.semibold)
                     }
                     
@@ -159,7 +207,7 @@ struct ByRule: StaticLayout {
                         Text("💬 Rules Chat")
                             .font(.title6)
                             .fontWeight(.bold)
-                        Text("Get insights directly from official documentation when you have specific questions.")
+                        Text("Instant answers, straight from the source.")
                             .fontWeight(.semibold)
                     }
                     
@@ -230,7 +278,7 @@ struct ByRule: StaticLayout {
         .clipped()
         .cornerRadius(12)
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
-        .background(.dodgerBlue.opacity(0.5))
+        .background(.silver.opacity(0.5))
         .innerShadow(radius: 5)
         .margin(.bottom, .large)
         
@@ -248,7 +296,7 @@ struct ByRule: StaticLayout {
                         Text("📖 Rulebook")
                             .fontWeight(.bold)
                             .font(.title6)
-                        Text("Built on official documents, Manu delivers precise, rule-based answers—no guesswork.")
+                        Text("No guesswork—just the facts.")
                             .fontWeight(.semibold)
                     }
                     
@@ -256,7 +304,7 @@ struct ByRule: StaticLayout {
                         Text("⚡ Fast")
                             .fontWeight(.bold)
                             .font(.title6)
-                        Text("No more flipping through pages—Manu gets straight to the point, instantly.")
+                        Text("Answers in a snap—no page-flipping required.")
                             .fontWeight(.semibold)
                     }
                     
@@ -264,7 +312,7 @@ struct ByRule: StaticLayout {
                         Text("🎯 Clarity")
                             .fontWeight(.bold)
                             .font(.title6)
-                        Text("Whether you're courtside, on film study, or debating a call, Manu brings the facts.")
+                        Text("Courtside or film room, Manu nails it.")
                             .fontWeight(.semibold)
                     }
                     
@@ -297,7 +345,7 @@ struct ByRule: StaticLayout {
                 .margin(.top, .large)
                 .margin(.bottom, .large)
             
-            Text("When the game moves fast, Manu keeps you ahead of the play. Your personal rules expert, built for quick calls, clear answers, and instant insight. No debates, no delays—just the right call, right when you need it.")
+            Text("When the game moves fast, Manu keeps you ahead of the play. Your personal rules expert, built for quick calls, clear answers, and instant insight. No debates, no delays—just the right call, right when you need it. Built into By Rule, this AI rules expert delivers instant, no-nonsense answers—straight from the NCAA rulebook. Fast, clear, and courtside-ready, it’s like having a rules assistant in your pocket.")
                 .padding(4)
                 .lineSpacing(1.75)
                 .font(.title6)
@@ -329,7 +377,7 @@ struct ByRule: StaticLayout {
         .clipped()
         .cornerRadius(12)
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
-        .background(.mediumSeaGreen.opacity(0.5))
+        .background(.darkSeaGreen.opacity(0.5))
         .innerShadow(radius: 5)
         .margin(.bottom, .large)
         
@@ -345,7 +393,7 @@ struct ByRule: StaticLayout {
                     .margin(.vertical, .medium)
             }
         } header: {
-            Text("Download Today ✅")
+            Text("Download By Rule Today! ✅")
                 .font(.title2)
                 .margin(.top, .large)
             
@@ -359,3 +407,4 @@ struct ByRule: StaticLayout {
     }
 }
 
+//Download By Rule and rule the game!

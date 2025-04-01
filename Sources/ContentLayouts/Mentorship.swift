@@ -18,10 +18,7 @@ struct Mentorship: StaticLayout {
     var image = "/images/photos/mentorshipCard.png"
     
     var body: some HTML {
-        Head {
-            // Add the Google Analytics include file here
-            Include("google-analytics.html") as! (any HeadElement)
-        }
+      
             Text("Mentorship 📚")
             .font(.title1)
             .margin(.vertical, .large)

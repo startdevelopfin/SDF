@@ -1,0 +1,276 @@
+<!doctype html>
+<html data-bs-theme="auto" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="Daniel J. Aupont" name="author" />
+    <meta content="Ignite v0.2.1" name="generator" />
+    <title>By Rule: Basketball Official – Swift Blog Site</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/prism-xcode-dark.css" rel="stylesheet" data-highlight-theme="xcode-dark" />
+    <link href="/css/prism-xcode-light.css" rel="stylesheet" data-highlight-theme="xcode-light" />
+    <link href="/css/prism-plugins.css" rel="stylesheet" />
+    <link href="/css/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="/css/ignite-core.min.css" rel="stylesheet" />
+    <link href="https://startdevelopfinish.com/by-rule" rel="canonical" />
+    <script>(function() {
+    function getThemePreference() {
+        return localStorage.getItem('custom-theme') || 'auto';
+    }
+
+    function applyTheme(themeID) {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const lightThemeID = document.documentElement.getAttribute('data-light-theme') || 'light';
+        const darkThemeID = document.documentElement.getAttribute('data-dark-theme') || 'dark';
+        const actualThemeID = themeID === 'auto' ? (prefersDark ? darkThemeID : lightThemeID) : themeID;
+
+        document.documentElement.setAttribute('data-bs-theme', actualThemeID);
+        document.documentElement.setAttribute('data-theme-state', themeID);
+    }
+
+    function applySyntaxTheme() {
+        const syntaxTheme = getComputedStyle(document.documentElement)
+            .getPropertyValue('--syntax-highlight-theme').trim().replace(/"/g, '');
+
+        if (!syntaxTheme) return;
+
+        document.querySelectorAll('link[data-highlight-theme]').forEach(link => {
+            link.setAttribute('disabled', 'disabled');
+        });
+
+        const themeLink = document.querySelector(`link[data-highlight-theme="${syntaxTheme}"]`);
+        if (themeLink) {
+            themeLink.removeAttribute('disabled');
+        }
+    }
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        const currentTheme = getThemePreference();
+        if (currentTheme === 'auto') {
+            applyTheme('auto');
+            applySyntaxTheme();
+        }
+    });
+
+    const savedTheme = getThemePreference();
+    applyTheme(savedTheme);
+    applySyntaxTheme();
+})();
+</script>
+    <meta content="Start. Develop. Finish." property="og:site_name" />
+    <meta content="By Rule: Basketball Official" property="og:title" />
+    <meta content="By Rule: Basketball Official" name="twitter:title" />
+    <meta content="https://startdevelopfinish.com/by-rule" property="og:url" />
+    <meta content="startdevelopfinish.com" name="twitter:domain" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="on" name="twitter:dnt" />
+  </head>
+  <body class="container">
+    <header>
+      <nav class="fixed-top navbar navbar-expand-md" style="background-color: rgb(0 0 0 / 100%)" data-bs-theme="dark">
+        <div class="container">
+          <a href="/" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover navbar-brand"><p class="mb-0">Start. <span style="color: #6B8E23;">Develop</span>. Finish.</p></a>
+          <button type="button" class="btn navbar-toggler" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="col justify-content-end mb-2 mb-md-0 navbar-nav">
+              <li class="dropdown nav-item" data-bs-theme="light"><a href="#" role="button" class="dropdown dropdown-toggle link-underline link-underline-opacity-100 link-underline-opacity-100-hover nav-link" data-bs-toggle="dropdown" aria-expanded="false">SwiftUI Tutorials</a>
+                <ul class="dropdown dropdown-menu"></ul></li>
+              <li class="dropdown nav-item" data-bs-theme="light"><a href="#" role="button" class="active dropdown dropdown-toggle link-underline link-underline-opacity-100 link-underline-opacity-100-hover nav-link" data-bs-toggle="dropdown" aria-expanded="false">App Store</a>
+                <ul class="dropdown dropdown-menu">
+                  <li><a href="/by-rule" class="active dropdown-item link-underline link-underline-opacity-100 link-underline-opacity-100-hover" aria-current="page">By Rule</a></li>
+                </ul></li>
+              <li class="dropdown nav-item" data-bs-theme="light"><a href="#" role="button" class="dropdown dropdown-toggle link-underline link-underline-opacity-100 link-underline-opacity-100-hover nav-link" data-bs-toggle="dropdown" aria-expanded="false">Info</a>
+                <ul class="dropdown dropdown-menu">
+                  <li><a href="/about" class="dropdown-item link-underline link-underline-opacity-100 link-underline-opacity-100-hover">About</a></li>
+                </ul></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="row">
+      <div class="col-md-9">
+        <div style="padding-bottom: 80px; padding-top: 80px">
+          <h2 style="font-weight: 700; padding: 4px">By Rule: Basketball Official 🏀</h2>
+          <h4 style="font-weight: 600; padding: 4px">NCAA Rules Study &amp; Quiz</h4>
+          <div class="mb-5 ratio ratio-21x9" style="border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+            <img alt="" src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/Twitter%20Cover%20PNG.png?alt=media&amp;token=645e4185-4f66-4efb-9ae2-58513e5875f7" class="img-fluid object-fit-cover" />
+          </div>
+          <div class="card mb-4" style="background-color: rgb(222 184 135 / 50%); border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset">
+            <div class="card-body">
+              <h3 class="card-title mb-3">Why Choose By Rule? 💡</h3>
+              <h6 class="card-title" style="font-weight: 600; line-height: 1.8; padding: 4px">By Rule is the premier study tool for basketball officials, coaches, players, and fans looking to engage NCAA basketball rules. With comprehensive study modules, interactive quizzes, and pointed training resources, this app is designed to elevate your officiating knowledge and confidence.</h6>
+              <div class="mx-4 my-4 row">
+                <div class="col-md-4">
+                  <img alt="" src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/ref1shot.png?alt=media&amp;token=e2c020ed-0262-4f97-8623-c19c6b585008" class="img-fluid material-thin-light my-3" style="box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset" />
+                </div>
+                <div class="col-md-4">
+                  <img alt="" src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/refviolation.png?alt=media&amp;token=3bb531af-8b9b-4a06-84b6-8d6587bac634" class="img-fluid material-thin-light my-3" style="box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset" />
+                </div>
+                <div class="col-md-4">
+                  <img alt="" src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/reffoul.png?alt=media&amp;token=9791b1b1-7ed9-4a6a-a2a8-23b2a53ff944" class="img-fluid material-thin-light my-3" style="box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset" />
+                </div>
+              </div>
+              <h6 class="card-title my-3" style="font-weight: 600; line-height: 1.8; padding: 4px">Basketball demands split-second precision. Whether you’re a rookie stepping onto the court or a seasoned vet, By Rule sharpens your skills with tools you won’t find anywhere else. New officials, this is your fast track: flip through 300+ flashcards until every call feels instinctive, then test yourself with real-game scenarios using quizzes to mimic the pressure of a packed gym.</h6>
+            </div>
+          </div>
+          <div class="card mb-4" style="background-color: rgb(70 130 180 / 50%); border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset">
+            <div class="card-body">
+              <h6 class="card-title my-3" style="font-weight: 600; line-height: 1.8; padding: 4px">For everyone else, it’s about sharpening your skills and staying current—repetition that fits your life, from audio rules on your commute to video breakdowns of floor mechanics. Struggling with Rule 4? Analytics will spot it, Spotlight Learning fixes it, and Manu, your AI rules guru, clears up any call on the fly.</h6>
+              <div class="material-thin-light ratio ratio-21x9" style="box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset">
+                <img alt="" src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/refhuddle2.png?alt=media&amp;token=dc87ce1a-2e00-4d8f-bc8b-e3d6c441fc04" class="img-fluid object-fit-contain" />
+              </div>
+              <h6 class="card-title my-3" style="font-weight: 600; line-height: 1.8; padding: 4px">It’s not just an app—it’s your companion, built by refs for refs, designed to grow with you from your first game to your thousandth. Ready to see how it works?</h6>
+            </div>
+          </div>
+          <div class="card mb-4" style="background-color: rgb(192 192 192 / 50%); border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+            <div class="card-header">
+              <h2 class="mb-4 mt-4">Key Features 🔑</h2>
+              <hr class="my-4" />
+              <div class="mx-4 my-4 row">
+                <div class="col-md-4">
+                  <img alt="Index Rules" src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRIndex.png?alt=media&amp;token=328ecc96-4141-49b6-8a90-57093739abd3" class="img-fluid my-3" />
+                </div>
+                <div class="col-md-4">
+                  <img alt="Home" src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRHome2.png?alt=media&amp;token=bd00503d-85da-46b2-bc67-68baf663869b" class="img-fluid my-3" />
+                </div>
+                <div class="col-md-4">
+                  <img alt="Flashcards" src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRFlashcards.png?alt=media&amp;token=4315aa2a-cd75-4c43-aefa-f31487f06c8f" class="img-fluid my-3" />
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card my-4" style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px">
+                <div class="card-body">
+                  <table class="table">
+                    <tbody>
+                      <tr>
+                        <td><h6 style="font-weight: 700">📚 Comprehensive Study System</h6></td>
+                        <td><p style="font-weight: 600">Simulate exam conditions with customizable rules mashups to prepare for any testing scenario.</p></td>
+                      </tr>
+                      <tr>
+                        <td><h6 style="font-weight: 700">🔍 Spotlight Learning</h6></td>
+                        <td><p style="font-weight: 600">Zero in on weak spots—Rule 4 tripping you up? Master it fast.</p></td>
+                      </tr>
+                      <tr>
+                        <td><h6 style="font-weight: 700">📖 Official NCAA Rules</h6></td>
+                        <td><p style="font-weight: 600">The full men’s rulebook, searchable, always at hand.</p></td>
+                      </tr>
+                      <tr>
+                        <td><h6 style="font-weight: 700">📱 Interactive Flashcards</h6></td>
+                        <td><p style="font-weight: 600">300+ cards from seasoned officials—flip, learn, repeat.</p></td>
+                      </tr>
+                      <tr>
+                        <td><h6 style="font-weight: 700">✅ Challenging Quizzes</h6></td>
+                        <td><p style="font-weight: 600">Real scenarios, real pressure—be game-ready.</p></td>
+                      </tr>
+                      <tr>
+                        <td><h6 style="font-weight: 700">🎥 Video Training Library</h6></td>
+                        <td><p style="font-weight: 600">Learn officiating mechanics, step by step.</p></td>
+                      </tr>
+                      <tr>
+                        <td><h6 style="font-weight: 700">🎧 Audio Rules</h6></td>
+                        <td><p style="font-weight: 600">Rules on the go—learn while you drive or sweat.</p></td>
+                      </tr>
+                      <tr>
+                        <td><h6 style="font-weight: 700">📊 Performance Analytics</h6></td>
+                        <td><p style="font-weight: 600">Track every win, spot every gap.</p></td>
+                      </tr>
+                      <tr>
+                        <td><h6 style="font-weight: 700">💬 Rules Chat</h6></td>
+                        <td><p style="font-weight: 600">Instant answers, straight from the source.</p></td>
+                      </tr>
+                      <tr>
+                        <td><h6 style="font-weight: 700">⚙️ Customizable Experience</h6></td>
+                        <td><p style="font-weight: 600">Adjust font sizes, toggle between dark and light mode, and personalize your study sessions.</p></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer text-body-secondary">
+              <div class="mx-4 my-4 row">
+                <div class="col-md-4">
+                  <img alt="Audio" src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRAudio.png?alt=media&amp;token=b0b35ed8-55eb-448e-975e-0565799b0957" class="img-fluid my-3" />
+                </div>
+                <div class="col-md-4">
+                  <img alt="Video" src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRVideo.png?alt=media&amp;token=389c076d-cd48-42fc-b70c-c8b51961e3b3" class="img-fluid my-3" />
+                </div>
+                <div class="col-md-4">
+                  <img alt="Quiz" src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRQuiz.png?alt=media&amp;token=e9b7234b-6e2c-48cf-9cec-22741b61cfe7" class="img-fluid my-3" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-4" style="background-color: rgb(143 188 143 / 50%); border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+            <div class="card-header">
+              <h2 class="mb-4 mt-4">Manu: The AI That Makes the Call 🏀</h2>
+              <h6 class="mb-4 mt-4" style="font-weight: 600; line-height: 1.8; padding: 4px">When the game moves fast, Manu keeps you ahead of the play. Your personal rules expert, built for quick calls, clear answers, and instant insight. No debates, no delays—just the right call, right when you need it. Built into By Rule, this AI rules expert delivers instant, no-nonsense answers—straight from the NCAA rulebook. Fast, clear, and courtside-ready, it’s like having a rules assistant in your pocket.</h6>
+            </div>
+            <div class="card-body">
+              <img alt="" src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/Manu.PNG?alt=media&amp;token=78d06f68-d338-4768-9000-a9b7d6cd8097" class="card-img img-fluid material-thin-light" />
+              <div class="card my-4" style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px">
+                <div class="card-body">
+                  <table class="table">
+                    <tbody>
+                      <tr>
+                        <td><h6 style="font-weight: 700">📖 Rulebook</h6></td>
+                        <td><p style="font-weight: 600">No guesswork—just the facts.</p></td>
+                      </tr>
+                      <tr>
+                        <td><h6 style="font-weight: 700">⚡ Fast</h6></td>
+                        <td><p style="font-weight: 600">Answers in a snap—no page-flipping required.</p></td>
+                      </tr>
+                      <tr>
+                        <td><h6 style="font-weight: 700">🎯 Clarity</h6></td>
+                        <td><p style="font-weight: 600">Courtside or film room, Manu nails it.</p></td>
+                      </tr>
+                      <tr>
+                        <td><h6 style="font-weight: 700">🤝 A Nudge</h6></td>
+                        <td><p style="font-weight: 600">Manu doesn’t just answer—it guides you to better decisions.</p></td>
+                      </tr>
+                      <tr>
+                        <td><h6 style="font-weight: 700">🚀 Game-Ready</h6></td>
+                        <td><p style="font-weight: 600">Reliable, efficient, and focused. No fluff, just the call you need.</p></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer text-body-secondary">
+              <div class="mx-4 my-4 row">
+                <div class="col-md-4">
+                  <img alt="Summary" src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRSummary.png?alt=media&amp;token=35fe7a9a-d86b-4b9c-b216-2237b58a7a5a" class="img-fluid my-3" />
+                </div>
+                <div class="col-md-4">
+                  <img alt="Manu" src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRManu.png?alt=media&amp;token=c7804be8-6a8a-4c5e-b7f9-e2e7a7850235" class="img-fluid my-3" />
+                </div>
+                <div class="col-md-4">
+                  <img alt="Analytics" src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRAnalytics.png?alt=media&amp;token=35254985-5ea7-4d2e-ae7c-818cdf90162c" class="img-fluid my-3" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr class="my-4" />
+          <div class="card mb-4" style="background-color: rgb(220 20 60 / 50%); border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset">
+            <div class="card-header">
+              <h2 class="mt-4">Download By Rule Today! ✅</h2>
+            </div>
+            <div class="card-body">
+              <a href="https://apps.apple.com/us/app/by-rule/id1532845521" class="card-link link-plain link-underline link-underline-opacity-100 link-underline-opacity-100-hover"><img alt="" src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/NewLogo1.png?alt=media&amp;token=b8ffed6b-0a32-46a3-b0ea-d3058f9365a2" class="my-3" style="height: 200px" /></a>
+            </div>
+            <div class="card-footer text-body-secondary">
+              <p>By Rule: Basketball Official - NCAA Rules Study &amp; Quiz</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="mt-5 text-center">Created in Swift with <a href="https://github.com/twostraws/Ignite" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover">Ignite</a></p>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/syntax-highlighting.js"></script>
+    <script src="/js/ignite-core.js"></script>
+  </body>
+</html>

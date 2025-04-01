@@ -18,10 +18,7 @@ struct FirstConference: StaticLayout {
     var image = "/images/photos/DeepDishCard.png"
     
     var body: some HTML {
-        Head {
-            // Add the Google Analytics include file here
-            Include("google-analytics.html") as! (any HeadElement)
-        }
+        
             Text("First Conference 🥳")
             .font(.title1)
             .margin(.vertical, .large)

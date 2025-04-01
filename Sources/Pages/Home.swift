@@ -38,10 +38,7 @@ struct Home: StaticLayout {
     ]
 
     var body: some HTML {
-        Head {
-            // Add the Google Analytics include file here
-            Include("google-analytics.html") as! (any HeadElement)
-        }
+        
         NavBar()
         
         Text("Welcome Swift enthusiasts!")

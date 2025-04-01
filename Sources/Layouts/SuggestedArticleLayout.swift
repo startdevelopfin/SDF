@@ -37,15 +37,12 @@ struct SuggestedArticleLayout: Layout {
         .teal,
         .tomato,
     ]
-    
+
     var body: some HTML {
-        Head {
-            // Add the Google Analytics include file here
-            Include("google-analytics.html") as! (any HeadElement)
-        }
+        
         Body {
             NavBar()
-            
+
             Grid {
                 content
                     .width(9)

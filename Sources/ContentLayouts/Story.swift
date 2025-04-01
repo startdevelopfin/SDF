@@ -10,10 +10,7 @@ import Ignite
 
 struct Story: ArticleLayout {
     var body: some HTML {
-        Head {
-            // Add the Google Analytics include file here
-            Include("google-analytics.html") as! (any HeadElement)
-        }
+        
 //        Text(article.title)
 //            .font(.title1)
 //        
