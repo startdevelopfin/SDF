@@ -151,7 +151,7 @@ struct ByRule: StaticLayout {
                         Text("🗂️ Index to Rules")
                             .font(.title6)
                             .fontWeight(.bold)
-                        Text("Glossary terms at your fingertips")
+                        Text("Glossary terms at your fingertips.")
                             .fontWeight(.semibold)
                     }
 
@@ -159,7 +159,7 @@ struct ByRule: StaticLayout {
                         Text("🏠 Rules Center")
                             .font(.title6)
                             .fontWeight(.bold)
-                        Text("For quick reference of major concerns and procedures")
+                        Text("For quick reference of major concerns and procedures.")
                             .fontWeight(.semibold)
                     }
 
@@ -329,7 +329,7 @@ struct ByRule: StaticLayout {
                             .font(.title6)
                             .fontWeight(.bold)
                         
-                        Text("Your personal guide to learning the basketball rules")
+                        Text("Your personal guide to learning the basketball rules.")
                             .fontWeight(.semibold)
                     }
                     
@@ -438,7 +438,7 @@ struct ByRule: StaticLayout {
                         Text("📲 Rules Chat, One-on-One:")
                             .font(.title6)
                             .fontWeight(.semibold)
-                        Text("Got a question? Manu’s your AI ref coach, pulling from the official NCAA rulebook and your data to clarify calls and boost weak spots.")
+                        Text("Got a question? Manu’s your AI rules assistant, pulling from the official NCAA rulebook and your data to clarify calls and boost weak spots.")
                             .fontWeight(.semibold)
                     }
 
@@ -446,7 +446,7 @@ struct ByRule: StaticLayout {
                         Text("📆 History")
                             .font(.title6)
                             .fontWeight(.semibold)
-                        Text("Don't worry, Manu will save your chat for in depth discussion")
+                        Text("Don't worry, Manu will save your chat for in depth discussion later.")
                             .fontWeight(.semibold)
                     }
 
@@ -455,7 +455,7 @@ struct ByRule: StaticLayout {
                         Text("🤖 Personalized Summary")
                             .font(.title6)
                             .fontWeight(.semibold)
-                        Text("Get detailed feedback based on your studies")
+                        Text("Get detailed feedback based on your studies and app usage.")
                             .fontWeight(.semibold)
                     }
                 }
@@ -529,13 +529,13 @@ struct ByRule: StaticLayout {
                         Text("💯 Score Cards")
                             .font(.title6)
                             .fontWeight(.semibold)
-                        Text("See your score, time, and rule-by-rule breakdown—think of it as your stat sheet after a big game, showing where you dominate and where to drill.")
+                        Text("See your score, rank, and question-by-question breakdown—think of it as your stat sheet after a big game, showing where you dominate and where to drill.")
                             .fontWeight(.semibold)
                     }
                     
                     
                     Row {
-                        Text("📊 Performance Analytics")
+                        Text("💽 Your Data")
                             .font(.title6)
                             .fontWeight(.bold)
                         Text("Track every win, spot every gap.")
@@ -591,9 +591,15 @@ struct ByRule: StaticLayout {
                     .margin(.vertical, .medium)
             }
         } header: {
-            Text("Download By Rule Today! ✅")
+            Text("Rule the Game - Download By Rule Today! ✅")
                 .font(.title2)
                 .margin(.top, .large)
+            
+            Text("Ready to take your studies to the next level? Elevate your NCAA game with By Rule—track what sticks, fix what slips, and grow into the college basketball officianado you’re meant to be. Learn the rules with precision so you can make the call it certainty, and raise the game, one play at a time.")
+                .padding(4)
+                .lineSpacing(1.75)
+                .font(.title6)
+                .fontWeight(.semibold)
             
         } footer: {
             Text("By Rule: Basketball Official - NCAA Rules Study & Quiz")
