@@ -10,6 +10,7 @@ import Ignite
 
 struct Story: ArticleLayout {
     var body: some HTML {
+        
 //        Text(article.title)
 //            .font(.title1)
 //        

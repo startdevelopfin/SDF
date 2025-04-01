@@ -10,6 +10,7 @@ import Ignite
 
 struct CustomStory: ArticleLayout {
     var body: some HTML {
+        
         if let image = article.image {
             Image(image, description: article.imageDescription)
                 .resizable()

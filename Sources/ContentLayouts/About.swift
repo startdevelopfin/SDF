@@ -11,6 +11,7 @@ struct About: StaticLayout {
     var title = "By Rule: Basketball Official"
 
     var body: some HTML {
+        
         Text("About 👤")
                 .font(.title1)
 

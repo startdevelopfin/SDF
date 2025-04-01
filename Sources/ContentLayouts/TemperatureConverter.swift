@@ -13,6 +13,7 @@ struct TemperatureConverter: StaticLayout {
     var title = "SwiftUI Fundamentals - The first example app TemperatureConverter"
 
     var body: some HTML {
+        
         Group {
             Text("SwiftUI Fundamentals 🚀")
                 .font(.title1)

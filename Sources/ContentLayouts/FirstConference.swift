@@ -18,6 +18,7 @@ struct FirstConference: StaticLayout {
     var image = "/images/photos/DeepDishCard.png"
     
     var body: some HTML {
+        
             Text("First Conference 🥳")
             .font(.title1)
             .margin(.vertical, .large)

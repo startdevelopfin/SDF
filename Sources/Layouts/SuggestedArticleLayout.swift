@@ -39,6 +39,7 @@ struct SuggestedArticleLayout: Layout {
     ]
 
     var body: some HTML {
+        
         Body {
             NavBar()
 

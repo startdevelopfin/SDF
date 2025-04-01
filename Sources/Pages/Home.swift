@@ -38,6 +38,7 @@ struct Home: StaticLayout {
     ]
 
     var body: some HTML {
+        
         NavBar()
         
         Text("Welcome Swift enthusiasts!")
