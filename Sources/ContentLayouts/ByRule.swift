@@ -381,10 +381,27 @@ struct ByRule: StaticLayout {
       
         // Manu
         Card {
-//            Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/Manu.PNG?alt=media&token=78d06f68-d338-4768-9000-a9b7d6cd8097")
-//                .resizable()
-//                .background(.thinMaterial.colorScheme(.light))
+            Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/Manu.PNG?alt=media&token=78d06f68-d338-4768-9000-a9b7d6cd8097")
+                .resizable()
+                .background(.thinMaterial.colorScheme(.light))
             
+        } header: {
+            // Manu Title + Description
+            Text("Manu: The AI That Makes the Call 🏀")
+                .font(.title2)
+                .margin(.top, .large)
+                .margin(.bottom, .large)
+            
+            Text("When the game moves fast, Manu keeps you ahead of the play. Your personal rules expert, built for quick calls, clear answers, and instant insight. No debates, no delays—just the right call, right when you need it. Built into By Rule, this AI rules expert delivers instant, no-nonsense answers—straight from the NCAA rulebook. Fast, clear, and courtside-ready, it’s like having a rules assistant in your pocket.")
+                .padding(4)
+                .lineSpacing(1.75)
+                .font(.title6)
+                .fontWeight(.semibold)
+                .margin(.top, .large)
+                .margin(.bottom, .large)
+            
+
+        } footer: {
             // Manu Screenshots
             Grid {
 
@@ -410,26 +427,6 @@ struct ByRule: StaticLayout {
             .margin(.vertical, .large)
             .margin(.horizontal, .large)
             
-
-        } header: {
-            // Manu Title + Description
-            Text("Manu: The AI That Makes the Call 🏀")
-                .font(.title2)
-                .margin(.top, .large)
-                .margin(.bottom, .large)
-            
-            Text("When the game moves fast, Manu keeps you ahead of the play. Your personal rules expert, built for quick calls, clear answers, and instant insight. No debates, no delays—just the right call, right when you need it. Built into By Rule, this AI rules expert delivers instant, no-nonsense answers—straight from the NCAA rulebook. Fast, clear, and courtside-ready, it’s like having a rules assistant in your pocket.")
-                .padding(4)
-                .lineSpacing(1.75)
-                .font(.title6)
-                .fontWeight(.semibold)
-                .margin(.top, .large)
-                .margin(.bottom, .large)
-            
-            Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/Manu.PNG?alt=media&token=78d06f68-d338-4768-9000-a9b7d6cd8097")
-                .resizable()
-                .background(.thinMaterial.colorScheme(.light))
-        } footer: {
             // Manu Table
             Card {
                 Table {
@@ -548,6 +545,17 @@ struct ByRule: StaticLayout {
             .margin(.vertical, .large)
             .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
             
+        }
+        .clipped()
+        .cornerRadius(12)
+        .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
+        .background(.dodgerBlue.opacity(0.5))
+        .innerShadow(radius: 5)
+        .margin(.bottom, .large)
+        
+        // Analyitcs
+        Card {
+
             Grid {
                 Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRIncorrect.png?alt=media&token=e1717b6e-4be3-4fc9-ace5-d2d27457c062", description: "Manu")
                     .resizable()
@@ -569,6 +577,57 @@ struct ByRule: StaticLayout {
             }
             .margin(.vertical, .large)
             .margin(.horizontal, .large)
+
+        } header: {
+            // Manu Title + Description
+            Text("Analtyics Continued 🌟")
+                .font(.title2)
+                .margin(.top, .large)
+                .margin(.bottom, .large)
+            
+            Text("Ever wonder what separates good refs from great ones? It’s knowing your game—inside and out. By Rule turns your effort into insight, tracking every quiz, flashcard, and second you put in. No mystery here—just your hustle, our analytics, and Manu’s genius, all working together to make you unstoppable. Here’s how we break it down:")
+                .padding(4)
+                .lineSpacing(1.75)
+                .font(.title6)
+                .fontWeight(.semibold)
+                .margin(.top, .large)
+                .margin(.bottom, .large)
+
+        } footer: {
+
+            // Manu Table
+            Card {
+                Table {
+                    Row {
+                        Text("😅 Incorrect Calls")
+                            .font(.title6)
+                            .fontWeight(.semibold)
+                        Text("Learn from your mistakes.")
+                            .fontWeight(.semibold)
+                    }
+                    
+                    Row {
+                        Text("📈 Key Metrics")
+                            .font(.title6)
+                            .fontWeight(.semibold)
+                        Text("Uncover trends and adjust your approach")
+                            .fontWeight(.semibold)
+                    }
+                    
+                    
+                    Row {
+                        Text("🎖️ Rank Up")
+                            .font(.title6)
+                            .fontWeight(.bold)
+                        Text("Study hard to achieve Crew Chief status")
+                            .fontWeight(.semibold)
+                    }
+                    
+                }
+                
+            }
+            .margin(.vertical, .large)
+            .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
             
         }
         .clipped()
@@ -577,6 +636,10 @@ struct ByRule: StaticLayout {
         .background(.dodgerBlue.opacity(0.5))
         .innerShadow(radius: 5)
         .margin(.bottom, .large)
+        
+        
+        
+
         
 
         Divider()
