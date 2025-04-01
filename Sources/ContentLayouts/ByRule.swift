@@ -133,7 +133,7 @@ struct ByRule: StaticLayout {
                 .margin(.vertical, .medium)
         }
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
-        .background(. burlyWood.opacity(0.5))
+        .background(.burlyWood.opacity(0.5))
         .innerShadow(radius: 5)
         .margin(.bottom, .large)
         
@@ -580,7 +580,7 @@ struct ByRule: StaticLayout {
 
         } header: {
             // Manu Title + Description
-            Text("Analtyics Continued 🌟")
+            Text("Analytics Continued 🌟")
                 .font(.title2)
                 .margin(.top, .large)
                 .margin(.bottom, .large)
