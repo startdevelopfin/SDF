@@ -165,7 +165,7 @@ struct ByRule: StaticLayout {
 
                     
                     Row {
-                        Text("📱 Interactive Flashcards")
+                        Text("📝 Interactive Flashcards")
                             .font(.title6)
                             .fontWeight(.bold)
                         Text("300+ cards from seasoned officials—flip, learn, repeat.")
@@ -181,7 +181,7 @@ struct ByRule: StaticLayout {
             .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
             
         } header: {
-            Text("Study 📝")
+            Text("Study 🔑")
                 .font(.title2)
                 .margin(.top, .large)
                 .margin(.bottom, .large)
@@ -341,7 +341,7 @@ struct ByRule: StaticLayout {
             .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
             
         } header: {
-            Text("Learn 🔑")
+            Text("Learn 🧠")
                 .font(.title2)
                 .margin(.top, .large)
                 .margin(.bottom, .large)
@@ -501,7 +501,7 @@ struct ByRule: StaticLayout {
                 .margin(.top, .large)
                 .margin(.bottom, .large)
             
-            Text("Ever wonder what separates good refs from great ones? It’s knowing your game—inside and out. By Rule turns your effort into insight, tracking every quiz, flashcard, and second you put in. No mystery here—just your hustle, our analytics, and Manu’s genius, all working together to make you unstoppable. Here’s how we break it down:")
+            Text("Ever wonder what separates good refs from great ones? It’s knowing your game—inside and out. Here’s how we break it down:")
                 .padding(4)
                 .lineSpacing(1.75)
                 .font(.title6)
@@ -585,7 +585,7 @@ struct ByRule: StaticLayout {
                 .margin(.top, .large)
                 .margin(.bottom, .large)
             
-            Text("Ever wonder what separates good refs from great ones? It’s knowing your game—inside and out. By Rule turns your effort into insight, tracking every quiz, flashcard, and second you put in. No mystery here—just your hustle, our analytics, and Manu’s genius, all working together to make you unstoppable. Here’s how we break it down:")
+            Text("By Rule turns your effort into insight, tracking every quiz, flashcard, and second you put in. No mystery here—just your hustle, our analytics, and Manu’s genius, all working together to make you unstoppable. ")
                 .padding(4)
                 .lineSpacing(1.75)
                 .font(.title6)
