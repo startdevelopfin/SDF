@@ -39,13 +39,31 @@ struct ByRule: StaticLayout {
             .innerShadow(radius: 5)
             .margin(.bottom, .xLarge)
         
+        // Mission Segment
+                Card {
+                    Text("Own the Rules, Rule the Game 🤩")
+                        .font(.title3)
+                        .fontWeight(.bold)
+                        .margin(.bottom, .medium)
+                    
+                    Text("By Rule is the premier study tool for basketball officials, coaches, players, and fans looking to engage NCAA basketball rules.")
+                        .lineSpacing(1.75)
+                        .padding(4)
+                        .font(.title5)
+                        .fontWeight(.semibold)
+                }
+                .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
+                .background(.darkOliveGreen.opacity(0.5))
+                .innerShadow(radius: 5)
+                .margin(.bottom, .large)
+        
         // Why Choose By Rule
         Card {
             Text("Why Choose By Rule? 💡")
                 .font(.title3)
                 .margin(.bottom, .medium)
             
-            Text("By Rule is the premier study tool for basketball officials, coaches, players, and fans looking to engage NCAA basketball rules. With comprehensive study modules, interactive quizzes, and pointed training resources, this app is designed to elevate your officiating knowledge and confidence.")
+            Text("With comprehensive study modules and pointed training resources, this app is designed to elevate your officiating knowledge and confidence.")
                 .lineSpacing(1.75)
                 .padding(4)
                 .fontWeight(.semibold)
@@ -78,7 +96,7 @@ struct ByRule: StaticLayout {
             .margin(.vertical, .large)
             .margin(.horizontal, .large)
             
-            Text("Basketball demands split-second precision. Whether you’re a rookie stepping onto the court or a seasoned vet, By Rule sharpens your skills with tools you won’t find anywhere else. New officials, this is your fast track: flip through 300+ flashcards until every call feels instinctive, then test yourself with real-game scenarios using quizzes to mimic the pressure of a packed gym.")
+            Text("Whether you’re a rookie stepping onto the court or a seasoned vet, By Rule sharpens your skills with tools you won’t find anywhere else. New officials, this is your fast track: flip through flashcards until every call feels instinctive, then test yourself with real-game scenarios to mimic the pressure of a packed gym.")
                 .padding(4)
                 .lineSpacing(1.75)
                 .font(.title6)
@@ -94,7 +112,7 @@ struct ByRule: StaticLayout {
         
         Card {
             
-            Text("For everyone else, it’s about sharpening your skills and staying current—repetition that fits your life, from audio rules on your commute to video breakdowns of floor mechanics. Struggling with Rule 4? Analytics will spot it, Spotlight Learning fixes it, and Manu, your AI rules guru, clears up any call on the fly.")
+            Text("For everyone else, it’s about sharpening your skills and staying current—repetition that fits your life, from audio rules on your commute to video breakdowns of floor mechanics. Struggling with Rule 4? Your personalized user Analytics will spot it, using Spotlight Learning modes fixes it, and Manu, your AI rules guru, clears up any other calls on the fly.")
                 .padding(4)
                 .lineSpacing(1.75)
                 .font(.title6)
@@ -107,7 +125,7 @@ struct ByRule: StaticLayout {
                 .background(.thinMaterial.colorScheme(.light))
                 .innerShadow(radius: 5)
             
-            Text("It’s not just an app—it’s your companion, built by refs for refs, designed to grow with you from your first game to your thousandth. Ready to see how it works?")
+            Text("By Rule: Basketball Official is your all-in-one edge for mastering NCAA rules. It’s not just an app—it’s your companion, built by refs for refs, designed to grow with you from your first game to your thousandth. Ready to see how it works?")
                 .padding(4)
                 .lineSpacing(1.75)
                 .font(.title6)
