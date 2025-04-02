@@ -85,6 +85,12 @@ struct ByRule: StaticLayout {
             .margin(.vertical, .large)
             .margin(.horizontal, .large)
             
+            Text("New officials, this is your fast track: flip through flashcards until every call feels instinctive, then test yourself with real-game scenarios to simulate the pressure of a packed gym.")
+                .padding(6)
+                .lineSpacing(1.75)
+                .font(.title5)
+                .fontWeight(.semibold)
+                .margin(.vertical, .medium)
         } header: {
             Text("Why Choose By Rule? 💡")
                 .font(.title3)
@@ -95,14 +101,6 @@ struct ByRule: StaticLayout {
                 .padding(6)
                 .fontWeight(.semibold)
                 .font(.title5)
-        } footer: {
-            
-            Text("New officials, this is your fast track: flip through flashcards until every call feels instinctive, then test yourself with real-game scenarios to simulate the pressure of a packed gym.")
-                .padding(6)
-                .lineSpacing(1.75)
-                .font(.title5)
-                .fontWeight(.semibold)
-                .margin(.vertical, .medium)
         }
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
         .background(.burlyWood.opacity(0.5))
@@ -117,6 +115,13 @@ struct ByRule: StaticLayout {
                 .aspectRatio(.r21x9, contentMode: .fit)
                 .background(.thinMaterial.colorScheme(.light))
                 .innerShadow(radius: 5)
+            
+            Text("By Rule: Basketball Official is your all-in-one edge for mastering NCAA rules. It’s not just an app—it’s your companion, built by refs for refs, designed to grow with you from your first game to your thousandth. Ready to see how it works?")
+                .padding(6)
+                .lineSpacing(1.75)
+                .font(.title5)
+                .fontWeight(.semibold)
+                .margin(.vertical, .medium)
 
         } header: {
             Text("Experienced? 👴🏽")
@@ -125,14 +130,6 @@ struct ByRule: StaticLayout {
             
             Text("For everyone else, it’s about sharpening your skills and staying current—repetition that fits your life, from audio rules on your commute to video breakdowns of floor mechanics. Struggling with Rule 4? Your personalized user Analytics will spot it, using Spotlight Learning modes fixes it, and Manu, your AI rules guru, clears up any other calls on the fly.")
                 .padding()
-                .lineSpacing(1.75)
-                .font(.title5)
-                .fontWeight(.semibold)
-                .margin(.vertical, .medium)
-        } footer: {
-            
-            Text("By Rule: Basketball Official is your all-in-one edge for mastering NCAA rules. It’s not just an app—it’s your companion, built by refs for refs, designed to grow with you from your first game to your thousandth. Ready to see how it works?")
-                .padding(6)
                 .lineSpacing(1.75)
                 .font(.title5)
                 .fontWeight(.semibold)
