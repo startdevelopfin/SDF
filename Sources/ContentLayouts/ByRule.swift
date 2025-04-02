@@ -59,18 +59,7 @@ struct ByRule: StaticLayout {
         
         // Why Choose By Rule
         Card {
-            Text("Why Choose By Rule? 💡")
-                .font(.title2)
-                .margin(.bottom, .medium)
-            
-            Text("With comprehensive study modules and pointed training resources, this app is designed to elevate your officiating knowledge and confidence. Whether you’re a rookie stepping onto the court or a seasoned vet, By Rule sharpens your skills with tools you won’t find anywhere else.")
-                .lineSpacing(1.75)
-                .padding(6)
-                .fontWeight(.semibold)
-                .font(.title5)
-            
-           
-            
+
             Grid {
                 Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/ref1shot.png?alt=media&token=e2c020ed-0262-4f97-8623-c19c6b585008")
                     .resizable()
@@ -96,13 +85,24 @@ struct ByRule: StaticLayout {
             .margin(.vertical, .large)
             .margin(.horizontal, .large)
             
+        } header: {
+            Text("Why Choose By Rule? 💡")
+                .font(.title2)
+                .margin(.vertical, .medium)
+            
+            Text("With comprehensive study modules and pointed training resources, this app is designed to elevate your officiating knowledge and confidence. Whether you’re a rookie stepping onto the court or a seasoned vet, By Rule sharpens your skills with tools you won’t find anywhere else.")
+                .lineSpacing(1.75)
+                .padding(6)
+                .fontWeight(.semibold)
+                .font(.title5)
+        } footer: {
+            
             Text("New officials, this is your fast track: flip through flashcards until every call feels instinctive, then test yourself with real-game scenarios to mimic the pressure of a packed gym.")
                 .padding(6)
                 .lineSpacing(1.75)
                 .font(.title5)
                 .fontWeight(.semibold)
                 .margin(.vertical, .medium)
-            
         }
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
         .background(.burlyWood.opacity(0.5))
@@ -111,6 +111,18 @@ struct ByRule: StaticLayout {
         
         
         Card {
+
+            
+            Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/refhuddle2.png?alt=media&token=dc87ce1a-2e00-4d8f-bc8b-e3d6c441fc04")
+                .resizable()
+                .aspectRatio(.r21x9, contentMode: .fit)
+                .background(.thinMaterial.colorScheme(.light))
+                .innerShadow(radius: 5)
+
+        } header: {
+            Text("Experience Officials 👴🏽")
+                .font(.title2)
+                .margin(.vertical, .medium)
             
             Text("For everyone else, it’s about sharpening your skills and staying current—repetition that fits your life, from audio rules on your commute to video breakdowns of floor mechanics. Struggling with Rule 4? Your personalized user Analytics will spot it, using Spotlight Learning modes fixes it, and Manu, your AI rules guru, clears up any other calls on the fly.")
                 .padding()
@@ -118,12 +130,7 @@ struct ByRule: StaticLayout {
                 .font(.title5)
                 .fontWeight(.semibold)
                 .margin(.vertical, .medium)
-            
-            Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/refhuddle2.png?alt=media&token=dc87ce1a-2e00-4d8f-bc8b-e3d6c441fc04")
-                .resizable()
-                .aspectRatio(.r21x9, contentMode: .fit)
-                .background(.thinMaterial.colorScheme(.light))
-                .innerShadow(radius: 5)
+        } footer: {
             
             Text("By Rule: Basketball Official is your all-in-one edge for mastering NCAA rules. It’s not just an app—it’s your companion, built by refs for refs, designed to grow with you from your first game to your thousandth. Ready to see how it works?")
                 .padding(6)
