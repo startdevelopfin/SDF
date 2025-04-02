@@ -111,16 +111,15 @@ struct ByRule: StaticLayout {
         
         
         Card {
-
             
-            Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/refhuddle2.png?alt=media&token=dc87ce1a-2e00-4d8f-bc8b-e3d6c441fc04")
+            Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRRef5.png?alt=media&token=9e349162-6204-4d9f-86a9-69d1d2d907dc")
                 .resizable()
                 .aspectRatio(.r21x9, contentMode: .fit)
                 .background(.thinMaterial.colorScheme(.light))
                 .innerShadow(radius: 5)
 
         } header: {
-            Text("Experience Officials 👴🏽")
+            Text("Experienced? 👴🏽")
                 .font(.title3)
                 .margin(.vertical, .medium)
             
@@ -655,11 +654,13 @@ struct ByRule: StaticLayout {
         
         // Download section
         Card {
-            Link(target: "https://apps.apple.com/us/app/by-rule/id1532845521") {
-                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/NewLogo1.png?alt=media&token=b8ffed6b-0a32-46a3-b0ea-d3058f9365a2")
-                    .frame(height: 200)
-                    .margin(.vertical, .medium)
-            }
+            
+            Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/refhuddle2.png?alt=media&token=dc87ce1a-2e00-4d8f-bc8b-e3d6c441fc04")
+                .resizable()
+                .aspectRatio(.r21x9, contentMode: .fit)
+                .background(.thinMaterial.colorScheme(.light))
+                .innerShadow(radius: 5)
+
         } header: {
             Text("Rule the Game - Download By Rule Today! ✅")
                 .font(.title3)
@@ -672,10 +673,16 @@ struct ByRule: StaticLayout {
                 .fontWeight(.semibold)
             
         } footer: {
+            Link(target: "https://apps.apple.com/us/app/by-rule/id1532845521") {
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/NewLogo1.png?alt=media&token=b8ffed6b-0a32-46a3-b0ea-d3058f9365a2")
+                    .frame(height: 200)
+                    .margin(.vertical, .medium)
+            }
+            
             Text("By Rule: Basketball Official - NCAA Rules Study & Quiz")
         }
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
-        .background(.crimson.opacity(0.5))
+        .background(.firebrick.opacity(0.5))
         .innerShadow(radius: 5)
         .margin(.bottom, .large)
     }
