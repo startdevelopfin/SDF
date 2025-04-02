@@ -42,7 +42,7 @@ struct ByRule: StaticLayout {
         // Mission Segment
                 Card {
                     Text("Own the Rules, Rule the Game 🤩")
-                        .font(.title2)
+                        .font(.title3)
                         .fontWeight(.bold)
                         .margin(.bottom, .medium)
                     
@@ -87,7 +87,7 @@ struct ByRule: StaticLayout {
             
         } header: {
             Text("Why Choose By Rule? 💡")
-                .font(.title2)
+                .font(.title3)
                 .margin(.vertical, .medium)
             
             Text("With comprehensive study modules and pointed training resources, this app is designed to elevate your officiating knowledge and confidence. Whether you’re a rookie stepping onto the court or a seasoned vet, By Rule sharpens your skills with tools you won’t find anywhere else.")
@@ -121,7 +121,7 @@ struct ByRule: StaticLayout {
 
         } header: {
             Text("Experience Officials 👴🏽")
-                .font(.title2)
+                .font(.title3)
                 .margin(.vertical, .medium)
             
             Text("For everyone else, it’s about sharpening your skills and staying current—repetition that fits your life, from audio rules on your commute to video breakdowns of floor mechanics. Struggling with Rule 4? Your personalized user Analytics will spot it, using Spotlight Learning modes fixes it, and Manu, your AI rules guru, clears up any other calls on the fly.")
@@ -189,7 +189,7 @@ struct ByRule: StaticLayout {
             
         } header: {
             Text("Study 🔑")
-                .font(.title2)
+                .font(.title3)
                 .margin(.top, .large)
                 .margin(.bottom, .large)
             
@@ -269,7 +269,7 @@ struct ByRule: StaticLayout {
             
         } header: {
             Text("Listen 🎧 , Watch 🎥")
-                .font(.title2)
+                .font(.title3)
                 .margin(.top, .large)
                 .margin(.bottom, .large)
             
@@ -349,7 +349,7 @@ struct ByRule: StaticLayout {
             
         } header: {
             Text("Learn 🧠")
-                .font(.title2)
+                .font(.title3)
                 .margin(.top, .large)
                 .margin(.bottom, .large)
             
@@ -395,7 +395,7 @@ struct ByRule: StaticLayout {
         } header: {
             // Manu Title + Description
             Text("Manu: The AI That Makes the Call 🏀")
-                .font(.title2)
+                .font(.title3)
                 .margin(.top, .large)
                 .margin(.bottom, .large)
             
@@ -504,7 +504,7 @@ struct ByRule: StaticLayout {
         } header: {
             // Manu Title + Description
             Text("Analytics: Your Game Plan to Greatness 📊")
-                .font(.title2)
+                .font(.title3)
                 .margin(.top, .large)
                 .margin(.bottom, .large)
             
@@ -587,8 +587,8 @@ struct ByRule: StaticLayout {
 
         } header: {
             // Manu Title + Description
-            Text("Analytics Continued 🌟")
-                .font(.title2)
+            Text("More 🌟")
+                .font(.title3)
                 .margin(.top, .large)
                 .margin(.bottom, .large)
             
@@ -662,7 +662,7 @@ struct ByRule: StaticLayout {
             }
         } header: {
             Text("Rule the Game - Download By Rule Today! ✅")
-                .font(.title2)
+                .font(.title3)
                 .margin(.top, .large)
             
             Text("Ready to take your studies to the next level? Elevate your NCAA game with By Rule—track what sticks, fix what slips, and grow into the college basketball officianado you’re meant to be. Learn the rules with precision so you can make the call with certainty and raise the game one play at a time.")
