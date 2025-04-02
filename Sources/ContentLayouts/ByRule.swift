@@ -663,7 +663,7 @@ struct ByRule: StaticLayout {
                 .font(.title3)
                 .margin(.top, .large)
             
-            Text("Ready to take your studies to the next level? Elevate your NCAA game with By Rule—track what sticks, fix what slips, and grow into the college basketball officianado you’re meant to be. Learn the rules with precision so you can make the call with certainty and raise the game one play at a time.")
+            Text("Ready to take control of your studies? Get started with By Rule—track what sticks, fix what slips, and grow into the college basketball aficionado you’re meant to be. Learn the rules with precision and raise your game one play at a time.")
                 .padding(6)
                 .lineSpacing(1.75)
                 .font(.title5)
