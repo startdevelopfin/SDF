@@ -63,7 +63,7 @@ struct ByRule: StaticLayout {
                 .font(.title2)
                 .margin(.bottom, .medium)
             
-            Text("With comprehensive study modules and pointed training resources, this app is designed to elevate your officiating knowledge and confidence.")
+            Text("With comprehensive study modules and pointed training resources, this app is designed to elevate your officiating knowledge and confidence. Whether you’re a rookie stepping onto the court or a seasoned vet, By Rule sharpens your skills with tools you won’t find anywhere else.")
                 .lineSpacing(1.75)
                 .padding(6)
                 .fontWeight(.semibold)
@@ -96,7 +96,7 @@ struct ByRule: StaticLayout {
             .margin(.vertical, .large)
             .margin(.horizontal, .large)
             
-            Text("Whether you’re a rookie stepping onto the court or a seasoned vet, By Rule sharpens your skills with tools you won’t find anywhere else. New officials, this is your fast track: flip through flashcards until every call feels instinctive, then test yourself with real-game scenarios to mimic the pressure of a packed gym.")
+            Text("New officials, this is your fast track: flip through flashcards until every call feels instinctive, then test yourself with real-game scenarios to mimic the pressure of a packed gym.")
                 .padding(6)
                 .lineSpacing(1.75)
                 .font(.title5)
