@@ -120,7 +120,7 @@ struct ByRule: StaticLayout {
                 .innerShadow(radius: 5)
 
         } header: {
-            Text("Experience Officials 👴🏽")
+            Text("Experienced? 👴🏽")
                 .font(.title3)
                 .margin(.vertical, .medium)
             
