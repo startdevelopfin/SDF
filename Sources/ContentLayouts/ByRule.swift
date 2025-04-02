@@ -97,7 +97,7 @@ struct ByRule: StaticLayout {
                 .font(.title5)
         } footer: {
             
-            Text("New officials, this is your fast track: flip through flashcards until every call feels instinctive, then test yourself with real-game scenarios to mimic the pressure of a packed gym.")
+            Text("New officials, this is your fast track: flip through flashcards until every call feels instinctive, then test yourself with real-game scenarios to simulate the pressure of a packed gym.")
                 .padding(6)
                 .lineSpacing(1.75)
                 .font(.title5)
