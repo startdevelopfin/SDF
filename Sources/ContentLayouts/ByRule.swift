@@ -57,6 +57,15 @@ struct ByRule: StaticLayout {
                 .innerShadow(radius: 5)
                 .margin(.bottom, .large)
         
+        Card {
+            Embed(title: "By Rule: Basketball Official - NCAA Rules Study & Quiz", url: URL(string: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRPROMO9.mp4?alt=media&token=54ee52a9-036a-44a9-b854-c4be16f09a9c")!)
+                .aspectRatio(.r16x9)
+        }
+        .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
+        .background(.thinMaterial.colorScheme(.light))
+        .innerShadow(radius: 5)
+        .margin(.bottom, .large)
+        
         // Why Choose By Rule
         Card {
 
