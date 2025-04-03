@@ -124,7 +124,7 @@ struct ByRule: StaticLayout {
                 .margin(.vertical, .medium)
 
         } header: {
-            Text("Experienced? 👴🏽")
+            Text("Experienced? 🤓")
                 .font(.title3)
                 .margin(.vertical, .medium)
             
