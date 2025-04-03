@@ -236,7 +236,7 @@ struct ByRule: StaticLayout {
         .clipped()
         .cornerRadius(12)
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
-        .background(.black.opacity(0.5))
+        .background(.silver.opacity(0.5))
         .innerShadow(radius: 5)
         .margin(.bottom, .large)
         
@@ -317,7 +317,7 @@ struct ByRule: StaticLayout {
         .clipped()
         .cornerRadius(12)
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
-        .background(.black.opacity(0.5))
+        .background(.silver.opacity(0.5))
         .innerShadow(radius: 5)
         .margin(.bottom, .large)
         
@@ -396,7 +396,7 @@ struct ByRule: StaticLayout {
         .clipped()
         .cornerRadius(12)
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
-        .background(.black.opacity(0.5))
+        .background(.silver.opacity(0.5))
         .innerShadow(radius: 5)
         .margin(.bottom, .large)
         
@@ -485,7 +485,7 @@ struct ByRule: StaticLayout {
         .clipped()
         .cornerRadius(12)
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
-        .background(.darkSeaGreen.opacity(0.5))
+        .background(.black.opacity(0.5))
         .innerShadow(radius: 5)
         .margin(.bottom, .large)
         
@@ -570,7 +570,7 @@ struct ByRule: StaticLayout {
         .clipped()
         .cornerRadius(12)
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
-        .background(.black.opacity(0.5))
+        .background(.silver.opacity(0.5))
         .innerShadow(radius: 5)
         .margin(.bottom, .large)
         
@@ -654,7 +654,7 @@ struct ByRule: StaticLayout {
         .clipped()
         .cornerRadius(12)
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
-        .background(.black.opacity(0.5))
+        .background(.silver.opacity(0.5))
         .innerShadow(radius: 5)
         .margin(.bottom, .large)
         
@@ -697,7 +697,7 @@ struct ByRule: StaticLayout {
             Text("By Rule: Basketball Official - NCAA Rules Study & Quiz")
         }
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
-        .background(.firebrick.opacity(0.5))
+        .background(.dodgerBlue.opacity(0.5))
         .innerShadow(radius: 5)
         .margin(.bottom, .large)
     }
