@@ -1,7 +1,6 @@
 # Swift Blog with Ignite
 
-Welcome to my Swift blog, built using [Ignite](https://ignite.iosdev.directory/)—a modern static site generator for Swift developers. This project serves as my personal blog, where I share content focused on Swift, SwiftUI, and development insights.
-
+Welcome to my Swift blog, built using [Ignite](https://ignite.iosdev.directory/)—a modern static site generator for Swift developers. Enjoy a variety of posts focused on programming and the Swift community. Follow along as I use SwiftUI fundamentals to build cool apps and be sure to check out the latest content to stay up to date. Thank you for reading!
 ## Overview
 
 This blog features:
