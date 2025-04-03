@@ -42,9 +42,6 @@ struct SDF: Site {
         FirstTalk()
         FirstConference()
         Mentorship()
-        TemperatureConverter()
-        TCPart2()
-        LeveragingAI()
     }
     
 }
