@@ -70,8 +70,6 @@ struct ByRule: StaticLayout {
                     .frame(height: 200)
                     .margin(.vertical, .medium)
             }
-            
-            Text("By Rule: Basketball Official - NCAA Rules Study & Quiz")
         }
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
         .background(.thinMaterial.colorScheme(.light))
