@@ -48,7 +48,7 @@ struct About: StaticLayout {
         }
         .cardStyle(.bordered)
         .margin(.bottom, .large)
-        .background(.steelBlue.opacity(0.5))
+        .background(.dodgerBlue.opacity(0.5))
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
         .innerShadow(radius: 5)
 
@@ -65,7 +65,7 @@ struct About: StaticLayout {
         }
         .cardStyle(.bordered)
         .margin(.bottom, .large)
-        .background(.darkSalmon.opacity(0.5))
+        .background(.firebrick.opacity(0.5))
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
         .innerShadow(radius: 5)
         
@@ -82,7 +82,7 @@ struct About: StaticLayout {
         }
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
         .margin(.bottom, .large)
-        .background(.seaGreen.opacity(0.5))
+        .background(.mediumSeaGreen.opacity(0.5))
         .innerShadow(radius: 5)
 
         SocialFooter()
