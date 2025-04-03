@@ -96,7 +96,7 @@ struct ByRule: StaticLayout {
                 .font(.title3)
                 .margin(.vertical, .medium)
             
-            Text("With comprehensive study modules and pointed training resources, this app is designed to elevate your officiating knowledge and confidence. Whether you’re a rookie stepping onto the court or a seasoned vet, By Rule sharpens your skills with tools you won’t find anywhere else.")
+            Text("With comprehensive study modules and pointed training resources, this app is designed to elevate your officiating knowledge and confidence. Whether you’re a rookie stepping onto the court or a seasoned vet, By Rule has what you need to succeed.")
                 .lineSpacing(1.75)
                 .padding(6)
                 .fontWeight(.semibold)
@@ -109,11 +109,11 @@ struct ByRule: StaticLayout {
         
         
         Card {
-            
-            Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRRef5.png?alt=media&token=9e349162-6204-4d9f-86a9-69d1d2d907dc")
+//            "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRRef5.png?alt=media&token=9e349162-6204-4d9f-86a9-69d1d2d907dc"
+            Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRREF7.png?alt=media&token=d0f0c850-8670-420f-a07d-d6c15adfa057")
                 .resizable()
                 .aspectRatio(.r21x9, contentMode: .fit)
-                .background(.thinMaterial.colorScheme(.light))
+                .background(.black)
                 .innerShadow(radius: 5)
             
             Text("By Rule: Basketball Official is your all-in-one tool for mastering NCAA rules. It’s not just an app—it’s your companion, built by refs for refs, designed to grow with you from your first game to your thousandth. Ready to see how it works?")
