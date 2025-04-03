@@ -39,31 +39,21 @@ struct ByRule: StaticLayout {
             .innerShadow(radius: 5)
             .margin(.bottom, .xLarge)
         
-        // Mission Segment
-                Card {
-                    Text("Own the Rules, Rule the Game 🤩")
-                        .font(.title3)
-                        .fontWeight(.bold)
-                        .margin(.bottom, .medium)
-                    
-                    Text("By Rule is the premier study tool for anyone looking to engage NCAA basketball rules.")
-                        .lineSpacing(1.75)
-                        .padding(6)
-                        .font(.title5)
-                        .fontWeight(.semibold)
-                }
-                .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
-                .background(.black.opacity(0.5))
-                .innerShadow(radius: 5)
-                .margin(.bottom, .large)
-        
         Card {
             Embed(title: "By Rule: Basketball Official - NCAA Rules Study & Quiz", url: URL(string: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRPROMO9.mp4?alt=media&token=54ee52a9-036a-44a9-b854-c4be16f09a9c")!)
                 .aspectRatio(.r16x9)
         } header: {
-            Text("Video 🎥")
+            Text("Own the Rules, Rule the Game 🤩")
                 .font(.title3)
-                .margin(.vertical, .medium)
+                .fontWeight(.bold)
+                .margin(.top, .large)
+            
+            Text("By Rule is the premier study tool for anyone looking to engage NCAA basketball rules.")
+                .lineSpacing(1.75)
+                .padding(6)
+                .font(.title5)
+                .fontWeight(.semibold)
+            
         } footer: {
             Link(target: "https://apps.apple.com/us/app/by-rule/id1532845521") {
                 Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/NewLogo1.png?alt=media&token=b8ffed6b-0a32-46a3-b0ea-d3058f9365a2", description: "By Rule App Icon Button")
@@ -74,7 +64,7 @@ struct ByRule: StaticLayout {
             Text("By Rule: Basketball Official - NCAA Rules Study & Quiz")
         }
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
-        .background(.black.opacity(0.5))
+        .background(.darkSeaGreen.opacity(0.5))
         .innerShadow(radius: 5)
         .margin(.bottom, .large)
         
