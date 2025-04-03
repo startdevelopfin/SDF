@@ -30,7 +30,7 @@ struct ByRule: StaticLayout {
         .padding(4)
         
         // By Rule Banner
-        Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/Twitter%20Cover%20PNG.png?alt=media&token=645e4185-4f66-4efb-9ae2-58513e5875f7")
+        Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/Twitter%20Cover%20PNG.png?alt=media&token=645e4185-4f66-4efb-9ae2-58513e5875f7", description: "By Rule Banner")
             .resizable()
             .aspectRatio(.r21x9, contentMode: .fill)
             .clipped()
@@ -60,9 +60,13 @@ struct ByRule: StaticLayout {
         Card {
             Embed(title: "By Rule: Basketball Official - NCAA Rules Study & Quiz", url: URL(string: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRPROMO9.mp4?alt=media&token=54ee52a9-036a-44a9-b854-c4be16f09a9c")!)
                 .aspectRatio(.r16x9)
+        } header: {
+            Text("Video 🎥")
+                .font(.title3)
+                .margin(.vertical, .medium)
         } footer: {
             Link(target: "https://apps.apple.com/us/app/by-rule/id1532845521") {
-                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/NewLogo1.png?alt=media&token=b8ffed6b-0a32-46a3-b0ea-d3058f9365a2")
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/NewLogo1.png?alt=media&token=b8ffed6b-0a32-46a3-b0ea-d3058f9365a2", description: "By Rule App Icon Button")
                     .frame(height: 200)
                     .margin(.vertical, .medium)
             }
@@ -78,20 +82,20 @@ struct ByRule: StaticLayout {
         Card {
 
             Grid {
-                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/ref1shot.png?alt=media&token=e2c020ed-0262-4f97-8623-c19c6b585008")
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/ref1shot.png?alt=media&token=e2c020ed-0262-4f97-8623-c19c6b585008", description: "Referee Signaling One Shot")
                     .resizable()
                     .width(4)
                     .margin(.vertical, .medium)
                     .background(.thinMaterial.colorScheme(.light))
                     .innerShadow(radius: 5)
                 
-                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/refviolation.png?alt=media&token=3bb531af-8b9b-4a06-84b6-8d6587bac634")
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/refviolation.png?alt=media&token=3bb531af-8b9b-4a06-84b6-8d6587bac634", description: "Referee Stopping The Clock")
                     .resizable()
                     .width(4)
                     .margin(.vertical, .medium)
                     .background(.thinMaterial.colorScheme(.light))
                     .innerShadow(radius: 5)
-                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/reffoul.png?alt=media&token=9791b1b1-7ed9-4a6a-a2a8-23b2a53ff944")
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/reffoul.png?alt=media&token=9791b1b1-7ed9-4a6a-a2a8-23b2a53ff944", description: "Referee Signaling a Foul")
                     .resizable()
                     .width(4)
                     .margin(.vertical, .medium)
@@ -126,8 +130,7 @@ struct ByRule: StaticLayout {
         
         
         Card {
-//            "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRRef5.png?alt=media&token=9e349162-6204-4d9f-86a9-69d1d2d907dc"
-            Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRREF7.png?alt=media&token=d0f0c850-8670-420f-a07d-d6c15adfa057")
+            Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRREF7.png?alt=media&token=d0f0c850-8670-420f-a07d-d6c15adfa057", description: "Referee Conducting Replay Review")
                 .resizable()
                 .aspectRatio(.r21x9, contentMode: .fit)
                 .background(.black)
@@ -221,7 +224,7 @@ struct ByRule: StaticLayout {
                     .width(4)
                     .margin(.vertical, .medium)
                 
-                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRFlashcards.png?alt=media&token=4315aa2a-cd75-4c43-aefa-f31487f06c8f", description: "Flashcards")
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRFlashcards.png?alt=media&token=4315aa2a-cd75-4c43-aefa-f31487f06c8f", description: "Flashcard Notes")
                     .resizable()
                     .width(4)
                     .margin(.vertical, .medium)
@@ -291,12 +294,12 @@ struct ByRule: StaticLayout {
             
             // By Rule Screenshots 2
             Grid {
-                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRAudio.png?alt=media&token=b0b35ed8-55eb-448e-975e-0565799b0957", description: "Audio")
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRAudio.png?alt=media&token=b0b35ed8-55eb-448e-975e-0565799b0957", description: "Audio Library")
                     .resizable()
                     .width(4)
                     .margin(.vertical, .medium)
                 
-                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRVideo.png?alt=media&token=389c076d-cd48-42fc-b70c-c8b51961e3b3", description: "Video")
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRVideo.png?alt=media&token=389c076d-cd48-42fc-b70c-c8b51961e3b3", description: "Video Library")
                     .resizable()
                     .width(4)
                     .margin(.vertical, .medium)
@@ -372,18 +375,18 @@ struct ByRule: StaticLayout {
             // By Rule Screenshots 2
             Grid {
                 
-                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRSearch.png?alt=media&token=d81968ce-8514-45d9-aa89-bea6bbd98d91", description: "Summary")
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRSearch.png?alt=media&token=d81968ce-8514-45d9-aa89-bea6bbd98d91", description: "Lightning Search")
                     .resizable()
                     .width(4)
                     .margin(.vertical, .medium)
 
                 
-                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRPDF.png?alt=media&token=b627d5eb-a906-406d-9d9a-7a0e5fe86830", description: "Summary")
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRPDF.png?alt=media&token=b627d5eb-a906-406d-9d9a-7a0e5fe86830", description: "PDF")
                     .resizable()
                     .width(4)
                     .margin(.vertical, .medium)
                 
-                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRHome.png?alt=media&token=448cca4a-fa6e-488a-aff5-0a306c93d1bc", description: "Summary")
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRHome.png?alt=media&token=448cca4a-fa6e-488a-aff5-0a306c93d1bc", description: "Quick Start Module")
                     .resizable()
                     .width(4)
                     .margin(.vertical, .medium)
@@ -401,7 +404,7 @@ struct ByRule: StaticLayout {
       
         // Manu
         Card {
-            Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/Manu.PNG?alt=media&token=78d06f68-d338-4768-9000-a9b7d6cd8097")
+            Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/Manu.PNG?alt=media&token=78d06f68-d338-4768-9000-a9b7d6cd8097", description: "Manu AI")
                 .resizable()
                 .background(.thinMaterial.colorScheme(.light))
             
@@ -426,23 +429,20 @@ struct ByRule: StaticLayout {
             Grid {
 
                 
-                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRChatHistory.png?alt=media&token=cf9750b0-2a1a-42ef-ac85-c4f55d755e30", description: "Manu")
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRChatHistory.png?alt=media&token=cf9750b0-2a1a-42ef-ac85-c4f55d755e30", description: "Manu Chat History")
                     .resizable()
                     .width(4)
                     .margin(.vertical, .medium)
                 
-                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRManu2.png?alt=media&token=7aaad391-ae07-4b32-8e8a-e7cedaf4124e", description: "Summary")
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRManu2.png?alt=media&token=7aaad391-ae07-4b32-8e8a-e7cedaf4124e", description: "Manu Chat")
                     .resizable()
                     .width(4)
                     .margin(.vertical, .medium)
                 
-                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRAnalyticSummary.png?alt=media&token=62da4096-0ab9-4813-a6b5-a3079a96f14b", description: "Summary")
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRAnalyticSummary.png?alt=media&token=62da4096-0ab9-4813-a6b5-a3079a96f14b", description: "Manu Analytic Summary")
                     .resizable()
                     .width(4)
                     .margin(.vertical, .medium)
-                
-
-
                }
             .margin(.vertical, .large)
             .margin(.horizontal, .large)
@@ -493,19 +493,19 @@ struct ByRule: StaticLayout {
         Card {
 
             Grid {
-                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRSummary.png?alt=media&token=35fe7a9a-d86b-4b9c-b216-2237b58a7a5a", description: "Summary")
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRSummary.png?alt=media&token=35fe7a9a-d86b-4b9c-b216-2237b58a7a5a", description: "Manu Quiz Summary")
                     .resizable()
                     .width(4)
                     .margin(.vertical, .medium)
 
                 
-                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRBoxScore.png?alt=media&token=36ff5a9a-6ad3-477a-8e2a-21d4075c8517", description: "Manu")
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRBoxScore.png?alt=media&token=36ff5a9a-6ad3-477a-8e2a-21d4075c8517", description: "Score Card")
                     .resizable()
                     .width(4)
                     .margin(.vertical, .medium)
                 
                 
-                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRAnalytics.png?alt=media&token=35254985-5ea7-4d2e-ae7c-818cdf90162c", description: "Analytics")
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRAnalytics.png?alt=media&token=35254985-5ea7-4d2e-ae7c-818cdf90162c", description: "Analytics Charts")
                     .resizable()
                     .width(4)
                     .margin(.vertical, .medium)
@@ -577,20 +577,20 @@ struct ByRule: StaticLayout {
         Card {
 
             Grid {
-                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRIncorrect.png?alt=media&token=e1717b6e-4be3-4fc9-ace5-d2d27457c062", description: "Manu")
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRIncorrect.png?alt=media&token=e1717b6e-4be3-4fc9-ace5-d2d27457c062", description: "Incorrect Calls")
                     .resizable()
                     .width(4)
                     .margin(.vertical, .medium)
                 
                
                 
-                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRChart2.png?alt=media&token=d71eebec-4e4a-44c9-99e6-bc7425170b77", description: "Manu")
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRChart2.png?alt=media&token=d71eebec-4e4a-44c9-99e6-bc7425170b77", description: "Chart Detail")
                     .resizable()
                     .width(4)
                     .margin(.vertical, .medium)
                 
                 
-                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRRuleRank.png?alt=media&token=2a185fc4-9046-4b55-9d41-8235326cd48a", description: "Manu")
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRRuleRank.png?alt=media&token=2a185fc4-9046-4b55-9d41-8235326cd48a", description: "Rule Rank")
                     .resizable()
                     .width(4)
                     .margin(.vertical, .medium)
@@ -669,7 +669,7 @@ struct ByRule: StaticLayout {
         // Download section
         Card {
             
-            Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/refhuddle2.png?alt=media&token=dc87ce1a-2e00-4d8f-bc8b-e3d6c441fc04")
+            Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/refhuddle2.png?alt=media&token=dc87ce1a-2e00-4d8f-bc8b-e3d6c441fc04", description: "Officials Huddle")
                 .resizable()
                 .aspectRatio(.r21x9, contentMode: .fit)
                 .background(.thinMaterial.colorScheme(.light))
@@ -688,7 +688,7 @@ struct ByRule: StaticLayout {
             
         } footer: {
             Link(target: "https://apps.apple.com/us/app/by-rule/id1532845521") {
-                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/NewLogo1.png?alt=media&token=b8ffed6b-0a32-46a3-b0ea-d3058f9365a2")
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/NewLogo1.png?alt=media&token=b8ffed6b-0a32-46a3-b0ea-d3058f9365a2", description: "By Rule App Icon Button")
                     .frame(height: 200)
                     .margin(.vertical, .medium)
             }
