@@ -53,7 +53,7 @@ struct ByRule: StaticLayout {
                         .fontWeight(.semibold)
                 }
                 .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
-                .background(.oliveDrab.opacity(0.5))
+                .background(.black.opacity(0.5))
                 .innerShadow(radius: 5)
                 .margin(.bottom, .large)
         
@@ -70,9 +70,11 @@ struct ByRule: StaticLayout {
                     .frame(height: 200)
                     .margin(.vertical, .medium)
             }
+            
+            Text("By Rule: Basketball Official - NCAA Rules Study & Quiz")
         }
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
-        .background(.thinMaterial.colorScheme(.light))
+        .background(.black.opacity(0.5))
         .innerShadow(radius: 5)
         .margin(.bottom, .large)
         
@@ -234,7 +236,7 @@ struct ByRule: StaticLayout {
         .clipped()
         .cornerRadius(12)
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
-        .background(.silver.opacity(0.5))
+        .background(.black.opacity(0.5))
         .innerShadow(radius: 5)
         .margin(.bottom, .large)
         
@@ -315,7 +317,7 @@ struct ByRule: StaticLayout {
         .clipped()
         .cornerRadius(12)
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
-        .background(.silver.opacity(0.5))
+        .background(.black.opacity(0.5))
         .innerShadow(radius: 5)
         .margin(.bottom, .large)
         
@@ -394,7 +396,7 @@ struct ByRule: StaticLayout {
         .clipped()
         .cornerRadius(12)
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
-        .background(.silver.opacity(0.5))
+        .background(.black.opacity(0.5))
         .innerShadow(radius: 5)
         .margin(.bottom, .large)
         
@@ -491,90 +493,6 @@ struct ByRule: StaticLayout {
         Card {
 
             Grid {
-                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRSummary.png?alt=media&token=35fe7a9a-d86b-4b9c-b216-2237b58a7a5a", description: "Manu Quiz Summary")
-                    .resizable()
-                    .width(4)
-                    .margin(.vertical, .medium)
-
-                
-                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRBoxScore.png?alt=media&token=36ff5a9a-6ad3-477a-8e2a-21d4075c8517", description: "Score Card")
-                    .resizable()
-                    .width(4)
-                    .margin(.vertical, .medium)
-                
-                
-                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRAnalytics.png?alt=media&token=35254985-5ea7-4d2e-ae7c-818cdf90162c", description: "Analytics Charts")
-                    .resizable()
-                    .width(4)
-                    .margin(.vertical, .medium)
-
-               }
-            .margin(.vertical, .large)
-            .margin(.horizontal, .large)
-
-        } header: {
-            // Manu Title + Description
-            Text("Analytics: Your Game Plan to Greatness 📊")
-                .font(.title3)
-                .margin(.top, .large)
-                .margin(.bottom, .large)
-            
-            Text("Ever wonder what separates good refs from great ones? It’s knowing your game—inside and out. Here’s how we break it down:")
-                .padding(6)
-                .lineSpacing(1.75)
-                .font(.title5)
-                .fontWeight(.semibold)
-                .margin(.top, .large)
-                .margin(.bottom, .large)
-
-        } footer: {
-
-            // Manu Table
-            Card {
-                Table {
-                    Row {
-                        Text("🤓 Instant Feedback")
-                            .font(.title5)
-                            .fontWeight(.semibold)
-                        Text("Finish a quiz? Manu’s on it—dissecting your rights and wrongs faster than a timeout huddle, so you learn on the spot.")
-                            .fontWeight(.semibold)
-                    }
-                    
-                    Row {
-                        Text("💯 Score Cards")
-                            .font(.title5)
-                            .fontWeight(.semibold)
-                        Text("See your score, rank, and question-by-question breakdown—think of it as your stat sheet after a big game, showing where you dominate and where to drill.")
-                            .fontWeight(.semibold)
-                    }
-                    
-                    
-                    Row {
-                        Text("💽 Your Data")
-                            .font(.title5)
-                            .fontWeight(.bold)
-                        Text("Track every win, spot every gap.")
-                            .fontWeight(.semibold)
-                    }
-                    
-                }
-                
-            }
-            .margin(.vertical, .large)
-            .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
-            
-        }
-        .clipped()
-        .cornerRadius(12)
-        .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
-        .background(.dodgerBlue.opacity(0.5))
-        .innerShadow(radius: 5)
-        .margin(.bottom, .large)
-        
-        // Analyitcs
-        Card {
-
-            Grid {
                 Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRIncorrect.png?alt=media&token=e1717b6e-4be3-4fc9-ace5-d2d27457c062", description: "Incorrect Calls")
                     .resizable()
                     .width(4)
@@ -596,14 +514,15 @@ struct ByRule: StaticLayout {
             .margin(.vertical, .large)
             .margin(.horizontal, .large)
 
+
         } header: {
             // Manu Title + Description
-            Text("More 🌟")
+            Text("Analytics: Your Game Plan to Greatness 📊")
                 .font(.title3)
                 .margin(.top, .large)
                 .margin(.bottom, .large)
             
-            Text("By Rule turns your effort into insight, tracking every quiz, flashcard, and second you put in. No mystery here—just your hustle, your analytics, and Manu’s genius, all working together to make you unstoppable. ")
+            Text("Ever wonder what separates good refs from great ones? It’s knowing your game—inside and out. Here’s how we break it down:")
                 .padding(6)
                 .lineSpacing(1.75)
                 .font(.title5)
@@ -651,7 +570,91 @@ struct ByRule: StaticLayout {
         .clipped()
         .cornerRadius(12)
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
-        .background(.dodgerBlue.opacity(0.5))
+        .background(.black.opacity(0.5))
+        .innerShadow(radius: 5)
+        .margin(.bottom, .large)
+        
+        // Analyitcs
+        Card {
+            Grid {
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRSummary.png?alt=media&token=35fe7a9a-d86b-4b9c-b216-2237b58a7a5a", description: "Manu Quiz Summary")
+                    .resizable()
+                    .width(4)
+                    .margin(.vertical, .medium)
+
+                
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRBoxScore.png?alt=media&token=36ff5a9a-6ad3-477a-8e2a-21d4075c8517", description: "Score Card")
+                    .resizable()
+                    .width(4)
+                    .margin(.vertical, .medium)
+                
+                
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRAnalytics.png?alt=media&token=35254985-5ea7-4d2e-ae7c-818cdf90162c", description: "Analytics Charts")
+                    .resizable()
+                    .width(4)
+                    .margin(.vertical, .medium)
+
+               }
+            .margin(.vertical, .large)
+            .margin(.horizontal, .large)
+
+
+        } header: {
+            // Manu Title + Description
+            Text("More 🌟")
+                .font(.title3)
+                .margin(.top, .large)
+                .margin(.bottom, .large)
+            
+            Text("By Rule turns your effort into insight, tracking every quiz, flashcard, and second you put in. No mystery here—just your hustle, your analytics, and Manu’s genius, all working together to make you unstoppable. ")
+                .padding(6)
+                .lineSpacing(1.75)
+                .font(.title5)
+                .fontWeight(.semibold)
+                .margin(.top, .large)
+                .margin(.bottom, .large)
+
+        } footer: {
+            // Manu Table
+            Card {
+                Table {
+                    Row {
+                        Text("🤓 Instant Feedback")
+                            .font(.title5)
+                            .fontWeight(.semibold)
+                        Text("Finish a quiz? Manu’s on it—dissecting your rights and wrongs faster than a timeout huddle, so you learn on the spot.")
+                            .fontWeight(.semibold)
+                    }
+                    
+                    Row {
+                        Text("💯 Score Cards")
+                            .font(.title5)
+                            .fontWeight(.semibold)
+                        Text("See your score, rank, and question-by-question breakdown—think of it as your stat sheet after a big game, showing where you dominate and where to drill.")
+                            .fontWeight(.semibold)
+                    }
+                    
+                    
+                    Row {
+                        Text("💽 Your Data")
+                            .font(.title5)
+                            .fontWeight(.bold)
+                        Text("Track every win, spot every gap.")
+                            .fontWeight(.semibold)
+                    }
+                    
+                }
+                
+            }
+            .margin(.vertical, .large)
+            .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
+            
+            
+        }
+        .clipped()
+        .cornerRadius(12)
+        .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
+        .background(.black.opacity(0.5))
         .innerShadow(radius: 5)
         .margin(.bottom, .large)
         
