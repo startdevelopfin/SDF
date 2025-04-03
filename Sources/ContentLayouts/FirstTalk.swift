@@ -18,7 +18,6 @@ struct FirstTalk: StaticLayout {
     
     var body: some HTML {
         
-        
         Text("First Talk 🎙️")
             .font(.title1)
             .margin(.vertical, .large)

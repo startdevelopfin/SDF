@@ -12,14 +12,31 @@ struct About: StaticLayout {
 
     var body: some HTML {
         
-        Text("About 👤")
-                .font(.title1)
-
+        Card {
         Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/swiftuiweekly%2FPFP.png?alt=media&token=555d869c-661d-414b-8584-f26560226c44")
-            .margin(.bottom, .xLarge)
-            .cornerRadius(12)
-            .border(.powderBlue, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
-        
+                .resizable()
+                .aspectRatio(.square, contentMode: .fill)
+                .clipped()
+                .cornerRadius(12)
+                .innerShadow(radius: 5)
+
+        } header: {
+            Text("About 👤")
+                .font(.title1)
+                .margin(.bottom, .medium)
+        } footer: {
+            Text("Daniel J. Aupont")
+                .font(.title3)
+                .fontWeight(.heavy)
+                .padding(.horizontal, 4)
+                .lineSpacing(1.5)
+        }
+        .cardStyle(.bordered)
+        .margin(.bottom, .large)
+        .background(.silver.opacity(0.5))
+        .cornerRadius(12)
+        .border(.powderBlue, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
+        .innerShadow(radius: 5)
 
         Card {
             Text("What I Do 🛠️")

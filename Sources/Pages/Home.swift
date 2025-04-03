@@ -56,35 +56,10 @@ struct Home: StaticLayout {
             .cornerRadius(12)
             .border(.powderBlue, width: 6, style: .solid, cornerRadii: .init(), edges: .all)
             .margin(.bottom, .xLarge)
-
-        
-//        Text("Latest")
-//            .font(.title2)
-//            .padding(.top)
-        
-//        Grid {
-//            
-//            ForEach(articles.tagged("Article")) { item in
-//                let randomColor = backgroundColors.randomElement() ?? Color.dodgerBlue  // Pick a random Ignite color
-//
-//                
-//                    ContentPreview(for: item)
-//                        .width(4)
-//                        .margin(.bottom)
-//                        .background(randomColor.opacity(0.5))  // Apply random background
-//                        .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
-//                        .innerShadow(radius: 5)
-//                
-//            }
-//            
-//        }
-//        .margin(.bottom, .xLarge)
         
         Text("Latest")
             .font(.title2)
             .padding(.top)
-        
-        
         
         Grid {
 
