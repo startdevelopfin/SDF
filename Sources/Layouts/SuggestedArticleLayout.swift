@@ -11,7 +11,6 @@ import Ignite
 struct SuggestedArticleLayout: Layout {
     @Environment(\.articles) private var articles
     
-    
     let backgroundColors: [Color] = [
         .bootstrapGreen,
         .bootstrapPurple,
@@ -48,8 +47,6 @@ struct SuggestedArticleLayout: Layout {
                     .width(9)
                     .padding(.vertical, 80)
                 
-                
-
 //                Section {
 //                    Text("Read this next…")
 //                        .font(.title3)
