@@ -154,7 +154,7 @@ struct CodingInstructor: StaticLayout {
                 .fontWeight(.semibold)
                 .margin(.vertical, .large)
         
-        Image("/images/photos/Classroom.png")
+        Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/Classroom.png?alt=media&token=49623c5b-e65e-4148-a446-3fdfb4d09b5a")
             .resizable()
             .aspectRatio(.r21x9, contentMode: .fill)
             .clipped()
@@ -186,7 +186,7 @@ struct CodingInstructor: StaticLayout {
                 .fontWeight(.semibold)
                 .margin(.vertical, .large)
         
-        Image("/images/photos/CodingHeader.png")
+        Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/CodingHeader.png?alt=media&token=65448e8d-0249-476a-a6a9-836af3b5531f")
             .resizable()
             .aspectRatio(.r21x9, contentMode: .fit)
             .clipped()
