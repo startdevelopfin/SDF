@@ -36,8 +36,36 @@ struct ByRule: StaticLayout {
             .margin(.bottom, .xLarge)
         
         Card {
-            Embed(title: "By Rule: Basketball Official - NCAA Rules Study & Quiz", url: URL(string: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRPromoGuitar.mp4?alt=media&token=21c12c13-2439-4c5f-90c4-e3006cce8c73")!)
+            
+            // Bass + Guitar
+//            Embed(title: "By Rule: Basketball Official - NCAA Rules Study & Quiz", url: URL(string: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRPromoGuitar.mp4?alt=media&token=21c12c13-2439-4c5f-90c4-e3006cce8c73")!)
+//                .aspectRatio(.r16x9)
+            
+//            // Podcast Into
+//            Embed(title: "By Rule: Basketball Official - NCAA Rules Study & Quiz", url: URL(string: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRPromoPodcast.mp4?alt=media&token=b78d413c-7bba-4e3f-99b9-8dd91718b224")!)
+//                .aspectRatio(.r16x9)
+            
+            // Bass Guitar
+//            Embed(title: "By Rule: Basketball Official - NCAA Rules Study & Quiz", url: URL(string: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRPromoBassGuitar.mp4?alt=media&token=dd89f819-2fce-44f3-b012-9163bfe90a4e")!)
+//                .aspectRatio(.r16x9)
+            
+            
+            // Lounge
+//            Embed(title: "By Rule: Basketball Official - NCAA Rules Study & Quiz", url: URL(string: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRPromoLounge.mp4?alt=media&token=3a6421b8-7000-471f-9e1a-b6c8b475360b")!)
+//                .aspectRatio(.r16x9)
+            
+
+            
+
+            
+            // Hip Hop
+            Embed(title: "By Rule: Basketball Official - NCAA Rules Study & Quiz", url: URL(string: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRPromoHipHop.mp4?alt=media&token=2e369c1e-65d9-4fd0-8dcd-751ffd3e0ffd")!)
                 .aspectRatio(.r16x9)
+            
+            
+            
+            
+            
             
         } header: {
             Text("Own the Rules, Rule the Game 🤩")
@@ -65,9 +93,9 @@ struct ByRule: StaticLayout {
         .innerShadow(radius: 5)
         .margin(.bottom, .large)
         
-        // Why Choose By Rule
+        // Game Changer
         Card {
-
+            
             Grid {
                 Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/ref1shot.png?alt=media&token=e2c020ed-0262-4f97-8623-c19c6b585008", description: "Referee Signaling One Shot")
                     .resizable()
@@ -92,8 +120,62 @@ struct ByRule: StaticLayout {
             }
             .margin(.vertical, .large)
             .margin(.horizontal, .large)
+
             
-            Text("New officials, this is your fast track: flip through flashcards until every call feels instinctive, then test yourself with real-game scenarios to simulate the pressure of a packed gym.")
+            Text("With comprehensive study modules and pointed training resources, this app is designed to elevate your officiating knowledge and confidence. Whether you’re a rookie stepping onto the court or a seasoned vet, By Rule has what you need to succeed.")
+                .padding(6)
+                .lineSpacing(1.75)
+                .font(.title5)
+                .fontWeight(.semibold)
+                .margin(.vertical, .medium)
+        } header: {
+            Text("Game Changer ⛹🏽")
+                .font(.title3)
+                .margin(.vertical, .medium)
+            
+            Text("By Rule: Basketball Official is your all-in-one tool for mastering NCAA rules. It’s not just an app—it’s your companion, built by refs for refs, designed to grow with you from your first game to your thousandth.")
+                .lineSpacing(1.75)
+                .padding(6)
+                .fontWeight(.semibold)
+                .font(.title5)
+        }
+        .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
+        .background(.burlyWood.opacity(0.5))
+        .innerShadow(radius: 5)
+        .margin(.bottom, .large)
+
+        
+        // Why Choose By Rule
+        Card {
+
+            Grid {
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/Ref2.png?alt=media&token=94c982e0-e621-42da-ad3f-73a0096306fc", description: "Referee Hand Up")
+                    .resizable()
+                    .width(6)
+                    .margin(.vertical, .medium)
+                    .background(.thinMaterial.colorScheme(.light))
+                    .innerShadow(radius: 5)
+            
+                
+//                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/RefCoach2.png?alt=media&token=28d3b37d-0371-439e-869b-29ae754a9760", description: "Referee and Coach")
+//                    .resizable()
+//                    .width(4)
+//                    .margin(.vertical, .medium)
+//                    .background(.thinMaterial.colorScheme(.light))
+//                    .innerShadow(radius: 5)
+                
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/RefCoach.png?alt=media&token=291bdad2-7fbf-4640-ae31-da926c44347e", description: "Referee and Coach")
+                    .resizable()
+                    .width(6)
+                    .margin(.vertical, .medium)
+                    .background(.thinMaterial.colorScheme(.light))
+                    .innerShadow(radius: 5)
+
+            }
+            .margin(.vertical, .large)
+            .margin(.horizontal, .large)
+            
+            Text("For everyone else, it’s about sharpening your skills and staying current—repetition that fits your life, from audio rules on your commute to video breakdowns of floor mechanics.")
                 .padding(6)
                 .lineSpacing(1.75)
                 .font(.title5)
@@ -104,7 +186,7 @@ struct ByRule: StaticLayout {
                 .font(.title3)
                 .margin(.vertical, .medium)
             
-            Text("With comprehensive study modules and pointed training resources, this app is designed to elevate your officiating knowledge and confidence. Whether you’re a rookie stepping onto the court or a seasoned vet, By Rule has what you need to succeed.")
+            Text("New officials, this is your fast track: flip through flashcards until every call feels instinctive, then test yourself with real-game scenarios to simulate the pressure of a packed gym.")
                 .lineSpacing(1.75)
                 .padding(6)
                 .fontWeight(.semibold)
@@ -116,6 +198,7 @@ struct ByRule: StaticLayout {
         .margin(.bottom, .large)
         
         
+        
         Card {
             Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRREF7.png?alt=media&token=d0f0c850-8670-420f-a07d-d6c15adfa057", description: "Referee Conducting Replay Review")
                 .resizable()
@@ -123,7 +206,7 @@ struct ByRule: StaticLayout {
                 .background(.black)
                 .innerShadow(radius: 5)
             
-            Text("By Rule: Basketball Official is your all-in-one tool for mastering NCAA rules. It’s not just an app—it’s your companion, built by refs for refs, designed to grow with you from your first game to your thousandth. Ready to see how it works?")
+            Text("Manu, your AI rules guru, can clear up any other calls on the fly. Ready to see how it works?")
                 .padding(6)
                 .lineSpacing(1.75)
                 .font(.title5)
@@ -131,11 +214,11 @@ struct ByRule: StaticLayout {
                 .margin(.vertical, .medium)
 
         } header: {
-            Text("Experienced? 🤓")
+            Text("Optimize Your Learning 🔥")
                 .font(.title3)
                 .margin(.vertical, .medium)
             
-            Text("For everyone else, it’s about sharpening your skills and staying current—repetition that fits your life, from audio rules on your commute to video breakdowns of floor mechanics. Struggling with Rule 4? Your personalized user Analytics will spot it, using Spotlight Learning modes fixes it, and Manu, your AI rules guru, clears up any other calls on the fly.")
+            Text("Struggling with Rule 4? Your personalized user Analytics will spot it. Then, use Spotlight modes to bridge learning gaps.")
                 .padding()
                 .lineSpacing(1.75)
                 .font(.title5)
