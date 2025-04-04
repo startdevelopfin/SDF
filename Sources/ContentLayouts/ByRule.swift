@@ -487,7 +487,7 @@ struct ByRule: StaticLayout {
                 .margin(.top, .large)
                 .margin(.bottom, .large)
             
-            Text("When the game moves fast, Manu keeps you ahead of the play. Your personal rules expert, built for quick calls, clear answers, and instant insight. No debates, no delays—just the right call, right when you need it. Built into By Rule, this AI rules expert delivers instant, no-nonsense answers—straight from the NCAA rulebook. Fast, clear, and courtside-ready, it’s like having a rules assistant in your pocket.")
+            Text("When the game moves fast, Manu keeps you ahead of the play. Built into By Rule, Manu can deliver instant, no-nonsense answers—straight from the NCAA rulebook. It’s like having a rules assistant in your pocket.")
                 .padding(6)
                 .lineSpacing(1.75)
                 .font(.title5)
