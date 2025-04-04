@@ -44,12 +44,14 @@ struct Home: StaticLayout {
         Text("Welcome Swift enthusiasts!")
             .font(.title1)
         
+        Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/swiftuiweekly%2FPFP.png?alt=media&token=555d869c-661d-414b-8584-f26560226c44")
+        
         Text("Enjoy a variety of posts focused on programming and the Swift community. Follow along as I use SwiftUI fundamentals to build cool apps and be sure to check out the latest content to stay up to date. Thank you for reading!")
             .font(.lead)
             .fontWeight(.semibold)
             .padding()
 
-            Image("/images/photos/CardImage3.png")
+            Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/CardImage3.png?alt=media&token=74e5ec39-e269-4163-8e31-d54eb2491f37")
             .resizable()
             .aspectRatio(.r21x9, contentMode: .fill)
             .clipped()
@@ -63,7 +65,7 @@ struct Home: StaticLayout {
         
         Grid {
 
-            Card(imageName: "/images/photos/mentorshipCard.png") {
+            Card(imageName: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/mentorshipCard.png?alt=media&token=2938b7ba-adc4-443b-a104-116d67aabfb1") {
                 Link("Mentorship 📚", target: Mentorship())
                     .font(.title3)
                 Text("In this post, I reflect on the the power of Mentorship using excerpts from my second iOS Conference Talk.")
@@ -76,7 +78,7 @@ struct Home: StaticLayout {
             .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
             .innerShadow(radius: 5)
             
-            Card(imageName: "/images/photos/DeepDishCard.png") {
+            Card(imageName: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/DeepDish%2FDeepDishCard.png?alt=media&token=dd331145-cf3f-464e-a804-64e33b118b69") {
                 Link("First Conference 🥳", target: FirstConference())
                     .font(.title3)
                 Text("In this post, I reflect on the experience attending my first Swift conference and detail the potential impact of these community driven events for aspiring iOS developers.")
@@ -90,7 +92,7 @@ struct Home: StaticLayout {
             .innerShadow(radius: 5)
             
             
-            Card(imageName: "/images/photos/SpeakerStage.png") {
+            Card(imageName: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/FirstTalk%2FSpeakerStage.png?alt=media&token=58770c24-7c93-40d5-8817-d11b479a2c7c") {
                 Link("First Talk 🎙️", target: FirstTalk())
                     .font(.title3)
                 Text("In this post, I reflect on my first speaking engagement as a part of the HBCU C2 Student Leadership Conference at Tennesee State University.")
@@ -104,7 +106,7 @@ struct Home: StaticLayout {
             .innerShadow(radius: 5)
         }
         
-        Card(imageName: "/images/photos/CodingHeader.png") {
+        Card(imageName: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/CodingHeader.png?alt=media&token=65448e8d-0249-476a-a6a9-836af3b5531f") {
             Link("Coding Instructor 👨🏿‍💻", target: CodingInstructor())
                 .font(.title3)
                 .foregroundStyle(.white)
