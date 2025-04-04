@@ -149,7 +149,7 @@ struct ByRule: StaticLayout {
         Card {
 
             Grid {
-                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/Ref2.png?alt=media&token=94c982e0-e621-42da-ad3f-73a0096306fc", description: "Referee Hand Up")
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/RefCoach.png?alt=media&token=291bdad2-7fbf-4640-ae31-da926c44347e", description: "Referee and Coach")
                     .resizable()
                     .width(6)
                     .margin(.vertical, .medium)
@@ -164,7 +164,9 @@ struct ByRule: StaticLayout {
 //                    .background(.thinMaterial.colorScheme(.light))
 //                    .innerShadow(radius: 5)
                 
-                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/RefCoach.png?alt=media&token=291bdad2-7fbf-4640-ae31-da926c44347e", description: "Referee and Coach")
+
+                
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/Ref2.png?alt=media&token=94c982e0-e621-42da-ad3f-73a0096306fc", description: "Referee Hand Up")
                     .resizable()
                     .width(6)
                     .margin(.vertical, .medium)
@@ -214,7 +216,7 @@ struct ByRule: StaticLayout {
                 .margin(.vertical, .medium)
 
         } header: {
-            Text("Optimize Your Learning 🔥")
+            Text("Optimized Learning 🔥")
                 .font(.title3)
                 .margin(.vertical, .medium)
             
