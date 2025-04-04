@@ -36,8 +36,9 @@ struct ByRule: StaticLayout {
             .margin(.bottom, .xLarge)
         
         Card {
-            Embed(title: "By Rule: Basketball Official - NCAA Rules Study & Quiz", url: URL(string: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRPROMO9.mp4?alt=media&token=54ee52a9-036a-44a9-b854-c4be16f09a9c")!)
+            Embed(title: "By Rule: Basketball Official - NCAA Rules Study & Quiz", url: URL(string: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRPromoGuitar.mp4?alt=media&token=21c12c13-2439-4c5f-90c4-e3006cce8c73")!)
                 .aspectRatio(.r16x9)
+            
         } header: {
             Text("Own the Rules, Rule the Game 🤩")
                 .font(.title3)
