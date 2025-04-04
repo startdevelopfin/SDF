@@ -44,8 +44,6 @@ struct Home: StaticLayout {
         Text("Welcome Swift enthusiasts!")
             .font(.title1)
         
-        Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/swiftuiweekly%2FPFP.png?alt=media&token=555d869c-661d-414b-8584-f26560226c44")
-        
         Text("Enjoy a variety of posts focused on programming and the Swift community. Follow along as I use SwiftUI fundamentals to build cool apps and be sure to check out the latest content to stay up to date. Thank you for reading!")
             .font(.lead)
             .fontWeight(.semibold)
