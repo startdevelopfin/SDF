@@ -36,36 +36,14 @@ struct ByRule: StaticLayout {
             .margin(.bottom, .xLarge)
         
         Card {
-            
-            // Bass + Guitar
-//            Embed(title: "By Rule: Basketball Official - NCAA Rules Study & Quiz", url: URL(string: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRPromoGuitar.mp4?alt=media&token=21c12c13-2439-4c5f-90c4-e3006cce8c73")!)
-//                .aspectRatio(.r16x9)
-            
-//            // Podcast Into
-//            Embed(title: "By Rule: Basketball Official - NCAA Rules Study & Quiz", url: URL(string: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRPromoPodcast.mp4?alt=media&token=b78d413c-7bba-4e3f-99b9-8dd91718b224")!)
-//                .aspectRatio(.r16x9)
-            
-            // Bass Guitar
-//            Embed(title: "By Rule: Basketball Official - NCAA Rules Study & Quiz", url: URL(string: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRPromoBassGuitar.mp4?alt=media&token=dd89f819-2fce-44f3-b012-9163bfe90a4e")!)
-//                .aspectRatio(.r16x9)
-            
-            
-            // Lounge
-//            Embed(title: "By Rule: Basketball Official - NCAA Rules Study & Quiz", url: URL(string: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRPromoLounge.mp4?alt=media&token=3a6421b8-7000-471f-9e1a-b6c8b475360b")!)
-//                .aspectRatio(.r16x9)
-            
 
+//            // Short Version
+//            Embed(title: "By Rule: Basketball Official - NCAA Rules Study & Quiz", url: URL(string: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRPromoHipHop.mp4?alt=media&token=2e369c1e-65d9-4fd0-8dcd-751ffd3e0ffd")!)
+//                .aspectRatio(.r16x9)
             
-
-            
-            // Hip Hop
-            Embed(title: "By Rule: Basketball Official - NCAA Rules Study & Quiz", url: URL(string: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRPromoHipHop.mp4?alt=media&token=2e369c1e-65d9-4fd0-8dcd-751ffd3e0ffd")!)
+// Long version
+            Embed(title: "By Rule: Basketball Official - NCAA Rules Study & Quiz", url: URL(string: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRPromoLongVersion.mp4?alt=media&token=6e059df0-a170-4680-a8c2-15bccf31145e")!)
                 .aspectRatio(.r16x9)
-            
-            
-            
-            
-            
             
         } header: {
             Text("Own the Rules, Rule the Game 🤩")
