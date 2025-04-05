@@ -42,7 +42,7 @@ struct ByRule: StaticLayout {
 //                .aspectRatio(.r16x9)
             
 // Long version
-            Embed(title: "By Rule: Basketball Official - NCAA Rules Study & Quiz", url: URL(string: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRPromoLongVersion.mp4?alt=media&token=6e059df0-a170-4680-a8c2-15bccf31145e")!)
+            Embed(title: "By Rule: Basketball Official - NCAA Rules Study & Quiz", url: URL(string: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRPromoLongVersion.mp4?alt=media&token=56b187ea-ac87-4562-b093-c42a716fc957")!)
                 .aspectRatio(.r16x9)
             
         } header: {
