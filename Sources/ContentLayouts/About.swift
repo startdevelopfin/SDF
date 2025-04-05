@@ -22,7 +22,7 @@ struct About: StaticLayout {
 
         } header: {
             Text("About 👤")
-                .font(.title1)
+                .font(.title2)
                 .margin(.bottom, .medium)
         } footer: {
             Text("Daniel J. Aupont")
