@@ -41,8 +41,12 @@ struct ByRule: StaticLayout {
 //            Embed(title: "By Rule: Basketball Official - NCAA Rules Study & Quiz", url: URL(string: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRPromoHipHop.mp4?alt=media&token=2e369c1e-65d9-4fd0-8dcd-751ffd3e0ffd")!)
 //                .aspectRatio(.r16x9)
             
-// Long version
-            Embed(title: "By Rule: Basketball Official - NCAA Rules Study & Quiz", url: URL(string: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRPromoLongVersion.mp4?alt=media&token=56b187ea-ac87-4562-b093-c42a716fc957")!)
+//// Long version
+//            Embed(title: "By Rule: Basketball Official - NCAA Rules Study & Quiz", url: URL(string: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRPromoLongVersion.mp4?alt=media&token=56b187ea-ac87-4562-b093-c42a716fc957")!)
+//                .aspectRatio(.r16x9)
+            
+            // Long version 2
+            Embed(title: "By Rule: Basketball Official - NCAA Rules Study & Quiz", url: URL(string: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRPromoLongVersion2.mp4?alt=media&token=3d78431f-ca2c-49bf-af56-38c11225b2ba")!)
                 .aspectRatio(.r16x9)
             
         } header: {
@@ -155,7 +159,7 @@ struct ByRule: StaticLayout {
             .margin(.vertical, .large)
             .margin(.horizontal, .large)
             
-            Text("For everyone else, it’s about sharpening your skills and staying current—repetition that fits your life, from audio rules on your commute to video breakdowns of floor mechanics.")
+            Text("For everyone else, it’s about sharpening your skills and staying current -- finding repetition that fits your life, from audio rules on your commute to video breakdowns of floor mechanics.")
                 .padding(6)
                 .lineSpacing(1.75)
                 .font(.title5)
@@ -479,7 +483,7 @@ struct ByRule: StaticLayout {
             Grid {
 
                 
-                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRChatHistory.png?alt=media&token=cf9750b0-2a1a-42ef-ac85-c4f55d755e30", description: "Manu Chat History")
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRManu4.png?alt=media&token=8fb59063-855f-46de-83dd-8445a1c5e3f4", description: "Manu Verticality")
                     .resizable()
                     .width(4)
                     .margin(.vertical, .medium)
@@ -502,7 +506,7 @@ struct ByRule: StaticLayout {
                 Table {
                     
                     Row {
-                        Text("📲 Rules Chat, One-on-One:")
+                        Text("📲 Rules Chat")
                             .font(.title5)
                             .fontWeight(.semibold)
                         Text("Got a question? Manu’s your AI rules assistant, pulling from the official NCAA rulebook and your data to clarify calls and boost weak spots.")
@@ -510,10 +514,10 @@ struct ByRule: StaticLayout {
                     }
 
                     Row {
-                        Text("📆 History")
+                        Text("🧱 Build Understanding")
                             .font(.title5)
                             .fontWeight(.semibold)
-                        Text("Don't worry, Manu will save your chat for in depth discussion later.")
+                        Text("Advanced breakdowns and related rules to increase your depth of knowledge.")
                             .fontWeight(.semibold)
                     }
 
