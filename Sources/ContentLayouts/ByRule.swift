@@ -137,14 +137,6 @@ struct ByRule: StaticLayout {
                     .margin(.vertical, .medium)
                     .background(.thinMaterial.colorScheme(.light))
                     .innerShadow(radius: 5)
-            
-                
-//                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/RefCoach2.png?alt=media&token=28d3b37d-0371-439e-869b-29ae754a9760", description: "Referee and Coach")
-//                    .resizable()
-//                    .width(4)
-//                    .margin(.vertical, .medium)
-//                    .background(.thinMaterial.colorScheme(.light))
-//                    .innerShadow(radius: 5)
                 
 
                 
@@ -233,7 +225,7 @@ struct ByRule: StaticLayout {
                     }
 
                     Row {
-                        Text("🏠 Rules Center")
+                        Text("ℹ️ Rules Center")
                             .font(.title5)
                             .fontWeight(.bold)
                         Text("For quick reference of major concerns and procedures.")
