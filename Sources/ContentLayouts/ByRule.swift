@@ -131,7 +131,7 @@ struct ByRule: StaticLayout {
         Card {
 
             Grid {
-                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/RefCoach.png?alt=media&token=291bdad2-7fbf-4640-ae31-da926c44347e", description: "Referee and Coach")
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/RefCoach4.png?alt=media&token=e84dd668-cff6-45df-a6a6-600ed2d2066c", description: "Referee and Coach")
                     .resizable()
                     .width(6)
                     .margin(.vertical, .medium)
