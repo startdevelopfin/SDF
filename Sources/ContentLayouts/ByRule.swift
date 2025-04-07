@@ -658,7 +658,7 @@ struct ByRule: StaticLayout {
                         Text("📲 Rules Chat")
                             .font(.title5)
                             .fontWeight(.semibold)
-                        Text("Got a question? Manu’s your AI rules assistant, pulling from the official NCAA rulebook and your data to clarify calls and boost weak spots.")
+                        Text("Got a question? Your AI rules assistant, Manu, pulls from the official NCAA rulebook while using your data to clarify calls and boost weak spots.")
                             .fontWeight(.semibold)
                     }
                     
@@ -666,7 +666,7 @@ struct ByRule: StaticLayout {
                         Text("🧱 Build Understanding")
                             .font(.title5)
                             .fontWeight(.semibold)
-                        Text("Advanced breakdowns and related rules to increase your depth of knowledge.")
+                        Text("Learn from advanced breakdowns and related rules to increase your depth of knowledge.")
                             .fontWeight(.semibold)
                     }
                     
@@ -675,7 +675,7 @@ struct ByRule: StaticLayout {
                         Text("🤖 Personalized Summary")
                             .font(.title5)
                             .fontWeight(.semibold)
-                        Text("Get detailed feedback based on your studies and app usage.")
+                        Text("Get detailed analytical feedback based on your studies and app usage.")
                             .fontWeight(.semibold)
                     }
                     
