@@ -675,7 +675,6 @@ struct ByRule: StaticLayout {
                         Text("🤖 Personalized Summary")
                             .font(.title5)
                             .fontWeight(.semibold)
-                        Text("Get detailed feedback based on your studies and app usage.")
                         Text("Get detailed analytical feedback based on your studies and app usage.")
                             .fontWeight(.semibold)
                     }
