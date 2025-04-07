@@ -103,14 +103,12 @@ struct ByRule: StaticLayout {
         
         Card {
             Grid {
-                Text("")
-                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/ref1shot.png?alt=media&token=e2c020ed-0262-4f97-8623-c19c6b585008", description: "Referee Signaling One Shot")
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/RefH2.png?alt=media&token=88f01a45-bf2e-4126-b359-122150b6a747", description: "Referee and Player")
                     .resizable()
-                    .width(6)
                     .margin(.vertical, .medium)
                     .background(.thinMaterial.colorScheme(.light))
                     .innerShadow(radius: 5)
-                Text("")
+
                 
             }
             .margin(.vertical, .large)
@@ -137,12 +135,16 @@ struct ByRule: StaticLayout {
         Card {
             
             Grid {
-
-                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/RefH2.png?alt=media&token=88f01a45-bf2e-4126-b359-122150b6a747", description: "Referee and Player")
+                Text("")
+                
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/ref1shot.png?alt=media&token=e2c020ed-0262-4f97-8623-c19c6b585008", description: "Referee Signaling One Shot")
                     .resizable()
+                    .width(6)
                     .margin(.vertical, .medium)
                     .background(.thinMaterial.colorScheme(.light))
                     .innerShadow(radius: 5)
+                Text("")
+
 //                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/refviolation.png?alt=media&token=3bb531af-8b9b-4a06-84b6-8d6587bac634", description: "Referee Stopping The Clock")
 //                    .resizable()
 //                    .width(4)
@@ -162,7 +164,7 @@ struct ByRule: StaticLayout {
 
         } footer: {
             
-            Text("With comprehensive study modules and pointed training resources, this app is designed to elevate your officiating knowledge and confidence. Whether you’re a rookie stepping onto the court or a seasoned vet, By Rule has what you need to succeed.")
+            Text("This app is expertly designed to elevate your officiating knowledge and confidence using comprehensive study modules and pointed training resources. Whether you’re a rookie stepping onto the court or a seasoned vet, By Rule has what you need to succeed.")
                 .padding(6)
                 .lineSpacing(1.75)
                 .font(.title5)
