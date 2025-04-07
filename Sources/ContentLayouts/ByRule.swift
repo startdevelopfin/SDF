@@ -142,20 +142,15 @@ struct ByRule: StaticLayout {
         
         Card {
             Grid {
+                Text("")
                 Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/ref1shot.png?alt=media&token=e2c020ed-0262-4f97-8623-c19c6b585008", description: "Referee Signaling One Shot")
                     .resizable()
                     .width(6)
                     .margin(.vertical, .medium)
                     .background(.thinMaterial.colorScheme(.light))
                     .innerShadow(radius: 5)
+                Text("")
                 
-                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/reffoul.png?alt=media&token=9791b1b1-7ed9-4a6a-a2a8-23b2a53ff944", description: "Referee Signaling a Foul")
-                    .resizable()
-                    .width(6)
-                    .margin(.vertical, .medium)
-                    .background(.thinMaterial.colorScheme(.light))
-                    .innerShadow(radius: 5)
-
             }
             .margin(.vertical, .large)
             .margin(.horizontal, .large)
@@ -203,12 +198,20 @@ struct ByRule: StaticLayout {
                 
                 Text("")
                 
-                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/RefCoach.png?alt=media&token=291bdad2-7fbf-4640-ae31-da926c44347e", description: "New Referee")
+//                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/RefCoach.png?alt=media&token=291bdad2-7fbf-4640-ae31-da926c44347e", description: "New Referee")
+//                    .resizable()
+//                    .width(6)
+//                    .margin(.vertical, .medium)
+//                    .background(.thinMaterial.colorScheme(.light))
+//                    .innerShadow(radius: 5)
+                
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/reffoul.png?alt=media&token=9791b1b1-7ed9-4a6a-a2a8-23b2a53ff944", description: "Referee Signaling a Foul")
                     .resizable()
                     .width(6)
                     .margin(.vertical, .medium)
                     .background(.thinMaterial.colorScheme(.light))
                     .innerShadow(radius: 5)
+
                 
                 Text("")
                 
