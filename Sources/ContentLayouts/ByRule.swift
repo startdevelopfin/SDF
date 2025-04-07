@@ -136,7 +136,7 @@ struct ByRule: StaticLayout {
                 .font(.title5)
         }
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
-        .background(.darkSeaGreen.opacity(0.5))
+        .background(.bootstrapRed.opacity(0.5))
         .innerShadow(radius: 5)
         .margin(.bottom, .large)
         
@@ -169,7 +169,7 @@ struct ByRule: StaticLayout {
                 .margin(.vertical, .medium)
         }
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
-        .background(.burlyWood.opacity(0.5))
+        .background(.black.opacity(0.5))
         .innerShadow(radius: 5)
         .margin(.bottom, .large)
         
@@ -232,7 +232,7 @@ struct ByRule: StaticLayout {
                 .font(.title5)
         }
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
-        .background(.burlyWood.opacity(0.5))
+        .background(.black.opacity(0.5))
         .innerShadow(radius: 5)
         .margin(.bottom, .large)
         
@@ -257,7 +257,7 @@ struct ByRule: StaticLayout {
                 .margin(.vertical, .medium)
         }
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
-        .background(.crimson.opacity(0.5))
+        .background(.bootstrapBlue.opacity(0.5))
         .innerShadow(radius: 5)
         .margin(.bottom, .large)
 
@@ -310,7 +310,7 @@ struct ByRule: StaticLayout {
                 .margin(.vertical, .medium)
         }
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
-        .background(.burlyWood.opacity(0.5))
+        .background(.black.opacity(0.5))
         .innerShadow(radius: 5)
         .margin(.bottom, .large)
         
@@ -561,7 +561,7 @@ struct ByRule: StaticLayout {
         .clipped()
         .cornerRadius(12)
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
-        .background(.steelBlue.opacity(0.5))
+        .background(.bootstrapYellow.opacity(0.5))
         .innerShadow(radius: 5)
         .margin(.bottom, .large)
         
@@ -587,7 +587,7 @@ struct ByRule: StaticLayout {
         .clipped()
         .cornerRadius(12)
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
-        .background(.darkSeaGreen.opacity(0.5))
+        .background(.bootstrapGreen.opacity(0.5))
         .innerShadow(radius: 5)
         .margin(.bottom, .large)
       
@@ -706,7 +706,7 @@ struct ByRule: StaticLayout {
         .clipped()
         .cornerRadius(12)
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
-        .background(.crimson.opacity(0.5))
+        .background(.bootstrapBlue.opacity(0.5))
         .innerShadow(radius: 5)
         .margin(.bottom, .large)
         
@@ -741,7 +741,7 @@ struct ByRule: StaticLayout {
         .clipped()
         .cornerRadius(12)
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
-        .background(.burlyWood.opacity(0.5))
+        .background(.black.opacity(0.5))
         .innerShadow(radius: 5)
         .margin(.bottom, .large)
         
@@ -776,7 +776,7 @@ struct ByRule: StaticLayout {
             Text("By Rule: Basketball Official - NCAA Rules Study & Quiz")
         }
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
-        .background(.steelBlue.opacity(0.5))
+        .background(.bootstrapRed.opacity(0.5))
         .innerShadow(radius: 5)
         .margin(.bottom, .large)
     }
