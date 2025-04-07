@@ -98,7 +98,7 @@ struct ByRule: StaticLayout {
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
         .background(.steelBlue.opacity(0.5))
         .innerShadow(radius: 5)
-        .margin(.bottom, .large)
+        .margin(.vertical, .large)
         
         
         Card {
@@ -129,7 +129,7 @@ struct ByRule: StaticLayout {
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
         .background(.black.opacity(0.5))
         .innerShadow(radius: 5)
-        .margin(.bottom, .large)
+        .margin(.vertical, .large)
         
         // Game Changer
         Card {
@@ -176,7 +176,7 @@ struct ByRule: StaticLayout {
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
         .background(.black.opacity(0.5))
         .innerShadow(radius: 5)
-        .margin(.bottom, .large)
+        .margin(.vertical, .large)
         
 
         
@@ -215,7 +215,7 @@ struct ByRule: StaticLayout {
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
         .background(.black.opacity(0.5))
         .innerShadow(radius: 5)
-        .margin(.bottom, .large)
+        .margin(.vertical, .large)
         
 
         Card {
@@ -462,7 +462,7 @@ struct ByRule: StaticLayout {
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
         .background(.bootstrapRed.opacity(0.6))
         .innerShadow(radius: 5)
-        .margin(.bottom, .large)
+        .margin(.vertical, .large)
         
         
         
@@ -477,7 +477,7 @@ struct ByRule: StaticLayout {
                 .margin(.top, .large)
                 .margin(.bottom, .large)
         } footer: {
-            Text("When the game moves fast, Manu keeps you ahead of the play. Built into By Rule, Manu can deliver instant, no-nonsense answers—straight from the NCAA rulebook. It’s like having a rules assistant in your pocket.")
+            Text("When the game moves fast, Manu keeps you ahead of the play. Built into By Rule, Manu can deliver instant, no-nonsense answers—straight from the NCAA rulebook while it guides you to better decisions. It’s like having a rules assistant in your pocket.")
                 .padding(6)
                 .lineSpacing(1.75)
                 .font(.title5)
@@ -490,7 +490,7 @@ struct ByRule: StaticLayout {
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
         .background(.bootstrapGreen.opacity(0.5))
         .innerShadow(radius: 5)
-        .margin(.bottom, .large)
+        .margin(.vertical, .large)
 
     
         
@@ -608,11 +608,7 @@ struct ByRule: StaticLayout {
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
         .background(.dodgerBlue.opacity(0.5))
         .innerShadow(radius: 5)
-        .margin(.bottom, .large)
-        
-        
-        
-
+        .margin(.vertical, .large)
         
 
         Card {
@@ -649,7 +645,7 @@ struct ByRule: StaticLayout {
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
         .background(.black.opacity(0.5))
         .innerShadow(radius: 5)
-        .margin(.bottom, .large)
+        .margin(.vertical, .large)
         
         Card {
             Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRREF7.png?alt=media&token=d0f0c850-8670-420f-a07d-d6c15adfa057", description: "Referee Conducting Replay Review")
@@ -674,7 +670,7 @@ struct ByRule: StaticLayout {
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
         .background(.black.opacity(0.5))
         .innerShadow(radius: 5)
-        .margin(.bottom, .large)
+        .margin(.vertical, .large)
 
         
         // Why Choose By Rule
@@ -727,13 +723,7 @@ struct ByRule: StaticLayout {
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
         .background(.black.opacity(0.5))
         .innerShadow(radius: 5)
-        .margin(.bottom, .large)
-        
-
-        
-
-        
-
+        .margin(.vertical, .large)
         
 
         Divider()
@@ -768,7 +758,7 @@ struct ByRule: StaticLayout {
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
         .background(.steelBlue.opacity(0.5))
         .innerShadow(radius: 5)
-        .margin(.bottom, .large)
+        .margin(.vertical, .large)
     }
 }
 
