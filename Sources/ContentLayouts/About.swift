@@ -21,19 +21,13 @@ struct About: StaticLayout {
                 .innerShadow(radius: 5)
 
         } header: {
-            Text("About 👤")
+            Text("Daniel J. Aupont 👤")
                 .font(.title2)
-                .margin(.bottom, .medium)
-        } footer: {
-            Text("Daniel J. Aupont")
-                .font(.title3)
-                .fontWeight(.heavy)
-                .padding(.horizontal, 4)
-                .lineSpacing(1.5)
+                .margin(.vertical, .medium)
         }
         .cardStyle(.bordered)
         .margin(.bottom, .large)
-        .background(.silver.opacity(0.5))
+        .background(.ultraThickMaterial.colorScheme(.dark))
         .cornerRadius(12)
         .border(.powderBlue, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
         .innerShadow(radius: 5)
