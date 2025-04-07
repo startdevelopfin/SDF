@@ -202,15 +202,23 @@ struct CodingInstructor: StaticLayout {
         
         Text("First, I introduced a guest speaker to share their insights working in tech. Secondly, I de-mystified the app building process by showing them apps I have personally built and components of their favorite apps. Lastly, I provided after hours support via a Coding-Club, for students that either struggled with certain concepts or wanted to learn more.")
             .margin(.vertical, .large)
-            
- 
-            Text("Every day during leisure hours, students could come back to the classroom to catch up on class work and were encouraged to ask more pointed questions after having been exposed to the material earlier. They received advanced lessons and guidance regarding future projects they wished to create. Some students would find me during our lunch period to let me know they were sneaking ahead of the lessons to learn more.")
-                .margin(.vertical, .large)
-            
-            
+        
+        Text("Every day during leisure hours, students could come back to the classroom to catch up on class work and were encouraged to ask more pointed questions after having been exposed to the material earlier. They received advanced lessons and guidance regarding future projects they wished to create. Some students would find me during our lunch period to let me know they were sneaking ahead of the lessons to learn more.")
+            .margin(.vertical, .large)
+        
+        Card {
+            Embed(vimeoID: 754154977, title: "DTC UB Coding")
+                .aspectRatio(.r16x9)
+        } header: {
             Text("I asked the students questions about their experience coding this summer, but you will have to watch the DTC UB Coding Video to hear what they had to say. You can also check out some of the About Me projects they were working on by downloading the testflight beta DTC UB22 app. Not every student completed their project, but I am still incredibly proud of how hard they worked to create their own views and provide the apps content.")
                 .margin(.vertical, .large)
-        
+        }
+        .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
+        .background(.steelBlue.opacity(0.5))
+        .innerShadow(radius: 5)
+        .margin(.bottom, .large)
+ 
+
             Text("Final Thoughts 💭")
                 .font(.title3)
                 .fontWeight(.semibold)
