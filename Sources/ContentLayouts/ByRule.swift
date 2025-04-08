@@ -744,7 +744,7 @@ struct ByRule: StaticLayout {
                 .font(.title4)
                 .margin(.top, .large)
             
-            Text("Ready to take control of your studies? Get started with By Rule—track what sticks, fix what slips, and grow into the college basketball aficionado you’re meant to be!")
+            Text("Ready to take control of your learning? Download By Rule to unlock your potential. Track what sticks, fix what slips, and grow into the college basketball aficionado you’re meant to be!")
                 .padding(6)
                 .lineSpacing(1.75)
                 .font(.title5)
