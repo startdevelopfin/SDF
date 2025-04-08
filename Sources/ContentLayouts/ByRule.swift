@@ -102,8 +102,7 @@ struct ByRule: StaticLayout {
             
             Grid {
                 Text("")
-                
-                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/ref1shot.png?alt=media&token=e2c020ed-0262-4f97-8623-c19c6b585008", description: "Referee Signaling One Shot")
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/ref1shot.png?alt=media&token=e2c020ed-0262-4f97-8623-c19c6b585008", description: "One Shot")
                     .resizable()
                     .width(6)
                     .margin(.vertical, .medium)
@@ -583,7 +582,7 @@ struct ByRule: StaticLayout {
                 
                 Text("")
 
-                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/reffoul.png?alt=media&token=9791b1b1-7ed9-4a6a-a2a8-23b2a53ff944", description: "Referee Signaling a Foul")
+                 Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BlackOfficial3.png?alt=media&token=6db38ee6-e709-4671-bdfd-619a9b2b2f83", description: "Young Referee")
                     .resizable()
                     .width(6)
                     .margin(.vertical, .medium)
@@ -618,11 +617,14 @@ struct ByRule: StaticLayout {
         Card {
 
             Grid {
-                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/RefA2.png?alt=media&token=3e0bad54-ae95-4a0e-91c6-f8665c24a764", description: "Referee and Player")
+                Text("")
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/reffoul.png?alt=media&token=9791b1b1-7ed9-4a6a-a2a8-23b2a53ff944", description: "Referee Foul")
                     .resizable()
+                    .width(6)
                     .margin(.vertical, .medium)
                     .background(.thinMaterial.colorScheme(.light))
                     .innerShadow(radius: 5)
+                Text("")
 
             }
             .margin(.vertical, .large)
