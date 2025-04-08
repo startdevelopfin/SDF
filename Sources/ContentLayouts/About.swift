@@ -22,11 +22,11 @@ struct About: StaticLayout {
 
         } header: {
             Text("Daniel J. Aupont 👤")
-                .font(.title2)
+                .font(.title3)
                 .margin(.vertical, .medium)
         }
         .cardStyle(.bordered)
-        .margin(.bottom, .large)
+        .margin(.vertical, .xLarge)
         .background(.ultraThickMaterial.colorScheme(.dark))
         .cornerRadius(12)
         .border(.powderBlue, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
@@ -34,7 +34,7 @@ struct About: StaticLayout {
 
         Card {
             Text("What I Do 🛠️")
-                .font(.title2)
+                .font(.title3)
                 .margin(.bottom, .medium)
             
             Text("I create intuitive iOS applications that solve real problems while maintaining clean, maintainable codebases. When I'm not building software, I'm sharing knowledge through:")
@@ -58,14 +58,14 @@ struct About: StaticLayout {
                 
         }
         .cardStyle(.bordered)
-        .margin(.bottom, .large)
+        .margin(.vertical, .large)
         .background(.dodgerBlue.opacity(0.5))
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
         .innerShadow(radius: 5)
 
         Card {
             Text("My Approach 🎯")
-                .font(.title2)
+                .font(.title3)
                 .margin(.bottom, .medium)
             
             Text("I believe great software emerges from the intersection of technical excellence and intuitive design. As an independent developer, I have the freedom to pursue projects that align with this philosophy, whether client work or personal endeavors.")
@@ -75,7 +75,7 @@ struct About: StaticLayout {
                 .margin(.bottom, .medium)
         }
         .cardStyle(.bordered)
-        .margin(.bottom, .large)
+        .margin(.vertical, .large)
         .background(.firebrick.opacity(0.5))
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
         .innerShadow(radius: 5)
@@ -92,7 +92,7 @@ struct About: StaticLayout {
                 .margin(.bottom, .medium)
         }
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
-        .margin(.bottom, .large)
+        .margin(.vertical, .large)
         .background(.mediumSeaGreen.opacity(0.5))
         .innerShadow(radius: 5)
 
