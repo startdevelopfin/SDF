@@ -102,7 +102,7 @@ struct ByRule: StaticLayout {
             
             Grid {
                 Text("")
-                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/ref1shot.png?alt=media&token=e2c020ed-0262-4f97-8623-c19c6b585008", description: "One Shot")
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/reffoul.png?alt=media&token=9791b1b1-7ed9-4a6a-a2a8-23b2a53ff944", description: "Referee Foul")
                     .resizable()
                     .width(6)
                     .margin(.vertical, .medium)
@@ -618,7 +618,7 @@ struct ByRule: StaticLayout {
 
             Grid {
                 Text("")
-                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/reffoul.png?alt=media&token=9791b1b1-7ed9-4a6a-a2a8-23b2a53ff944", description: "Referee Foul")
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/AsianReferee2.png?alt=media&token=cee1a072-c0af-46eb-9d1e-4ca0c0e150f9", description: "Referee and Coach")
                     .resizable()
                     .width(6)
                     .margin(.vertical, .medium)
