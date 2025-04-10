@@ -96,11 +96,16 @@ struct Launched: StaticLayout {
         .innerShadow(radius: 5)
         .margin(.vertical, .xLarge)
         
+        Text("I ran into a million roadblocks building my app but thats actually the fun of being an iOS developer. The job is just problem solving over and over again. How to authenticate users or store their data? What kind of features do my users need and what do I need to learn to begin implementing them? Where can I find help writing better code so my app performs at it's best?")
+            .font(.body)
+            .margin(.top, .xLarge)
+        
+        Text("I'll save the details for longer post but for now, here are some tools and resources I found helpful that made navigating the process smoother:")
+            .font(.body)
+            .margin(.vertical, .large)
+        
         
         Card {
-            Text("I ran into a million roadblocks building my app but thats actually the fun of being an iOS developer. The job is just problem solving over and over again. How to authenticate users or store their data? What kind of features do my users need and what do I need to learn to begin implementing them? Where can I find help writing better code so my app performs at it's best? I'll save the details for longer post but for now, here are some tools and resources I found helpful that made navigating the process smoother:")
-                .font(.body)
-                .margin(.vertical, .large)
             
             Table {
                 Row {
