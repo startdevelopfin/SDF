@@ -153,7 +153,7 @@ struct Launched: StaticLayout {
         .margin(.vertical, .large)
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
         
-        Text("I'm really encouraged about the direction of the app now that that first batch of updates have landed. I cant wait to experiment with App Intents, Deep Linking, and explore what the Game Center has to offer. I've got a feeling this experience would be really smooth on the iPad or Mac 👀...")
+        Text("I'm really encouraged about the direction of the app. The first batch of updates have arrived but there's plenty more to come. I can't wait to experiment with App Intents, Deep Linking, and explore what the Game Center has to offer. I've got a feeling this experience would be really smooth on the iPad or Mac 👀...")
             .font(.body)
             .margin(.vertical, .large)
 
