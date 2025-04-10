@@ -16,7 +16,7 @@ struct Launched: StaticLayout {
     var date = "2025-04-09 14:55"
     var tags = ["SwiftUI", "By Rule", "Ignite", "Article"]
     var published = true
-    var image = "/images/photos/byRuleBanner.png"
+    var image = "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/FirstTalk%2FBy%20Rule%20Banner.png?alt=media&token=7ffa6818-9e19-44cb-8cd1-4c0db85273a1"
     
     var body: some HTML {
         
