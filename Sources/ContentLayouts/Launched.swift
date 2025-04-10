@@ -12,7 +12,7 @@ import SwiftUI
 struct Launched: StaticLayout {
     var title = "Launched 🚀"
     var author = "Daniel J. Aupont"
-    var description = "In this post, I share some insight on the experience rebuilding my Swift blog site and iOS app. I explain the challenges I faced, tools I leveraged along the way, and whats next for By Rule."
+    var description = "In this post, I share some insight on the experience rebuilding my Swift blog site and iOS app. I highlight the resources I leveraged along the way, and whats next for By Rule."
     var date = "2025-04-09 14:55"
     var tags = ["SwiftUI", "By Rule", "Ignite", "Article"]
     var published = true
