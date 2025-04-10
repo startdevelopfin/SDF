@@ -24,7 +24,7 @@ struct Launched: StaticLayout {
             .font(.title1)
             .margin(.vertical, .large)
         
-        Text("Rebuilding my blog site using Ignite was a really simple and fun process. I'll share the link to the GitHub repo so you can give it a try today.")
+        Text("Rebuilding my blog site using Ignite was a really simple and fun process. I'm still exploring themes and layouts so I will report back when I unlock it's true potential. For now, I'll share the link to the GitHub repo so you can give Ignite a try today.")
             .font(.body)
             .margin(.vertical, .large)
         
