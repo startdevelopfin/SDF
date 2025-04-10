@@ -42,6 +42,7 @@ struct SDF: Site {
         FirstTalk()
         FirstConference()
         Mentorship()
+        Launched()
     }
     
 }

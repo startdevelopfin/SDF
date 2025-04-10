@@ -1,0 +1,165 @@
+<!doctype html>
+<html data-bs-theme="auto" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="In this post, I share some insight on the experience rebuilding my Swift blog site and iOS app. I explain the challenges I faced, tools I leveraged along the way, and whats next for By Rule." name="description" />
+    <meta content="Daniel J. Aupont" name="author" />
+    <meta content="Ignite v0.2.1" name="generator" />
+    <title>Launched 🚀 – Swift Blog Site</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/prism-xcode-dark.css" rel="stylesheet" data-highlight-theme="xcode-dark" />
+    <link href="/css/prism-xcode-light.css" rel="stylesheet" data-highlight-theme="xcode-light" />
+    <link href="/css/prism-plugins.css" rel="stylesheet" />
+    <link href="/css/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="/css/ignite-core.min.css" rel="stylesheet" />
+    <link href="https://startdevelopfinish.com/launched" rel="canonical" />
+    <script>(function() {
+    function getThemePreference() {
+        return localStorage.getItem('custom-theme') || 'auto';
+    }
+
+    function applyTheme(themeID) {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const lightThemeID = document.documentElement.getAttribute('data-light-theme') || 'light';
+        const darkThemeID = document.documentElement.getAttribute('data-dark-theme') || 'dark';
+        const actualThemeID = themeID === 'auto' ? (prefersDark ? darkThemeID : lightThemeID) : themeID;
+
+        document.documentElement.setAttribute('data-bs-theme', actualThemeID);
+        document.documentElement.setAttribute('data-theme-state', themeID);
+    }
+
+    function applySyntaxTheme() {
+        const syntaxTheme = getComputedStyle(document.documentElement)
+            .getPropertyValue('--syntax-highlight-theme').trim().replace(/"/g, '');
+
+        if (!syntaxTheme) return;
+
+        document.querySelectorAll('link[data-highlight-theme]').forEach(link => {
+            link.setAttribute('disabled', 'disabled');
+        });
+
+        const themeLink = document.querySelector(`link[data-highlight-theme="${syntaxTheme}"]`);
+        if (themeLink) {
+            themeLink.removeAttribute('disabled');
+        }
+    }
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        const currentTheme = getThemePreference();
+        if (currentTheme === 'auto') {
+            applyTheme('auto');
+            applySyntaxTheme();
+        }
+    });
+
+    const savedTheme = getThemePreference();
+    applyTheme(savedTheme);
+    applySyntaxTheme();
+})();
+</script>
+    <meta content="Start. Develop. Finish." property="og:site_name" />
+    <meta content="Launched 🚀" property="og:title" />
+    <meta content="Launched 🚀" name="twitter:title" />
+    <meta content="In this post, I share some insight on the experience rebuilding my Swift blog site and iOS app. I explain the challenges I faced, tools I leveraged along the way, and whats next for By Rule." property="og:description" />
+    <meta content="In this post, I share some insight on the experience rebuilding my Swift blog site and iOS app. I explain the challenges I faced, tools I leveraged along the way, and whats next for By Rule." name="twitter:description" />
+    <meta content="https://startdevelopfinish.com/launched" property="og:url" />
+    <meta content="startdevelopfinish.com" name="twitter:domain" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="on" name="twitter:dnt" />
+  </head>
+  <body class="container">
+    <header>
+      <nav class="fixed-top navbar navbar-expand-md" style="background-color: rgb(0 0 0 / 100%)" data-bs-theme="dark">
+        <div class="container">
+          <a href="/" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover navbar-brand"><p class="mb-0">Start. <span style="color: #6B8E23;">Develop</span>. Finish.</p></a>
+          <button type="button" class="btn navbar-toggler" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="col justify-content-end mb-2 mb-md-0 navbar-nav">
+              <li class="dropdown nav-item" data-bs-theme="light"><a href="#" role="button" class="dropdown dropdown-toggle link-underline link-underline-opacity-100 link-underline-opacity-100-hover nav-link" data-bs-toggle="dropdown" aria-expanded="false">App Store</a>
+                <ul class="dropdown dropdown-menu">
+                  <li><a href="/by-rule" class="dropdown-item link-underline link-underline-opacity-100 link-underline-opacity-100-hover">By Rule</a></li>
+                </ul></li>
+              <li class="dropdown nav-item" data-bs-theme="light"><a href="#" role="button" class="dropdown dropdown-toggle link-underline link-underline-opacity-100 link-underline-opacity-100-hover nav-link" data-bs-toggle="dropdown" aria-expanded="false">Info</a>
+                <ul class="dropdown dropdown-menu">
+                  <li><a href="/about" class="dropdown-item link-underline link-underline-opacity-100 link-underline-opacity-100-hover">About</a></li>
+                </ul></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="row">
+      <div class="col-md-9">
+        <div style="padding-bottom: 80px; padding-top: 80px">
+          <h1 class="my-4">Welcome! 🤩</h1>
+          <p class="my-4">Rebuilding my blog site using Ignite was a really simple and fun process. I'll share the link to the GitHub repo so you can give it a try today.</p>
+          <div class="card my-5" style="background-color: rgb(220 53 69 / 60%); border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset">
+            <div class="card-header">
+              <h3 class="my-4">Ignite 🔥</h3>
+            </div>
+            <div class="card-body">
+              <div class="my-4 ratio ratio-21x9" style="background-color: rgb(143 188 143 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+                <img alt="" src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/Screenshot%202025-04-09%20at%207.58.27%E2%80%AFPM.png?alt=media&amp;token=870a6498-a66b-4b78-8999-4fba7d67d358" class="img-fluid object-fit-cover" />
+              </div>
+            </div>
+            <div class="card-footer text-body-secondary">
+              <p class="my-3">- Ignite is a static site builder for Swift developers, offering an expressive, powerful API to build beautiful websites that work great on all devices.</p>
+              <p class="my-3">- Ignite doesn't try to convert SwiftUI code to HTML, or simply map HTML tags to Swift code. Instead, it aims to use SwiftUI-like syntax to help you build great websites even if you have no knowledge of HTML or CSS</p>
+              <a href="https://github.com/twostraws/Ignite" class="link-plain link-underline link-underline-opacity-100 link-underline-opacity-100-hover"><i class="bi-github"></i></a>
+            </div>
+          </div>
+          <p class="my-4">The journey rebuilding By Rule has been rewarding in more ways than one. I learned so much while experimenting with design, development, and productivity tools along the way. Using SwiftUI to improve the experience really sets the foundaton for a more robust app for my users. Download the app and stay tuned for updates!</p>
+          <div class="card my-5" style="background-color: rgb(70 130 180 / 50%); border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset">
+            <div class="card-header">
+              <h4 class="mt-4" style="font-weight: 700">Own the Rules, Rule the Game 🤩</h4>
+              <h5 style="font-weight: 600; line-height: 1.8; padding: 6px">By Rule is the premier study tool for anyone looking to engage NCAA basketball rules.</h5>
+            </div>
+            <div class="card-body">
+              <div class="ratio ratio-16x9">
+                <iframe src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRPromoLongVersion2.mp4?alt=media&amp;token=3d78431f-ca2c-49bf-af56-38c11225b2ba" title="By Rule: Basketball Official - NCAA Rules Study &amp; Quiz" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+              </div>
+            </div>
+            <div class="card-footer text-body-secondary">
+              <a href="https://apps.apple.com/us/app/by-rule/id1532845521" class="link-plain link-underline link-underline-opacity-100 link-underline-opacity-100-hover"><img alt="By Rule App Icon Button" src="https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/NewLogo1.png?alt=media&amp;token=b8ffed6b-0a32-46a3-b0ea-d3058f9365a2" class="my-3" style="height: 200px" /></a>
+              <p>By Rule: Basketball Official - NCAA Rules Study &amp; Quiz</p>
+            </div>
+          </div>
+          <div class="card my-4" style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px">
+            <div class="card-header">
+              <h2 class="my-4">Resources 🛠️</h2>
+            </div>
+            <div class="card-body">
+              <p class="card-text my-4">I ran into a million roadblocks building my app. Here are some tools and reources I found helpful that made navigating the process smoother:</p>
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <td><h5 style="font-weight: 600">⚡️ Firebase</h5></td>
+                    <td><p style="font-weight: 600">Authentication. Storage. Functions. Vertex AI.</p></td>
+                  </tr>
+                  <tr>
+                    <td><h5 style="font-weight: 600">⚡️ Kavsoft</h5></td>
+                    <td><p style="font-weight: 600">Design. Prototyping.</p></td>
+                  </tr>
+                  <tr>
+                    <td><h5 style="font-weight: 600">⚡️ Hacking with Swift</h5></td>
+                    <td><p style="font-weight: 600">Learn Swift, SwiftUI.</p></td>
+                  </tr>
+                  <tr>
+                    <td><h5 style="font-weight: 600">⚡️ RevenueCat</h5></td>
+                    <td><p style="font-weight: 600">Paywalls. Subscriptions.</p></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <p class="my-4">I'm really encouraged about the direction of the app. I cant wait to experiment with App Intents, Deep Linking, and the Game Center. I may even bring this experience to iPad or Mac 👀...</p>
+        </div>
+      </div>
+    </div>
+    <p class="mt-5 text-center">Created in Swift with <a href="https://github.com/twostraws/Ignite" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover">Ignite</a></p>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/syntax-highlighting.js"></script>
+    <script src="/js/ignite-core.js"></script>
+  </body>
+</html>
