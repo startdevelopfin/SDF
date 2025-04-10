@@ -62,6 +62,19 @@ struct Home: StaticLayout {
             .padding(.top)
         
         Grid {
+            
+            Card(imageName: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/FirstTalk%2FBy%20Rule%20Banner.png?alt=media&token=7ffa6818-9e19-44cb-8cd1-4c0db85273a1") {
+                Link("Launched 🚀", target: Launched())
+                    .font(.title3)
+                Text("In this post, I share some insight on the experience rebuilding my Swift blog site and iOS app. I explain the challenges I faced, tools I leveraged along the way, and whats next for By Rule.")
+            } footer: {
+
+            }
+            .width(4)
+            .margin(.bottom)
+            .background(Color.bootstrapGray.opacity(0.5))  // Apply random background
+            .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
+            .innerShadow(radius: 5)
 
             Card(imageName: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/mentorshipCard.png?alt=media&token=2938b7ba-adc4-443b-a104-116d67aabfb1") {
                 Link("Mentorship 📚", target: Mentorship())
@@ -102,24 +115,25 @@ struct Home: StaticLayout {
             .background(Color.bootstrapPurple.opacity(0.5))
             .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
             .innerShadow(radius: 5)
-        }
-        
-        Card(imageName: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/CodingHeader.png?alt=media&token=65448e8d-0249-476a-a6a9-836af3b5531f") {
-            Link("Coding Instructor 👨🏿‍💻", target: CodingInstructor())
-                .font(.title3)
-                .foregroundStyle(.white)
-            Text("In this post, I reflect on my time instructing Denmark Technical College's coding class as a part of their Upward Bound summer enrichment program. I'll also explain how students with little to no coding experience leveraged the power of SwiftUI and Swift Playgrounds to build apps using an iPad.")
-        } footer: {
-
-        }
-        .width(4)
-        .margin(.bottom)
-        .background(Color.bootstrapTeal.opacity(0.35))
-        .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
-        .innerShadow(radius: 5)
             
+            Card(imageName: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/CodingHeader.png?alt=media&token=65448e8d-0249-476a-a6a9-836af3b5531f") {
+                Link("Coding Instructor 👨🏿‍💻", target: CodingInstructor())
+                    .font(.title3)
+                    .foregroundStyle(.white)
+                Text("In this post, I reflect on my time instructing Denmark Technical College's coding class as a part of their Upward Bound summer enrichment program. I'll also explain how students with little to no coding experience leveraged the power of SwiftUI and Swift Playgrounds to build apps using an iPad.")
+            } footer: {
+
+            }
+            .width(4)
+            .margin(.bottom)
+            .background(Color.bootstrapTeal.opacity(0.35))
+            .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
+            .innerShadow(radius: 5)
+                
+            
+            .margin(.bottom, .xLarge)
+        }
         
-        .margin(.bottom, .xLarge)
         
     }
     
