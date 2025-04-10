@@ -43,16 +43,14 @@ struct Launched: StaticLayout {
         } header: {
             Text("Ignite 🔥")
                 .font(.title3)
-                .margin(.vertical, .large)
+                .margin(.vertical, .medium)
         } footer: {
             Text("- Ignite is a static site builder for Swift developers, offering an expressive, powerful API to build beautiful websites that work great on all devices.")
                 .margin(.vertical, .medium)
             Text("- Ignite doesn't try to convert SwiftUI code to HTML, or simply map HTML tags to Swift code. Instead, it aims to use SwiftUI-like syntax to help you build great websites even if you have no knowledge of HTML or CSS")
                 .margin(.vertical, .medium)
-            Link(target: "https://github.com/twostraws/Ignite") {
-                Image(systemName: "github")
-                
-            }
+            Link("Ignite GitHub Repo", target: "https://github.com/twostraws/Ignite")
+                .margin(.vertical, .medium)
         }
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
         .background(.bootstrapRed.opacity(0.6))
@@ -66,22 +64,23 @@ struct Launched: StaticLayout {
         
         // Own The Rules
         Card {
-            // Long Version
-            Embed(title: "By Rule: Basketball Official - NCAA Rules Study & Quiz", url: URL(string: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRPromoLongVersion2.mp4?alt=media&token=3d78431f-ca2c-49bf-af56-38c11225b2ba")!)
-                .aspectRatio(.r16x9)
-            
-        } header: {
-            Text("Own the Rules, Rule the Game 🤩")
-                .font(.title4)
-                .fontWeight(.bold)
-                .margin(.top, .large)
             
             Text("By Rule is the premier study tool for anyone looking to engage NCAA basketball rules.")
                 .lineSpacing(1.75)
                 .padding(6)
                 .font(.title5)
                 .fontWeight(.semibold)
+                .margin(.vertical, .medium)
             
+            Link("Learn More", target: ByRule())
+                .margin(.vertical, .medium)
+            
+        } header: {
+            Text("Own the Rules, Rule the Game 🤩")
+                .font(.title4)
+                .fontWeight(.bold)
+                .margin(.vertical, .medium)
+ 
         } footer: {
             Link(target: "https://apps.apple.com/us/app/by-rule/id1532845521") {
                 Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/NewLogo1.png?alt=media&token=b8ffed6b-0a32-46a3-b0ea-d3058f9365a2", description: "By Rule App Icon Button")
@@ -90,6 +89,7 @@ struct Launched: StaticLayout {
             }
             
             Text("By Rule: Basketball Official - NCAA Rules Study & Quiz")
+            
         }
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
         .background(.steelBlue.opacity(0.5))
