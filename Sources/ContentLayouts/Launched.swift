@@ -57,7 +57,7 @@ struct Launched: StaticLayout {
         .innerShadow(radius: 5)
         .margin(.vertical, .xLarge)
         
-        Text("The journey rebuilding By Rule has been rewarding in more ways than one. I learned so much while experimenting with design, development, and productivity tools along the way. Using SwiftUI to improve the experience really sets the foundaton for a more robust app for my users. Download the app and stay tuned for updates!")
+        Text("The journey converting By Rule from UIKit to SwiftUI has been rewarding in more ways than one. A refreshed app meant learning new APIs and researching the latest trends in iOS. It also meant talking to users and getting wuality feedback. Now, I've set the foundaton for a more robust app you can continue to love. Download today and stay tuned for updates!")
             .font(.body)
             .margin(.vertical, .large)
         
@@ -96,11 +96,11 @@ struct Launched: StaticLayout {
         .innerShadow(radius: 5)
         .margin(.vertical, .xLarge)
         
-        Text("I ran into a million roadblocks building my app but thats actually the fun of being an iOS developer. The job is just problem solving over and over again. How to authenticate users or store their data? What kind of features do my users need and what do I need to learn to begin implementing them? Where can I find help writing better code so my app performs at it's best?")
+        Text("I ran into quite a few obstacles building my app but thats actually the fun of being an iOS developer. So much of the job is simply commiting to being a problem solver over and over again. How should I authenticate users? Where will I store their data? What kind of features does the app need? What do I need to learn to start implementing them? Where can I find help writing better code so my app performs at it's best?")
             .font(.body)
             .margin(.top, .xLarge)
         
-        Text("I'll save the details for longer post but for now, here are some tools and resources I found helpful that made navigating the process smoother:")
+        Text("I'll revisit the finer details in a later post but for now, here are some tools and resources I found helpful while navigating the app building process:")
             .font(.body)
             .margin(.vertical, .large)
         
@@ -153,7 +153,7 @@ struct Launched: StaticLayout {
         .margin(.vertical, .large)
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
         
-        Text("I'm really encouraged about the direction of the app. I cant wait to experiment with App Intents, Deep Linking, and the Game Center. I may even bring this experience to iPad or Mac 👀...")
+        Text("I'm really encouraged about the direction of the app now that that first batch of updates have landed. I cant wait to experiment with App Intents, Deep Linking, and explore what the Game Center has to offer. I've got a feeling this experience would be really smooth on the iPad or Mac 👀...")
             .font(.body)
             .margin(.vertical, .large)
 
