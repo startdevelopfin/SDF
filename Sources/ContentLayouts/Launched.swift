@@ -57,7 +57,7 @@ struct Launched: StaticLayout {
         .innerShadow(radius: 5)
         .margin(.vertical, .xLarge)
         
-        Text("The journey converting By Rule from UIKit to SwiftUI has been rewarding in more ways than one. A refreshed app meant learning new APIs and researching the latest trends in iOS. It also meant talking to users and getting wuality feedback. Now, I've set the foundaton for a more robust app you can continue to love. Download today and stay tuned for updates!")
+        Text("The journey converting By Rule from UIKit to SwiftUI has been rewarding in more ways than one. A refreshed app meant learning new APIs and researching the latest trends in iOS. It meant reaching out to potential users to solidify my understanding of the issues they face. Now, I've set the foundaton for a more robust app everyone can continue to love. Download today and stay tuned for updates!")
             .font(.body)
             .margin(.vertical, .large)
         
