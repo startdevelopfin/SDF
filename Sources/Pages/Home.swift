@@ -66,7 +66,7 @@ struct Home: StaticLayout {
             Card(imageName: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/FirstTalk%2FBy%20Rule%20Banner.png?alt=media&token=7ffa6818-9e19-44cb-8cd1-4c0db85273a1") {
                 Link("Launched 🚀", target: Launched())
                     .font(.title3)
-                Text("In this post, I share some insight on the experience rebuilding my Swift blog site and iOS app. I explain the challenges I faced, tools I leveraged along the way, and whats next for By Rule.")
+                Text("In this post, I share some insight on the experience rebuilding my Swift blog site and iOS app. I highlight the resources I leveraged along the way and whats next for By Rule.")
             } footer: {
 
             }
