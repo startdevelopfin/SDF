@@ -686,46 +686,25 @@ struct ByRule: StaticLayout {
         Card {
             
             Grid {
-                Text("")
-                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/WRefTwoShots.png?alt=media&token=6a3ed5dd-31b0-45f0-b023-2b6f5b1b02ba", description: "Women's Official Two Shots")
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/WRef44.png?alt=media&token=98871762-c9e0-48f8-b6e7-e368c2b3c6fb", description: "Women's Official 3")
                     .resizable()
-                    .width(6)
+                    .width(4)
                     .margin(.vertical, .medium)
                     .background(.thinMaterial.colorScheme(.light))
                     .innerShadow(radius: 5)
-                Text("")
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/WRefTwoShots.png?alt=media&token=6a3ed5dd-31b0-45f0-b023-2b6f5b1b02ba", description: "Women's Official Two Shots")
+                    .resizable()
+                    .width(5)
+                    .margin(.vertical, .medium)
+                    .background(.thinMaterial.colorScheme(.light))
+                    .innerShadow(radius: 5)
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/Wref45.png?alt=media&token=13f124d5-4c25-4951-88e6-cb02db78ae2b", description: "Women's Official 2")
+                    .resizable()
+                    .width(3)
+                    .margin(.vertical, .medium)
+                    .background(.thinMaterial.colorScheme(.light))
+                    .innerShadow(radius: 5)
             }
-            
-//            Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/WRefsHudl.png?alt=media&token=51175c3d-9a76-4691-8510-f3d842b453a7", description: "Women's Officials Huddle")
-//                .resizable()
-//                .width(6)
-//                .margin(.vertical, .medium)
-//                .background(.thinMaterial.colorScheme(.light))
-//                .innerShadow(radius: 5)
-            
-//            Grid {
-//                
-//                
-//               
-//                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/WRef44.png?alt=media&token=98871762-c9e0-48f8-b6e7-e368c2b3c6fb", description: "Women's Official 3")
-//                    .resizable()
-//                    .width(3)
-//                    .margin(.vertical, .medium)
-//                    .background(.thinMaterial.colorScheme(.light))
-//                    .innerShadow(radius: 5)
-//                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/WRefTwoShots.png?alt=media&token=6a3ed5dd-31b0-45f0-b023-2b6f5b1b02ba", description: "Women's Official Two Shots")
-//                    .resizable()
-//                    .width(5)
-//                    .margin(.vertical, .medium)
-//                    .background(.thinMaterial.colorScheme(.light))
-//                    .innerShadow(radius: 5)
-//                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/Wref45.png?alt=media&token=13f124d5-4c25-4951-88e6-cb02db78ae2b", description: "Women's Official 2")
-//                    .resizable()
-//                    .width(3)
-//                    .margin(.vertical, .medium)
-//                    .background(.thinMaterial.colorScheme(.light))
-//                    .innerShadow(radius: 5)
-//            }
             
 
         } header: {
@@ -748,6 +727,8 @@ struct ByRule: StaticLayout {
         .background(.black.opacity(0.5))
         .innerShadow(radius: 5)
         .margin(.vertical, .large)
+        
+
         
     }
 }
