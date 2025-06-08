@@ -85,7 +85,7 @@ struct ByRule: StaticLayout {
                 .font(.title4)
                 .margin(.vertical, .medium)
         } footer: {
-            Text("By Rule: Basketball Official is your all-in-one tool for mastering NCAA rules. It’s not just an app—it’s your companion, built by refs for refs, designed to grow with you from your first game to your thousandth.")
+            Text("By Rule: Basketball Official is your all-in-one tool for mastering NCAA rules. It's not just an app—it's your companion, built by refs for refs, designed to grow with you from your first game to your thousandth.")
                 .lineSpacing(1.75)
                 .padding(6)
                 .fontWeight(.semibold)
@@ -121,7 +121,7 @@ struct ByRule: StaticLayout {
 
         } footer: {
             
-            Text("This app is expertly designed to elevate your officiating knowledge and confidence using pointed training resources. Whether you’re a rookie stepping onto the court or a seasoned vet, By Rule has what you need to succeed. Ready to see how it works?")
+            Text("This app is expertly designed to elevate your officiating knowledge and confidence using pointed training resources. Whether you're a rookie stepping onto the court or a seasoned vet, By Rule has what you need to succeed. Ready to see how it works?")
                 .padding(6)
                 .lineSpacing(1.75)
                 .font(.title5)
@@ -348,7 +348,7 @@ struct ByRule: StaticLayout {
                         Text("📖 Official NCAA Rules")
                             .font(.title5)
                             .fontWeight(.bold)
-                        Text("The full men’s rulebook, searchable, always at hand.")
+                        Text("The full men's rulebook, searchable, always at hand.")
                             .fontWeight(.semibold)
                     }
                     
@@ -412,7 +412,7 @@ struct ByRule: StaticLayout {
                 .margin(.top, .large)
                 .margin(.bottom, .large)
         } footer: {
-            Text("When the game moves fast, Manu keeps you ahead of the play. Built into By Rule, Manu can deliver instant, no-nonsense answers—straight from the NCAA rulebook while it guides you to better decisions. It’s like having a rules assistant in your pocket.")
+            Text("When the game moves fast, Manu keeps you ahead of the play. Built into By Rule, Manu can deliver instant, no-nonsense answers—straight from the NCAA rulebook while it guides you to better decisions. It's like having a rules assistant in your pocket.")
                 .padding(6)
                 .lineSpacing(1.75)
                 .font(.title5)
@@ -444,7 +444,7 @@ struct ByRule: StaticLayout {
 
         } footer: {
             
-            Text("By Rule turns your effort into insight, tracking every quiz, flashcard, and second you put in. No mystery here—just your hustle, your analytics, and Manu’s genius, all working together to make you unstoppable.")
+            Text("By Rule turns your effort into insight, tracking every quiz, flashcard, and second you put in. No mystery here—just your hustle, your analytics, and Manu's genius, all working together to make you unstoppable.")
                 .padding(6)
                 .lineSpacing(1.75)
                 .font(.title5)
@@ -472,7 +472,7 @@ struct ByRule: StaticLayout {
                         Text("🤓 Instant Feedback")
                             .font(.title5)
                             .fontWeight(.semibold)
-                        Text("Finish a quiz? Manu’s on it—dissecting your rights and wrongs faster than a timeout huddle, so you learn on the spot.")
+                        Text("Finish a quiz? Manu's on it—dissecting your rights and wrongs faster than a timeout huddle, so you learn on the spot.")
                             .fontWeight(.semibold)
                     }
                     
@@ -561,7 +561,7 @@ struct ByRule: StaticLayout {
                 .margin(.bottom, .large)
         } footer: {
             
-            Text("Ever wonder what separates good refs from great ones? It’s knowing your game—inside and out.")
+            Text("Ever wonder what separates good refs from great ones? It's knowing your game—inside and out.")
                 .padding(6)
                 .lineSpacing(1.75)
                 .font(.title5)
@@ -636,7 +636,7 @@ struct ByRule: StaticLayout {
                 .margin(.vertical, .medium)
             
         } footer: {
-            Text("For everyone else, it’s about sharpening your skills while staying up to date with the latest rules and guidelines--finding repetition that fits your life so you can build and sustain better habits.")
+            Text("For everyone else, it's about sharpening your skills while staying up to date with the latest rules and guidelines--finding repetition that fits your life so you can build and sustain better habits.")
                 .padding(6)
                 .lineSpacing(1.75)
                 .font(.title5)
@@ -648,9 +648,6 @@ struct ByRule: StaticLayout {
         .innerShadow(radius: 5)
         .margin(.vertical, .large)
         
-        
-        Divider()
-            .margin(.vertical, .large)
         
         // Download section
         Card {
@@ -666,7 +663,7 @@ struct ByRule: StaticLayout {
                 .font(.title4)
                 .margin(.top, .large)
             
-            Text("Ready to take control of your learning? Download By Rule to unlock your full potential. Track what sticks, fix what slips, and grow into the college basketball aficionado you’re meant to be!")
+            Text("Ready to take control of your learning? Download By Rule to unlock your full potential. Track what sticks, fix what slips, and grow into the college basketball aficionado you're meant to be!")
                 .padding(6)
                 .lineSpacing(1.75)
                 .font(.title5)
@@ -681,5 +678,76 @@ struct ByRule: StaticLayout {
         .background(.steelBlue.opacity(0.5))
         .innerShadow(radius: 5)
         .margin(.vertical, .xLarge)
+        
+        Divider()
+            .margin(.vertical, .large)
+        
+        // Coming Soon
+        Card {
+            
+            Grid {
+                Text("")
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/WRefTwoShots.png?alt=media&token=6a3ed5dd-31b0-45f0-b023-2b6f5b1b02ba", description: "Women's Official Two Shots")
+                    .resizable()
+                    .width(6)
+                    .margin(.vertical, .medium)
+                    .background(.thinMaterial.colorScheme(.light))
+                    .innerShadow(radius: 5)
+                Text("")
+            }
+            
+//            Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/WRefsHudl.png?alt=media&token=51175c3d-9a76-4691-8510-f3d842b453a7", description: "Women's Officials Huddle")
+//                .resizable()
+//                .width(6)
+//                .margin(.vertical, .medium)
+//                .background(.thinMaterial.colorScheme(.light))
+//                .innerShadow(radius: 5)
+            
+//            Grid {
+//                
+//                
+//               
+//                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/WRef44.png?alt=media&token=98871762-c9e0-48f8-b6e7-e368c2b3c6fb", description: "Women's Official 3")
+//                    .resizable()
+//                    .width(3)
+//                    .margin(.vertical, .medium)
+//                    .background(.thinMaterial.colorScheme(.light))
+//                    .innerShadow(radius: 5)
+//                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/WRefTwoShots.png?alt=media&token=6a3ed5dd-31b0-45f0-b023-2b6f5b1b02ba", description: "Women's Official Two Shots")
+//                    .resizable()
+//                    .width(5)
+//                    .margin(.vertical, .medium)
+//                    .background(.thinMaterial.colorScheme(.light))
+//                    .innerShadow(radius: 5)
+//                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/Wref45.png?alt=media&token=13f124d5-4c25-4951-88e6-cb02db78ae2b", description: "Women's Official 2")
+//                    .resizable()
+//                    .width(3)
+//                    .margin(.vertical, .medium)
+//                    .background(.thinMaterial.colorScheme(.light))
+//                    .innerShadow(radius: 5)
+//            }
+            
+
+        } header: {
+            Text("Coming Soon 👀")
+                .font(.title4)
+                .margin(.top, .large)
+            
+           
+        } footer: {
+           
+            Text("Are you looking for more? Stay tuned, as women's college basketball rules sets and features are being curated. Be sure to download the app and check for updates as they roll out!")
+                .padding(6)
+                .lineSpacing(1.75)
+                .font(.title5)
+                .fontWeight(.semibold)
+                .margin(.vertical, .medium)
+
+        }
+        .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
+        .background(.black.opacity(0.5))
+        .innerShadow(radius: 5)
+        .margin(.vertical, .large)
+        
     }
 }
