@@ -324,7 +324,7 @@ struct ByRule: StaticLayout {
                         Text("🎥 Video Training Library")
                             .font(.title5)
                             .fontWeight(.bold)
-                        Text("Learn officiating mechanics, step by step.")
+                        Text("Learn officiating mechanics, step by step. Men's and Women's video review.")
                             .fontWeight(.semibold)
                     }
                     
@@ -348,7 +348,7 @@ struct ByRule: StaticLayout {
                         Text("📖 Official NCAA Rules")
                             .font(.title5)
                             .fontWeight(.bold)
-                        Text("The full men's rulebook, searchable, always at hand.")
+                        Text("The full Men's and Women's rules books, searchable with query highlighting, always at hand.")
                             .fontWeight(.semibold)
                     }
                     
@@ -372,6 +372,52 @@ struct ByRule: StaticLayout {
         .background(.bootstrapRed.opacity(0.6))
         .innerShadow(radius: 5)
         .margin(.vertical, .xLarge)
+        
+        // Women's Rules
+        Card {
+            
+            Grid {
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/WRef44.png?alt=media&token=98871762-c9e0-48f8-b6e7-e368c2b3c6fb", description: "Women's Official 3")
+                    .resizable()
+                    .width(4)
+                    .margin(.vertical, .medium)
+                    .background(.thinMaterial.colorScheme(.light))
+                    .innerShadow(radius: 5)
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/WRefTwoShots.png?alt=media&token=6a3ed5dd-31b0-45f0-b023-2b6f5b1b02ba", description: "Women's Official Two Shots")
+                    .resizable()
+                    .width(5)
+                    .margin(.vertical, .medium)
+                    .background(.thinMaterial.colorScheme(.light))
+                    .innerShadow(radius: 5)
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/Wref45.png?alt=media&token=13f124d5-4c25-4951-88e6-cb02db78ae2b", description: "Women's Official 2")
+                    .resizable()
+                    .width(3)
+                    .margin(.vertical, .medium)
+                    .background(.thinMaterial.colorScheme(.light))
+                    .innerShadow(radius: 5)
+            }
+            
+
+        } header: {
+            Text("Women's Rules ⛹🏽‍♀️")
+                .font(.title4)
+                .margin(.top, .large)
+            
+           
+        } footer: {
+           
+            Text("By Rule is constantly evolving—built for officials who want more. Support for the women's game is finally here! The latest release includes PDF search + highlighting, indexed rules, and video mechanics review tailored for women’s college basketball. Stay tuned as more updates roll out!")
+                .padding(6)
+                .lineSpacing(1.75)
+                .font(.title5)
+                .fontWeight(.semibold)
+                .margin(.vertical, .medium)
+
+        }
+        .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
+        .background(.black.opacity(0.5))
+        .innerShadow(radius: 5)
+        .margin(.vertical, .large)
         
         // Optimized Learning
         Card {
@@ -426,6 +472,7 @@ struct ByRule: StaticLayout {
         .background(.bootstrapGreen.opacity(0.5))
         .innerShadow(radius: 5)
         .margin(.vertical, .xLarge)
+        
         
         // Rule The Game
         Card {
@@ -648,6 +695,12 @@ struct ByRule: StaticLayout {
         .innerShadow(radius: 5)
         .margin(.vertical, .large)
         
+
+        
+        
+        Divider()
+            .margin(.vertical, .large)
+        
         
         // Download section
         Card {
@@ -678,57 +731,8 @@ struct ByRule: StaticLayout {
         .background(.steelBlue.opacity(0.5))
         .innerShadow(radius: 5)
         .margin(.vertical, .xLarge)
-        
-        Divider()
-            .margin(.vertical, .large)
-        
-        // Coming Soon
-        Card {
-            
-            Grid {
-                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/WRef44.png?alt=media&token=98871762-c9e0-48f8-b6e7-e368c2b3c6fb", description: "Women's Official 3")
-                    .resizable()
-                    .width(4)
-                    .margin(.vertical, .medium)
-                    .background(.thinMaterial.colorScheme(.light))
-                    .innerShadow(radius: 5)
-                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/WRefTwoShots.png?alt=media&token=6a3ed5dd-31b0-45f0-b023-2b6f5b1b02ba", description: "Women's Official Two Shots")
-                    .resizable()
-                    .width(5)
-                    .margin(.vertical, .medium)
-                    .background(.thinMaterial.colorScheme(.light))
-                    .innerShadow(radius: 5)
-                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/Wref45.png?alt=media&token=13f124d5-4c25-4951-88e6-cb02db78ae2b", description: "Women's Official 2")
-                    .resizable()
-                    .width(3)
-                    .margin(.vertical, .medium)
-                    .background(.thinMaterial.colorScheme(.light))
-                    .innerShadow(radius: 5)
-            }
-            
-
-        } header: {
-            Text("Coming Soon 👀")
-                .font(.title4)
-                .margin(.top, .large)
-            
-           
-        } footer: {
-           
-            Text("Are you looking for more? Stay tuned, as women's college basketball rules sets and features are being curated. Be sure to download the app and check for updates as they roll out!")
-                .padding(6)
-                .lineSpacing(1.75)
-                .font(.title5)
-                .fontWeight(.semibold)
-                .margin(.vertical, .medium)
-
-        }
-        .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
-        .background(.black.opacity(0.5))
-        .innerShadow(radius: 5)
-        .margin(.vertical, .large)
-        
 
         
+   
     }
 }
