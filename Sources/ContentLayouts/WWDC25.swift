@@ -277,7 +277,7 @@ struct WWDC25: StaticLayout {
                     .margin(.vertical, .medium)
             }
             .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
-                .background(.seaGreen.opacity(0.6))
+                .background(.crimson.opacity(0.6))
                 .innerShadow(radius: 5)
                 .margin(.vertical, .medium)
         
