@@ -43,7 +43,7 @@ struct WWDC25: StaticLayout {
                 .margin(.vertical, .medium)
         }
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
-        .background(.burlyWood.opacity(0.6))
+        .background(.darkOrange.opacity(0.6))
         .innerShadow(radius: 5)
         .margin(.vertical, .xLarge)
         
@@ -78,7 +78,7 @@ struct WWDC25: StaticLayout {
             .margin(.vertical, .medium)
         }
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
-        .background(.skyBlue.opacity(0.6))
+        .background(.darkOliveGreen.opacity(0.6))
         .innerShadow(radius: 5)
         .margin(.vertical, .xLarge)
         
@@ -87,7 +87,7 @@ struct WWDC25: StaticLayout {
             Text("The Apple Keynote watch party felt less like a viewing and more like a premiere in a packed theater, buzzing with collective excitement. Afterward, I connected with Emil and Audrey, and we instantly bonded over lunch at Benihana, sharing stories as if we’d known each other for years.")
                 .margin(.vertical, .medium)
             
-            Text("The State of the Union session truly got my developer gears turning; the Foundation Model Framework was a definite crowd-pleaser and has direct implications for my app, By Rule. Later, the Apple Intelligence Automators Meetup proved to be a lively group chat where Matthew, the Shortcuts guru, expertly fielded every question about App Intents and the future of action-centered design.")
+            Text("The State of the Union session truly got my developer gears turning; the Foundation Model Framework was a definite crowd-pleaser and had direct implications for my app, By Rule. Later, the Apple Intelligence Automators Meetup proved to be a lively group chat where Matthew, the Shortcuts guru, expertly fielded every question about App Intents and the future of action-centered design.")
                 .margin(.vertical, .medium)
             
         }
@@ -124,7 +124,7 @@ struct WWDC25: StaticLayout {
                 .margin(.vertical, .medium)
         }
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
-        .background(.burlyWood.opacity(0.6))
+        .background(.darkSalmon.opacity(0.6))
         .innerShadow(radius: 5)
         .margin(.vertical, .xLarge)
         
@@ -222,7 +222,7 @@ struct WWDC25: StaticLayout {
             .margin(.vertical, .medium)
         }
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
-        .background(.deepSkyBlue.opacity(0.6))
+        .background(.darkBlue.opacity(0.6))
         .innerShadow(radius: 5)
         .margin(.vertical, .xLarge)
         
@@ -305,7 +305,7 @@ struct WWDC25: StaticLayout {
 
         }
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
-        .background(.burlyWood.opacity(0.6))
+        .background(.darkKhaki.opacity(0.6))
         .innerShadow(radius: 5)
         .margin(.vertical, .xLarge)
     }
