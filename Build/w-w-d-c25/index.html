@@ -1,0 +1,255 @@
+<!doctype html>
+<html data-bs-theme="auto" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="In this post, I share my experience travleling to Cupertino for WWDC 25. I highlight events I attended and emphasize the power of community." name="description" />
+    <meta content="Daniel J. Aupont" name="author" />
+    <meta content="Ignite v0.2.1" name="generator" />
+    <title>WWDC 25 💧 – Swift Blog Site</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/prism-xcode-dark.css" rel="stylesheet" data-highlight-theme="xcode-dark" />
+    <link href="/css/prism-xcode-light.css" rel="stylesheet" data-highlight-theme="xcode-light" />
+    <link href="/css/prism-plugins.css" rel="stylesheet" />
+    <link href="/css/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="/css/ignite-core.min.css" rel="stylesheet" />
+    <link href="https://startdevelopfinish.com/w-w-d-c25" rel="canonical" />
+    <script>(function() {
+    function getThemePreference() {
+        return localStorage.getItem('custom-theme') || 'auto';
+    }
+
+    function applyTheme(themeID) {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const lightThemeID = document.documentElement.getAttribute('data-light-theme') || 'light';
+        const darkThemeID = document.documentElement.getAttribute('data-dark-theme') || 'dark';
+        const actualThemeID = themeID === 'auto' ? (prefersDark ? darkThemeID : lightThemeID) : themeID;
+
+        document.documentElement.setAttribute('data-bs-theme', actualThemeID);
+        document.documentElement.setAttribute('data-theme-state', themeID);
+    }
+
+    function applySyntaxTheme() {
+        const syntaxTheme = getComputedStyle(document.documentElement)
+            .getPropertyValue('--syntax-highlight-theme').trim().replace(/"/g, '');
+
+        if (!syntaxTheme) return;
+
+        document.querySelectorAll('link[data-highlight-theme]').forEach(link => {
+            link.setAttribute('disabled', 'disabled');
+        });
+
+        const themeLink = document.querySelector(`link[data-highlight-theme="${syntaxTheme}"]`);
+        if (themeLink) {
+            themeLink.removeAttribute('disabled');
+        }
+    }
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        const currentTheme = getThemePreference();
+        if (currentTheme === 'auto') {
+            applyTheme('auto');
+            applySyntaxTheme();
+        }
+    });
+
+    const savedTheme = getThemePreference();
+    applyTheme(savedTheme);
+    applySyntaxTheme();
+})();
+</script>
+    <meta content="Start. Develop. Finish." property="og:site_name" />
+    <meta content="WWDC 25 💧" property="og:title" />
+    <meta content="WWDC 25 💧" name="twitter:title" />
+    <meta content="In this post, I share my experience travleling to Cupertino for WWDC 25. I highlight events I attended and emphasize the power of community." property="og:description" />
+    <meta content="In this post, I share my experience travleling to Cupertino for WWDC 25. I highlight events I attended and emphasize the power of community." name="twitter:description" />
+    <meta content="https://startdevelopfinish.com/w-w-d-c25" property="og:url" />
+    <meta content="startdevelopfinish.com" name="twitter:domain" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="on" name="twitter:dnt" />
+  </head>
+  <body class="container">
+    <header>
+      <nav class="fixed-top navbar navbar-expand-md" style="background-color: rgb(0 0 0 / 100%)" data-bs-theme="dark">
+        <div class="container">
+          <a href="/" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover navbar-brand"><p class="mb-0">Start. <span style="color: #6B8E23;">Develop</span>. Finish.</p></a>
+          <button type="button" class="btn navbar-toggler" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="col justify-content-end mb-2 mb-md-0 navbar-nav">
+              <li class="dropdown nav-item" data-bs-theme="light"><a href="#" role="button" class="dropdown dropdown-toggle link-underline link-underline-opacity-100 link-underline-opacity-100-hover nav-link" data-bs-toggle="dropdown" aria-expanded="false">App Store</a>
+                <ul class="dropdown dropdown-menu">
+                  <li><a href="/by-rule" class="dropdown-item link-underline link-underline-opacity-100 link-underline-opacity-100-hover">By Rule</a></li>
+                </ul></li>
+              <li class="dropdown nav-item" data-bs-theme="light"><a href="#" role="button" class="dropdown dropdown-toggle link-underline link-underline-opacity-100 link-underline-opacity-100-hover nav-link" data-bs-toggle="dropdown" aria-expanded="false">Info</a>
+                <ul class="dropdown dropdown-menu">
+                  <li><a href="/about" class="dropdown-item link-underline link-underline-opacity-100 link-underline-opacity-100-hover">About</a></li>
+                </ul></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="row">
+      <div class="col-md-9">
+        <div style="padding-bottom: 80px; padding-top: 80px">
+          <h1 class="my-4">A Celebration of Community and Innovation</h1>
+          <div class="card my-5" style="background-color: rgb(222 184 135 / 60%); border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset">
+            <div class="card-header">
+              <h3 class="my-3">Off to Cupertino</h3>
+            </div>
+            <div class="card-body">
+              <div class="my-4 ratio ratio-21x9" style="background-color: rgb(143 188 143 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+                <img alt="" src="/images/photos/WWDC25C.png" class="img-fluid object-fit-cover" />
+              </div>
+            </div>
+            <div class="card-footer text-body-secondary">
+              <p class="my-3">Despite coming up short in the WWDC lottery, my indie developer spirit, fueled by a hefty dose of optimism, propelled me from Orlando to Cupertino.</p>
+            </div>
+          </div>
+          <div class="card my-3" style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px">
+            <div class="card-body">
+              <p class="card-text my-3">In a job market that's, shall we say, character-building, my goal was clear: to learn, network, and find that spark of inspiration to keep building.</p>
+              <p class="card-text my-3">This trip was, thankfully, fruitful beyond measure. I didn't just gain new skills and eye-opening experiences; the true silver lining was discovering the incredible power of community and making lifelong friends along the way.</p>
+            </div>
+          </div>
+          <div class="card my-5" style="background-color: rgb(135 206 235 / 60%); border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset">
+            <div class="card-header">
+              <h3 class="my-3">CommunityKit</h3>
+            </div>
+            <div class="card-body">
+              <div class="my-4 ratio ratio-21x9" style="background-color: rgb(143 188 143 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+                <img alt="" src="/images/photos/WWDC25CK.png" class="img-fluid object-fit-cover" />
+              </div>
+            </div>
+            <div class="card-footer text-body-secondary">
+              <p class="my-3">This year marked the inaugural CommunityKit. I arrived without expectations, only to be completely blown away by the sheer effort and flawless execution from everyone involved. A special shoutout goes to Adrian, whose infectious energy was truly everywhere!</p>
+            </div>
+          </div>
+          <div class="card my-3" style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px">
+            <div class="card-body">
+              <p class="card-text my-3">The Apple Keynote watch party felt less like a viewing and more like a premiere in a packed theater, buzzing with collective excitement. Afterward, I connected with Emil and Audrey, and we instantly bonded over lunch at Benihana, sharing stories as if we’d known each other for years.</p>
+              <p class="card-text my-3">The State of the Union session truly got my developer gears turning; the Foundation Model Framework was a definite crowd-pleaser and has direct implications for my app, By Rule. Later, the Apple Intelligence Automators Meetup proved to be a lively group chat where Matthew, the Shortcuts guru, expertly fielded every question about App Intents and the future of action-centered design.</p>
+            </div>
+          </div>
+          <div class="card my-3" style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px">
+            <div class="card-body">
+              <p class="card-text my-3">Hacking With Swift Live with Paul Hudson was incredibly fun as he live-coded updates from WWDC, and I even snagged a spot in the top 20 during the Swift trivia Kahoot game—not too shabby if I do say so myself! I’m already counting down the days until his next book, Everything But The Code.</p>
+            </div>
+          </div>
+          <div class="card my-5" style="background-color: rgb(222 184 135 / 60%); border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset">
+            <div class="card-header">
+              <h3 class="my-3">Indie App Fair</h3>
+            </div>
+            <div class="card-body">
+              <div class="my-4 ratio ratio-16x9" style="background-color: rgb(0 255 127 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+                <img alt="" src="/images/photos/WWDC25IF.png" class="img-fluid object-fit-cover" />
+              </div>
+            </div>
+            <div class="card-footer text-body-secondary">
+              <p class="my-3">My absolute favorite, though, was the Indie App Fair. Getting to present the latest updates to By Rule, share custom stickers, and talk about my unique journey as a college basketball official on the indie dev path was incredibly rewarding. The affirming reception from every visitor left me with a profound sense of pride and validation.</p>
+            </div>
+          </div>
+          <div class="card my-5" style="background-color: rgb(220 20 60 / 60%); border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset">
+            <div class="card-header">
+              <h3 class="my-3">One More Thing</h3>
+            </div>
+            <div class="card-body">
+              <div class="my-4 ratio ratio-16x9" style="background-color: rgb(0 255 127 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+                <img alt="" src="/images/photos/WWDC25OMT.png" class="img-fluid object-fit-cover" />
+              </div>
+            </div>
+            <div class="card-footer text-body-secondary">
+              <p class="my-3">The combination of insightful talks and hands-on workshops, led by some of the industry's finest experts, made this an unforgettable experience.</p>
+            </div>
+          </div>
+          <div class="card my-3" style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px">
+            <div class="card-body">
+              <p class="card-text my-3">One More Thing truly felt like the gift that kept on giving. The Shipping AI-powered apps with Firebase and Flutter talk was precisely what I needed, as I plan to leverage Flutter to expand my app's reach based on user feedback throughout my year officiating basketball. Turns out not everyone has an iPhone, who knew?!</p>
+            </div>
+          </div>
+          <div class="card my-3" style="background-color: rgb(46 139 87 / 60%); border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset">
+            <div class="card-header">
+              <div class="my-4 ratio ratio-16x9" style="background-color: rgb(0 255 127 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+                <img alt="" src="/images/photos/WWDC25EAI.png" class="img-fluid object-fit-cover" />
+              </div>
+            </div>
+            <div class="card-body">
+              <p class="card-text my-3">Rudrank Riyam delivered a flawless talk on What’s New in AI/ML, live coding without missing a beat. He’s been my go-to for all things AI leading up to WWDC, so naturally, I snagged a copy of his book, <a href="https://academy.rudrank.com/a/vhudd7vppcwypivx3ibm1" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover">Exploring AI for iOS Developers.</a> Reading it, I feel like Thanos collecting the final Infinity Stone – a powerful addition to my indie developer journey.</p>
+            </div>
+          </div>
+          <div class="card my-3" style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px">
+            <div class="card-body">
+              <p class="card-text my-3">As if that wasnt enough, Rudrank also organized a fantastic AI/ML meetup where I made new friends and chatted about all things AI and MLX. Big shoutouts to Logesh and Adrien for sharing their stories and pushing me to further refine my app.</p>
+            </div>
+          </div>
+          <div class="card my-3" style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px">
+            <div class="card-body">
+              <p class="card-text my-3">During the Vibe Code &amp; Chill session, I learned about new AI coding tools and even won Chris Eidhoff’s book, Thinking in SwiftUI, thanks to Harry challenging me to a little contest. Cursor is such a powerful tool. I also can’t wait to give Windsurf a try! </p>
+              <p class="card-text my-3">My new friend Kenji opened my eyes to more insights than this paragraph can possibly hold; he truly is a genius. And I absolutely have to give a special shout-out to Abigail and Hans for not only showing interest in my app but also providing invaluable feedback on how I could level it up even further.</p>
+            </div>
+          </div>
+          <div class="card my-5" style="background-color: rgb(0 191 255 / 60%); border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset">
+            <div class="card-header">
+              <h3 class="my-3">Apple Park</h3>
+            </div>
+            <div class="card-body">
+              <div class="my-4 ratio ratio-16x9" style="background-color: rgb(0 255 127 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+                <img alt="" src="/images/photos/WWDC25Banner.png" class="img-fluid object-fit-cover" />
+              </div>
+            </div>
+            <div class="card-footer text-body-secondary">
+              <p class="my-3">My first visit to Apple Park was quite the experience. Picture this: lounging on the rooftop under the cool shade of umbrellas, sharing laughs over… well, conspicuously placed pints of milk and butter.</p>
+            </div>
+          </div>
+          <div class="card my-3" style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px">
+            <div class="card-body">
+              <p class="card-text my-3">The Core Coffee meetup was a lighthearted reminder that while code might have brought us all here, the true goal was simply to connect.</p>
+              <p class="card-text my-3">My friend Adam, with his insightful conversations, really inspired me to think beyond just basketball officiating, helping me see a bright and promising future in development.</p>
+              <p class="card-text my-3">And kudos to Nathan and John, who gave me the nudge I needed to start running for fun again. I can hear a 10K run calling my name… eventually!</p>
+            </div>
+          </div>
+          <div class="card my-5" style="background-color: rgb(72 61 139 / 60%); border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset">
+            <div class="card-header">
+              <h3 class="my-3">The Unifying Power of Community</h3>
+            </div>
+            <div class="card-body">
+              <div class="my-4 ratio ratio-16x9" style="background-color: rgb(0 255 127 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+                <img alt="" src="/images/photos/WWDC25CPTNO.png" class="img-fluid object-fit-cover" />
+              </div>
+            </div>
+            <div class="card-footer text-body-secondary">
+              <p class="my-3">Being an indie developer, it’s easy to battle imposter syndrome, but this trip made me feel the exact opposite – a profound sense of belonging and camaraderie.</p>
+            </div>
+          </div>
+          <div class="card my-3" style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px">
+            <div class="card-body">
+              <p class="card-text my-3">Shared learning and problem-solving sessions naturally spilled into lighthearted conversations and even a few delightful hijinks. The energy around WWDC was undeniably contagious! If the Apple Keynote is the main event, then the surrounding community gatherings are the after-party where all the real magic happens.</p>
+            </div>
+          </div>
+          <div class="card my-3" style="background-color: rgb(46 139 87 / 60%); border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset">
+            <div class="card-body">
+              <p class="card-text my-3">I have to give a huge shoutout to the person who made me feel most welcome: my good friend Vince. He’s been an inspiration since the first time I saw him on stage at a conference. During the Vibe Code &amp; Chill session, I watched him vibe-code a tvOS app in one sitting and win an Apple TV! He's not just a super-talented developer, but also a future pilot and a secret comedian. I honestly don't know what my trip to Cupertino would have been like without his help, and thankfully, I won't have to wonder. He looked out for me every step of the way this weekend, and for that, I'm forever grateful.</p>
+            </div>
+          </div>
+          <div class="card my-5" style="background-color: rgb(222 184 135 / 60%); border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset">
+            <div class="card-header">
+              <h3 class="my-3">Until Next Time, Cupertino!</h3>
+            </div>
+            <div class="card-body">
+              <div class="my-4 ratio ratio-21x9" style="background-color: rgb(143 188 143 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+                <img alt="" src="/images/photos/WWDC25X.png" class="img-fluid object-fit-cover" />
+              </div>
+            </div>
+            <div class="card-footer text-body-secondary">
+              <p class="my-3">If you’re reading this, consider it your sign to take chances and venture into the unknown. Build that app, go to that conference, make a new friend, and if you tried before but felt disappointed, try it again. The community waiting for you might just be the most valuable part of the journey. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="mt-5 text-center">Created in Swift with <a href="https://github.com/twostraws/Ignite" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover">Ignite</a></p>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/syntax-highlighting.js"></script>
+    <script src="/js/ignite-core.js"></script>
+  </body>
+</html>

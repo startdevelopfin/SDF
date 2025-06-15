@@ -63,6 +63,18 @@ struct Home: StaticLayout {
         
         Grid {
             
+            Card(imageName: "/images/photos/WWDC25VC.png") {
+                Link("WWDC 2025: Beyond the Keynote", target: WWDC25())
+                    .font(.title3)
+                Text("In this post, I share my experience travleling to Cupertino for WWDC 25. I highlight events I attended and emphasize the power of community.")
+            } footer: {
+
+            }
+            .width(4)
+            .margin(.bottom)
+            .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
+            .innerShadow(radius: 5)
+            
             Card(imageName: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/FirstTalk%2FBy%20Rule%20Banner.png?alt=media&token=7ffa6818-9e19-44cb-8cd1-4c0db85273a1") {
                 Link("Launched 🚀", target: Launched())
                     .font(.title3)
@@ -98,7 +110,7 @@ struct Home: StaticLayout {
             }
             .width(4)
             .margin(.bottom)
-            .background(Color.bootstrapRed.opacity(0.25))
+            .background(Color.bootstrapRed.opacity(0.5))
             .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
             .innerShadow(radius: 5)
             
