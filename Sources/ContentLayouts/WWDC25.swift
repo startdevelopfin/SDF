@@ -124,7 +124,7 @@ struct WWDC25: StaticLayout {
                 .margin(.vertical, .medium)
         }
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
-        .background(.darkSalmon.opacity(0.6))
+        .background(.darkTurquoise.opacity(0.6))
         .innerShadow(radius: 5)
         .margin(.vertical, .xLarge)
         
@@ -222,7 +222,7 @@ struct WWDC25: StaticLayout {
             .margin(.vertical, .medium)
         }
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
-        .background(.darkBlue.opacity(0.6))
+        .background(.dodgerBlue.opacity(0.6))
         .innerShadow(radius: 5)
         .margin(.vertical, .xLarge)
         
@@ -305,7 +305,7 @@ struct WWDC25: StaticLayout {
 
         }
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
-        .background(.darkKhaki.opacity(0.6))
+        .background(.darkOliveGreen.opacity(0.6))
         .innerShadow(radius: 5)
         .margin(.vertical, .xLarge)
     }
