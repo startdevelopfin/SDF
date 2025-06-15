@@ -43,6 +43,7 @@ struct SDF: Site {
         FirstConference()
         Mentorship()
         Launched()
+        WWDC25()
     }
     
 }
