@@ -120,7 +120,7 @@ struct WWDC25: StaticLayout {
                 .font(.title3)
                 .margin(.vertical, .medium)
         } footer: {
-            Text("My absolute favorite, though, was the Indie App Fair. Getting to present the latest updates to By Rule, share custom stickers, and talk about my unique journey as a college basketball official on the indie dev path was incredibly rewarding. The affirming reception from every visitor left me with a profound sense of pride and validation.")
+            Text("My absolute favorite, though, was the Indie App Fair. Getting to present the latest updates to \(Link("By Rule", target: ByRule())), share custom stickers, and talk about my unique journey as a college basketball official on the indie dev path was incredibly rewarding. The affirming reception from every visitor left me with a profound sense of pride and validation.")
                 .margin(.vertical, .medium)
         }
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
