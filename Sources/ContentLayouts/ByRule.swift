@@ -372,32 +372,22 @@ struct ByRule: StaticLayout {
         .background(.bootstrapRed.opacity(0.6))
         .innerShadow(radius: 5)
         .margin(.vertical, .xLarge)
-        
+
         // Women's Rules
         Card {
             
             Grid {
-                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/WRef44.png?alt=media&token=98871762-c9e0-48f8-b6e7-e368c2b3c6fb", description: "Women's Official 3")
+                Text("")
+                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/WRefsChat.png?alt=media&token=f78f7842-89e1-4ffb-a22c-17cda4b0a427", description: "Women's Refs Huddle")
                     .resizable()
-                    .width(4)
+                    .width(6)
                     .margin(.vertical, .medium)
                     .background(.thinMaterial.colorScheme(.light))
                     .innerShadow(radius: 5)
-                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/WRefTwoShots.png?alt=media&token=6a3ed5dd-31b0-45f0-b023-2b6f5b1b02ba", description: "Women's Official Two Shots")
-                    .resizable()
-                    .width(5)
-                    .margin(.vertical, .medium)
-                    .background(.thinMaterial.colorScheme(.light))
-                    .innerShadow(radius: 5)
-                Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/Wref45.png?alt=media&token=13f124d5-4c25-4951-88e6-cb02db78ae2b", description: "Women's Official 2")
-                    .resizable()
-                    .width(3)
-                    .margin(.vertical, .medium)
-                    .background(.thinMaterial.colorScheme(.light))
-                    .innerShadow(radius: 5)
+                Text("")
             }
             
-
+            
         } header: {
             Text("Women's Rules ⛹🏽‍♀️")
                 .font(.title4)
