@@ -87,7 +87,7 @@ struct WWDC25: StaticLayout {
             Text("The Apple Keynote watch party felt less like a viewing and more like a premiere in a packed theater, buzzing with collective excitement. Afterward, I connected with Emil and Audrey, and we instantly bonded over lunch at Benihana, sharing stories as if we’d known each other for years.")
                 .margin(.vertical, .medium)
             
-            Text("The State of the Union session truly got my developer gears turning; the Foundation Model Framework was a definite crowd-pleaser and had direct implications for my app, By Rule. Later, the Apple Intelligence Automators Meetup proved to be a lively group chat where Matthew, the Shortcuts guru, expertly fielded every question about App Intents and the future of action-centered design.")
+            Text("The State of the Union session truly got my developer gears turning; the Foundation Model Framework was a definite crowd-pleaser and had direct implications for my app, \(Link("By Rule", target: ByRule())). Later, the Apple Intelligence Automators Meetup proved to be a lively group chat where Matthew, the Shortcuts guru, expertly fielded every question about App Intents and the future of action-centered design.")
                 .margin(.vertical, .medium)
             
         }
@@ -184,7 +184,7 @@ struct WWDC25: StaticLayout {
             .margin(.vertical, .medium)
         
         Card {
-            Text("As if that wasnt enough, Rudrank also organized a fantastic AI/ML meetup where I made new friends and chatted about all things AI and MLX. Big shoutouts to Logesh and Adrien for sharing their stories and pushing me to further refine my app.")
+            Text("As if that wasnt enough, Rudrank also organized a fantastic AI/ML meetup where I made new friends and chatted about all things AI and MLX. Big shoutouts to Logesh and Adrien for sharing their stories and pushing me to refine my app.")
                 .margin(.vertical, .medium)
         }
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
