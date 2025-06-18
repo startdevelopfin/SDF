@@ -84,7 +84,7 @@ struct Home: StaticLayout {
             }
             .width(4)
             .margin(.bottom)
-            .background(Color.bootstrapGray.opacity(0.5))  // Apply random background
+            .background(Color.lightCoral.opacity(0.5))  // Apply random background
             .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
             .innerShadow(radius: 5)
 
@@ -110,7 +110,7 @@ struct Home: StaticLayout {
             }
             .width(4)
             .margin(.bottom)
-            .background(Color.bootstrapRed.opacity(0.5))
+            .background(Color.crimson.opacity(0.5))
             .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
             .innerShadow(radius: 5)
             
