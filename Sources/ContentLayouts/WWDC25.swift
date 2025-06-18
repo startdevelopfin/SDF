@@ -74,7 +74,7 @@ struct WWDC25: StaticLayout {
                 .font(.title3)
                 .margin(.vertical, .medium)
         } footer: {
-            Text("This year marked the inaugural CommunityKit. I arrived without expectations, only to be completely blown away by the sheer effort and flawless execution from everyone involved. A special shoutout goes to Adrian, whose infectious energy was truly everywhere!")
+            Text("This year marked the inaugural \(Link("CommunityKit", target: "https://communitykit.social")). I arrived without expectations, only to be completely blown away by the sheer effort and flawless execution from everyone involved. A special shoutout goes to Adrian, whose infectious energy was truly everywhere!")
             .margin(.vertical, .medium)
         }
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
@@ -155,7 +155,7 @@ struct WWDC25: StaticLayout {
         
         Card {
             
-            Text("One More Thing truly felt like the gift that kept on giving. The Shipping AI-powered apps with Firebase and Flutter talk was precisely what I needed, as I plan to leverage Flutter to expand my app's reach based on user feedback throughout my year officiating basketball. Turns out not everyone has an iPhone, who knew?!")
+            Text("\(Link("One More Thing", target: "https://omt-conf.com")) truly felt like the gift that kept on giving. The Shipping AI-powered apps with Firebase and Flutter talk was precisely what I needed, as I plan to leverage Flutter to expand my app's reach based on user feedback throughout my year officiating basketball. Turns out not everyone has an iPhone, who knew?!")
                 .margin(.vertical, .medium)
         }
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
