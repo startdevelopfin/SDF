@@ -192,7 +192,7 @@ struct WWDC25: StaticLayout {
         
         
         Card {
-            Text("During the Vibe Code & Chill session, I learned about new AI coding tools and even won Chris Eidhoff and Florain Kugler's book, Thinking in SwiftUI, thanks to Harry challenging me to a little contest. Cursor is such a powerful tool. I also can’t wait to give Windsurf a try! ")
+            Text("During the Vibe Code & Chill session, I learned about new AI coding tools and even won Chris Eidhoff and Florian Kugler's book, Thinking in SwiftUI, thanks to Harry challenging me to a little contest. Cursor is such a powerful tool. I also can’t wait to give Windsurf a try!")
                 .margin(.vertical, .medium)
             
             Text("My new friend Kenji opened my eyes to more insights than this paragraph can possibly hold; he truly is a genius. And I absolutely have to give a special shout-out to Abigail and Hans for not only showing interest in my app but also providing invaluable feedback on how I could level it up even further.")
