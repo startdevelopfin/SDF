@@ -74,7 +74,7 @@ struct WWDC25: StaticLayout {
                 .font(.title3)
                 .margin(.vertical, .medium)
         } footer: {
-            Text("This year marked the inaugural \(Link("CommunityKit", target: "https://communitykit.social")). I arrived without expectations, only to be completely blown away by the sheer effort and flawless execution from everyone involved. A special shoutout goes to Adrian, whose infectious energy was truly everywhere!")
+            Text("This year marked the inaugural \(Link("CommunityKit", target: "https://communitykit.social")). I arrived without expectations, only to be completely blown away by the sheer effort and flawless execution from everyone involved. A special shoutout goes to Adrian, whose infectious energy was everywhere!")
             .margin(.vertical, .medium)
         }
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
@@ -87,7 +87,7 @@ struct WWDC25: StaticLayout {
             Text("The Apple Keynote watch party felt less like a viewing and more like a premiere in a packed theater, buzzing with collective excitement. Afterward, I connected with Emil and Audrey, and we instantly bonded over lunch at Benihana, sharing stories as if we’d known each other for years.")
                 .margin(.vertical, .medium)
             
-            Text("The State of the Union session truly got my developer gears turning; the Foundation Model Framework was a definite crowd-pleaser and had direct implications for my app, \(Link("By Rule", target: ByRule())). Later, the Apple Intelligence Automators Meetup proved to be a lively group chat where Matthew, the Shortcuts guru, expertly fielded every question about App Intents and the future of action-centered design.")
+            Text("The State of the Union session got my developer gears turning; the Foundation Models Framework was a definite crowd-pleaser and had direct implications for my app, \(Link("By Rule", target: ByRule())). Later, the Apple Intelligence Automators Meetup proved to be a lively group chat where Matthew, the Shortcuts guru, expertly fielded every question about App Intents and the future of action-centered design.")
                 .margin(.vertical, .medium)
             
         }
@@ -155,7 +155,7 @@ struct WWDC25: StaticLayout {
         
         Card {
             
-            Text("\(Link("One More Thing", target: "https://omt-conf.com")) truly felt like the gift that kept on giving. The Shipping AI-powered apps with Firebase and Flutter talk was precisely what I needed, as I plan to leverage Flutter to expand my app's reach based on user feedback throughout my year officiating basketball. Turns out not everyone has an iPhone, who knew?!")
+            Text("\(Link("One More Thing", target: "https://omt-conf.com")) felt like the gift that kept on giving. The Shipping AI-powered apps with Firebase and Flutter talk was precisely what I needed, as I plan to leverage Flutter to expand my app's reach based on user feedback throughout my year officiating basketball. Turns out not everyone has an iPhone, who knew?!")
                 .margin(.vertical, .medium)
         }
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
@@ -192,7 +192,7 @@ struct WWDC25: StaticLayout {
         
         
         Card {
-            Text("During the Vibe Code & Chill session, I learned about new AI coding tools and even won Chris Eidhoff’s book, Thinking in SwiftUI, thanks to Harry challenging me to a little contest. Cursor is such a powerful tool. I also can’t wait to give Windsurf a try! ")
+            Text("During the Vibe Code & Chill session, I learned about new AI coding tools and even won Chris Eidhoff and Florain Kugler's book, Thinking in SwiftUI, thanks to Harry challenging me to a little contest. Cursor is such a powerful tool. I also can’t wait to give Windsurf a try! ")
                 .margin(.vertical, .medium)
             
             Text("My new friend Kenji opened my eyes to more insights than this paragraph can possibly hold; he truly is a genius. And I absolutely have to give a special shout-out to Abigail and Hans for not only showing interest in my app but also providing invaluable feedback on how I could level it up even further.")
