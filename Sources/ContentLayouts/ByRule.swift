@@ -10,18 +10,19 @@ import Ignite
 import SwiftUI
 
 struct ByRule: StaticLayout {
-    var title = "By Rule: Basketball Official"
+    var title = "By Rule"
     
     var body: some HTML {
         // By Rule Header
         Group {
-            Text("By Rule: Basketball Official 🏀")
+            Text("By Rule")
                 .font(.title2)
                 .fontWeight(.bold)
             
             Text("NCAA Rules Study & Quiz")
                 .font(.title3)
                 .fontWeight(.semibold)
+                .foregroundStyle(.secondary)
         }
         .padding(4)
         
@@ -38,7 +39,7 @@ struct ByRule: StaticLayout {
         // Own The Rules
         Card {
             // Long Version
-            Embed(title: "By Rule: Basketball Official - NCAA Rules Study & Quiz", url: URL(string: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRPromoLongVersion2.mp4?alt=media&token=3d78431f-ca2c-49bf-af56-38c11225b2ba")!)
+            Embed(title: "By Rule", url: URL(string: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRPromoLongVersion2.mp4?alt=media&token=3d78431f-ca2c-49bf-af56-38c11225b2ba")!)
                 .aspectRatio(.r16x9)
             
         } header: {
@@ -60,7 +61,7 @@ struct ByRule: StaticLayout {
                     .margin(.vertical, .medium)
             }
             
-            Text("By Rule: Basketball Official - NCAA Rules Study & Quiz")
+            Text("By Rule")
         }
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
         .background(.steelBlue.opacity(0.5))
@@ -85,7 +86,7 @@ struct ByRule: StaticLayout {
                 .font(.title4)
                 .margin(.vertical, .medium)
         } footer: {
-            Text("By Rule: Basketball Official is your all-in-one tool for mastering NCAA rules. It's not just an app—it's your companion, built by refs for refs, designed to grow with you from your first game to your thousandth.")
+            Text("By Rule is your all-in-one tool for mastering NCAA rules. It's not just an app—it's your companion, built by refs for refs, designed to grow with you from your first game to your thousandth.")
                 .lineSpacing(1.75)
                 .padding(6)
                 .fontWeight(.semibold)
@@ -715,7 +716,7 @@ struct ByRule: StaticLayout {
         } footer: {
            
             
-            Text("By Rule: Basketball Official - NCAA Rules Study & Quiz")
+            Text("By Rule")
         }
         .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
         .background(.steelBlue.opacity(0.5))
