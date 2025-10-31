@@ -39,7 +39,10 @@ struct ByRule: StaticLayout {
         // Own The Rules
         Card {
             // Long Version
-            Embed(title: "By Rule", url: URL(string: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRPromoLongVersion2.mp4?alt=media&token=3d78431f-ca2c-49bf-af56-38c11225b2ba")!)
+//            Embed(title: "By Rule", url: URL(string: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRPromoLongVersion2.mp4?alt=media&token=3d78431f-ca2c-49bf-af56-38c11225b2ba")!)
+//                .aspectRatio(.r16x9)
+            // 2025 Version
+            Embed(title: "By Rule", url: URL(string: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRPromo2025.mp4?alt=media&token=277b3344-5dd7-49f1-8c6a-e04104e6aa6a")!)
                 .aspectRatio(.r16x9)
             
         } header: {
