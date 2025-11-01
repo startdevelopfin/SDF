@@ -42,8 +42,12 @@ struct ByRule: StaticLayout {
 //            Embed(title: "By Rule", url: URL(string: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRPromo25.mp4?alt=media&token=de10aa29-cee1-450c-9a99-0114708149bb")!)
 //                .aspectRatio(.r16x9)
             // Version 2
-            Embed(title: "By Rule", url: URL(string: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRPROMO-PE.mp4?alt=media&token=3eaa9958-5fca-4bc1-90f2-08d86946ded1")!)
+            Embed(title: "By Rule", url: URL(string: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/25PromoBR.mp4?alt=media&token=d8948b75-c507-472e-bc3a-cbb366cc40dd")!)
                 .aspectRatio(.r16x9)
+            
+//            // Version 3
+//            Embed(title: "By Rule", url: URL(string: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRPROMO-PE.mp4?alt=media&token=3eaa9958-5fca-4bc1-90f2-08d86946ded1")!)
+//                .aspectRatio(.r16x9)
             
             
             
@@ -145,200 +149,148 @@ struct ByRule: StaticLayout {
         // Features
         Card {
             // Table
-            Card {
-                Carousel {
-                    Slide {
-                        Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRIndex.png?alt=media&token=328ecc96-4141-49b6-8a90-57093739abd3", description: "Index Rules")
-                            .resizable()
-                            .width(4)
-                            .margin(.vertical, .medium)
-                    }
-                    
-                    Slide {
-                        Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRHome2.png?alt=media&token=bd00503d-85da-46b2-bc67-68baf663869b", description: "Home")
-                            .resizable()
-                            .width(4)
-                            .margin(.vertical, .medium)
-                    }
-                    
-                    Slide {
-                        Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRFlashcards.png?alt=media&token=4315aa2a-cd75-4c43-aefa-f31487f06c8f", description: "Flashcard Notes")
-                            .resizable()
-                            .width(4)
-                            .margin(.vertical, .medium)
-                    }
-                    
-                    Slide {
-                        Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRAudio.png?alt=media&token=b0b35ed8-55eb-448e-975e-0565799b0957", description: "Audio Library")
-                            .resizable()
-                            .width(4)
-                            .margin(.vertical, .medium)
-                    }
-                    
-                    Slide {
-                        Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRVideo.png?alt=media&token=389c076d-cd48-42fc-b70c-c8b51961e3b3", description: "Video Library")
-                            .resizable()
-                            .width(4)
-                            .margin(.vertical, .medium)
-                    }
-                    
-                    Slide {
-                        Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRQuiz.png?alt=media&token=e9b7234b-6e2c-48cf-9cec-22741b61cfe7", description: "Quiz")
-                            .resizable()
-                            .width(4)
-                            .margin(.vertical, .medium)
-                    }
-                    
-                    Slide {
-                        Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRSearch.png?alt=media&token=d81968ce-8514-45d9-aa89-bea6bbd98d91", description: "Lightning Search")
-                            .resizable()
-                            .width(4)
-                            .margin(.vertical, .medium)
-                    }
-                    
-                    Slide {
-                        Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRPDF.png?alt=media&token=b627d5eb-a906-406d-9d9a-7a0e5fe86830", description: "PDF")
-                            .resizable()
-                            .width(4)
-                            .margin(.vertical, .medium)
-                    }
-                    
-                    Slide {
-                        Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRHome.png?alt=media&token=448cca4a-fa6e-488a-aff5-0a306c93d1bc", description: "Quick Start Module")
-                            .resizable()
-                            .width(4)
-                            .margin(.vertical, .medium)
-                    }
-                    
-                    Slide {
-                        Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRIncorrect.png?alt=media&token=e1717b6e-4be3-4fc9-ace5-d2d27457c062", description: "Incorrect Calls")
-                            .resizable()
-                            .width(4)
-                            .margin(.vertical, .medium)
-                    }
-                    
-                    Slide {
-                        Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRChart2.png?alt=media&token=d71eebec-4e4a-44c9-99e6-bc7425170b77", description: "Chart Detail")
-                            .resizable()
-                            .width(4)
-                            .margin(.vertical, .medium)
-                    }
-                    
-                    Slide {
-                        Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRRuleRank.png?alt=media&token=2a185fc4-9046-4b55-9d41-8235326cd48a", description: "Rule Rank")
-                            .resizable()
-                            .width(4)
-                            .margin(.vertical, .medium)
-                    }
-                    
-                    Slide {
-                        Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRSummary.png?alt=media&token=35fe7a9a-d86b-4b9c-b216-2237b58a7a5a", description: "Manu Quiz Summary")
-                            .resizable()
-                            .width(4)
-                            .margin(.vertical, .medium)
-                    }
-                    
-                    Slide {
-                        Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRBoxScore.png?alt=media&token=36ff5a9a-6ad3-477a-8e2a-21d4075c8517", description: "Score Card")
-                            .resizable()
-                            .width(4)
-                            .margin(.vertical, .medium)
-                    }
-                    
-                    Slide {
-                        Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRAnalytics.png?alt=media&token=35254985-5ea7-4d2e-ae7c-818cdf90162c", description: "Analytics Charts")
-                            .resizable()
-                            .width(4)
-                            .margin(.vertical, .medium)
-                    }
-                    
-                    Slide {
-                        Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRManu4.png?alt=media&token=8fb59063-855f-46de-83dd-8445a1c5e3f4", description: "Manu Verticality")
-                            .resizable()
-                            .width(4)
-                            .margin(.vertical, .medium)
-                    }
-                    
-                    Slide {
-                        Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRManu2.png?alt=media&token=7aaad391-ae07-4b32-8e8a-e7cedaf4124e", description: "Manu Chat")
-                            .resizable()
-                            .width(4)
-                            .margin(.vertical, .medium)
-                    }
-                    
-                    Slide {
-                        Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRAnalyticSummary.png?alt=media&token=62da4096-0ab9-4813-a6b5-a3079a96f14b", description: "Manu Analytic Summary")
-                            .resizable()
-                            .width(4)
-                            .margin(.vertical, .medium)
-                        
-                    }
-
-                }
-                .carouselStyle(.crossfade)
-                .margin(.vertical, .medium)
-            }
-            .margin(.vertical, .large)
-            .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
-            
-        } header: {
-            Text("Dynamic Learning 🧠")
-                .font(.title4)
-                .margin(.top, .large)
-                .margin(.bottom, .large)
-
-            
-        } footer: {
+//            Card {
+//                Carousel {
+//                    Slide {
+//                        Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRIndex.png?alt=media&token=328ecc96-4141-49b6-8a90-57093739abd3", description: "Index Rules")
+//                            .resizable()
+//                            .width(4)
+//                            .margin(.vertical, .medium)
+//                    }
+//                    
+//                    Slide {
+//                        Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRHome2.png?alt=media&token=bd00503d-85da-46b2-bc67-68baf663869b", description: "Home")
+//                            .resizable()
+//                            .width(4)
+//                            .margin(.vertical, .medium)
+//                    }
+//                    
+//                    Slide {
+//                        Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRFlashcards.png?alt=media&token=4315aa2a-cd75-4c43-aefa-f31487f06c8f", description: "Flashcard Notes")
+//                            .resizable()
+//                            .width(4)
+//                            .margin(.vertical, .medium)
+//                    }
+//                    
+//                    Slide {
+//                        Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRAudio.png?alt=media&token=b0b35ed8-55eb-448e-975e-0565799b0957", description: "Audio Library")
+//                            .resizable()
+//                            .width(4)
+//                            .margin(.vertical, .medium)
+//                    }
+//                    
+//                    Slide {
+//                        Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRVideo.png?alt=media&token=389c076d-cd48-42fc-b70c-c8b51961e3b3", description: "Video Library")
+//                            .resizable()
+//                            .width(4)
+//                            .margin(.vertical, .medium)
+//                    }
+//                    
+//                    Slide {
+//                        Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRQuiz.png?alt=media&token=e9b7234b-6e2c-48cf-9cec-22741b61cfe7", description: "Quiz")
+//                            .resizable()
+//                            .width(4)
+//                            .margin(.vertical, .medium)
+//                    }
+//                    
+//                    Slide {
+//                        Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRSearch.png?alt=media&token=d81968ce-8514-45d9-aa89-bea6bbd98d91", description: "Lightning Search")
+//                            .resizable()
+//                            .width(4)
+//                            .margin(.vertical, .medium)
+//                    }
+//                    
+//                    Slide {
+//                        Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRPDF.png?alt=media&token=b627d5eb-a906-406d-9d9a-7a0e5fe86830", description: "PDF")
+//                            .resizable()
+//                            .width(4)
+//                            .margin(.vertical, .medium)
+//                    }
+//                    
+//                    Slide {
+//                        Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRHome.png?alt=media&token=448cca4a-fa6e-488a-aff5-0a306c93d1bc", description: "Quick Start Module")
+//                            .resizable()
+//                            .width(4)
+//                            .margin(.vertical, .medium)
+//                    }
+//                    
+//                    Slide {
+//                        Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRIncorrect.png?alt=media&token=e1717b6e-4be3-4fc9-ace5-d2d27457c062", description: "Incorrect Calls")
+//                            .resizable()
+//                            .width(4)
+//                            .margin(.vertical, .medium)
+//                    }
+//                    
+//                    Slide {
+//                        Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRChart2.png?alt=media&token=d71eebec-4e4a-44c9-99e6-bc7425170b77", description: "Chart Detail")
+//                            .resizable()
+//                            .width(4)
+//                            .margin(.vertical, .medium)
+//                    }
+//                    
+//                    Slide {
+//                        Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRRuleRank.png?alt=media&token=2a185fc4-9046-4b55-9d41-8235326cd48a", description: "Rule Rank")
+//                            .resizable()
+//                            .width(4)
+//                            .margin(.vertical, .medium)
+//                    }
+//                    
+//                    Slide {
+//                        Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRSummary.png?alt=media&token=35fe7a9a-d86b-4b9c-b216-2237b58a7a5a", description: "Manu Quiz Summary")
+//                            .resizable()
+//                            .width(4)
+//                            .margin(.vertical, .medium)
+//                    }
+//                    
+//                    Slide {
+//                        Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRBoxScore.png?alt=media&token=36ff5a9a-6ad3-477a-8e2a-21d4075c8517", description: "Score Card")
+//                            .resizable()
+//                            .width(4)
+//                            .margin(.vertical, .medium)
+//                    }
+//                    
+//                    Slide {
+//                        Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRAnalytics.png?alt=media&token=35254985-5ea7-4d2e-ae7c-818cdf90162c", description: "Analytics Charts")
+//                            .resizable()
+//                            .width(4)
+//                            .margin(.vertical, .medium)
+//                    }
+//                    
+//                    Slide {
+//                        Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRManu4.png?alt=media&token=8fb59063-855f-46de-83dd-8445a1c5e3f4", description: "Manu Verticality")
+//                            .resizable()
+//                            .width(4)
+//                            .margin(.vertical, .medium)
+//                    }
+//                    
+//                    Slide {
+//                        Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRManu2.png?alt=media&token=7aaad391-ae07-4b32-8e8a-e7cedaf4124e", description: "Manu Chat")
+//                            .resizable()
+//                            .width(4)
+//                            .margin(.vertical, .medium)
+//                    }
+//                    
+//                    Slide {
+//                        Image("https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRAnalyticSummary.png?alt=media&token=62da4096-0ab9-4813-a6b5-a3079a96f14b", description: "Manu Analytic Summary")
+//                            .resizable()
+//                            .width(4)
+//                            .margin(.vertical, .medium)
+//                        
+//                    }
+//
+//                }
+//                .carouselStyle(.crossfade)
+//                .margin(.vertical, .medium)
+//            }
+//            .margin(.vertical, .large)
+//            .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
             Card {
                 Table {
                     Row {
-                        Text("🗂️ Index to Rules")
+                        Text("📖 Official NCAA Rules")
                             .font(.title5)
                             .fontWeight(.bold)
-                        Text("Glossary terms at your fingertips.")
-                            .fontWeight(.semibold)
-                    }
-
-                    Row {
-                        Text("ℹ️ Rules Center")
-                            .font(.title5)
-                            .fontWeight(.bold)
-                        Text("For quick reference of major concerns and procedures.")
-                            .fontWeight(.semibold)
-                    }
-
-                    
-                    Row {
-                        Text("📝 Interactive Flashcards")
-                            .font(.title5)
-                            .fontWeight(.bold)
-                        Text("300+ cards from seasoned officials—flip, learn, repeat.")
-                            .fontWeight(.semibold)
-                    }
-                
-                    Row {
-                        Text("🎧 Audio Rules")
-                            .font(.title5)
-                            .fontWeight(.bold)
-                        
-                        Text("Rules on the go—learn while you drive or sweat.")
-                            .fontWeight(.semibold)
-                    }
-                    
-                    
-                    Row {
-                        Text("🎥 Video Training Library")
-                            .font(.title5)
-                            .fontWeight(.bold)
-                        Text("Learn officiating mechanics, step by step. Men's and Women's video review.")
-                            .fontWeight(.semibold)
-                    }
-                    
-                    Row {
-                        Text("✅ Challenging Quizzes")
-                            .font(.title5)
-                            .fontWeight(.bold)
-                        Text("Real scenarios, real pressure—be game-ready.")
+                        Text("The full Men's and Women's rules books, searchable with query highlighting, always at hand.")
                             .fontWeight(.semibold)
                     }
                     
@@ -351,10 +303,18 @@ struct ByRule: StaticLayout {
                     }
                     
                     Row {
-                        Text("📖 Official NCAA Rules")
+                        Text("ℹ️ Rules Center")
                             .font(.title5)
                             .fontWeight(.bold)
-                        Text("The full Men's and Women's rules books, searchable with query highlighting, always at hand.")
+                        Text("For quick reference of major concerns and procedures.")
+                            .fontWeight(.semibold)
+                    }
+                    
+                    Row {
+                        Text("🗂️ Index to Rules")
+                            .font(.title5)
+                            .fontWeight(.bold)
+                        Text("Glossary terms at your fingertips.")
                             .fontWeight(.semibold)
                     }
                     
@@ -367,10 +327,83 @@ struct ByRule: StaticLayout {
                             .fontWeight(.semibold)
                     }
                     
+                    Row {
+                        Text("📝 Enhanced Notes")
+                            .font(.title5)
+                            .fontWeight(.bold)
+                        
+                        Text("Save, Tag, Favorite, Search and Review")
+                            .fontWeight(.semibold)
+                    }
+
+                    
+                    Row {
+                        Text("🧠 Flashcards")
+                            .font(.title5)
+                            .fontWeight(.bold)
+                        Text("300+ cards from seasoned officials—flip, learn, repeat.")
+                            .fontWeight(.semibold)
+                    }
+                    
+                    Row {
+                        Text("✅ Challenging Quizzes")
+                            .font(.title5)
+                            .fontWeight(.bold)
+                        Text("Real scenarios, real pressure—be game-ready.")
+                            .fontWeight(.semibold)
+                    }
+                    
+                    Row {
+                        Text("💥 Dynamic Study")
+                            .font(.title5)
+                            .fontWeight(.bold)
+                        Text("New formats, new questons-keep your brain engaged.")
+                            .fontWeight(.semibold)
+                    }
+                
+                    Row {
+                        Text("🎧 Audio Rules")
+                            .font(.title5)
+                            .fontWeight(.bold)
+                        
+                        Text("Professional narration, clear and concise.")
+                            .fontWeight(.semibold)
+                    }
+                    
+                    
+                    Row {
+                        Text("🎥 Video Training Library")
+                            .font(.title5)
+                            .fontWeight(.bold)
+                        Text("Learn officiating mechanics, step by step.")
+                            .fontWeight(.semibold)
+                    }
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                 }
             }
             .margin(.vertical, .large)
             .border(.black, width: 6, style: .solid, cornerRadii: .init(12), edges: .all)
+            
+        } header: {
+            Text("Dynamic Learning 🧠")
+                .font(.title4)
+                .margin(.top, .large)
+                .margin(.bottom, .large)
+
+            
+        } footer: {
+            Text("There's never been a more robust app for targeted rules study. By Rule stands alone as the premier resource to help you rule the game.")
+                .padding(6)
+                .lineSpacing(1.75)
+                .font(.title5)
+                .fontWeight(.semibold)
+                .margin(.vertical, .medium)
         }
         .clipped()
         .cornerRadius(12)
@@ -402,7 +435,7 @@ struct ByRule: StaticLayout {
            
         } footer: {
            
-            Text("By Rule is constantly evolving—built for officials who want more. Support for the women's game is finally here! The latest release includes PDF search + highlighting, indexed rules, and video mechanics review tailored for women’s college basketball. Stay tuned as more updates roll out!")
+            Text("By Rule is constantly evolving—built for officials who want more. Support for the women's game is finally here! Can you master both rule sets?")
                 .padding(6)
                 .lineSpacing(1.75)
                 .font(.title5)
@@ -712,7 +745,7 @@ struct ByRule: StaticLayout {
                 .font(.title4)
                 .margin(.top, .large)
             
-            Text("Ready to take control of your learning? Download By Rule to unlock your full potential. Track what sticks, fix what slips, and grow into the college basketball aficionado you're meant to be!")
+            Text("Ready to take control of your learning? By Rule is the #1 app for officials, coaches, players, and fans. Track what sticks, fix what slips, and grow into the college basketball aficionado you're meant to be!")
                 .padding(6)
                 .lineSpacing(1.75)
                 .font(.title5)
