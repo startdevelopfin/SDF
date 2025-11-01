@@ -38,12 +38,14 @@ struct ByRule: StaticLayout {
         
         // Own The Rules
         Card {
-            // Long Version
-//            Embed(title: "By Rule", url: URL(string: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRPromoLongVersion2.mp4?alt=media&token=3d78431f-ca2c-49bf-af56-38c11225b2ba")!)
+            // Version 1
+//            Embed(title: "By Rule", url: URL(string: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRPromo25.mp4?alt=media&token=de10aa29-cee1-450c-9a99-0114708149bb")!)
 //                .aspectRatio(.r16x9)
-            // 2025 Version
-            Embed(title: "By Rule", url: URL(string: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRPromo25.mp4?alt=media&token=de10aa29-cee1-450c-9a99-0114708149bb")!)
+            // Version 2
+            Embed(title: "By Rule", url: URL(string: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/2025BRPROMO.mp4?alt=media&token=0060d508-4f9a-4bed-ad93-81a14d0bb6df")!)
                 .aspectRatio(.r16x9)
+            
+            
             
         } header: {
             Text("Own the Rules, Rule the Game 🤩")
