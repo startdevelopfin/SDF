@@ -42,7 +42,7 @@ struct ByRule: StaticLayout {
 //            Embed(title: "By Rule", url: URL(string: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRPromo25.mp4?alt=media&token=de10aa29-cee1-450c-9a99-0114708149bb")!)
 //                .aspectRatio(.r16x9)
             // Version 2
-            Embed(title: "By Rule", url: URL(string: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/2025BRPROMO.mp4?alt=media&token=0060d508-4f9a-4bed-ad93-81a14d0bb6df")!)
+            Embed(title: "By Rule", url: URL(string: "https://firebasestorage.googleapis.com/v0/b/by-rule-90fbd.appspot.com/o/BRPROMO-PE.mp4?alt=media&token=3eaa9958-5fca-4bc1-90f2-08d86946ded1")!)
                 .aspectRatio(.r16x9)
             
             
