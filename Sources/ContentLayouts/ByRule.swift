@@ -57,7 +57,7 @@ struct ByRule: StaticLayout {
                 .fontWeight(.bold)
                 .margin(.top, .large)
             
-            Text("By Rule is the premier study tool for anyone looking to engage NCAA basketball rules.")
+            Text("By Rule is the premier study tool for officials, coaches, players, and fans looking to engage NCAA basketball rules.")
                 .lineSpacing(1.75)
                 .padding(6)
                 .font(.title5)
@@ -95,7 +95,7 @@ struct ByRule: StaticLayout {
                 .font(.title4)
                 .margin(.vertical, .medium)
         } footer: {
-            Text("By Rule is your all-in-one tool for mastering NCAA rules. It's not just an app—it's your companion, built by refs for refs, designed to grow with you from your first game to your thousandth.")
+            Text("It's not just an app—it's your rules learning companion, built by refs for refs, designed to grow with you from your first game to your thousandth.")
                 .lineSpacing(1.75)
                 .padding(6)
                 .fontWeight(.semibold)
@@ -131,7 +131,7 @@ struct ByRule: StaticLayout {
 
         } footer: {
             
-            Text("This app is expertly designed to elevate your officiating knowledge and confidence using pointed training resources. Whether you're a rookie stepping onto the court or a seasoned vet, By Rule has what you need to succeed. Ready to see how it works?")
+            Text("Whether you're a rookie stepping onto the court or a seasoned vet, By Rule has what you need to succeed. Ready to see how it works?")
                 .padding(6)
                 .lineSpacing(1.75)
                 .font(.title5)
@@ -398,7 +398,7 @@ struct ByRule: StaticLayout {
 
             
         } footer: {
-            Text("There's never been a more robust app for targeted rules study. By Rule stands alone as the premier resource to help you rule the game.")
+            Text("This app is expertly designed to elevate your officiating knowledge and confidence using pointed training resources.")
                 .padding(6)
                 .lineSpacing(1.75)
                 .font(.title5)
@@ -462,7 +462,7 @@ struct ByRule: StaticLayout {
                 .margin(.vertical, .medium)
             
         } footer: {
-            Text("Struggling with Rule 4? Your personalized user Analytics will spot it. Then, use Spotlight modes to bridge learning gaps. Manu, your AI rules guru, can clear up any other calls on the fly.")
+            Text("Struggling with Rule 4? Your personalized user Analytics will spot it. Then, use Spotlight modes to bridge learning gaps.")
                 .padding()
                 .lineSpacing(1.75)
                 .font(.title5)
@@ -487,7 +487,7 @@ struct ByRule: StaticLayout {
                 .margin(.top, .large)
                 .margin(.bottom, .large)
         } footer: {
-            Text("When the game moves fast, Manu keeps you ahead of the play. Built into By Rule, Manu can deliver instant, no-nonsense answers—straight from the NCAA rulebook while it guides you to better decisions. It's like having a rules assistant in your pocket.")
+            Text("Built into By Rule, Manu can deliver instant, no-nonsense answers—straight from the NCAA rulebook and guide you to better decisions. It's like having a rules assistant in your pocket.")
                 .padding(6)
                 .lineSpacing(1.75)
                 .font(.title5)
@@ -520,7 +520,7 @@ struct ByRule: StaticLayout {
 
         } footer: {
             
-            Text("By Rule turns your effort into insight, tracking every quiz, flashcard, and second you put in. No mystery here—just your hustle, your analytics, and Manu's genius, all working together to make you unstoppable.")
+            Text("By Rule turns your effort into insight. No mystery here—just your hustle, your analytics, and Manu's genius, all working together to make you unstoppable.")
                 .padding(6)
                 .lineSpacing(1.75)
                 .font(.title5)
@@ -745,7 +745,7 @@ struct ByRule: StaticLayout {
                 .font(.title4)
                 .margin(.top, .large)
             
-            Text("Ready to take control of your learning? By Rule is the #1 app for officials, coaches, players, and fans. Track what sticks, fix what slips, and grow into the college basketball aficionado you're meant to be!")
+            Text("By Rule stands alone as the premier resource to help you rule the game. There's never been a more robust app for targeted rules study. Are you ready to take control of your learning? Track what sticks, fix what slips, and grow into the college basketball aficionado you're meant to be!")
                 .padding(6)
                 .lineSpacing(1.75)
                 .font(.title5)
