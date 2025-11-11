@@ -11,7 +11,7 @@ import Ignite
 struct WWDC25: StaticLayout {
     var title = "WWDC 25 💧"
     var author = "Daniel J. Aupont"
-    var description = "In this post, I share my experience travleling to Cupertino for WWDC 25. I highlight events I attended and emphasize the power of community."
+    var description = "In this post, I share my experience traveling to Cupertino for WWDC 25. I highlight events I attended and emphasize the power of community."
     var date = "2025-06-14 14:55"
     var tags = ["WWDC25", "CommunityKit", "One More Thing", "Article"]
     var published = true
