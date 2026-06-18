@@ -9,7 +9,7 @@ import Foundation
 import Ignite
 
 struct WWDC26: StaticLayout {
-    var title = "WWDC 26 💧"
+    var title = "WWDC 26 🎟️"
     var author = "Daniel J. Aupont"
     var description = "In this post, I share my experience returning to Cupertino for WWDC 26. I highlight members of the community and more."
     var date = "2026-06-15 14:55"
