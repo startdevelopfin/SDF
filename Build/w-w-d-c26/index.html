@@ -1,0 +1,538 @@
+<!doctype html>
+<html data-bs-theme="auto" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="In this post, I share my experience returning to Cupertino for WWDC 26. I highlight members of the community and more." name="description" />
+    <meta content="Daniel J. Aupont" name="author" />
+    <meta content="Ignite v0.2.1" name="generator" />
+    <title>WWDC 26 💧 – Swift Blog Site</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/prism-xcode-dark.css" rel="stylesheet" data-highlight-theme="xcode-dark" />
+    <link href="/css/prism-xcode-light.css" rel="stylesheet" data-highlight-theme="xcode-light" />
+    <link href="/css/prism-plugins.css" rel="stylesheet" />
+    <link href="/css/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="/css/ignite-core.min.css" rel="stylesheet" />
+    <link href="https://startdevelopfinish.com/w-w-d-c26" rel="canonical" />
+    <script>(function() {
+    function getThemePreference() {
+        return localStorage.getItem('custom-theme') || 'auto';
+    }
+
+    function applyTheme(themeID) {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const lightThemeID = document.documentElement.getAttribute('data-light-theme') || 'light';
+        const darkThemeID = document.documentElement.getAttribute('data-dark-theme') || 'dark';
+        const actualThemeID = themeID === 'auto' ? (prefersDark ? darkThemeID : lightThemeID) : themeID;
+
+        document.documentElement.setAttribute('data-bs-theme', actualThemeID);
+        document.documentElement.setAttribute('data-theme-state', themeID);
+    }
+
+    function applySyntaxTheme() {
+        const syntaxTheme = getComputedStyle(document.documentElement)
+            .getPropertyValue('--syntax-highlight-theme').trim().replace(/"/g, '');
+
+        if (!syntaxTheme) return;
+
+        document.querySelectorAll('link[data-highlight-theme]').forEach(link => {
+            link.setAttribute('disabled', 'disabled');
+        });
+
+        const themeLink = document.querySelector(`link[data-highlight-theme="${syntaxTheme}"]`);
+        if (themeLink) {
+            themeLink.removeAttribute('disabled');
+        }
+    }
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        const currentTheme = getThemePreference();
+        if (currentTheme === 'auto') {
+            applyTheme('auto');
+            applySyntaxTheme();
+        }
+    });
+
+    const savedTheme = getThemePreference();
+    applyTheme(savedTheme);
+    applySyntaxTheme();
+})();
+</script>
+    <meta content="Start. Develop. Finish." property="og:site_name" />
+    <meta content="WWDC 26 💧" property="og:title" />
+    <meta content="WWDC 26 💧" name="twitter:title" />
+    <meta content="In this post, I share my experience returning to Cupertino for WWDC 26. I highlight members of the community and more." property="og:description" />
+    <meta content="In this post, I share my experience returning to Cupertino for WWDC 26. I highlight members of the community and more." name="twitter:description" />
+    <meta content="https://startdevelopfinish.com/w-w-d-c26" property="og:url" />
+    <meta content="startdevelopfinish.com" name="twitter:domain" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="on" name="twitter:dnt" />
+  </head>
+  <body class="container">
+    <header>
+      <nav class="fixed-top navbar navbar-expand-md" style="background-color: rgb(0 0 0 / 100%)" data-bs-theme="dark">
+        <div class="container">
+          <a href="/" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover navbar-brand"><p class="mb-0">Start. <span style="color: #6B8E23;">Develop</span>. Finish.</p></a>
+          <button type="button" class="btn navbar-toggler" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="col justify-content-end mb-2 mb-md-0 navbar-nav">
+              <li class="dropdown nav-item" data-bs-theme="light"><a href="#" role="button" class="dropdown dropdown-toggle link-underline link-underline-opacity-100 link-underline-opacity-100-hover nav-link" data-bs-toggle="dropdown" aria-expanded="false">App Store</a>
+                <ul class="dropdown dropdown-menu">
+                  <li><a href="/by-rule" class="dropdown-item link-underline link-underline-opacity-100 link-underline-opacity-100-hover">By Rule</a></li>
+                </ul></li>
+              <li class="dropdown nav-item" data-bs-theme="light"><a href="#" role="button" class="dropdown dropdown-toggle link-underline link-underline-opacity-100 link-underline-opacity-100-hover nav-link" data-bs-toggle="dropdown" aria-expanded="false">Info</a>
+                <ul class="dropdown dropdown-menu">
+                  <li><a href="/about" class="dropdown-item link-underline link-underline-opacity-100 link-underline-opacity-100-hover">About</a></li>
+                </ul></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="row">
+      <div class="col-md-9">
+        <div style="padding-bottom: 80px; padding-top: 80px">
+          <h1 class="my-4">WWDC 26</h1>
+          <div class="card my-3" style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px">
+            <div class="card-body">
+              <p class="card-text my-3">Apple invites developers from around the world for informative talks and interactive mixers during WWDC.</p>
+            </div>
+          </div>
+          <div class="card my-5" style="background-color: rgb(30 144 255 / 60%); border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset">
+            <div class="card-header">
+              <h3 class="my-3">TLDR</h3>
+            </div>
+            <div class="card-body">
+              <div class="my-4 ratio ratio-16x9" style="background-color: rgb(143 188 143 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+                <img alt="" src="/images/photos/WWDC26Swag.png" class="img-fluid object-fit-contain" />
+              </div>
+            </div>
+            <div class="card-footer text-body-secondary">
+              <p class="my-3">In case you are short on time, here are 5 Key Takeaways from my time at WWDC 26.</p>
+            </div>
+          </div>
+          <div class="card my-3" style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px">
+            <div class="card-body">
+              <p class="card-text my-2">1. The campus is pristine, teams are engaging, and food is top-notch.</p>
+            </div>
+          </div>
+          <div class="card my-3" style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px">
+            <div class="card-body">
+              <p class="card-text my-2">2. The Community Kit team goes above and beyond to ensure you walk away feeling informed and inspired.</p>
+            </div>
+          </div>
+          <div class="card my-3" style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px">
+            <div class="card-body">
+              <p class="card-text my-2">3. Networking is an integral part of WWDC due to the global makeup of attendees. Leave no stone unturned.</p>
+            </div>
+          </div>
+          <div class="card my-3" style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px">
+            <div class="card-body">
+              <p class="card-text my-2">4. Register early. Some meetups can reach capacity quickly.</p>
+            </div>
+          </div>
+          <div class="card my-3" style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px">
+            <div class="card-body">
+              <p class="card-text my-2">5. Consider taking pictures and videos to celebrate the moments and create lasting memories.</p>
+            </div>
+          </div>
+          <div class="card my-5" style="background-color: rgb(178 34 34 / 60%); border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset">
+            <div class="card-header">
+              <h3 class="my-3">On Site</h3>
+            </div>
+            <div class="card-body">
+              <div class="my-4 ratio ratio-16x9" style="background-color: rgb(143 188 143 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+                <img alt="" src="/images/photos/WWDC26Sign.png" class="img-fluid object-fit-contain" />
+              </div>
+            </div>
+            <div class="card-footer text-body-secondary">
+              <p class="my-3">This year I got a chance to see how the proverbial sausage was made.</p>
+            </div>
+          </div>
+          <div class="card my-3" style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px">
+            <div class="card-body">
+              <p class="card-text my-3">When I received the invitation from Apple to attend WWDC 26, I decided to approach it like a journalist, determined to look past the corporate veneer and discover what actually made this event special.</p>
+            </div>
+          </div>
+          <div class="card my-5" style="background-color: rgb(0 139 139 / 60%); border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset">
+            <div class="card-header">
+              <h3 class="my-3">First Impressions</h3>
+            </div>
+            <div class="card-body">
+              <div class="my-4 ratio ratio-16x9" style="background-color: rgb(143 188 143 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+                <img alt="" src="/images/photos/WWDC26WelcomeTeam.png" class="img-fluid object-fit-contain" />
+              </div>
+            </div>
+            <div class="card-footer text-body-secondary">
+              <p class="my-3">We were surrounded by the welcome team, brimming with energy. Every team member greeted us warmly, pointed us in the right direction, and sparked up conversation to keep the vibes high.</p>
+            </div>
+          </div>
+          <div class="card my-3" style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px">
+            <div class="card-body">
+              <p class="card-text my-3">The welcome team provided drinks and snacks for attendees and even led dub-dub chants. Apple certainly passed the first impression test.</p>
+            </div>
+          </div>
+          <div class="card my-5" style="background-color: rgb(72 61 139 / 60%); border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset">
+            <div class="card-header">
+              <h3 class="my-3">Checkpoint</h3>
+            </div>
+            <div class="card-body">
+              <div class="my-4 ratio ratio-4x3" style="background-color: rgb(143 188 143 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+                <img alt="" src="/images/photos/WWDC26Map.png" class="img-fluid object-fit-contain" />
+              </div>
+            </div>
+            <div class="card-footer text-body-secondary">
+              <p class="my-3">Engineers from all over lined up to pin their locations on the world map based on years of experience.</p>
+            </div>
+          </div>
+          <div class="card my-3" style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px">
+            <div class="card-body">
+              <p class="card-text my-3">I was early, so the map wasn't full yet, but I still managed to find a pin near central Florida and couldn't believe it!</p>
+            </div>
+          </div>
+          <div class="card my-5" style="background-color: rgb(85 107 47 / 60%); border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset">
+            <div class="card-header">
+              <h3 class="my-3">The Inside Scoop</h3>
+            </div>
+            <div class="card-body">
+              <div class="my-4 ratio ratio-4x3" style="background-color: rgb(143 188 143 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+                <img alt="" src="/images/photos/WWDC26Friends4.png" class="img-fluid object-fit-contain" />
+              </div>
+            </div>
+            <div class="card-footer text-body-secondary">
+              <p class="my-3">Mickael, a Senior iOS Developer and conference veteran, kindly offered pro-tips to help me maximize my time. His first tip: show up early for the Keynote queue. Seating at Apple Park is plentiful, but the early birds get the worm; canopy seats and proximity to the stage for an optimal viewing experience.</p>
+            </div>
+          </div>
+          <div class="card my-3" style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px">
+            <div class="card-body">
+              <p class="card-text my-3">I look forward to connecting with him again!</p>
+            </div>
+          </div>
+          <div class="card my-5" style="background-color: rgb(178 34 34 / 60%); border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset">
+            <div class="card-header">
+              <h3 class="my-3">The Infinite Queue</h3>
+            </div>
+            <div class="card-body">
+              <div class="my-4 ratio ratio-16x9" style="background-color: rgb(143 188 143 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+                <img alt="" src="/images/photos/WWDC26Line.png" class="img-fluid object-fit-cover" />
+              </div>
+            </div>
+            <div class="card-footer text-body-secondary">
+              <p class="my-3">Pictured here is a pod of golden ticket holders awaiting entry for the WWDC 26 Keynote. The raw buzz of collective anticipation was palpable. I struck up a conversation with a man standing in front of me, not knowing he was a Staff iOS Developer who works for the NBA!</p>
+            </div>
+          </div>
+          <div class="card my-3" style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px">
+            <div class="card-body">
+              <p class="card-text my-3">Establishing common ground with attendees as a college basketball official who builds software can be challenging. I was reminded that the best networking at WWDC doesn't always happen during scheduled mixers; it can happen randomly while you're rubbing sleep from your eyes.</p>
+            </div>
+          </div>
+          <div class="card my-5" style="background-color: rgb(30 144 255 / 60%); border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset">
+            <div class="card-header">
+              <h3 class="my-3">Bon App-etite</h3>
+            </div>
+            <div class="card-body">
+              <div class="my-4 ratio ratio-4x3" style="background-color: rgb(143 188 143 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+                <img alt="" src="/images/photos/WWDC26Food.png" class="img-fluid object-fit-contain" />
+              </div>
+            </div>
+            <div class="card-footer text-body-secondary">
+              <p class="my-3">Treating this event like a journalist meant paying attention to minor details that go overlooked. After the wait, we shuffled into the park, claimed our seats under the shade, and set off for refreshments. The space was large, and the atmosphere was lively. The cafe was clean, the drinks were health-conscious and freshly made, and the food was beautifully plated. When it came to coffee, I opted for a custom machine featuring a spout connected to an iPad interface.</p>
+            </div>
+          </div>
+          <div class="card my-3" style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px">
+            <div class="card-body">
+              <p class="card-text my-3">The human element also made the cafe experience a lot of fun. I casually mentioned to my friend Harry and a few developers that I had been learning Chinese on Duolingo. They jumped at the opportunity to hear what I knew and teach me new phrases. Next year I hope to be fluent. Xièxiè!</p>
+            </div>
+          </div>
+          <div class="card my-5" style="background-color: rgb(72 61 139 / 60%); border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset">
+            <div class="card-header">
+              <h3 class="my-3">The Interactive Playground</h3>
+            </div>
+            <div class="card-body">
+              <div class="my-4 ratio ratio-4x3" style="background-color: rgb(143 188 143 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+                <img alt="" src="/images/photos/WWDC26WallOfApps2.png" class="img-fluid object-fit-contain" />
+              </div>
+            </div>
+            <div class="card-footer text-body-secondary">
+              <p class="my-3">That lighthearted energy turned into surreal validation when I discovered the iconic Wall of Apps and saw my app, <a href="/by-rule" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover">By Rule</a>! As I stood there, I felt a sense of accomplishment.</p>
+            </div>
+          </div>
+          <div class="card my-3" style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px">
+            <div class="card-body">
+              <p class="card-text my-3">A project that started as a simple, personal tool to help me improve as a college basketball official was suddenly being displayed on a wall at Apple for everyone to see. At this point, I wasn't just an attendee; I was a part of the conference!</p>
+            </div>
+          </div>
+          <div class="card my-3" style="background-color: rgb(46 139 87 / 60%); border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset">
+            <div class="card-header">
+              <h3 class="my-3">Not So Quiet on Set</h3>
+            </div>
+            <div class="card-body">
+              <div class="my-4 ratio ratio-4x3" style="background-color: rgb(143 188 143 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+                <img alt="" src="/images/photos/WWDC26Keynote.png" class="img-fluid object-fit-contain" />
+              </div>
+            </div>
+            <div class="card-footer text-body-secondary">
+              <p class="my-3">Every detail of the event seemed carefully crafted. The canopy above let warm light through while keeping us cool under the Cupertino sun. Lining the artificial grass were high-end director's chairs which featured solid blonde wood frames paired with a minimalist canvas sling seat. The aesthetic made me feel like I was on set for a movie. The crowd was packed and buzzing with excitement. I took a seat and tried to process it all.</p>
+            </div>
+          </div>
+          <div class="card my-3" style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px">
+            <div class="card-body">
+              <p class="card-text my-3">Then, the moment of truth. We got to see Tim Cook run out on stage to deliver his trademark Good morning!, for the final time.</p>
+            </div>
+          </div>
+          <div class="card my-5" style="background-color: rgb(220 20 60 / 60%); border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset">
+            <div class="card-header">
+              <h3 class="my-3">Good...bye</h3>
+            </div>
+            <div class="card-body">
+              <div class="my-4 ratio ratio-4x3" style="background-color: rgb(143 188 143 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+                <img alt="" src="/images/photos/WWDC26TimCook.png" class="img-fluid object-fit-contain" />
+              </div>
+            </div>
+            <div class="card-footer text-body-secondary">
+              <p class="my-3">I won't delve too deep into the tech announcements because there wasn’t much to get excited about. The oohs and ahhs from the audience were infrequent this year. In fact, the group I was sitting with let out a few audible groans at certain points during the presentation, proving that developers are a notoriously tough crowd to please when balancing consumer hype with developer realities. I am withholding judgement, however. This was probably a gap year as we prepare for the transition into the John Ternus era.</p>
+            </div>
+          </div>
+          <div class="card my-3" style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px">
+            <div class="card-body">
+              <p class="card-text my-3">The true emotional peak of the Keynote didn't come from a software feature or a new hardware spec. When the presentation shifted to honor the global members driving innovation and positive sentiment within the developer ecosystem, the giant screen lit up with a massive grid of familiar faces.</p>
+            </div>
+          </div>
+          <div class="card my-3" style="background-color: rgb(0 139 139 / 60%); border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset">
+            <div class="card-header">
+              <h3 class="my-3">Community</h3>
+            </div>
+            <div class="card-body">
+              <div class="my-4 ratio ratio-16x9" style="background-color: rgb(143 188 143 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+                <img alt="" src="/images/photos/WWDC26Community.png" class="img-fluid object-fit-cover" />
+              </div>
+            </div>
+            <div class="card-footer text-body-secondary">
+              <p class="my-3">The grid included leaders in open-source tools, people who organize events, write tutorials, mentor others, and create spaces for learning. Their contributions make it easy for aspiring developers who want to build cool stuff and meet like-minded people. Do you see anyone you know?</p>
+            </div>
+          </div>
+          <div class="card my-3" style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px">
+            <div class="card-body">
+              <p class="card-text my-3">I was sitting right next to my friend Rudrank when he saw his face appear on the screen. When prompted to stand and be recognized, I captured the moment and his candid reaction.</p>
+            </div>
+          </div>
+          <div class="card my-5" style="background-color: rgb(30 144 255 / 60%); border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset">
+            <div class="card-header">
+              <h3 class="my-3">Spotlight</h3>
+            </div>
+            <div class="card-body">
+              <div class="my-4 ratio ratio-16x9" style="background-color: rgb(143 188 143 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+                <img alt="" src="/images/photos/WWDC26Friends3.png" class="img-fluid object-fit-cover" />
+              </div>
+            </div>
+            <div class="card-footer text-body-secondary">
+              <p class="my-3">The time and effort Rudrank dedicates to serving the Apple community was instantly validated on the grandest stage. His face completely lit up as the crowd broke into a raucous, deafening applause. Seeing that wave of pure emotion sweep over him was awesome. It buttressed the point I made last year: while coding might bring us to Cupertino, the community matters so much more!</p>
+            </div>
+          </div>
+          <div class="card my-3" style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px">
+            <div class="card-body">
+              <p class="card-text my-3">After the Keynote, I was lukewarm but still had plenty of questions related to longstanding dev tasks I had been struggling with. A rebuilt Siri powered by Google Gemini, alongside upgrades to the App Intents and Foundation Models Framework, made my mind race. I sought information on hands-free interactions and seamless agency to improve my user experience during the in-person labs.</p>
+            </div>
+          </div>
+          <div class="card my-5" style="background-color: rgb(85 107 47 / 60%); border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset">
+            <div class="card-header">
+              <h3 class="my-3">Pulling Back the Curtain</h3>
+            </div>
+            <div class="card-body">
+              <div class="my-4 ratio ratio-21x9" style="background-color: rgb(143 188 143 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+                <img alt="" src="/images/photos/WWDC26View.png" class="img-fluid object-fit-cover" />
+              </div>
+            </div>
+            <div class="card-footer text-body-secondary">
+              <p class="my-3">Picking the brains of the engineers behind Machine Learning, Apple Intelligence, Foundation Models Framework, Siri, and App Intents was fruitful because they were super friendly, patient, and knowledgeable. They gave me detailed feedback as I peppered them with questions and explained plans for future projects. I walked away feeling charged up and confident I could bring some of my ideas to life.</p>
+            </div>
+          </div>
+          <div class="card my-3" style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px">
+            <div class="card-body">
+              <p class="card-text my-3">This year I set out to do more than just absorb technical information. I wanted to actively connect with the people driving the ecosystem forward and forge lasting memories by snapping a few pictures. Some of the magic of WWDC is actually scattered across the local meetups, impromptu gatherings, and random encounters happening all over.</p>
+            </div>
+          </div>
+          <div class="card my-5" style="background-color: rgb(178 34 34 / 60%); border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset">
+            <div class="card-header">
+              <h3 class="my-3">Apple's App of the Year</h3>
+            </div>
+            <div class="card-body">
+              <div class="my-4 ratio ratio-16x9" style="background-color: rgb(0 255 127 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+                <img alt="" src="/images/photos/WWDC26Tiimo.png" class="img-fluid object-fit-cover" />
+              </div>
+            </div>
+            <div class="card-footer text-body-secondary">
+              <p class="my-3">While leaving the Visitor Center, I crossed paths with the team behind <a href="https://apps.apple.com/us/app/tiimo-to-do-list-ai-planner/id1480220328" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover">Tiimo: To Do List &amp; AI Planner</a>, a visual AI planner built for real life that took home Apple's App of the Year honors. When you stop to consider there are over two million apps in the App Store today, you start to understand that winning is no simple feat. I hope to win the award one day, so I asked for a picture in order to remember this moment. They were nice enough to pose and even shared some swag with me!</p>
+            </div>
+          </div>
+          <div class="card my-3" style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px">
+            <div class="card-body">
+              <p class="card-text my-3">My next stop on the conference tour was the Residence Inn. I made my way over to the 2nd annual <a href="https://communitykit.social" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover">CommunityKit</a>, and the good times kept rolling.</p>
+            </div>
+          </div>
+          <div class="card my-5" style="background-color: rgb(46 139 87 / 60%); border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset">
+            <div class="card-header">
+              <h3 class="my-3">Something for Everyone</h3>
+            </div>
+            <div class="card-body">
+              <div class="my-4 ratio ratio-16x9" style="background-color: rgb(143 188 143 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+                <img alt="" src="/images/photos/WWDC26CommunityKit2.png" class="img-fluid object-fit-cover" />
+              </div>
+            </div>
+            <div class="card-footer text-body-secondary">
+              <p class="my-3">If you want to meet new people and learn something new, off-site conferences are a great option as well. Not all events are created equally. But with the right vision and dedicated organizers, you can have an unforgettable experience.</p>
+            </div>
+          </div>
+          <div class="card my-3" style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px">
+            <div class="card-body">
+              <p class="card-text my-3">Let this be your sign to come out and support Community Kit in 2027. I highly recommend it, whether you land a golden ticket or not!</p>
+            </div>
+          </div>
+          <div class="card my-5" style="background-color: rgb(72 61 139 / 60%); border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset">
+            <div class="card-header">
+              <h3 class="my-3">Build What You Believe In</h3>
+            </div>
+            <div class="card-body">
+              <div class="my-4 ratio ratio-16x9" style="background-color: rgb(143 188 143 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+                <img alt="" src="/images/photos/WWDC26CommunityKit.png" class="img-fluid object-fit-cover" />
+              </div>
+            </div>
+            <div class="card-footer text-body-secondary">
+              <p class="my-3">I listened to Paul Hudson implore students and developers to build things they genuinely believe in. His impassioned plea was a grounding moment—a refreshing reminder of why I started building <a href="/by-rule" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover">By Rule</a> in the first place, and exactly the spark of inspiration I needed to keep pushing forward.</p>
+            </div>
+          </div>
+          <div class="card my-3" style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px">
+            <div class="card-body">
+              <p class="card-text my-3">Sometimes you just happen to be in the right place at the right time. When I decided to take a walk for some fresh air, I ran into a legend!</p>
+            </div>
+          </div>
+          <div class="card my-5" style="background-color: rgb(30 144 255 / 60%); border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset">
+            <div class="card-header">
+              <h3 class="my-3">Friese, Dont Move!</h3>
+            </div>
+            <div class="card-body">
+              <div class="my-4 ratio ratio-16x9" style="background-color: rgb(143 188 143 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+                <img alt="" src="/images/photos/WWDC26Friends.png" class="img-fluid object-fit-cover" />
+              </div>
+            </div>
+            <div class="card-footer text-body-secondary">
+              <p class="my-3">I've spent countless hours watching Firebase videos and combing through developer documentation in order to maintain <a href="/by-rule" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover">By Rule</a> and implement new features. <a href="https://peterfriese.dev" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover">Peter</a> took some time to chat with me about my app, and he even showed me a few demos to build my intuition. Needless to say, I have some homework to do, but nothing beats the satisfaction of learning something new en route to solving a problem!</p>
+            </div>
+          </div>
+          <div class="card my-3" style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px">
+            <div class="card-body">
+              <p class="card-text my-3">When it was time for the app fair, I rushed into the room early to get a head start. Each table featured cool projects and even greater people.</p>
+            </div>
+          </div>
+          <div class="card my-5" style="background-color: rgb(85 107 47 / 60%); border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset">
+            <div class="card-header">
+              <h3 class="my-3">Indie App Fair</h3>
+            </div>
+            <div class="card-body">
+              <div class="my-4 ratio ratio-21x9" style="background-color: rgb(143 188 143 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+                <img alt="" src="/images/photos/WWDC26IndieAppFair.png" class="img-fluid object-fit-cover" />
+              </div>
+            </div>
+            <div class="card-footer text-body-secondary">
+              <p class="my-3">My friend Om absolutely crushed his presentation for <a href="https://apps.apple.com/us/app/lookback-contacts-history/id6762175300" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover">LookBack: Contacts History</a>, an app that helps people associate their contacts with events.</p>
+            </div>
+          </div>
+          <div class="card my-3" style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px">
+            <div class="card-body">
+              <p class="card-text my-3">Last year I was a presenter at the Indie App Fair, but this time around I went purely to support and engage with the community. The talent in the room was unbelievable.</p>
+            </div>
+          </div>
+          <div class="card my-5" style="background-color: rgb(220 20 60 / 60%); border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset">
+            <div class="card-header">
+              <h3 class="my-3">Innovators</h3>
+            </div>
+            <div class="card-body">
+              <div class="my-4 ratio ratio-21x9" style="background-color: rgb(143 188 143 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+                <img alt="" src="/images/photos/WWDC26DeltaTeam.png" class="img-fluid object-fit-cover" />
+              </div>
+            </div>
+            <div class="card-footer text-body-secondary">
+              <p class="my-3">I spent some time talking with the Delta emulator team about the <a href="https://altstore.io" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover">Alt Store</a> and my love for Pokémon Red on iPhone, met a fellow basketball-loving developer, Jordan, and even received a mind-blowing demo of Paul’s new app, <a href="https://apps.apple.com/us/app/kickstart-app-accelerator/id6758355178?mt=12" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover">Kickstart - App Accelerator.</a></p>
+            </div>
+          </div>
+          <div class="card my-3" style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px">
+            <div class="card-body">
+              <p class="card-text my-3">I transitioned to a place most developers don't get to see in person. As part of the access given to golden ticket holders, I visited the Steve Jobs Theater. Walking into the space as a creator gave me a profound appreciation for its design and the decisions that went into it.</p>
+            </div>
+          </div>
+          <div class="card my-5" style="background-color: rgb(46 139 87 / 60%); border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset">
+            <div class="card-header">
+              <h3 class="my-3">Lights</h3>
+            </div>
+            <div class="card-body">
+              <div class="my-4 ratio ratio-21x9" style="background-color: rgb(143 188 143 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+                <img alt="" src="/images/photos/WWDC26SteveJobsTheater2.png" class="img-fluid object-fit-contain" />
+              </div>
+            </div>
+            <div class="card-footer text-body-secondary">
+              <p class="my-3">Picture this: A lens-shaped ceiling composed of radial panels carefully arranged in concentric rings, recessed lighting and clean lines drawing your eyes to the center, pristine glass cylinder walls wrapped around the perimeter, long wooden tables paired with potted olive trees for a natural decor, a circular and futuristic reception desk centered on an open floor with zero obstructions tainting the view of both indoors and outdoors.</p>
+            </div>
+          </div>
+          <div class="card my-3" style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px">
+            <div class="card-body">
+              <p class="card-text my-3">The composition of the lobby was a masterclass in architectural minimalism and symmetry. We descended a spiraling staircase leading into the theater and were greeted by more of the welcome team.</p>
+            </div>
+          </div>
+          <div class="card my-5" style="background-color: rgb(72 61 139 / 60%); border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset">
+            <div class="card-header">
+              <h3 class="my-3">Cameras...</h3>
+            </div>
+            <div class="card-body">
+              <div class="my-4 ratio ratio-21x9" style="background-color: rgb(143 188 143 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+                <img alt="" src="/images/photos/WWDC26Crew.png" class="img-fluid object-fit-contain" />
+              </div>
+            </div>
+            <div class="card-footer text-body-secondary">
+              <p class="my-3">For the first time, Apple held a developer session in the theater, so I got the chance to see the space up close and get a better sense of the tech that powers the show.</p>
+            </div>
+          </div>
+          <div class="card my-3" style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px">
+            <div class="card-body">
+              <p class="card-text my-3">Golden ticket holders were also treated to a live interview with the Production Visual Effects Supervisor for Lucasfilm's feature film Star Wars: The Mandalorian &amp; Grogu, John Knoll. He spoke about how far technology in film has come and the groundbreaking techniques that have made his work possible.</p>
+            </div>
+          </div>
+          <div class="card my-5" style="background-color: rgb(85 107 47 / 60%); border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset">
+            <div class="card-header">
+              <h3 class="my-3">Action!</h3>
+            </div>
+            <div class="card-body">
+              <div class="my-4 ratio ratio-21x9" style="background-color: rgb(143 188 143 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+                <img alt="" src="/images/photos/WWDC26SteveJobsTheater.png" class="img-fluid object-fit-cover" />
+              </div>
+            </div>
+            <div class="card-footer text-body-secondary">
+              <p class="my-3">I won't spoil the film for those of you with plans to see it. But if the crowd reactions were any indication, Mando was great, and Grogu was in rare form!</p>
+            </div>
+          </div>
+          <div class="card my-3" style="border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px">
+            <div class="card-body">
+              <p class="card-text my-3">For indie developers, WWDC is a great opportunity to learn about the ideas, tools, and people that shape the way we interact. John and his team did a remarkable job on the film, and I really enjoyed the night. My goal is to deliver products and experiences that make a difference in people's lives. Ultimately, my investigative reporting revealed what I already knew about WWDC: behind the glitz and glam of the show are regular people trying to make a lasting impact on the community.</p>
+            </div>
+          </div>
+          <div class="card my-5" style="background-color: rgb(30 144 255 / 60%); border: 6.0px solid rgb(0 0 0 / 100%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset">
+            <div class="card-header">
+              <h3 class="my-3">Put a Pin in It</h3>
+            </div>
+            <div class="card-body">
+              <div class="my-4 ratio ratio-21x9" style="background-color: rgb(143 188 143 / 50%); border: 6.0px solid rgb(176 224 230 / 100%); border-radius: 12px; box-shadow: rgb(0 0 0 / 33%) 0px 0px 5px inset; overflow: hidden">
+                <img alt="" src="/images/photos/WWDC26Bowling.png" class="img-fluid object-fit-cover" />
+              </div>
+            </div>
+            <div class="card-footer text-body-secondary">
+              <p class="my-3">I'm also grateful for friends who made this trip one to remember. Danielle started out hot, but Vince schooled us with his steady hand during a few rounds of bowling. In my defense, the NBA finals were on, so my focus wandered! I may have lost the game that night, but I walked away from WWDC feeling like a winner!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="mt-5 text-center">Created in Swift with <a href="https://github.com/twostraws/Ignite" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover">Ignite</a></p>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/syntax-highlighting.js"></script>
+    <script src="/js/ignite-core.js"></script>
+  </body>
+</html>

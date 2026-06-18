@@ -44,6 +44,7 @@ struct SDF: Site {
         Mentorship()
         Launched()
         WWDC25()
+        WWDC26()
     }
     
 }
